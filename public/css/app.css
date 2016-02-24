@@ -5769,8 +5769,11 @@ body {
     padding-bottom: 20px; }
   .navbar .navbar-brand {
     color: #FFA0DC;
+    font-weight: bold;
+    font-style: italic;
     font-size: 32px;
-    margin-top: 5px; }
+    margin-top: 5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
     .navbar .navbar-brand:hover {
       color: #FFA0DC; }
   .navbar .navbar-nav > li > a {
@@ -5785,5 +5788,19 @@ body {
     .navbar .navbar-nav > .active > a:hover {
       color: white;
       background: #231067; }
+
+footer {
+  width: 100%;
+  background: #1a1335;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 50px 0;
+  font-size: 26px; }
+  footer .item {
+    text-align: center;
+    color: white; }
+  footer #email-link {
+    color: white; }
 
 /*# sourceMappingURL=app.css.map */

@@ -22,7 +22,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#">MULTIVERSUM</a>
+                            <a class="navbar-brand" href="#">Multiversum</a>
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
                             <!-- <ul class="nav navbar-nav">
@@ -55,6 +55,16 @@
                 </div>
             </div>
         </nav>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 item">Наше расположение</div>
+                    <div class="col-xs-3 item"><a id="email-link" href="mailto:portaciya@gmail.com">portaciya@gmail.com</a></div>
+                    <div class="col-xs-3 item">niko</div>
+                    <div class="col-xs-3 item">niko</div>
+                </div>
+            </div>
+        </footer>
         <script src="/js/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
     </body>

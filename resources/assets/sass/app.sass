@@ -24,10 +24,14 @@ body
     
     .navbar-brand
         color: #FFA0DC
+        font-weight: bold
+        font-style: italic
         font-size: 32px
         margin-top: 5px
         &:hover
             color: #FFA0DC
+            
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         
     .navbar-nav
         > li
@@ -49,3 +53,22 @@ body
                 &:hover
                     color: white
                     background: #231067
+                    
+
+
+// footer
+footer
+    width: 100%
+    background: #1a1335
+    position: fixed
+    bottom: 0
+    left: 0
+    padding: 50px 0
+    font-size: 26px
+    
+    .item
+        text-align: center
+        color: white
+    
+    #email-link
+        color: white
