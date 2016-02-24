@@ -13,7 +13,7 @@
         @endif
     </head>
     <body>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="row">
                     <div class="container-fluid">
@@ -45,18 +45,24 @@
                                 </li>
                             </ul> -->
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="active"><a href="./">О нас<span class="sr-only">(current)</span></a></li>
-                                <li><a href="../navbar-static-top/">Вебинары</a></li>
-                                <li><a href="../navbar-fixed-top/">Книги</a></li>
-                                <li><a href="../navbar-fixed-top/">Диски</a></li>
-                                <li><a href="../navbar-fixed-top/">Блог</a></li>
-                                <li><a href="../navbar-fixed-top/">Контакты</a></li>
+                                <li class="active"><a href="#">О нас<span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">Вебинары</a></li>
+                                <li><a href="#">Книги</a></li>
+                                <li><a href="#">Диски</a></li>
+                                <li><a href="#">Блог</a></li>
+                                <li><a href="#">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
+        <header>
+
+        </header>
+        <div class="content">
+
+        </div>
         <footer>
             <div class="container">
                 <div class="row">
