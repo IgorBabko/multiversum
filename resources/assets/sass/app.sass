@@ -1,9 +1,21 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+// general
+.logo
+    color: #FFA0DC !important
+    font-weight: bold
+    font-style: italic
+    font-size: 32px
+    margin-top: 5px
+    &:hover
+        color: #FFA0DC
+        
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+
 // navbar
 
 body
-    background: black
+    background: #58498E
     font-family: 'Georgia'
 
 .navbar
@@ -21,17 +33,6 @@ body
     border: none
     border-bottom: 2px solid #DC40A5
     border-radius: 0
-    
-    .navbar-brand
-        color: #FFA0DC
-        font-weight: bold
-        font-style: italic
-        font-size: 32px
-        margin-top: 5px
-        &:hover
-            color: #FFA0DC
-            
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         
     .navbar-nav
         > li
@@ -63,12 +64,46 @@ footer
     position: fixed
     bottom: 0
     left: 0
-    padding: 50px 0
-    font-size: 26px
+    padding: 20px 0
+    font-size: 22px
     
     .item
+        height: 95px
+        padding: 20px 0
         text-align: center
-        color: white
+        border-right: 2px solid #2D244E
+        color: #978DBB
+        i
+            color: #FFA0DC
+            font-size: 36px
+            margin-right: 5px
+        
+        &:last-child
+            line-height: 1
+            border-right: none
     
     #email-link
-        color: white
+        color: #978DBB
+        
+    .social-icons-list
+        // list-style: none
+        padding: 0
+        li
+            &:hover
+                background: #FFA0DC
+            cursor: pointer
+            display: inline-block
+            width: 45px
+            height: 45px
+            background: #978DBB
+            border-radius: 50%
+            margin-right: 5px
+            padding: 10px 0 0 5px
+            
+            i
+                color: #1a1335
+                font-size: 28px
+    
+    #copyright
+        font-size: 16px
+

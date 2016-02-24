@@ -5749,8 +5749,18 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.logo {
+  color: #FFA0DC !important;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 32px;
+  margin-top: 5px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+  .logo:hover {
+    color: #FFA0DC; }
+
 body {
-  background: black;
+  background: #58498E;
   font-family: 'Georgia'; }
 
 .navbar {
@@ -5767,15 +5777,6 @@ body {
   .navbar .nav li a {
     padding-top: 20px;
     padding-bottom: 20px; }
-  .navbar .navbar-brand {
-    color: #FFA0DC;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 32px;
-    margin-top: 5px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
-    .navbar .navbar-brand:hover {
-      color: #FFA0DC; }
   .navbar .navbar-nav > li > a {
     color: white;
     font-size: 22px; }
@@ -5795,12 +5796,40 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 50px 0;
-  font-size: 26px; }
+  padding: 20px 0;
+  font-size: 22px; }
   footer .item {
+    height: 95px;
+    padding: 20px 0;
     text-align: center;
-    color: white; }
+    border-right: 2px solid #2D244E;
+    color: #978DBB; }
+    footer .item i {
+      color: #FFA0DC;
+      font-size: 36px;
+      margin-right: 5px; }
+    footer .item:last-child {
+      line-height: 1;
+      border-right: none; }
   footer #email-link {
-    color: white; }
+    color: #978DBB; }
+  footer .social-icons-list {
+    padding: 0; }
+    footer .social-icons-list li {
+      cursor: pointer;
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      background: #978DBB;
+      border-radius: 50%;
+      margin-right: 5px;
+      padding: 10px 0 0 5px; }
+      footer .social-icons-list li:hover {
+        background: #FFA0DC; }
+      footer .social-icons-list li i {
+        color: #1a1335;
+        font-size: 28px; }
+  footer #copyright {
+    font-size: 16px; }
 
 /*# sourceMappingURL=app.css.map */

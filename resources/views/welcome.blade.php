@@ -4,6 +4,8 @@
         <title>Laravel</title>
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/css/font-awesome.css">
+
         @if ( Config::get('app.debug') )
         <script type="text/javascript">
         document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
@@ -22,7 +24,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Multiversum</a>
+                            <a class="navbar-brand logo" href="#">Multiversum</a>
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
                             <!-- <ul class="nav navbar-nav">
@@ -58,10 +60,20 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-3 item">Наше расположение</div>
-                    <div class="col-xs-3 item"><a id="email-link" href="mailto:portaciya@gmail.com">portaciya@gmail.com</a></div>
-                    <div class="col-xs-3 item">niko</div>
-                    <div class="col-xs-3 item">niko</div>
+                    <div class="col-xs-3 item"><i class="fa fa-home"></i>Наше расположение</div>
+                    <div class="col-xs-3 item"><i class="fa fa-envelope"></i><a id="email-link" href="mailto:portaciya@gmail.com">portaciya@gmail.com</a></div>
+                    <div class="col-xs-3 item">
+                        <ul class="social-icons-list">
+                            <li><i class="fa fa-facebook"></i></li>
+                            <li><i class="fa fa-instagram"></i></li>
+                            <li><i class="fa fa-youtube"></i></li>
+                            <li><i class="fa fa-google-plus"></i></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3 item">
+                        <span class="logo">Multiversum</span><br/>
+                        <span id="copyright">&copy; Все права защищены</span>
+                    </div>
                 </div>
             </div>
         </footer>
