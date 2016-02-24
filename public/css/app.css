@@ -5749,4 +5749,41 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+body {
+  background: black;
+  font-family: 'Georgia'; }
+
+.navbar {
+  min-height: 60px;
+  background: #45357d;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #45357d 0%, #615fb5 0%, #260a72 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border: none;
+  border-bottom: 2px solid #DC40A5;
+  border-radius: 0; }
+  .navbar .nav li a {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .navbar .navbar-brand {
+    color: #FFA0DC;
+    font-size: 32px;
+    margin-top: 5px; }
+    .navbar .navbar-brand:hover {
+      color: #FFA0DC; }
+  .navbar .navbar-nav > li > a {
+    color: white;
+    font-size: 22px; }
+  .navbar .navbar-nav > li > a:hover {
+    color: #FFA0DC; }
+  .navbar .navbar-nav > .active > a {
+    background: #231067;
+    /* Old browsers */
+    color: white; }
+    .navbar .navbar-nav > .active > a:hover {
+      color: white;
+      background: #231067; }
+
 /*# sourceMappingURL=app.css.map */

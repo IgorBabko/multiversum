@@ -4,6 +4,11 @@
         <title>Laravel</title>
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="/css/app.css">
+        @if ( Config::get('app.debug') )
+        <script type="text/javascript">
+        document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
+        </script>
+        @endif
     </head>
     <body>
         <nav class="navbar navbar-default">
@@ -17,10 +22,10 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Project name</a>
+                            <a class="navbar-brand" href="#">MULTIVERSUM</a>
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
+                            <!-- <ul class="nav navbar-nav">
                                 <li class="active"><a href="#">Home</a></li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Contact</a></li>
@@ -36,18 +41,20 @@
                                         <li><a href="#">One more separated link</a></li>
                                     </ul>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
-                                <li><a href="../navbar-static-top/">Static top</a></li>
-                                <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+                                <li class="active"><a href="./">О нас<span class="sr-only">(current)</span></a></li>
+                                <li><a href="../navbar-static-top/">Вебинары</a></li>
+                                <li><a href="../navbar-fixed-top/">Книги</a></li>
+                                <li><a href="../navbar-fixed-top/">Диски</a></li>
+                                <li><a href="../navbar-fixed-top/">Блог</a></li>
+                                <li><a href="../navbar-fixed-top/">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-
         <script src="/js/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
     </body>
