@@ -5776,6 +5776,7 @@ header {
   -ms-flex-align: center;
   align-items: center; }
   header h1 {
+    display: none;
     font-size: 72px;
     font-weight: bold;
     text-align: center;
@@ -5881,6 +5882,7 @@ footer {
     font-size: 16px; }
 
 .bounce {
+  display: none;
   font-size: 48px;
   font-weight: 100;
   position: absolute;

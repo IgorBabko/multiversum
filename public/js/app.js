@@ -35,6 +35,10 @@ $(function() {
         }
     });
 
+    $('header h1').fadeIn(1000, function () {
+        $('.bounce').fadeIn(500);
+    });
+
     var quotesArray = [
         "Все стремится друг к другу",
         "Мир не терпит пустоты",
