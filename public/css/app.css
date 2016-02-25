@@ -5760,7 +5760,8 @@ button.close {
     color: #FFA0DC; }
 
 body {
-  font-family: 'Roboto Slab', serif; }
+  font-family: 'Roboto Slab', serif;
+  background: #2A1E33; }
 
 header {
   width: 100vw;
@@ -5785,7 +5786,7 @@ header {
     max-width: 100px;
     margin: 25px auto;
     border-top: 6px solid white; }
-  header h3 {
+  header #quote {
     text-align: center;
     font-size: 36px;
     color: white; }
