@@ -6,6 +6,12 @@
         <link rel="stylesheet" href="/css/app.css">
         <link rel="stylesheet" href="/css/font-awesome.css">
 
+        <script src="/js/jquery.min.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.4.2/parallax.min.js"></script>
+        <script src="/js/app.js"></script>
+
         @if ( Config::get('app.debug') )
         <script type="text/javascript">
         document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
@@ -63,6 +69,12 @@
         <div class="content">
 
         </div>
+        <div class="parallax-content">
+
+        </div>
+        <div class="before-footer">
+
+        </div>
         <footer>
             <div class="container">
                 <div class="row">
@@ -83,7 +95,5 @@
                 </div>
             </div>
         </footer>
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
     </body>
 </html>
