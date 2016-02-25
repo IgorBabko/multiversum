@@ -64,7 +64,13 @@
             </div>
         </nav>
         <header>
-
+            <div class="header-content">
+                <h1>Главный заголовок</h1>
+                <hr class="light-line">
+                <h3>Здесь можно написать цитату</h3>
+                <!-- <button class="btn btn-primary">Кнопка</button> -->
+                <div class="bounce"><i class="fa fa-angle-double-down"></i></div>
+            </div>
         </header>
         <div class="content">
 

@@ -1,4 +1,4 @@
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap"
 
 // general
 .logo
@@ -13,11 +13,31 @@
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
 
 body
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', serif
 
 header
     width: 100vw
     height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    
+    h1
+        font-size: 72px
+        font-weight: bold
+        text-align: center
+        color: #FFF791
+        text-transform: uppercase
+        text-shadow: 5px 5px 5px black
+    hr
+        max-width: 100px
+        margin: 25px auto
+        border-top: 6px solid white
+    
+    h3
+        text-align: center
+        font-size: 36px
+        color: white
 
 .content
     height: 800px
@@ -47,6 +67,7 @@ header
             > a
                 color: white
                 font-size: 20px
+                font-weight: 100
                 text-transform: uppercase
             > a:hover
                 color: #FFA0DC
@@ -130,3 +151,59 @@ footer
     
     #copyright
         font-size: 16px
+
+
+// bouncing arrow
+ 
+.bounce
+    font-size: 48px
+    font-weight: 100
+    position: absolute
+    bottom: 60px
+    left: 50% 
+    width: 60px
+    height: 60px 
+    margin-left: -25px
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    -ms-border-radius: 50%
+    border-radius: 50%
+    animation: bounce 2s infinite
+    -webkit-animation: bounce 2s infinite
+    -moz-animation: bounce 2s infinite
+    -o-animation: bounce 2s infinite
+    padding-left: 12.5px
+    color: #D7B3F3
+ 
+@-webkit-keyframes bounce
+    0%, 20%, 50%, 80%, 100%
+        -webkit-transform: translateY(0) 
+    40%
+        -webkit-transform: translateY(-30px)
+    60%
+        -webkit-transform: translateY(-15px)
+ 
+@-moz-keyframes bounce
+    0%, 20%, 50%, 80%, 100%
+        -moz-transform: translateY(0)
+    40%
+        -moz-transform: translateY(-30px)
+    60%
+        -moz-transform: translateY(-15px)
+ 
+@-o-keyframes bounce
+    0%, 20%, 50%, 80%, 100%
+        -o-transform: translateY(0)
+    40%
+        -o-transform: translateY(-30px)
+    60%
+        -o-transform: translateY(-15px)
+
+
+@keyframes bounce
+    0%, 20%, 50%, 80%, 100%
+        transform: translateY(0)
+    40%
+        transform: translateY(-30px)
+    60%
+        transform: translateY(-15px)
