@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Laravel</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/css/app.css">
         <link rel="stylesheet" href="/css/font-awesome.css">
 
