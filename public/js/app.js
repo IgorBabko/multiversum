@@ -15,7 +15,7 @@ $(function() {
         if ($(this).scrollTop() >= 100 && n && !k) {
             k = true;
             $('.navbar').animate({
-                'backgroundColor': 'rgba(92,41,130,1)',
+                'backgroundColor': 'rgba(0,0,0,0.7)',
                 'padding': 0
             }, 500, function () {
                 k = false;
@@ -25,7 +25,7 @@ $(function() {
         if ($(this).scrollTop() < 100 && !n && !k) {
             k = true;
             $('.navbar').animate({
-                'backgroundColor': 'rgba(92,41,130,0)',
+                'backgroundColor': 'rgba(0,0,0,0)',
                 'padding': '50px 0'
             }, 500, function () {
                 k = false;
