@@ -5,13 +5,11 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/css/app.css">
         <link rel="stylesheet" href="/css/font-awesome.css">
-
         <script src="/js/jquery.min.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.4.2/parallax.min.js"></script>
         <script src="/js/app.js"></script>
-
         @if ( Config::get('app.debug') )
         <script type="text/javascript">
         document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
@@ -72,14 +70,27 @@
                 <div class="bounce"><i class="fa fa-angle-double-down"></i></div>
             </div>
         </header>
-        <div class="content">
-
+        <div class="about-me-wrapper">
+            <div class="container about-me">
+                <div class="row">
+                    <h1>Обо мне</h1>
+                    <hr class="light-line">
+                    <div class="col-xs-4" style="text-align: center">
+                        <div id="main-avatar">
+                            <img src="/img/main-avatar-gray.jpg" main-avatar class="img-responsive img-circle" alt="мой аватар">
+                        </div>
+                    </div>
+                    <div class="col-xs-7" style="text-align: center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quasi tenetur modi maiores totam. Error, laboriosam, cupiditate dolorum voluptates dolore dolor animi consectetur doloremque harum vero minus.
+                    <br><br>
+                    Iste, cupiditate, rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quasi tenetur modi maiores totam. Error, laboriosam, cupiditate dolorum.</div>
+                </div>
+            </div>
         </div>
+        <!-- <div class="about-me">
+        </div> -->
         <div class="parallax-content">
-
         </div>
         <div class="before-footer">
-
         </div>
         <footer>
             <div class="container">

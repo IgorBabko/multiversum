@@ -1,7 +1,6 @@
 $(function() {
-    console.log('nikk');
     $('header').parallax({
-        imageSrc: '/img/background3.jpg'
+        imageSrc: '/img/background3__.jpg'
     });
 
     $('.parallax-content').parallax({
@@ -16,7 +15,7 @@ $(function() {
         if ($(this).scrollTop() >= 100 && n && !k) {
             k = true;
             $('.navbar').animate({
-                'backgroundColor': 'rgba(0,0,0,0.7)',
+                'backgroundColor': 'rgba(29,10,41,1)',
                 'padding': 0
             }, 500, function() {
                 k = false;

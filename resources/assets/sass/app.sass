@@ -12,6 +12,11 @@
         
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
 
+hr
+    max-width: 100px
+    margin: 25px auto
+    border-top: 6px solid white
+
 body
     font-family: 'Roboto Slab', serif
     background: #2A1E33 
@@ -31,10 +36,6 @@ header
         color: #FFF791
         text-transform: uppercase
         text-shadow: 5px 5px 5px black
-    hr
-        max-width: 100px
-        margin: 25px auto
-        border-top: 6px solid white
     
     #quote
         // display: none
@@ -42,10 +43,34 @@ header
         font-size: 36px
         color: white
 
-.content
-    height: 800px
-    width: 100%
+.about-me-wrapper
     background: #F5E7FF
+
+    .about-me
+        font-size: 20px
+        font-weight: 300
+        line-height: 1.6
+        padding: 100px 0
+        
+        h1
+            text-align: center
+            color: #483358
+        hr
+            border-top: 7px solid #AC77D4
+            
+        #main-avatar
+            display: inline-block
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                border-radius: 50%
+                box-shadow: inset 0 0 0 15px rgba(0,0,0,0.2)
+                z-index: 666665
 
 // navbar
 
@@ -99,7 +124,7 @@ header
         width: 100%
         height: 100%
         background: rgba(0,0,0,0.3)
-        z-index: 6
+        // z-index: 6
 
 
 // before footer
