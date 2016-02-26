@@ -5898,7 +5898,6 @@ footer {
     height: 95px;
     padding: 20px 0;
     text-align: center;
-    border-right: 2px solid #2D244E;
     color: #978DBB; }
     footer .item i {
       color: #FFA0DC;
@@ -5918,10 +5917,12 @@ footer {
       height: 45px;
       background: #978DBB;
       border-radius: 50%;
-      margin-right: 5px;
+      margin-right: 20px;
       padding: 10px 0 0 5px; }
       footer .social-icons-list li:hover {
         background: #FFA0DC; }
+      footer .social-icons-list li:last-child {
+        margin-right: 0; }
       footer .social-icons-list li i {
         color: #1a1335;
         font-size: 28px; }
