@@ -5749,6 +5749,10 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.col {
+  padding-right: 10px;
+  padding-left: 10px; }
+
 .logo {
   color: #FFA0DC !important;
   font-weight: bold;
@@ -5924,15 +5928,30 @@ footer {
   footer #copyright {
     font-size: 16px; }
 
+.centered {
+  text-align: center; }
+
 .posts-wrapper {
   background: #F5E7FF; }
   .posts-wrapper .posts {
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6;
-    padding: 100px 0; }
-    .posts-wrapper .posts > div {
-      text-align: center; }
+    padding: 100px 0;
+    text-align: center; }
+    .posts-wrapper .posts .post-thumbnail {
+      margin: 0;
+      display: inline-block; }
+    .posts-wrapper .posts .post-info {
+      background: #FFF;
+      padding: 10px;
+      font-size: 16px;
+      max-width: 400px;
+      margin: 0 0 30px 0;
+      display: inline-block; }
+    .posts-wrapper .posts .post-meta-info {
+      color: #909090;
+      font-size: 16px; }
     .posts-wrapper .posts h1 {
       text-align: center;
       color: #483358; }
