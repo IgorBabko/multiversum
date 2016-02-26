@@ -63,7 +63,7 @@
         </nav>
         <header>
             <div class="header-content">
-                <h1>Главный заголовок</h1>
+                <!-- <h1>Главный заголовок</h1> -->
                 <hr class="light-line">
                 <h3 id="quote">Здесь можно написать цитату</h3>
                 <!-- <button class="btn btn-primary">Кнопка</button> -->
@@ -114,6 +114,7 @@
                     <h1>Свежие статьи</h1>
                     <hr class="light-line">
                     <div class="col-xs-4">
+                        <img src="#" class="img-responsive img-rounded" alt="Статья 1">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, mollitia atque temporibus totam incidunt doloribus suscipit tempore nulla qui, facilis, in possimus delectus quam et.
                     </div>
                     <div class="col-xs-4">
