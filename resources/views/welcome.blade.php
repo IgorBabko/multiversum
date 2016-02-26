@@ -94,16 +94,16 @@
                     <h1>Недавние вебинары</h1>
                     <hr class="light-line">
                     <div class="col-md-4 col-sm-6">
-                            <div class="video"></div>
-                            <h3>Видео 1</h3>
+                        <div class="video"></div>
+                        <h3>Видео 1</h3>
                     </div>
                     <div class="col-md-4 col-sm-6">
-                            <div class="video"></div>
-                            <h3>Видео 2</h3>
+                        <div class="video"></div>
+                        <h3>Видео 2</h3>
                     </div>
                     <div class="col-md-4 col-sm-12">
-                            <div class="video"></div>
-                            <h3>Видео 3</h3>
+                        <div class="video"></div>
+                        <h3>Видео 3</h3>
                     </div>
                 </div>
             </div>
@@ -114,29 +114,43 @@
                     <h1>Свежие статьи</h1>
                     <hr class="light-line">
                     <div class="col-md-4 col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10">
-                            <img src="http://placehold.it/400x250" class="img-responsive post-thumbnail" alt="Статья 1">
-                            <div class="post-info">
-                                <h3>Статья 2</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, mollitia atque temporibus totam incidunt doloribus suscipit tempore nulla qui, facilis, in possimus delectus quam et.</p>
-                                <p class="post-meta-info">February 31, 2015 9 Comments  12</p>
-                            </div>
+                        <img src="http://placehold.it/400x250" class="img-responsive post-thumbnail" alt="Статья 1">
+                        <div class="post-info">
+                            <h3>Статья 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, mollitia atque temporibus totam incidunt doloribus suscipit tempore nulla qui, facilis, in possimus delectus quam et.</p>
+                            <p class="post-meta-info">February 31, 2015 9 Comments  12</p>
+                        </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10">
-                            <img src="http://placehold.it/400x250" class="img-responsive  post-thumbnail" alt="Статья 1">
-                            <div class="post-info">
-                                <h3>Статья 3</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, mollitia atque temporibus totam incidunt doloribus suscipit tempore nulla qui, facilis, in possimus delectus quam et.</p>
-                                <p class="post-meta-info">February 31, 2015 9 Comments  12</p>
-                            </div>
+                        <img src="http://placehold.it/400x250" class="img-responsive  post-thumbnail" alt="Статья 1">
+                        <div class="post-info">
+                            <h3>Статья 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, mollitia atque temporibus totam incidunt doloribus suscipit tempore nulla qui, facilis, in possimus delectus quam et.</p>
+                            <p class="post-meta-info">February 31, 2015 9 Comments  12</p>
+                        </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-md-offset-0 col-sm-offset-3 col-xs-offset-1 col-xs-10">
-                            <img src="http://placehold.it/400x250" class="img-responsive post-thumbnail" alt="Статья 1">
-                            <div class="post-info">
-                                <h3>Статья 1</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, mollitia atque temporibus totam incidunt doloribus suscipit tempore nulla qui, facilis, in possimus delectus quam et.</p>
-                                <p class="post-meta-info">February 31, 2015 9 Comments  12</p>
-                            </div>
+                        <img src="http://placehold.it/400x250" class="img-responsive post-thumbnail" alt="Статья 1">
+                        <div class="post-info">
+                            <h3>Статья 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, mollitia atque temporibus totam incidunt doloribus suscipit tempore nulla qui, facilis, in possimus delectus quam et.</p>
+                            <p class="post-meta-info">February 31, 2015 9 Comments  12</p>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="email-block">
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+                    <h1>Связаться со мной</h1>
+                    <hr class="light-line">
+                    <form>
+                        <input type="email" placeholder="Имя">
+                        <input type="password" placeholder="Email">
+                        <textarea placeholder="Сообщение"></textarea>
+                        <button type="submit">Отправить</button>
+                    </form>
                 </div>
             </div>
         </div>

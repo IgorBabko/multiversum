@@ -5970,6 +5970,43 @@ footer {
         border-radius: 50%;
         box-shadow: inset 0 0 0 15px rgba(0, 0, 0, 0.3); }
 
+.email-block {
+  background: #2A1E33;
+  padding: 100px 0; }
+  .email-block h1 {
+    text-align: center;
+    color: white; }
+  .email-block input,
+  .email-block textarea {
+    width: 100%;
+    margin-bottom: 30px;
+    height: 50px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 24px;
+    padding-left: 20px; }
+    .email-block input:focus,
+    .email-block textarea:focus {
+      color: #FFD5F0;
+      outline: none !important;
+      border-bottom: 1px solid #FFD5F0; }
+  .email-block textarea {
+    height: 200px; }
+  .email-block button {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid white;
+    width: 150px;
+    height: 50px;
+    background: none;
+    color: white;
+    font-size: 22px; }
+    .email-block button:hover {
+      color: #FFA0DC;
+      border-color: #FFA0DC; }
+
 .bounce {
   display: none;
   font-size: 48px;
