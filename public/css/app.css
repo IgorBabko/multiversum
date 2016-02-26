@@ -5924,6 +5924,33 @@ footer {
   footer #copyright {
     font-size: 16px; }
 
+.posts-wrapper {
+  background: #F5E7FF; }
+  .posts-wrapper .posts {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+    padding: 100px 0; }
+    .posts-wrapper .posts > div {
+      text-align: center; }
+    .posts-wrapper .posts h1 {
+      text-align: center;
+      color: #483358; }
+    .posts-wrapper .posts hr {
+      border-top: 7px solid #AC77D4; }
+    .posts-wrapper .posts #main-avatar {
+      display: inline-block;
+      position: relative; }
+      .posts-wrapper .posts #main-avatar:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 15px rgba(0, 0, 0, 0.3); }
+
 .bounce {
   display: none;
   font-size: 48px;

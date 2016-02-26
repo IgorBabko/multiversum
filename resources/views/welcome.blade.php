@@ -89,7 +89,6 @@
         <!--   <div class="parallax-content">
         </div> -->
         <div class="video-block-wrapper">
-            <!-- <img id="portrait" src="/img/portrait.jpg" alt="мой портрет"> -->
             <div class="container video-block">
                 <div class="row">
                     <h1>Недавние вебинары</h1>
@@ -105,6 +104,23 @@
                     <div class="col-md-4">
                             <div class="video"></div>
                             <h3>Видео 3</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="posts-wrapper">
+            <div class="container posts">
+                <div class="row">
+                    <h1>Свежие статьи</h1>
+                    <hr class="light-line">
+                    <div class="col-xs-4">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, mollitia atque temporibus totam incidunt doloribus suscipit tempore nulla qui, facilis, in possimus delectus quam et.
+                    </div>
+                    <div class="col-xs-4">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, mollitia atque temporibus totam incidunt doloribus suscipit tempore nulla qui, facilis, in possimus delectus quam et.
+                    </div>
+                    <div class="col-xs-4">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, mollitia atque temporibus totam incidunt doloribus suscipit tempore nulla qui, facilis, in possimus delectus quam et.
                     </div>
                 </div>
             </div>
