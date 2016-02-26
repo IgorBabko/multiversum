@@ -12,22 +12,22 @@ $(function() {
 
     $(window).on('scroll', function() {
         console.log('scrolled');
-        if ($(this).scrollTop() >= 100 && n && !k) {
+        if ($(this).scrollTop() >= 50 && n && !k) {
             k = true;
             $('.navbar').animate({
                 'backgroundColor': 'rgba(29,10,41,1)',
                 'padding': 0
-            }, 500, function() {
+            }, 300, function() {
                 k = false;
             });
             n = false;
         }
-        if ($(this).scrollTop() < 100 && !n && !k) {
+        if ($(this).scrollTop() < 50 && !n && !k) {
             k = true;
             $('.navbar').animate({
                 'backgroundColor': 'rgba(0,0,0,0)',
-                'padding': '50px 0'
-            }, 500, function() {
+                'padding': '25px 0'
+            }, 300, function() {
                 k = false;
             });
             n = true;

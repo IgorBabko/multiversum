@@ -82,7 +82,7 @@ header
 // navbar
 
 .navbar
-    padding: 50px 0
+    padding: 25px 0
     position: fixed
     top: 0
     left: 0
@@ -387,3 +387,23 @@ footer
         transform: translateY(-30px)
     60%
         transform: translateY(-15px)
+
+
+// hamburger menu
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle .icon-bar
+    background: #FFA0DC
+    
+.navbar-default .navbar-toggle
+    border-color: #FFA0DC
+    border-color: #FFA0DC
+    .icon-bar
+        background: black
+
+    &.collapsed
+        background: none
+        &:hover
+            border-color: #FFA0DC
+            .icon-bar
+                background: black

@@ -144,7 +144,7 @@
                 <h1>Новые книги и диски</h1>
                 <hr class="light-line">
                 <div class="row centered" id="books-block">
-                    <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-6 col-md-offset-0 col-md-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 1">
                         <div class="item-info">
                             <h3>Книга 1</h3>
@@ -197,7 +197,7 @@
                 </div>
             </div>
         </div>
-        <div class="email-block">
+        <div class="container email-block">
             <div class="row">
                 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
                     <h1>Связаться со мной</h1>
