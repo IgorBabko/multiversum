@@ -49,12 +49,11 @@
                                 </li>
                             </ul> -->
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="active"><a href="#">О нас<span class="sr-only">(current)</span></a></li>
+                                <li class="active"><a href="#">Главная<span class="sr-only">(current)</span></a></li>
                                 <li><a href="#">Вебинары</a></li>
                                 <li><a href="#">Книги</a></li>
                                 <li><a href="#">Диски</a></li>
                                 <li><a href="#">Блог</a></li>
-                                <li><a href="#">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
@@ -135,6 +134,64 @@
                             <h3>Статья 1</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, mollitia atque temporibus totam incidunt doloribus suscipit tempore nulla qui, facilis, in possimus delectus quam et.</p>
                             <p class="post-meta-info">February 31, 2015 9 Comments  12</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="books-and-disks-block">
+            <div class="container">
+                <h1>Новые книги и диски</h1>
+                <hr class="light-line">
+                <div class="row centered">
+                    <div class="col-md-3">
+                        <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 1">
+                        <div class="item-info">
+                            <h3>Книга 1</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 2">
+                        <div class="item-info">
+                            <h3>Книга 2</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 3">
+                        <div class="item-info">
+                            <h3>Книга 3</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 4">
+                        <div class="item-info">
+                            <h3>Книга 4</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row centered">
+                    <div class="col-md-3">
+                        <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Диск 1">
+                        <div class="item-info">
+                            <h3>Диск 1</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Диск 2">
+                        <div class="item-info">
+                            <h3>Диск 2</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Диск 3">
+                        <div class="item-info">
+                            <h3>Диск 3</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Диск 4">
+                        <div class="item-info">
+                            <h3>Диск 4</h3>
                         </div>
                     </div>
                 </div>

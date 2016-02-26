@@ -3,8 +3,8 @@ $(function() {
         imageSrc: '/img/background3__.jpg'
     });
 
-    $('.parallax-content').parallax({
-        imageSrc: '/img/background1.jpg'
+    $('.books-and-disks-block').parallax({
+        imageSrc: '/img/background1_.jpg'
     });
 
     var n = true,
