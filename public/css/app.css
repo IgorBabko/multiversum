@@ -5972,8 +5972,8 @@ footer {
 
 .books-and-disks-block .container {
   padding: 100px 0; }
-  .books-and-disks-block .container > div {
-    margin-bottom: 30px; }
+  .books-and-disks-block .container #books-block {
+    margin-bottom: 50px; }
 
 .books-and-disks-block h1 {
   color: white;

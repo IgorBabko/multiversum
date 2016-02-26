@@ -143,26 +143,26 @@
             <div class="container">
                 <h1>Новые книги и диски</h1>
                 <hr class="light-line">
-                <div class="row centered">
-                    <div class="col-md-3">
+                <div class="row centered" id="books-block">
+                    <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-6 col-md-offset-0 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 1">
                         <div class="item-info">
                             <h3>Книга 1</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 2">
                         <div class="item-info">
                             <h3>Книга 2</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 3">
                         <div class="item-info">
                             <h3>Книга 3</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 4">
                         <div class="item-info">
                             <h3>Книга 4</h3>
