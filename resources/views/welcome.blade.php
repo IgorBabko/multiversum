@@ -75,22 +75,39 @@
                 <div class="row">
                     <h1>Обо мне</h1>
                     <hr class="light-line">
-                    <div class="col-xs-4" style="text-align: center">
+                    <div class="col-xs-4">
                         <div id="main-avatar">
                             <img src="/img/main-avatar-gray.jpg" main-avatar class="img-responsive img-circle" alt="мой аватар">
                         </div>
                     </div>
-                    <div class="col-xs-7" style="text-align: center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quasi tenetur modi maiores totam. Error, laboriosam, cupiditate dolorum voluptates dolore dolor animi consectetur doloremque harum vero minus.
-                    <br><br>
+                    <div class="col-xs-7">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quasi tenetur modi maiores totam. Error, laboriosam, cupiditate dolorum voluptates dolore dolor animi consectetur doloremque harum vero minus.
+                        <br><br>
                     Iste, cupiditate, rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quasi tenetur modi maiores totam. Error, laboriosam, cupiditate dolorum.</div>
                 </div>
             </div>
         </div>
-        <!-- <div class="about-me">
+        <!--   <div class="parallax-content">
         </div> -->
-        <div class="parallax-content">
-        </div>
-        <div class="before-footer">
+        <div class="video-block-wrapper">
+            <!-- <img id="portrait" src="/img/portrait.jpg" alt="мой портрет"> -->
+            <div class="container video-block">
+                <div class="row">
+                    <h1>Недавние вебинары</h1>
+                    <hr class="light-line">
+                    <div class="col-md-4">
+                            <div class="video"></div>
+                            <h3>Видео 1</h3>
+                    </div>
+                    <div class="col-md-4">
+                            <div class="video"></div>
+                            <h3>Видео 2</h3>
+                    </div>
+                    <div class="col-md-4">
+                            <div class="video"></div>
+                            <h3>Видео 3</h3>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer>
             <div class="container">
