@@ -82,11 +82,17 @@ header
 // navbar
 
 .navbar
+    border-bottom: 1px solid #FFA0DC
     padding: 25px 0
     position: fixed
     top: 0
     left: 0
+
+    #navbar
+        border: none
+
     .nav
+        text-align: center
         li
             a
                 padding-top: 20px
@@ -390,20 +396,14 @@ footer
 
 
 // hamburger menu
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus,
-.navbar-default .navbar-toggle .icon-bar
+.navbar-default .navbar-header .navbar-toggle
+    border-color: #FFA0DC
     background: #FFA0DC
-    
-.navbar-default .navbar-toggle
-    border-color: #FFA0DC
-    border-color: #FFA0DC
+    transition: all 0.1s ease-in-out
     .icon-bar
-        background: black
+        background: #1D0A29
 
     &.collapsed
         background: none
-        &:hover
-            border-color: #FFA0DC
-            .icon-bar
-                background: black
+        .icon-bar
+            background: #FFA0DC

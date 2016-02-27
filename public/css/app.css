@@ -5825,6 +5825,7 @@ header {
         box-shadow: inset 0 0 0 15px rgba(0, 0, 0, 0.3); }
 
 .navbar {
+  border-bottom: 1px solid #FFA0DC;
   padding: 25px 0;
   position: fixed;
   top: 0;
@@ -5833,9 +5834,13 @@ header {
   background: rgba(92, 41, 130, 0);
   border: none;
   border-radius: 0; }
-  .navbar .nav li a {
-    padding-top: 20px;
-    padding-bottom: 20px; }
+  .navbar #navbar {
+    border: none; }
+  .navbar .nav {
+    text-align: center; }
+    .navbar .nav li a {
+      padding-top: 20px;
+      padding-bottom: 20px; }
   .navbar .navbar-nav > li > a {
     color: white;
     font-size: 20px;
@@ -6062,21 +6067,15 @@ footer {
     -webkit-transform: translateY(-15px);
     transform: translateY(-15px); } }
 
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus,
-.navbar-default .navbar-toggle .icon-bar {
-  background: #FFA0DC; }
-
-.navbar-default .navbar-toggle {
+.navbar-default .navbar-header .navbar-toggle {
   border-color: #FFA0DC;
-  border-color: #FFA0DC; }
-  .navbar-default .navbar-toggle .icon-bar {
-    background: black; }
-  .navbar-default .navbar-toggle.collapsed {
+  background: #FFA0DC;
+  transition: all 0.1s ease-in-out; }
+  .navbar-default .navbar-header .navbar-toggle .icon-bar {
+    background: #1D0A29; }
+  .navbar-default .navbar-header .navbar-toggle.collapsed {
     background: none; }
-    .navbar-default .navbar-toggle.collapsed:hover {
-      border-color: #FFA0DC; }
-      .navbar-default .navbar-toggle.collapsed:hover .icon-bar {
-        background: black; }
+    .navbar-default .navbar-header .navbar-toggle.collapsed .icon-bar {
+      background: #FFA0DC; }
 
 /*# sourceMappingURL=app.css.map */
