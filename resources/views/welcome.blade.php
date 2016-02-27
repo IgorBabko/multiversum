@@ -9,6 +9,10 @@
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.4.2/parallax.min.js"></script>
+
+        <script src="/js/ScrollMagic.js"></script>
+        <script src="/js/debug.addIndicators.js"></script>
+
         <script src="/js/app.js"></script>
         @if ( Config::get('app.debug') )
         <script type="text/javascript">
@@ -69,7 +73,7 @@
                 <div class="bounce"><i class="fa fa-angle-double-down"></i></div>
             </div>
         </header>
-        <div class="wrapper  about-me-wrapper">
+        <div class="wrapper about-me-wrapper">
             <div class="container about-me">
                 <div class="row">
                     <h1>Обо мне</h1>
@@ -79,7 +83,7 @@
                             <img src="/img/main-avatar-gray.jpg" main-avatar class="img-responsive img-circle" alt="мой аватар">
                         </div>
                     </div>
-                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-7 col-lg-offset-0 col-lg-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quasi tenetur modi maiores totam. Error, laboriosam, cupiditate dolorum voluptates dolore dolor animi consectetur doloremque harum vero minus.
+                    <div id="about-info" class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-7 col-lg-offset-0 col-lg-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quasi tenetur modi maiores totam. Error, laboriosam, cupiditate dolorum voluptates dolore dolor animi consectetur doloremque harum vero minus.
                         <br><br>
                     Iste, cupiditate, rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quasi tenetur modi maiores totam. Error, laboriosam, cupiditate dolorum.</div>
                 </div>

@@ -20,5 +20,8 @@ elixir(function(mix) {
     mix.copy('node_modules/font-awesome/css/font-awesome.css', 'public/css/font-awesome.css');
     mix.copy('node_modules/font-awesome/fonts', 'public/fonts');
 
+    mix.copy('node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js', 'public/js/ScrollMagic.js');
+    mix.copy('node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js', 'public/js/debug.addIndicators.js');
+
     mix.livereload();
 });

@@ -34,7 +34,7 @@ $(function() {
     //     }
     // });
 
-    $('header h1').fadeIn(1000, function () {
+    $('header h1').fadeIn(1000, function() {
         $('.bounce').fadeIn(500);
     });
 
@@ -58,4 +58,14 @@ $(function() {
     };
 
     changeQuotes(0);
+
+    // scroll magic
+    var controller = new ScrollMagic.Controller();
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: '.about-me-wrapper', // starting scene, when reaching this element
+        duration: 400 // pin the element for a total of 400px
+    }).on('enter', function () {
+        $('#main-avatar, #about-info').addClass('visible');
+    }).addIndicators('hello').addTo(controller);
 });
