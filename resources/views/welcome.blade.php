@@ -69,7 +69,7 @@
                 <div class="bounce"><i class="fa fa-angle-double-down"></i></div>
             </div>
         </header>
-        <div class="about-me-wrapper">
+        <div class="wrapper  about-me-wrapper">
             <div class="container about-me">
                 <div class="row">
                     <h1>Обо мне</h1>
@@ -87,7 +87,7 @@
         </div>
         <!--   <div class="parallax-content">
         </div> -->
-        <div class="video-block-wrapper">
+        <div class="wrapper video-block-wrapper">
             <div class="container video-block">
                 <div class="row centered">
                     <h1>Недавние вебинары</h1>
@@ -107,7 +107,7 @@
                 </div>
             </div>
         </div>
-        <div class="posts-wrapper">
+        <div class="wrapper posts-wrapper">
             <div class="container posts">
                 <div class="row centered">
                     <h1>Свежие статьи</h1>
@@ -139,7 +139,7 @@
                 </div>
             </div>
         </div>
-        <div class="books-and-disks-block">
+        <div class="wrapper books-and-disks-block">
             <div class="container">
                 <h1>Новые книги и диски</h1>
                 <hr class="light-line">
@@ -170,25 +170,25 @@
                     </div>
                 </div>
                 <div class="row centered">
-                    <div class="col-md-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Диск 1">
                         <div class="item-info">
                             <h3>Диск 1</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Диск 2">
                         <div class="item-info">
                             <h3>Диск 2</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Диск 3">
                         <div class="item-info">
                             <h3>Диск 3</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Диск 4">
                         <div class="item-info">
                             <h3>Диск 4</h3>
@@ -197,17 +197,19 @@
                 </div>
             </div>
         </div>
-        <div class="container email-block">
-            <div class="row">
-                <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
-                    <h1>Связаться со мной</h1>
-                    <hr class="light-line">
-                    <form>
-                        <input type="email" placeholder="Имя">
-                        <input type="password" placeholder="Email">
-                        <textarea placeholder="Сообщение"></textarea>
-                        <button type="submit">Отправить</button>
-                    </form>
+        <div class="wrapper email-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+                        <h1>Связаться со мной</h1>
+                        <hr class="light-line">
+                        <form>
+                            <input type="email" placeholder="Имя">
+                            <input type="password" placeholder="Email">
+                            <textarea placeholder="Сообщение"></textarea>
+                            <button type="submit">Отправить</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

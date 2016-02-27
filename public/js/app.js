@@ -10,29 +10,29 @@ $(function() {
     var n = true,
         k = false;
 
-    $(window).on('scroll', function() {
-        console.log('scrolled');
-        if ($(this).scrollTop() >= 50 && n && !k) {
-            k = true;
-            $('.navbar').animate({
-                'backgroundColor': 'rgba(29,10,41,1)',
-                'padding': 0
-            }, 300, function() {
-                k = false;
-            });
-            n = false;
-        }
-        if ($(this).scrollTop() < 50 && !n && !k) {
-            k = true;
-            $('.navbar').animate({
-                'backgroundColor': 'rgba(0,0,0,0)',
-                'padding': '25px 0'
-            }, 300, function() {
-                k = false;
-            });
-            n = true;
-        }
-    });
+    // $(window).on('scroll', function() {
+    //     console.log('scrolled');
+    //     if ($(this).scrollTop() >= 50 && n && !k) {
+    //         k = true;
+    //         $('.navbar').animate({
+    //             'backgroundColor': 'rgba(29,10,41,1)',
+    //             'padding': 0
+    //         }, 300, function() {
+    //             k = false;
+    //         });
+    //         n = false;
+    //     }
+    //     if ($(this).scrollTop() < 50 && !n && !k) {
+    //         k = true;
+    //         $('.navbar').animate({
+    //             'backgroundColor': 'rgba(0,0,0,0)',
+    //             'padding': '25px 0'
+    //         }, 300, function() {
+    //             k = false;
+    //         });
+    //         n = true;
+    //     }
+    // });
 
     $('header h1').fadeIn(1000, function () {
         $('.bounce').fadeIn(500);

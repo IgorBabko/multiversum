@@ -2,9 +2,50 @@
 
 // general
 
-.col
-    padding-right: 10px
-    padding-left: 10px
+// h1
+//     margin-left: 20px
+//     margin-right: 20px
+
+// .posts-wrapper
+//     padding: 0 20px
+
+.wrapper
+    padding: 100px 0
+
+@media only screen and (max-width : 480px)
+    header .header-content
+        h1
+            font-size: 28px
+        #quote
+            font-size: 20px
+
+    div.bounce
+        bottom: 20px
+
+
+@media only screen and (min-width : 480px) and (max-width : 768px)
+    header .header-content
+        h1
+            font-size: 36px
+        #quote
+            font-size: 28px
+    
+    div.bounce
+        bottom: 20px
+
+@media only screen and (min-width : 768px) and (max-width : 920px)
+    header .header-content
+        h1
+            font-size: 48px
+        #quote
+            font-size: 40px
+    
+    #navbar .navbar-nav > li > a
+        font-size: 16px
+    
+    div.bounce
+        bottom: 20px
+
 
 .logo
     color: #FFA0DC !important
@@ -55,7 +96,7 @@ header
         font-size: 20px
         font-weight: 300
         line-height: 1.6
-        padding: 100px 0
+        // padding: 100px 0
         
         > div
             text-align: center
@@ -82,11 +123,13 @@ header
 // navbar
 
 .navbar
-    border-bottom: 1px solid #FFA0DC
-    padding: 25px 0
+    // padding: 25px 0
     position: fixed
     top: 0
     left: 0
+    
+    &.navbar-default
+        border-bottom: 1px solid #FFADE1
 
     #navbar
         border: none
@@ -99,7 +142,8 @@ header
                 padding-bottom: 20px
     margin: 0
     
-    background: rgba(92,41,130,0)
+    // background: rgba(92,41,130,0)
+    background: rgba(29,10,41,0.9)
     border: none
     border-radius: 0
 
@@ -107,7 +151,7 @@ header
         > li
             > a
                 color: white
-                font-size: 20px
+                font-size: 18px
                 font-weight: 100
                 text-transform: uppercase
             > a:hover
@@ -158,7 +202,7 @@ header
         height: 100%
 
     .video-block
-        padding: 100px 0
+        // padding: 100px 0
         > div
             text-align: center
         
@@ -238,12 +282,12 @@ footer
         font-size: 20px
         font-weight: 300
         line-height: 1.6
-        padding: 100px 0
+        // padding: 100px 0
         text-align: center
             
         .post-thumbnail
-                margin: 0
-                display: inline-block
+            margin: 0
+            display: inline-block
         
         .post-info
             background: #FFF
@@ -279,7 +323,7 @@ footer
 // books and disks block
 .books-and-disks-block
     .container
-        padding: 100px 0
+        // padding: 100px 0
         #books-block
             margin-bottom: 50px
 
@@ -298,7 +342,7 @@ footer
 // email block
 .email-block
     background: #2A1E33
-    padding: 100px 0
+    // padding: 100px 0
     
     h1
         text-align: center
