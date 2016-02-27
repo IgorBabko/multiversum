@@ -148,25 +148,25 @@
                 <h1>Новые книги и диски</h1>
                 <hr class="light-line">
                 <div class="row centered" id="books-block">
-                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="book book1 col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 1">
                         <div class="item-info">
                             <h3>Книга 1</h3>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="book book2 col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 2">
                         <div class="item-info">
                             <h3>Книга 2</h3>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="book book3 col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 3">
                         <div class="item-info">
                             <h3>Книга 3</h3>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="book book4 col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Книга 4">
                         <div class="item-info">
                             <h3>Книга 4</h3>
@@ -174,25 +174,25 @@
                     </div>
                 </div>
                 <div class="row centered">
-                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="disk disk1 col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Диск 1">
                         <div class="item-info">
                             <h3>Диск 1</h3>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="disk disk2 col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Диск 2">
                         <div class="item-info">
                             <h3>Диск 2</h3>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="disk disk3 col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Диск 3">
                         <div class="item-info">
                             <h3>Диск 3</h3>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="disk disk4 col-xs-12 col-sm-6 col-md-3">
                         <img src="http://placehold.it/200x200" class="img-responsive img-circle post-thumbnail" alt="Диск 4">
                         <div class="item-info">
                             <h3>Диск 4</h3>

@@ -107,4 +107,54 @@ $(function() {
         $('.post3').addClass('visible');
     }).addIndicators('hello').addTo(controller);
 
+    // books appear
+    new ScrollMagic.Scene({
+        triggerElement: '.book1'
+    }).on('enter', function () {
+        $('.book1').addClass('scaled');
+    }).addIndicators('hello').addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.book2'
+    }).on('enter', function () {
+        $('.book2').addClass('scaled');
+    }).addIndicators('hello').addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.book3'
+    }).on('enter', function () {
+        $('.book3').addClass('scaled');
+    }).addIndicators('hello').addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.book4'
+    }).on('enter', function () {
+        $('.book4').addClass('scaled');
+    }).addIndicators('hello').addTo(controller);
+
+    // disks appear
+    new ScrollMagic.Scene({
+        triggerElement: '.disk1'
+    }).on('enter', function () {
+        $('.disk1').addClass('scaled');
+    }).addIndicators('hello').addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.disk2'
+    }).on('enter', function () {
+        $('.disk2').addClass('scaled');
+    }).addIndicators('hello').addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.disk3'
+    }).on('enter', function () {
+        $('.disk3').addClass('scaled');
+    }).addIndicators('hello').addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.disk4'
+    }).on('enter', function () {
+        $('.disk4').addClass('scaled');
+    }).addIndicators('hello').addTo(controller);
+
 });
