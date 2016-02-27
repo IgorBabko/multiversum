@@ -64,6 +64,11 @@
     .video2,
     .video3
         left: 0
+    
+    .post1
+    .post2,
+    .post3
+        left: 0
 
     .visible
         opacity: 1
@@ -101,6 +106,15 @@
 
     .video3
         left: 0
+    
+    .post1
+        left: -100px
+
+    .post2
+        left: 100px
+
+    .post3
+        left: 0
 
     .visible
         opacity: 1
@@ -127,6 +141,15 @@
 
     .video3
         left: 100px
+    
+    .post1
+        left: -100px
+
+    .post2
+        left: 0
+
+    .post3
+        left: 100px
 
     .visible
         opacity: 1 !important
@@ -152,6 +175,15 @@
         left: 0
 
     .video3
+        left: 100px
+        
+    .post1
+        left: -100px
+
+    .post2
+        left: 0
+
+    .post3
         left: 100px
 
     .visible
@@ -408,7 +440,12 @@ footer
         line-height: 1.6
         // padding: 100px 0
         text-align: center
-            
+        
+        .post
+            transition: all 0.8s ease-in-out
+            opacity: 0
+
+
         .post-thumbnail
             margin: 0
             display: inline-block

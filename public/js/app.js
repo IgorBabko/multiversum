@@ -88,4 +88,23 @@ $(function() {
         $('.video3').addClass('visible');
     }).addIndicators('hello').addTo(controller);
 
+    //posts appear
+    new ScrollMagic.Scene({
+        triggerElement: '.post1'
+    }).on('enter', function () {
+        $('.post1').addClass('visible');
+    }).addIndicators('hello').addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.post2'
+    }).on('enter', function () {
+        $('.post2').addClass('visible');
+    }).addIndicators('hello').addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.post3'
+    }).on('enter', function () {
+        $('.post3').addClass('visible');
+    }).addIndicators('hello').addTo(controller);
+
 });
