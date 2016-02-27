@@ -78,12 +78,12 @@
                 <div class="row">
                     <h1>Обо мне</h1>
                     <hr class="light-line">
-                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-3 col-lg-offset-0 col-lg-4">
+                    <div class="col-xs-12 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4 col-lg-offset-0 col-lg-4">
                         <div id="main-avatar">
                             <img src="/img/main-avatar-gray.jpg" main-avatar class="img-responsive img-circle" alt="мой аватар">
                         </div>
                     </div>
-                    <div id="about-info" class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-7 col-lg-offset-0 col-lg-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quasi tenetur modi maiores totam. Error, laboriosam, cupiditate dolorum voluptates dolore dolor animi consectetur doloremque harum vero minus.
+                    <div id="about-info" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quasi tenetur modi maiores totam. Error, laboriosam, cupiditate dolorum voluptates dolore dolor animi consectetur doloremque harum vero minus.
                         <br><br>
                     Iste, cupiditate, rem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quasi tenetur modi maiores totam. Error, laboriosam, cupiditate dolorum.</div>
                 </div>
@@ -97,15 +97,15 @@
                     <h1>Недавние вебинары</h1>
                     <hr class="light-line">
                     <div class="col-md-4 col-sm-6">
-                        <img src="http://placehold.it/400x250" class="video">
+                        <img src="http://placehold.it/400x250" class="video video1">
                         <h3>Видео 1</h3>
                     </div>
                     <div class="col-md-4 col-sm-6">
-                        <img src="http://placehold.it/400x250" class="video">
+                        <img src="http://placehold.it/400x250" class="video video2">
                         <h3>Видео 2</h3>
                     </div>
                     <div class="col-md-4 col-sm-12">
-                        <img src="http://placehold.it/400x250" class="video">
+                        <img src="http://placehold.it/400x250" class="video video3">
                         <h3>Видео 3</h3>
                     </div>
                 </div>

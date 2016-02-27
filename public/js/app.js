@@ -62,10 +62,30 @@ $(function() {
     // scroll magic
     var controller = new ScrollMagic.Controller();
 
-    var scene = new ScrollMagic.Scene({
-        triggerElement: '.about-me-wrapper', // starting scene, when reaching this element
-        duration: 400 // pin the element for a total of 400px
+    // about block appears
+    new ScrollMagic.Scene({
+        triggerElement: '.about-me-wrapper'
     }).on('enter', function () {
         $('#main-avatar, #about-info').addClass('visible');
     }).addIndicators('hello').addTo(controller);
+
+    // videos appear
+    new ScrollMagic.Scene({
+        triggerElement: '.video1'
+    }).on('enter', function () {
+        $('.video1').addClass('visible');
+    }).addIndicators('hello').addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.video2'
+    }).on('enter', function () {
+        $('.video2').addClass('visible');
+    }).addIndicators('hello').addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.video3'
+    }).on('enter', function () {
+        $('.video3').addClass('visible');
+    }).addIndicators('hello').addTo(controller);
+
 });
