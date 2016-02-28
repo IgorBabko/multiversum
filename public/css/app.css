@@ -5989,13 +5989,13 @@ header {
     font-size: 20px;
     font-weight: 300;
     line-height: 1.6; }
-    .about-me-wrapper .about-me > div {
-      text-align: center; }
     .about-me-wrapper .about-me h1 {
       text-align: center;
       color: #483358; }
     .about-me-wrapper .about-me hr {
       border-top: 7px solid #AC77D4; }
+    .about-me-wrapper .about-me > div:first-child {
+      text-align: center; }
     .about-me-wrapper .about-me #main-avatar {
       opacity: 0;
       display: inline-block;
@@ -6011,6 +6011,7 @@ header {
         border-radius: 50%;
         box-shadow: inset 0 0 0 15px rgba(50, 32, 61, 0.3); }
     .about-me-wrapper .about-me #about-info {
+      text-align: left !important;
       opacity: 0;
       position: relative;
       top: 0; }

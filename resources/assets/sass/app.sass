@@ -301,20 +301,18 @@ header
     background: #F5E7FF
 
     .about-me
-
         font-size: 20px
         font-weight: 300
         line-height: 1.6
-        // padding: 100px 0
-        
-        > div
-            text-align: center
 
         h1
             text-align: center
             color: #483358
         hr
             border-top: 7px solid #AC77D4
+        
+        > div:first-child
+            text-align: center
             
         #main-avatar
             opacity: 0
@@ -332,6 +330,7 @@ header
                 box-shadow: inset 0 0 0 15px rgba(50,32,61,0.3)//rgba(0,0,0,0.3)
 
         #about-info
+            text-align: left !important
             opacity: 0
             position: relative
             top: 0
