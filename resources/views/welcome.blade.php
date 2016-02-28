@@ -9,10 +9,8 @@
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.4.2/parallax.min.js"></script>
-
         <script src="/js/ScrollMagic.js"></script>
         <script src="/js/debug.addIndicators.js"></script>
-
         <script src="/js/app.js"></script>
         @if ( Config::get('app.debug') )
         <script type="text/javascript">
@@ -97,15 +95,30 @@
                     <h1>Недавние вебинары</h1>
                     <hr class="light-line">
                     <div class="col-md-4 col-sm-6">
-                        <img src="http://placehold.it/400x250" class="video video1">
+                        <div class="video video1">
+                            <img src="http://placehold.it/300x250">
+                            <span class="caption">
+                                <i class="fa fa-play"></i>
+                            </span>
+                        </div>
                         <h3>Видео 1</h3>
                     </div>
                     <div class="col-md-4 col-sm-6">
-                        <img src="http://placehold.it/400x250" class="video video2">
+                        <div class="video video2">
+                            <img src="http://placehold.it/300x250">
+                            <span class="caption">
+                                <i class="fa fa-play-circle"></i>
+                            </span>
+                        </div>
                         <h3>Видео 2</h3>
                     </div>
                     <div class="col-md-4 col-sm-12">
-                        <img src="http://placehold.it/400x250" class="video video3">
+                        <div class="video video3">
+                            <img src="http://placehold.it/300x250">
+                            <span class="caption">
+                                <i class="fa fa-play-circle-o"></i>
+                            </span>
+                        </div>
                         <h3>Видео 3</h3>
                     </div>
                 </div>
