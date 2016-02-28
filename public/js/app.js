@@ -154,18 +154,15 @@ $(function() {
         }) /*.addIndicators('hello')*/ .addTo(controller);
     }
 
-    // var video = $('.video:nth-child(2)');
-    // console.log($(video).selector);
 
-
-    if (location.pathname == '/webinars') {
-        $('.video').each(function(i, video) {
-            new ScrollMagic.Scene({
-                triggerElement: video,
-                triggerHook: '0.9'
-            }).on('enter', function() {
-                $(video).addClass('visible');
-            }) /*.addIndicators('hello')*/ .addTo(controller);
-        });
-    }
+    // if (location.pathname == '/webinars') {
+    //     $('.video').each(function(i, video) {
+    //         new ScrollMagic.Scene({
+    //             triggerElement: video,
+    //             triggerHook: '0.9'
+    //         }).on('enter', function() {
+    //             $(video).addClass('visible');
+    //         }) /*.addIndicators('hello')*/ .addTo(controller);
+    //     });
+    // }
 });
