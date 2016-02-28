@@ -6152,6 +6152,13 @@ footer {
       max-width: 400px;
       margin: 0 0 30px 0;
       display: inline-block; }
+      .posts-wrapper .posts .post-info button {
+        margin: 10px 0;
+        background: #49BF97;
+        border-color: #49BF97; }
+        .posts-wrapper .posts .post-info button:hover {
+          background: #1A986D;
+          border-color: #1A986D; }
     .posts-wrapper .posts .post-meta-info {
       color: #909090;
       font-size: 16px; }
@@ -6218,9 +6225,9 @@ footer {
     padding-left: 20px; }
     .email-block input:focus,
     .email-block textarea:focus {
-      color: #FFD5F0;
+      color: #7FFFD4;
       outline: none !important;
-      border-bottom: 1px solid #FFD5F0; }
+      border-bottom: 1px solid #7FFFD4; }
   .email-block textarea {
     height: 200px; }
   .email-block button {
@@ -6233,8 +6240,8 @@ footer {
     color: white;
     font-size: 22px; }
     .email-block button:hover {
-      color: #FFA0DC;
-      border-color: #FFA0DC; }
+      color: #7FFFD4;
+      border-color: #7FFFD4; }
 
 .bounce {
   display: none;
