@@ -7,33 +7,6 @@ $(function() {
         imageSrc: '/img/background1_.jpg'
     });
 
-    var n = true,
-        k = false;
-
-    // $(window).on('scroll', function() {
-    //     console.log('scrolled');
-    //     if ($(this).scrollTop() >= 50 && n && !k) {
-    //         k = true;
-    //         $('.navbar').animate({
-    //             'backgroundColor': 'rgba(29,10,41,1)',
-    //             'padding': 0
-    //         }, 300, function() {
-    //             k = false;
-    //         });
-    //         n = false;
-    //     }
-    //     if ($(this).scrollTop() < 50 && !n && !k) {
-    //         k = true;
-    //         $('.navbar').animate({
-    //             'backgroundColor': 'rgba(0,0,0,0)',
-    //             'padding': '25px 0'
-    //         }, 300, function() {
-    //             k = false;
-    //         });
-    //         n = true;
-    //     }
-    // });
-
     $('header h1').fadeIn(1000, function() {
         $('.bounce').fadeIn(500);
     });
@@ -61,6 +34,11 @@ $(function() {
 
     // scroll magic
     var controller = new ScrollMagic.Controller();
+
+    // animate navbar
+    new ScrollMagic.Scene({
+        offset: 100
+    }).setClassToggle('.navbar', 'compactNavbar')/*.addIndicators('hello')*/.addTo(controller);
 
     // about block appears
     new ScrollMagic.Scene({

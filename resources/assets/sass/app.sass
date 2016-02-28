@@ -2,19 +2,27 @@
 
 // general
 
-// h1
-//     margin-left: 20px
-//     margin-right: 20px
-
-// .posts-wrapper
-//     padding: 0 20px
-
 .visible
     opacity: 1 !important
     left: 0 !important
 
 .scaled
     transform: scale(1) !important
+
+@media only screen and (min-width : 768px)
+    
+    .navbar
+        background: rgba(29,10,41,0) !important
+        transition: padding 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out
+        padding: 25px 0
+        border-bottom: 1px solid rgba(255,173,225,0) !important
+        
+
+    .compactNavbar
+        background: rgba(29,10,41,0.9) !important
+        padding: 0 !important
+        border-bottom: 1px solid rgba(255,173,225,1) !important
+        
 
 @media only screen and (max-width : 480px)
     header .header-content
@@ -294,7 +302,6 @@ header
 // navbar
 
 .navbar
-    // padding: 25px 0
     position: fixed
     top: 0
     left: 0
@@ -312,8 +319,7 @@ header
                 padding-top: 20px
                 padding-bottom: 20px
     margin: 0
-    
-    // background: rgba(92,41,130,0)
+
     background: rgba(29,10,41,0.9)
     border: none
     border-radius: 0

@@ -5757,6 +5757,17 @@ button.close {
   -webkit-transform: scale(1) !important;
   transform: scale(1) !important; }
 
+@media only screen and (min-width: 768px) {
+  .navbar {
+    background: rgba(29, 10, 41, 0) !important;
+    transition: padding 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(255, 173, 225, 0) !important; }
+  .compactNavbar {
+    background: rgba(29, 10, 41, 0.9) !important;
+    padding: 0 !important;
+    border-bottom: 1px solid #ffade1 !important; } }
+
 @media only screen and (max-width: 480px) {
   header .header-content h1 {
     font-size: 28px; }
