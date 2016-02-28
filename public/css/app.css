@@ -6296,6 +6296,20 @@ footer {
   .video-content .video-block .video {
     transition: opacity 0.4s ease-in-out;
     opacity: 1; }
+  .video-content .video-block .meta-info {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto; }
+    .video-content .video-block .meta-info .name {
+      font-size: 24px; }
+    .video-content .video-block .meta-info .date {
+      font-style: italic;
+      color: #978DBB; }
   .video-content .row > div {
     margin-bottom: 30px; }
   .video-content .search {

@@ -22,7 +22,10 @@
                         <i class="fa fa-play"></i>
                     </div>
                 </div>
-                <h3>{{ $webinar->name }}</h3>
+                <div class="meta-info">
+                    <span class="name">{{ $webinar->name }}</span>
+                    <span class="date">{{ $webinar->date->format('m.d.Y') }}</span>
+                </div>
             </div>
             @empty
             Вебинаров нет
