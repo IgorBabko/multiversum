@@ -731,3 +731,51 @@ footer
 
 
 // pagination
+.pagination-block
+    // text-align: left
+    ul.pagination
+        font-size: 18px
+        border: 2px solid #18131D
+        
+        li.active
+            span
+                background: #FFA0DC//#57DEB1
+
+    .pagination > li:first-child > a,
+    .pagination > li:first-child > span,
+    .pagination > li:last-child > a,
+    .pagination > li:last-child > span
+        border-radius: 0
+
+    .pagination > .active > a,
+    .pagination > .active > a:hover,
+    .pagination > .active > a:focus,
+    .pagination > .active > span,
+    .pagination > .active > span:hover,
+    .pagination > .active > span:focus
+        border-color: #FFA0DC//#57DEB1
+        background: #FFA0DC//#57DEB1
+        color: #402D4E
+
+    .pagination > li > a:hover,
+    .pagination > li > a:focus,
+    .pagination > li > span:hover,
+    .pagination > li > span:focus
+        background: #78598E//#FF7BCE
+        border-color: #78598E//#FF7BCE
+        color: white
+        
+    .pagination > .disabled > span,
+    .pagination > .disabled > span:hover,
+    .pagination > .disabled > span:focus,
+    .pagination > .disabled > a,
+    .pagination > .disabled > a:hover,
+    .pagination > .disabled > a:focus
+        color: #ABABAB
+        background: #FFE2F1
+
+    .pagination > li > a,
+    .pagination > li > span
+        color: #8152A5
+        border: none
+        background: #FFE2F1

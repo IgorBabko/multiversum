@@ -27,7 +27,7 @@
             @empty
             Вебинаров нет
             @endforelse
-            <div class="col-xs-12">
+            <div class="col-xs-12 pagination-block">
                 {!! $webinars->links() !!}
             </div>
         </div>

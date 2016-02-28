@@ -22,7 +22,7 @@ $factory->define(Multiversum\User::class, function (Faker\Generator $faker) {
 
 $factory->define(Multiversum\Webinar::class, function (Faker\Generator $faker) {
     return [
-        'name'        => $faker->word,
+        'name'        => $faker->word(2),
         'description' => $faker->sentence,
         'date'        => $faker->dateTime(),
         'path'        => $faker->url,

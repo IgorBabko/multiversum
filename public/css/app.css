@@ -6323,4 +6323,49 @@ footer {
       .video-content .search i:hover {
         color: #7FFFD4; }
 
+.pagination-block ul.pagination {
+  font-size: 18px;
+  border: 2px solid #18131D; }
+  .pagination-block ul.pagination li.active span {
+    background: #FFA0DC; }
+
+.pagination-block .pagination > li:first-child > a,
+.pagination-block .pagination > li:first-child > span,
+.pagination-block .pagination > li:last-child > a,
+.pagination-block .pagination > li:last-child > span {
+  border-radius: 0; }
+
+.pagination-block .pagination > .active > a,
+.pagination-block .pagination > .active > a:hover,
+.pagination-block .pagination > .active > a:focus,
+.pagination-block .pagination > .active > span,
+.pagination-block .pagination > .active > span:hover,
+.pagination-block .pagination > .active > span:focus {
+  border-color: #FFA0DC;
+  background: #FFA0DC;
+  color: #402D4E; }
+
+.pagination-block .pagination > li > a:hover,
+.pagination-block .pagination > li > a:focus,
+.pagination-block .pagination > li > span:hover,
+.pagination-block .pagination > li > span:focus {
+  background: #78598E;
+  border-color: #78598E;
+  color: white; }
+
+.pagination-block .pagination > .disabled > span,
+.pagination-block .pagination > .disabled > span:hover,
+.pagination-block .pagination > .disabled > span:focus,
+.pagination-block .pagination > .disabled > a,
+.pagination-block .pagination > .disabled > a:hover,
+.pagination-block .pagination > .disabled > a:focus {
+  color: #ABABAB;
+  background: #FFE2F1; }
+
+.pagination-block .pagination > li > a,
+.pagination-block .pagination > li > span {
+  color: #8152A5;
+  border: none;
+  background: #FFE2F1; }
+
 /*# sourceMappingURL=app.css.map */
