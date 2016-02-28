@@ -16,7 +16,7 @@
                 <hr class="light-line">
                 <div class="col-xs-12 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4 col-lg-offset-0 col-lg-4">
                     <div id="main-avatar">
-                        <img src="/img/main-avatar-gray.jpg" main-avatar class="img-responsive img-circle" alt="мой аватар">
+                        <img src="/img/main-avatar-gray.jpg" class="img-responsive img-circle" alt="мой аватар">
                     </div>
                 </div>
                 <div id="about-info" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quasi tenetur modi maiores totam. Error, laboriosam, cupiditate dolorum voluptates dolore dolor animi consectetur doloremque harum vero minus.
@@ -25,8 +25,6 @@
             </div>
         </div>
     </div>
-    <!--   <div class="parallax-content">
-    </div> -->
     <div class="wrapper video-block-wrapper">
         <div class="container video-block">
             <div class="row centered">

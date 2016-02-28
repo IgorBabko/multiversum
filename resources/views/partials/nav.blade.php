@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top {{ (\Request::route()->getName() == 'index') ? 'navbar-animated' :  '' }}">
     <div class="container">
         <div class="row">
             <div class="container-fluid">
@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand logo" href="#">Multiversum</a>
+                    <a class="navbar-brand logo" href="/">Multiversum</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <!-- <ul class="nav navbar-nav">
@@ -30,11 +30,11 @@
                         </li>
                     </ul> -->
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#">Главная<span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Вебинары</a></li>
-                        <li><a href="#">Книги</a></li>
-                        <li><a href="#">Диски</a></li>
-                        <li><a href="#">Блог</a></li>
+                        <li class="{{ (\Request::route()->getName() == 'index') ? 'active' :  '' }}"><a href="/">Главная<span class="sr-only">(current)</span></a></li>
+                        <li class="{{ (\Request::route()->getName() == 'webinars') ? 'active' :  '' }}"><a href="/webinars">Вебинары</a></li>
+                        <li class="{{ (\Request::route()->getName() == 'books') ? 'active' :  '' }}"><a href="#">Книги</a></li>
+                        <li class="{{ (\Request::route()->getName() == 'disks') ? 'active' :  '' }}"><a href="#">Диски</a></li>
+                        <li class="{{ (\Request::route()->getName() == 'blog') ? 'active' :  '' }}"><a href="#">Блог</a></li>
                     </ul>
                 </div>
             </div>
