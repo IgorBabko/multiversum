@@ -5796,7 +5796,7 @@ button.close {
   .compactNavbar {
     background: rgba(29, 10, 41, 0.9) !important;
     padding: 0 !important;
-    border-bottom: 1px solid #ffade1 !important; } }
+    border-bottom: 1px solid aquamarine !important; } }
 
 @media only screen and (max-width: 480px) {
   header .header-content h1 {
@@ -5942,14 +5942,11 @@ button.close {
     left: 0; } }
 
 .logo {
-  color: #FFA0DC !important;
+  color: aquamarine !important;
   font-weight: bold;
   font-style: italic;
   font-size: 32px;
-  margin-top: 5px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
-  .logo:hover {
-    color: #FFA0DC; }
+  margin-top: 5px; }
 
 hr {
   max-width: 100px;
