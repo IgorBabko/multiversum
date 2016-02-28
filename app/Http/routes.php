@@ -12,7 +12,7 @@
  */
 
 Route::get('/', ['as' => 'index', 'uses' => 'PagesController@index']);
-Route::get('/webinars', ['as' => 'webinars', 'uses' => 'PagesController@webinars']);
+Route::get('/webinars', ['as' => 'webinars', 'uses' => 'WebinarsController@index']);
 
 /*
 |--------------------------------------------------------------------------
