@@ -5974,7 +5974,7 @@ header {
     font-size: 72px;
     font-weight: bold;
     text-align: center;
-    color: aquamarine;
+    color: #FFADD6;
     text-transform: uppercase;
     text-shadow: 5px 5px 5px black; }
   header #quote {
@@ -6055,7 +6055,7 @@ header {
   color: white;
   position: relative; }
   .video-block-wrapper h1 {
-    color: aquamarine; }
+    color: #FFADD6; }
   .video-block-wrapper #portrait {
     position: absolute;
     right: 0;
@@ -6199,7 +6199,7 @@ footer {
   background: #402D4E; }
   .email-block h1 {
     text-align: center;
-    color: aquamarine; }
+    color: #FFADD6; }
   .email-block input,
   .email-block textarea {
     width: 100%;
@@ -6281,10 +6281,40 @@ footer {
 
 .video-content {
   margin: 100px 0 70px; }
+  .video-content .row {
+    margin-bottom: 50px; }
+  .video-content h1 {
+    float: left;
+    color: #FFADD6;
+    text-align: left; }
   .video-content .video-block .video {
     transition: opacity 0.4s ease-in-out;
     opacity: 0; }
   .video-content .row > div {
     margin-bottom: 30px; }
+  .video-content .search {
+    text-align: right;
+    position: relative; }
+    .video-content .search input {
+      margin-top: 15px;
+      height: 50px;
+      background: none;
+      border: none;
+      border-bottom: 1px solid white;
+      color: white;
+      font-size: 24px;
+      text-align: left; }
+      .video-content .search input:focus {
+        color: #7FFFD4;
+        outline: none !important;
+        border-bottom: 1px solid #7FFFD4; }
+    .video-content .search i {
+      font-size: 28px;
+      position: absolute;
+      top: 25px;
+      right: 0;
+      cursor: pointer; }
+      .video-content .search i:hover {
+        color: #7FFFD4; }
 
 /*# sourceMappingURL=app.css.map */
