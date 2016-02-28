@@ -34,6 +34,7 @@
                     <div class="video video1">
                         <img src="http://placehold.it/300x250">
                         <span class="caption">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                             <i class="fa fa-play"></i>
                         </span>
                     </div>
@@ -43,6 +44,7 @@
                     <div class="video video2">
                         <img src="http://placehold.it/300x250">
                         <span class="caption">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                             <i class="fa fa-play-circle"></i>
                         </span>
                     </div>
@@ -52,6 +54,7 @@
                     <div class="video video3">
                         <img src="http://placehold.it/300x250">
                         <span class="caption">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                             <i class="fa fa-play-circle-o"></i>
                         </span>
                     </div>

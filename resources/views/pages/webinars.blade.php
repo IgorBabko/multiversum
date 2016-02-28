@@ -16,81 +16,90 @@
             <div class="col-md-4 col-sm-6">
                 <div class="video">
                     <img src="http://placehold.it/300x250">
-                    <span class="caption">
+                    <div class="caption">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                         <i class="fa fa-play"></i>
-                    </span>
+                    </div>
                 </div>
                 <h3>Видео 1</h3>
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="video">
                     <img src="http://placehold.it/300x250">
-                    <span class="caption">
+                    <div class="caption">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                         <i class="fa fa-play-circle"></i>
-                    </span>
+                    </div>
                 </div>
                 <h3>Видео 2</h3>
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="video">
                     <img src="http://placehold.it/300x250">
-                    <span class="caption">
+                    <div class="caption">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                         <i class="fa fa-play-circle-o"></i>
-                    </span>
+                    </div>
                 </div>
                 <h3>Видео 3</h3>
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="video">
                     <img src="http://placehold.it/300x250">
-                    <span class="caption">
+                    <div class="caption">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                         <i class="fa fa-play"></i>
-                    </span>
+                    </div>
                 </div>
                 <h3>Видео 1</h3>
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="video">
                     <img src="http://placehold.it/300x250">
-                    <span class="caption">
+                    <div class="caption">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                         <i class="fa fa-play-circle"></i>
-                    </span>
+                    </div>
                 </div>
                 <h3>Видео 2</h3>
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="video">
                     <img src="http://placehold.it/300x250">
-                    <span class="caption">
+                    <div class="caption">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                         <i class="fa fa-play-circle-o"></i>
-                    </span>
+                    </div>
                 </div>
                 <h3>Видео 3</h3>
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="video">
                     <img src="http://placehold.it/300x250">
-                    <span class="caption">
+                    <div class="caption">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                         <i class="fa fa-play"></i>
-                    </span>
+                    </div>
                 </div>
                 <h3>Видео 1</h3>
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="video">
                     <img src="http://placehold.it/300x250">
-                    <span class="caption">
+                    <div class="caption">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                         <i class="fa fa-play-circle"></i>
-                    </span>
+                    </div>
                 </div>
                 <h3>Видео 2</h3>
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="video">
                     <img src="http://placehold.it/300x250">
-                    <span class="caption">
+                    <div class="caption">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                         <i class="fa fa-play-circle-o"></i>
-                    </span>
+                    </div>
                 </div>
                 <h3>Видео 3</h3>
             </div>
