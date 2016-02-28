@@ -5974,7 +5974,7 @@ header {
     font-size: 72px;
     font-weight: bold;
     text-align: center;
-    color: #FFF791;
+    color: aquamarine;
     text-transform: uppercase;
     text-shadow: 5px 5px 5px black; }
   header #quote {
@@ -6008,7 +6008,7 @@ header {
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        box-shadow: inset 0 0 0 15px rgba(0, 0, 0, 0.3); }
+        box-shadow: inset 0 0 0 15px rgba(50, 32, 61, 0.3); }
     .about-me-wrapper .about-me #about-info {
       opacity: 0;
       position: relative;
@@ -6065,6 +6065,8 @@ header {
   background-size: contain;
   color: white;
   position: relative; }
+  .video-block-wrapper h1 {
+    color: aquamarine; }
   .video-block-wrapper #portrait {
     position: absolute;
     right: 0;
@@ -6208,7 +6210,7 @@ footer {
   background: #402D4E; }
   .email-block h1 {
     text-align: center;
-    color: white; }
+    color: aquamarine; }
   .email-block input,
   .email-block textarea {
     width: 100%;
