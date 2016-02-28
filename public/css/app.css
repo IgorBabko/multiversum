@@ -5763,7 +5763,7 @@ button.close {
   height: 250px;
   text-align: center;
   position: absolute;
-  background: #EC85C6;
+  background: #7FFFD4;
   transition: all 0.2s ease-in-out;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6178,6 +6178,7 @@ footer {
 
 .books-and-disks-block .book,
 .books-and-disks-block .disk {
+  cursor: pointer;
   transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.15, 1.3);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.15, 1.3);
   -webkit-transform: scale(0);
@@ -6189,6 +6190,10 @@ footer {
 
 .books-and-disks-block img {
   display: inline; }
+
+.books-and-disks-block .book:hover .item-info,
+.books-and-disks-block .disk:hover .item-info {
+  color: #7FFFD4; }
 
 .books-and-disks-block .item-info {
   color: white; }
