@@ -28,3 +28,12 @@ $factory->define(Multiversum\Webinar::class, function (Faker\Generator $faker) {
         'path'        => $faker->url,
     ];
 });
+
+$factory->define(Multiversum\Post::class, function ($faker) {
+    return [
+        'title'        => $faker->sentence(mt_rand(3, 10)),
+        'content'      => join("\n\n", $faker->paragraphs(mt_rand(3, 6))),
+        'img'          => $faker->url,
+        'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
+    ];
+});

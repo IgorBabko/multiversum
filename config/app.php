@@ -156,6 +156,10 @@ return [
         Multiversum\Providers\EventServiceProvider::class,
         Multiversum\Providers\RouteServiceProvider::class,
 
+        /*
+         * Vendor Service Providers...
+         */
+        Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
     ],
 
     /*
