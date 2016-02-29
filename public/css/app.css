@@ -6413,4 +6413,16 @@ footer {
   border: none;
   background: #FFE2F1; }
 
+.filters {
+  margin-bottom: 30px; }
+
+.bootstrap-select {
+  width: 90% !important; }
+  .bootstrap-select button {
+    background: #FFADD6 !important; }
+  .bootstrap-select .dropdown-menu > li > a:hover,
+  .bootstrap-select .dropdown-menu > li > a:focus {
+    background: #78598E;
+    color: white; }
+
 /*# sourceMappingURL=app.css.map */

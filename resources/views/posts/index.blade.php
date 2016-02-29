@@ -8,6 +8,35 @@
                 @include('partials.search')
             </div>
         </div>
+        <div class="row filters">
+            <div class="col-md-6">
+                <!-- <h4>Категории</h4> -->
+                <select class="selectpicker" title="Выбор категории" data-size="5" multiple >
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <!-- <h4>Теги</h4> -->
+                <select class="selectpicker" title="Выбор тегов" data-size="5" data-selected-text-format="count > 3" multiple>
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </select>
+            </div>
+        </div>
         <div class="row centered">
             @forelse ($posts as $post)
             <div class="col-md-4 col-sm-6">
