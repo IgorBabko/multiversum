@@ -5,11 +5,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>Вебинары</h1>
-                <!-- <hr class="light-line"> -->
-                <div class="search">
-                    <input type="text" class="search" placeholder="поиск">
-                    <i class="fa fa-search"></i>
-                </div>
+                @include('partials.search')
             </div>
         </div>
         <div class="row centered">

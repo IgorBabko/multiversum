@@ -2,7 +2,6 @@
 
 namespace Multiversum\Http\Controllers;
 
-use Carbon\Carbon;
 use Multiversum\Http\Controllers\Controller;
 use Multiversum\Post;
 
@@ -10,8 +9,8 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::where('published_at', '<=', Carbon::now())
-            ->orderBy('published_at', 'desc')
+//where('published_at', '<=', Carbon::now())
+        $posts = Post::orderBy('published_at', 'desc')
             ->paginate(config('custom.posts_per_page'));
 
         return view('posts.index')->withPosts($posts);

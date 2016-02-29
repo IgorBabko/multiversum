@@ -4,34 +4,30 @@
     <div class="container video-block">
         <div class="row">
             <div class="col-md-12">
-                <h1>Вебинары</h1>
-                <!-- <hr class="light-line"> -->
-                <div class="search">
-                    <input type="text" class="search" placeholder="поиск">
-                    <i class="fa fa-search"></i>
-                </div>
+                <h1>Статьи</h1>
+                @include('partials.search')
             </div>
         </div>
         <div class="row centered">
-            @forelse ($webinars as $webinar)
+            @forelse ($posts as $post)
             <div class="col-md-4 col-sm-6">
                 <div class="video">
                     <img src="http://placehold.it/300x250">
                     <div class="caption">
-                        <div>{{ $webinar->description }}</div>
+                        <div>{{ str_limit($post->content, 150) . '...' }}</div>
                         <i class="fa fa-play"></i>
                     </div>
                 </div>
                 <div class="meta-info">
-                    <span class="name">{{ $webinar->name }}</span>
-                    <span class="date">{{ $webinar->date->format('m.d.Y') }}</span>
+                    <span class="name">{{ $post->name }}</span>
+                    <span class="date">{{ $post->published_at->format('m.d.Y') }}</span>
                 </div>
             </div>
             @empty
-            Вебинаров нет
+            Статей нет
             @endforelse
             <div class="col-xs-12 pagination-block">
-                {!! $webinars->links() !!}
+                {!! $posts->links() !!}
             </div>
         </div>
     </div>

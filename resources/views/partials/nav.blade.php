@@ -34,7 +34,7 @@
                         <li class="{{ (\Request::route()->getName() == 'webinars') ? 'active' :  '' }}"><a href="/webinars">Вебинары</a></li>
                         <li class="{{ (\Request::route()->getName() == 'books') ? 'active' :  '' }}"><a href="#">Книги</a></li>
                         <li class="{{ (\Request::route()->getName() == 'disks') ? 'active' :  '' }}"><a href="#">Диски</a></li>
-                        <li class="{{ (\Request::route()->getName() == 'blog') ? 'active' :  '' }}"><a href="#">Блог</a></li>
+                        <li class="{{ (\Request::route()->getName() == 'posts') ? 'active' :  '' }}"><a href="/posts">Статьи</a></li>
                     </ul>
                 </div>
             </div>
