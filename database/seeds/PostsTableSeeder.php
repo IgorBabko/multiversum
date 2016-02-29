@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Multiversum\Webinar;
+use Multiversum\Post;
 
-class WebinarTableSeeder extends Seeder
+class PostsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class WebinarTableSeeder extends Seeder
      */
     public function run()
     {
-        Webinar::truncate();
-        factory(Webinar::class, 50)->create();
+        Post::truncate();
+        factory(Post::class, 50)->create();
     }
 }

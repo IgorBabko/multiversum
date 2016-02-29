@@ -2,14 +2,12 @@
 
 namespace Multiversum\Http\Controllers;
 
-use Multiversum\Http\Controllers\Controller;
-use Multiversum/Post;
 use Carbon\Carbon;
-
+use Multiversum\Http\Controllers\Controller;
+use Multiversum\Post;
 
 class PostsController extends Controller
 {
-    // $post = Post::findBySlug('my-slug');
     public function index()
     {
         $posts = Post::where('published_at', '<=', Carbon::now())

@@ -33,7 +33,20 @@ $factory->define(Multiversum\Post::class, function ($faker) {
     return [
         'title'        => $faker->sentence(mt_rand(3, 10)),
         'content'      => join("\n\n", $faker->paragraphs(mt_rand(3, 6))),
-        'img'          => $faker->url,
+        'thumbnail'    => $faker->url,
+        'picture'      => $faker->url,
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
+    ];
+});
+
+$factory->define(Multiversum\Category::class, function ($faker) {
+    return [
+        'name' => $faker->word,
+    ];
+});
+
+$factory->define(Multiversum\Tag::class, function ($faker) {
+    return [
+        'name' => $faker->word,
     ];
 });

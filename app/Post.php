@@ -16,4 +16,21 @@ class Post extends Model implements SluggableInterface
         'build_from' => 'title',
         'save_to'    => 'slug',
     ];
+
+    /**
+     * Get the category that owns the post.
+     */
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    /**
+     * The tags that belong to the post.
+     */
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
 }

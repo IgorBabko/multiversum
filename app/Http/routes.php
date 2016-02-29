@@ -14,8 +14,8 @@
 Route::get('/', ['as' => 'index', 'uses' => 'PagesController@index']);
 Route::get('/webinars', ['as' => 'webinars', 'uses' => 'WebinarsController@index']);
 
-Route::get('/posts', ['as' => 'posts', 'uses' => 'BlogController@index']);
-Route::get('/posts/{slug}', ['as' => 'post', 'uses' => 'BlogController@showPost']);
+Route::get('/posts', ['as' => 'posts', 'uses' => 'PostsController@index']);
+Route::get('/posts/{slug}', ['as' => 'post', 'uses' => 'PostsController@showPost']);
 
 /*
 |--------------------------------------------------------------------------
