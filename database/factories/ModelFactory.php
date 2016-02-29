@@ -50,3 +50,21 @@ $factory->define(Multiversum\Tag::class, function ($faker) {
         'name' => $faker->word,
     ];
 });
+
+$factory->define(Multiversum\Book::class, function ($faker) {
+    return [
+        'name'        => $faker->word(2),
+        'description' => join("\n\n", $faker->paragraphs(mt_rand(1, 2))),
+        'picture'     => $faker->url,
+        'price'       => $faker->randomNumber(2),
+    ];
+});
+
+$factory->define(Multiversum\Disk::class, function ($faker) {
+    return [
+        'name'        => $faker->word(2),
+        'description' => join("\n\n", $faker->paragraphs(mt_rand(1, 2))),
+        'picture'     => $faker->url,
+        'price'       => $faker->randomNumber(2),
+    ];
+});

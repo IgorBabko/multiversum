@@ -5762,8 +5762,7 @@ body {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 100%;
-  border: 2px solid green; }
+  min-height: 100%; }
 
 .visible {
   opacity: 1 !important;
