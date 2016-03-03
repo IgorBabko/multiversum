@@ -1,10 +1,10 @@
 $(function() {
     $('header').parallax({
-        imageSrc: '/img/background3__.jpg'
+        imageSrc: '/img/background3.jpg'
     });
 
     $('.books-and-disks-block').parallax({
-        imageSrc: '/img/background1_.jpg'
+        imageSrc: '/img/background1.jpg'
     });
 
     $('header h1').fadeIn(1000, function() {

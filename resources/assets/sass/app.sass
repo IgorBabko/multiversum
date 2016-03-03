@@ -59,7 +59,6 @@ body
         margin-bottom: 40px
 
 @media only screen and (min-width : 768px)
-    
     .navbar.navbar-animated
         background: rgba(29,10,41,0) !important
         transition: padding 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out
@@ -72,6 +71,10 @@ body
         border-bottom: 1px solid rgba(127, 255, 212, 1) !important//rgba(255,173,225,1) !important
 
 @media only screen and (max-width : 480px)
+    .bootstrap-select
+            button
+                max-width: 300px !important
+                
     header .header-content
         h1
             font-size: 28px
@@ -111,6 +114,10 @@ body
             text-align: center !important
 
 @media only screen and (min-width : 480px) and (max-width : 768px)
+    .bootstrap-select
+        button
+            max-width: 300px !important
+
     header .header-content
         h1
             font-size: 36px
@@ -377,6 +384,10 @@ header
     
     &.navbar-default
         border-bottom: 1px solid #7FFFD4//#FFADE1
+
+        .navbar-nav > li > a:hover,
+        .navbar-nav > li > a:focus
+            color: #FFA0DC
 
     #navbar
         border: none
@@ -829,7 +840,10 @@ footer
 .bootstrap-select
     width: 90% !important
     button
-        background: #FFADD6 !important
+        background: #F9FFC6 !important//#F2FF8A !important//#FFADD6 !important
+        border: none 
+        margin: 0 auto
+        display: block
 
     .dropdown-menu > li > a:hover,
     .dropdown-menu > li > a:focus

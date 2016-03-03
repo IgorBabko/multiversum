@@ -5816,6 +5816,8 @@ body {
     border-bottom: 1px solid aquamarine !important; } }
 
 @media only screen and (max-width: 480px) {
+  .bootstrap-select button {
+    max-width: 300px !important; }
   header .header-content h1 {
     font-size: 28px; }
   header .header-content #quote {
@@ -5846,6 +5848,8 @@ body {
     text-align: center !important; } }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
+  .bootstrap-select button {
+    max-width: 300px !important; }
   header .header-content h1 {
     font-size: 36px; }
   header .header-content #quote {
@@ -6057,6 +6061,9 @@ header {
   border-radius: 0; }
   .navbar.navbar-default {
     border-bottom: 1px solid #7FFFD4; }
+    .navbar.navbar-default .navbar-nav > li > a:hover,
+    .navbar.navbar-default .navbar-nav > li > a:focus {
+      color: #FFA0DC; }
   .navbar #navbar {
     border: none; }
   .navbar .nav {
@@ -6419,7 +6426,10 @@ footer {
 .bootstrap-select {
   width: 90% !important; }
   .bootstrap-select button {
-    background: #FFADD6 !important; }
+    background: #F9FFC6 !important;
+    border: none;
+    margin: 0 auto;
+    display: block; }
   .bootstrap-select .dropdown-menu > li > a:hover,
   .bootstrap-select .dropdown-menu > li > a:focus {
     background: #78598E;

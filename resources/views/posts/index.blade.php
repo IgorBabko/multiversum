@@ -11,7 +11,7 @@
         <div class="row filters">
             <div class="col-md-6">
                 <!-- <h4>Категории</h4> -->
-                <select class="selectpicker" title="Выбор категории" data-size="5" multiple >
+                <select class="selectpicker" title="Выбор категории" data-size="5">
                     <option>Mustard</option>
                     <option>Ketchup</option>
                     <option>Relish</option>
