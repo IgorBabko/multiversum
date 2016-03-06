@@ -13,7 +13,7 @@ class Post extends Model implements SluggableInterface
     protected $dates = ['published_at'];
 
     protected $sluggable = [
-        'build_from' => 'title',
+        'build_from' => 'name',
         'save_to'    => 'slug',
     ];
 

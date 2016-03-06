@@ -12,7 +12,6 @@ class DisksTableSeeder extends Seeder
      */
     public function run()
     {
-        Disk::truncate();
         factory(Disk::class, 20)->create();
     }
 }

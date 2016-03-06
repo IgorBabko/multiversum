@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,10 +12,28 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        // specific for mysql
         //disable foreign key check for this connection before running seeders
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        // DB::statement('SET FOREIGN_KEY_CHECKS=0;');
 
         // $this->call(UsersTableSeeder::class);
+
+        $this->command->info('Unguarding models');
+        Model::unguard();
+
+        $tables = [
+            'books',
+            'categories',
+            'disks',
+            'post_tag',
+            'posts',
+            'tags',
+            'webinars',
+        ];
+
+        $this->command->info('Truncating existing tables');
+        DB::statement('TRUNCATE TABLE ' . implode(',', $tables) . ';');
+
         $this->call(WebinarsTableSeeder::class);
         $this->call(PostsTableSeeder::class);
         $this->call(CategoriesTableSeeder::class);
@@ -24,6 +43,6 @@ class DatabaseSeeder extends Seeder
 
         // supposed to only apply to a single connection and reset it's self
         // but I like to explicitly undo what I've done for clarity
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        // DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
 }

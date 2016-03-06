@@ -12,7 +12,6 @@ class WebinarsTableSeeder extends Seeder
      */
     public function run()
     {
-        Webinar::truncate();
         factory(Webinar::class, 50)->create();
     }
 }

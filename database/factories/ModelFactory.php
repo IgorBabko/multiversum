@@ -31,7 +31,7 @@ $factory->define(Multiversum\Webinar::class, function (Faker\Generator $faker) {
 
 $factory->define(Multiversum\Post::class, function ($faker) {
     return [
-        'name'         => $faker->word(2),
+        'name'         => join(" ", $faker->words(3)),
         'content'      => join("\n\n", $faker->paragraphs(mt_rand(3, 6))),
         'thumbnail'    => $faker->url,
         'picture'      => $faker->url,

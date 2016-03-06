@@ -13,7 +13,6 @@ class TagsTableSeeder extends Seeder
      */
     public function run()
     {
-        Tag::truncate();
         factory(Tag::class, 5)->create()->each(function ($tag) {
             foreach (Post::all()->random(10) as $post) {
                 $tag->posts()->save($post);
