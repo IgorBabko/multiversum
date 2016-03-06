@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.0.0",
+    "bootstrap-select": "^1.10.0",
     "font-awesome": "^4.5.0",
     "jquery": "^2.2.1",
     "laravel-elixir": "^4.0.0",

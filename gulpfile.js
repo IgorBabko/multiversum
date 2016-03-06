@@ -23,5 +23,9 @@ elixir(function(mix) {
     mix.copy('node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js', 'public/js/ScrollMagic.js');
     mix.copy('node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js', 'public/js/debug.addIndicators.js');
 
+    mix.copy('node_modules/bootstrap-select/dist/css/bootstrap-select.min.css', 'public/css/bootstrap-select.min.css');
+    mix.copy('node_modules/bootstrap-select/dist/js/bootstrap-select.min.js', 'public/js/bootstrap-select.min.js');
+
+
     mix.livereload();
 });

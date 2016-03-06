@@ -2,6 +2,16 @@
 
 // general
 
+html
+    height: 100%
+
+body
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-height: 100%
+    font-family: 'Exo 2', sans-serif
+
 .visible
     opacity: 1 !important
     left: 0 !important
@@ -50,7 +60,6 @@
         margin-bottom: 40px
 
 @media only screen and (min-width : 768px)
-    
     .navbar.navbar-animated
         background: rgba(29,10,41,0) !important
         transition: padding 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out
@@ -63,6 +72,10 @@
         border-bottom: 1px solid rgba(127, 255, 212, 1) !important//rgba(255,173,225,1) !important
 
 @media only screen and (max-width : 480px)
+    .bootstrap-select
+            button
+                max-width: 300px !important
+                
     header .header-content
         h1
             font-size: 28px
@@ -91,8 +104,21 @@
     .visible
         opacity: 1
         left: 0
+    
+    .video-content
+        h1
+            text-align: center !important
+            float: none !important
+        .search
+            max-width: 300px
+            margin: 0 auto
+            text-align: center !important
 
 @media only screen and (min-width : 480px) and (max-width : 768px)
+    .bootstrap-select
+        button
+            max-width: 300px !important
+
     header .header-content
         h1
             font-size: 36px
@@ -123,6 +149,15 @@
     .visible
         opacity: 1
         left: 0
+    
+    .video-content
+        h1
+            float: none !important
+            text-align: center !important
+        .search
+            max-width: 300px
+            margin: 0 auto
+            text-align: center !important
 
 @media only screen and (min-width : 768px) and (max-width : 920px)
     header .header-content
@@ -277,6 +312,7 @@ body
     background: #402D4E
 
 header
+    min-height: 600px
     width: 100vw
     height: 100vh
     display: flex
@@ -349,6 +385,10 @@ header
     
     &.navbar-default
         border-bottom: 1px solid #7FFFD4//#FFADE1
+
+        .navbar-nav > li > a:hover,
+        .navbar-nav > li > a:focus
+            color: #FFA0DC
 
     #navbar
         border: none
@@ -685,21 +725,29 @@ footer
 
 // webinars page
 .video-content
-    margin: 100px 0 70px
-    
-    .row
-        margin-bottom: 50px
+    margin-top: 100px
 
     h1
         float: left
         color: #FFADD6
         text-align: left
-        // margin-left: 28px
     
     .video-block
         .video
             transition: opacity 0.4s ease-in-out
             opacity: 1
+        
+        .meta-info
+            display: flex
+            justify-content: space-between
+            // padding: 0 30px
+            max-width: 300px
+            margin: 0 auto
+            .name
+                font-size: 24px
+            .date
+                font-style: italic
+                color: #978DBB
     
     .row > div
         margin-bottom: 30px
@@ -707,8 +755,6 @@ footer
     .search
         text-align: right 
         position: relative
-        
-        
         
         input
             margin-top: 15px
@@ -718,7 +764,8 @@ footer
             border-bottom: 1px solid white
             color: white
             font-size: 24px
-            text-align: left
+            text-align: left !important
+            padding-right: 30px
 
             &:focus
                 color: #7FFFD4//#FFD5F0
@@ -734,3 +781,72 @@ footer
 
             &:hover
                 color: #7FFFD4
+
+
+// pagination
+.pagination-block
+    // text-align: left
+    ul.pagination
+        font-size: 18px
+        border: 2px solid #18131D
+        
+        li.active
+            span
+                background: #FFA0DC//#57DEB1
+
+    .pagination > li:first-child > a,
+    .pagination > li:first-child > span,
+    .pagination > li:last-child > a,
+    .pagination > li:last-child > span
+        border-radius: 0
+
+    .pagination > .active > a,
+    .pagination > .active > a:hover,
+    .pagination > .active > a:focus,
+    .pagination > .active > span,
+    .pagination > .active > span:hover,
+    .pagination > .active > span:focus
+        border-color: #FFA0DC//#57DEB1
+        background: #FFA0DC//#57DEB1
+        color: #402D4E
+
+    .pagination > li > a:hover,
+    .pagination > li > a:focus,
+    .pagination > li > span:hover,
+    .pagination > li > span:focus
+        background: #78598E//#FF7BCE
+        border-color: #78598E//#FF7BCE
+        color: white
+        
+    .pagination > .disabled > span,
+    .pagination > .disabled > span:hover,
+    .pagination > .disabled > span:focus,
+    .pagination > .disabled > a,
+    .pagination > .disabled > a:hover,
+    .pagination > .disabled > a:focus
+        color: #ABABAB
+        background: #FFE2F1
+
+    .pagination > li > a,
+    .pagination > li > span
+        color: #8152A5
+        border: none
+        background: #FFE2F1
+
+// posts page
+.filters
+    margin-bottom: 30px
+
+// custom styles for bootstrap select plugin
+.bootstrap-select
+    width: 90% !important
+    button
+        background: #F9FFC6 !important//#F2FF8A !important//#FFADD6 !important
+        border: none 
+        margin: 0 auto
+        display: block
+
+    .dropdown-menu > li > a:hover,
+    .dropdown-menu > li > a:focus
+        background: #78598E;
+        color: white;

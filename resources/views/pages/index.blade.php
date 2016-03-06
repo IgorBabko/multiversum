@@ -163,8 +163,8 @@
                     <h1>Связаться со мной</h1>
                     <hr class="light-line">
                     <form>
-                        <input type="email" placeholder="Имя">
-                        <input type="password" placeholder="Email">
+                        <input type="text" placeholder="Имя">
+                        <input type="email" placeholder="Email">
                         <textarea placeholder="Сообщение"></textarea>
                         <button type="submit">Отправить</button>
                     </form>

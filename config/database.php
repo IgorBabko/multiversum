@@ -11,9 +11,9 @@ return [
     | stdClass object; however, you may desire to retrieve records in an
     | array format for simplicity. Here you can tweak the fetch style.
     |
-    */
+     */
 
-    'fetch' => PDO::FETCH_CLASS,
+    'fetch'       => PDO::FETCH_CLASS,
 
     /*
     |--------------------------------------------------------------------------
@@ -24,9 +24,9 @@ return [
     | to use as your default connection for all database work. Of course
     | you may use many connections at once using the Database library.
     |
-    */
+     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default'     => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
     | so make sure you have the driver for your particular database of
     | choice installed on your machine before you begin development.
     |
-    */
+     */
 
     'connections' => [
 
@@ -52,7 +52,7 @@ return [
             'prefix'   => '',
         ],
 
-        'mysql' => [
+        'mysql'  => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
             'database'  => env('DB_DATABASE', 'forge'),
@@ -65,12 +65,12 @@ return [
             'engine'    => null,
         ],
 
-        'pgsql' => [
+        'pgsql'  => [
             'driver'   => 'pgsql',
-            'host'     => env('DB_HOST', 'localhost'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host'     => env('DB_HOST', 'ec2-54-227-246-11.compute-1.amazonaws.com'),
+            'database' => env('DB_DATABASE', 'daajuajmmrkooe'),
+            'username' => env('DB_USERNAME', 'zqsycijtveyqdo'),
+            'password' => env('DB_PASSWORD', '7PVSRGE6OmlWxhxHU2-Ncv_A5Y'),
             'charset'  => 'utf8',
             'prefix'   => '',
             'schema'   => 'public',
@@ -97,9 +97,9 @@ return [
     | your application. Using this information, we can determine which of
     | the migrations on disk haven't actually been run in the database.
     |
-    */
+     */
 
-    'migrations' => 'migrations',
+    'migrations'  => 'migrations',
 
     /*
     |--------------------------------------------------------------------------
@@ -110,9 +110,9 @@ return [
     | provides a richer set of commands than a typical key-value systems
     | such as APC or Memcached. Laravel makes it easy to dig right in.
     |
-    */
+     */
 
-    'redis' => [
+    'redis'       => [
 
         'cluster' => false,
 
