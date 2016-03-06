@@ -1,6 +1,6 @@
 @extends("layout")
 @section("content")
-<div class="page-content video-block-wrapper">
+<div class="videos-content page-content video-block-wrapper">
     <div class="container video-block">
         <div class="row">
             <div class="col-md-12">

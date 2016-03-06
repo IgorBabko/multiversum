@@ -6337,6 +6337,11 @@ footer {
     .navbar-default .navbar-header .navbar-toggle.collapsed .icon-bar {
       background: #FFA0DC; }
 
+.videos-content {
+  background: url(../img/background3__.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat; }
+
 .page-content {
   padding-top: 100px; }
   .page-content .video,
