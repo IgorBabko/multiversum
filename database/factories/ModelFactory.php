@@ -29,7 +29,7 @@ $factory->define(Multiversum\Webinar::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(Multiversum\Post::class, function ($faker) {
+$factory->define(Multiversum\Post::class, function (Faker\Generator $faker) {
     return [
         'name'         => join(" ", $faker->words(3)),
         'content'      => join("\n\n", $faker->paragraphs(mt_rand(3, 6))),
@@ -39,19 +39,19 @@ $factory->define(Multiversum\Post::class, function ($faker) {
     ];
 });
 
-$factory->define(Multiversum\Category::class, function ($faker) {
+$factory->define(Multiversum\Category::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->word,
     ];
 });
 
-$factory->define(Multiversum\Tag::class, function ($faker) {
+$factory->define(Multiversum\Tag::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->word,
     ];
 });
 
-$factory->define(Multiversum\Book::class, function ($faker) {
+$factory->define(Multiversum\Book::class, function (Faker\Generator $faker) {
     return [
         'name'        => $faker->word(2),
         'description' => join("\n\n", $faker->paragraphs(mt_rand(1, 2))),
@@ -60,7 +60,7 @@ $factory->define(Multiversum\Book::class, function ($faker) {
     ];
 });
 
-$factory->define(Multiversum\Disk::class, function ($faker) {
+$factory->define(Multiversum\Disk::class, function (Faker\Generator $faker) {
     return [
         'name'        => $faker->word(2),
         'description' => join("\n\n", $faker->paragraphs(mt_rand(1, 2))),
