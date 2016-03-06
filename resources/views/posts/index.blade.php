@@ -1,7 +1,7 @@
 @extends("layout")
 @section("content")
-<div class="video-content video-block-wrapper">
-    <div class="container video-block">
+<div class="page-content posts-content posts-wrapper">
+    <div class="container posts">
         <div class="row">
             <div class="col-md-12">
                 <h1>Статьи</h1>
@@ -39,22 +39,20 @@
         </div>
         <div class="row centered">
             @forelse ($posts as $post)
-            <div class="col-md-4 col-sm-6">
-                <div class="video">
-                    <img src="http://placehold.it/300x250">
-                    <div class="caption">
-                        <div>{{ str_limit($post->content, 150) . '...' }}</div>
-                        <i class="fa fa-play"></i>
-                    </div>
-                </div>
-                <div class="meta-info">
-                    <span class="name">{{ $post->name }}</span>
-                    <span class="date">{{ $post->published_at->format('m.d.Y') }}</span>
+            <div class="post col-md-4 col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                <img src="http://placehold.it/400x250" class="img-responsive post-thumbnail" alt="Статья 1">
+                <div class="post-info">
+                    <h3>{{ $post->name }}</h3>
+                    <p class="short-content">{{ str_limit($post->content, 150) }}</p>
+                    <p class="post-meta-info">{{ $post->published_at->format('m.d.Y') }}</p>
+                    <button class="btn btn-primary">Читать</button>
                 </div>
             </div>
             @empty
             Статей нет
             @endforelse
+        </div>
+        <div class="row">
             <div class="col-xs-12 pagination-block">
                 {!! $posts->links() !!}
             </div>

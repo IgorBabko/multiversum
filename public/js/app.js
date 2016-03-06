@@ -155,14 +155,25 @@ $(function() {
     }
 
 
-    // if (location.pathname == '/webinars') {
-    //     $('.video').each(function(i, video) {
-    //         new ScrollMagic.Scene({
-    //             triggerElement: video,
-    //             triggerHook: '0.9'
-    //         }).on('enter', function() {
-    //             $(video).addClass('visible');
-    //         }) /*.addIndicators('hello')*/ .addTo(controller);
-    //     });
-    // }
+    if (location.pathname == '/webinars') {
+        $('.video').each(function(i, video) {
+            new ScrollMagic.Scene({
+                triggerElement: video,
+                triggerHook: '0.9'
+            }).on('enter', function() {
+                $(video).addClass('visible');
+            }) /*.addIndicators('hello')*/ .addTo(controller);
+        });
+    }
+
+    if (location.pathname == '/posts') {
+        $('.post').each(function(i, post) {
+            new ScrollMagic.Scene({
+                triggerElement: post,
+                triggerHook: '0.9'
+            }).on('enter', function() {
+                $(post).addClass('visible');
+            }) /*.addIndicators('hello')*/ .addTo(controller);
+        });
+    }
 });

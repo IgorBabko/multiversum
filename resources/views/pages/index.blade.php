@@ -65,7 +65,7 @@
     </div>
     <div class="wrapper posts-wrapper">
         <div class="container posts">
-            <div class="row centered">
+            <div class="row">
                 <h1>Свежие статьи</h1>
                 <hr class="light-line">
                 <div class="post post1 col-md-4 col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10">

@@ -71,11 +71,14 @@ body
         padding: 0 !important
         border-bottom: 1px solid rgba(127, 255, 212, 1) !important//rgba(255,173,225,1) !important
 
+    .bootstrap-select
+        width: 90% !important
+
+
 @media only screen and (max-width : 480px)
     .bootstrap-select
-            button
-                max-width: 300px !important
-                
+        min-width: 300px !important
+
     header .header-content
         h1
             font-size: 28px
@@ -105,19 +108,18 @@ body
         opacity: 1
         left: 0
     
-    .video-content
+    .page-content
         h1
             text-align: center !important
             float: none !important
-        .search
-            max-width: 300px
-            margin: 0 auto
-            text-align: center !important
+    .search
+        max-width: 300px
+        margin: 0 auto
+        text-align: center !important
 
 @media only screen and (min-width : 480px) and (max-width : 768px)
     .bootstrap-select
-        button
-            max-width: 300px !important
+        min-width: 300px !important
 
     header .header-content
         h1
@@ -150,14 +152,17 @@ body
         opacity: 1
         left: 0
     
-    .video-content
+    .page-content
         h1
             float: none !important
             text-align: center !important
-        .search
-            max-width: 300px
-            margin: 0 auto
-            text-align: center !important
+    .search
+        max-width: 300px
+        margin: 0 auto
+        text-align: center !important
+    
+    // .bootstrap-select
+    //     width: 40% !important
 
 @media only screen and (min-width : 768px) and (max-width : 920px)
     header .header-content
@@ -405,7 +410,7 @@ header
         > li
             a
                 color: white
-                font-size: 18px
+                font-size: 16px
                 font-weight: 100
                 text-transform: uppercase
             a:hover
@@ -529,27 +534,37 @@ footer
         font-weight: 300
         line-height: 1.6
         // padding: 100px 0
-        text-align: center
+        // text-align: center
         
         .post
             opacity: 0
 
 
         .post-thumbnail
-            box-shadow: 10px 10px 0 #AE9DB9
+            box-shadow: 2px 2px 5px #AE9DB9
             margin: 0
             display: inline-block
         
         .post-info
-            box-shadow: 10px 10px 0 #AE9DB9
+            height: 360px
+            text-align: left
+            box-shadow: 2px 2px 5px #AE9DB9
             background: #FFF
-            padding: 10px
+            padding: 20px
             font-size: 16px
             max-width: 400px
             margin: 0 0 30px 0
             display: inline-block
         
+            .short-content
+                max-height: 100px
+                overflow: hidden
+        
+            h3
+                min-height: 52px
+
             button
+                float: right
                 margin: 10px 0
                 background: #49BF97
                 border-color: #49BF97
@@ -560,6 +575,9 @@ footer
         .post-meta-info
             color: #909090
             font-size: 16px
+            border-bottom: 1px solid #CCCCCC
+            margin-top: 20px
+            padding-bottom: 5px
 
         h1
             text-align: center
@@ -725,68 +743,94 @@ footer
 
 
 // webinars page
-.video-content
-    margin-top: 100px
+
+
+// page-content
+.page-content
+    padding-top: 100px
+    
+    .video,
+    .post
+        left: 0 !important
+
+    .video
+        transition: opacity 0.4s ease-in-out
+        opacity: 0
+    
+    .meta-info
+        display: flex
+        justify-content: space-between
+        // padding: 0 30px
+        max-width: 300px
+        margin: 0 auto
+        .name
+            font-size: 24px
+        .date
+            font-style: italic
+            color: #978DBB
+                
+    .row > div
+        margin-bottom: 30px
 
     h1
         float: left
         color: #FFADD6
         text-align: left
-    
-    .video-block
-        .video
-            transition: opacity 0.4s ease-in-out
-            opacity: 1
-        
-        .meta-info
-            display: flex
-            justify-content: space-between
-            // padding: 0 30px
-            max-width: 300px
-            margin: 0 auto
-            .name
-                font-size: 24px
-            .date
-                font-style: italic
-                color: #978DBB
-    
-    .row > div
-        margin-bottom: 30px
 
+//posts page
+.posts-content
+    .post
+        left: 0
+    
     .search
-        text-align: right 
-        position: relative
-        
         input
-            margin-top: 15px
-            height: 50px
-            background: none
-            border: none
-            border-bottom: 1px solid white
-            color: white
-            font-size: 24px
-            text-align: left !important
-            padding-right: 30px
-
-            &:focus
-                color: #7FFFD4//#FFD5F0
-                outline: none !important
-                border-bottom: 1px solid #7FFFD4//#FFD5F0
+            border-bottom: 1px solid #AE9DB9
+            color: #483358 !important
         
-        i
-            font-size: 28px
-            position: absolute
-            top: 25px
-            right: 0
-            cursor: pointer
+            &:focus
+                outline: none !important
+                border-bottom: 1px solid #483358//#FFD5F0
+    
+    i
+        color: #AE9DB9
+        &:hover
+            color: #483358 !important
 
-            &:hover
-                color: #7FFFD4
+// search
+.search
+    text-align: right 
+    position: relative
+    
+    input
+        margin-top: 15px
+        height: 50px
+        background: none
+        border: none
+        border-bottom: 1px solid white
+        color: white
+        font-size: 24px
+        text-align: left !important
+        padding-right: 30px
+
+        &:focus
+            color: #7FFFD4//#FFD5F0
+            outline: none !important
+            border-bottom: 1px solid #7FFFD4//#FFD5F0
+    
+    i
+        font-size: 28px
+        position: absolute
+        top: 25px
+        right: 0
+        cursor: pointer
+
+        &:hover
+            color: #7FFFD4
 
 
 // pagination
 .pagination-block
-    // text-align: left
+    text-align: center
     ul.pagination
         font-size: 18px
         border: 2px solid #18131D
@@ -837,17 +881,20 @@ footer
 // posts page
 .filters
     margin-bottom: 30px
+    text-align: center
+    border-bottom: 1px solid #AE9DB9
 
 // custom styles for bootstrap select plugin
 .bootstrap-select
-    width: 90% !important
+    border: 1px solid #AE9DB9
+    // width: 90% !important
     button
-        background: #F9FFC6 !important//#F2FF8A !important//#FFADD6 !important
+        background: white!important//#F2FF8A !important//#FFADD6 !important
         border: none 
         margin: 0 auto
         display: block
 
     .dropdown-menu > li > a:hover,
     .dropdown-menu > li > a:focus
-        background: #78598E;
-        color: white;
+        background: #78598E
+        color: white

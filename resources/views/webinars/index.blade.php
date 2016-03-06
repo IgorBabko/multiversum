@@ -1,6 +1,6 @@
 @extends("layout")
 @section("content")
-<div class="video-content video-block-wrapper">
+<div class="page-content video-block-wrapper">
     <div class="container video-block">
         <div class="row">
             <div class="col-md-12">
@@ -14,7 +14,7 @@
                 <div class="video">
                     <img src="http://placehold.it/300x250">
                     <div class="caption">
-                        <div>{{ $webinar->description }}</div>
+                        <div>{{ str_limit($webinar->description, 150) }}</div>
                         <i class="fa fa-play"></i>
                     </div>
                 </div>
