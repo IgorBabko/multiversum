@@ -77,10 +77,10 @@ return [
 
         'pgsql'  => [
             'driver'   => 'pgsql',
-            'host'     => env('DB_HOST', $host ? $host : 'localhost'),
-            'database' => env('DB_DATABASE', $database ? $database : 'homestead'),
-            'username' => env('DB_USERNAME', $username ? $username : 'homestead'),
-            'password' => env('DB_PASSWORD', $password ? $password : 'homestead'),
+            'host'     => env('DB_HOST', isset($host) ? $host : 'localhost'),
+            'database' => env('DB_DATABASE', isset($database) ? $database : 'homestead'),
+            'username' => env('DB_USERNAME', isset($username) ? $username : 'homestead'),
+            'password' => env('DB_PASSWORD', isset($password) ? $password : 'homestead'),
             'charset'  => 'utf8',
             'prefix'   => '',
             'schema'   => 'public',

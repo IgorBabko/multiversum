@@ -5762,8 +5762,7 @@ body {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 100%;
-  font-family: 'Exo 2', sans-serif; }
+  min-height: 100%; }
 
 .visible {
   opacity: 1 !important;
@@ -5994,6 +5993,7 @@ body {
   background: #402D4E; }
 
 header {
+  position: relative;
   min-height: 600px;
   width: 100vw;
   height: 100vh;
