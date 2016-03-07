@@ -187,4 +187,15 @@ $(function() {
             }) /*.addIndicators('hello')*/ .addTo(controller);
         });
     }
+
+    if (location.pathname == '/disks') {
+        $('.disk').each(function(i, disk) {
+            new ScrollMagic.Scene({
+                triggerElement: disk,
+                triggerHook: '0.9'
+            }).on('enter', function() {
+                $(disk).addClass('visible');
+            }) /*.addIndicators('hello')*/ .addTo(controller);
+        });
+    }
 });

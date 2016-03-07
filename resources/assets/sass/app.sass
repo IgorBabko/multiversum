@@ -24,6 +24,8 @@ body
     font-weight: 100
     width: 100%
     height: 100%
+    overflow: hidden
+    // border-radius: 50%
     text-align: center
     position: absolute
     background: #7FFFD4//#EC85C6
@@ -49,7 +51,7 @@ body
         font-size: 32px
 
 .video:hover,
-.book:hover
+.book:hover,
     .caption
         -moz-transform: translateY(100%)
         -o-transform: translateY(100%)
@@ -779,9 +781,6 @@ footer
     color: #EBE6EF//#F3F3F3
     line-height: 1.6
     letter-spacing: 1px
-    
-    > div:first-child
-        padding-bottom: 50px 
 
     h1
         float: none
@@ -802,7 +801,7 @@ footer
         margin-left: 235px
 
 .buy-button
-    margin-top: 30px
+    margin: 30px 0
     width: 100px
     background: aquamarine
     color: black
@@ -822,6 +821,7 @@ footer
         width: 100%
         height: 500px
         box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12)
+        margin-bottom: 50px
         
     
     font-size: 18px
@@ -829,9 +829,6 @@ footer
     color: #EBE6EF//#F3F3F3
     line-height: 1.6
     letter-spacing: 1px
-    
-    > div:first-child
-        padding-bottom: 50px 
 
     h1
         float: none
@@ -843,17 +840,98 @@ footer
         font-size: 14px
         float: right
 
+// disks page
+.disks-content
+    .disk
+        box-shadow: 0px 0px 0px 10px rgba(204, 204, 204, 0.12)
+        overflow: hidden
+        position: relative
+        display: inline-block
+        top: 0
+        width: 250px
+        height: 250px
+        border-radius: 50%
+        background: white
+        margin: 0 auto 20px
+        opacity: 0
+        cursor: pointer
+        
+        .caption
+            transform: scale(0)
+            border-radius: 50%
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 44
+            background: #FFF 
+            
+            div
+                height: 100%
+                padding: 45px
+                overflow: hidden
+        
+        &:hover
+            .caption
+                transform: scale(1)
+
+        // .caption
+        //     border-radius: 50%
+        //     div
+        //         height: 100%
+        
+    h3
+        margin-top: 0
+        color: white
+    
+    
+
+// disk page
+.page-content.disk-content
+    font-size: 18px
+    font-weight: 100
+    color: #EBE6EF//#F3F3F3
+    line-height: 1.6
+    letter-spacing: 1px
+
+    h1
+        float: none
+        margin-bottom: 30px
+    
+    .disk-wrapper
+        text-align: center
+        img
+            border-radius: 50%
+            width: 220px
+            height: 220px
+    
+    span
+        color: #FFE2F2
+        font-style: italic
+        font-size: 14px
+        float: right
+    
+    .disk-description
+        margin-left: 235px
+
 // page-content
 .page-content
     padding-top: 100px
 
+    .centered
+        > div
+            margin: 20px 0 30px
+
     .video,
     .book,
-    .post
+    .post,
+    .disk
         left: 0 !important
         transition: opacity 0.4s ease-in-out
         opacity: 0
     
+    > div:first-child
+        padding-bottom: 100px 
+
     .meta-info
         display: flex
         justify-content: space-between
@@ -866,13 +944,13 @@ footer
             font-style: italic
             color: #978DBB
                 
-    .row > div
-        margin-bottom: 30px
+    // .row > div
+    //     margin-bottom: 30px
 
     h1
         float: left
         color: #FFADD6
-        text-align: left
+        text-align: center
 
 //posts page
 .posts-content
@@ -897,6 +975,7 @@ footer
 .search
     text-align: right 
     position: relative
+    margin-bottom: 20px
     
     input
         margin-top: 15px
@@ -981,6 +1060,7 @@ footer
     margin-bottom: 30px
     text-align: center
     border-bottom: 1px solid #AE9DB9
+    padding-bottom: 30px
 
 // custom styles for bootstrap select plugin
 .bootstrap-select

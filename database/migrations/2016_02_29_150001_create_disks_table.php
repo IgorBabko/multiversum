@@ -15,9 +15,11 @@ class CreateDisksTable extends Migration
         Schema::create('disks', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('slug')->nullable();
             $table->text('description');
             $table->string('picture');
             $table->float('price');
+            $table->timestamp('published_at')->index();
             $table->timestamps();
         });
     }
