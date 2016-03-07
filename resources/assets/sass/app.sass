@@ -777,7 +777,8 @@ footer
             height: 100%
 
 // book page
-.page-content.book-content
+.page-content.book-content,
+.page-content.post-content
     font-size: 18px
     font-weight: 100
     color: #EBE6EF//#F3F3F3
@@ -788,7 +789,8 @@ footer
         float: none
         margin-bottom: 30px
     
-    .book-wrapper
+    .book-wrapper,
+    .post-wrapper
         text-align: center
         img
             box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12)
@@ -801,6 +803,12 @@ footer
     
     .book-description
         margin-left: 235px
+
+// post page
+.page-content.post-content
+    .post-wrapper
+        img
+            width: 100%
 
 .buy-button
     margin: 30px 0

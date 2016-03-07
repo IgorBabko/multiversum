@@ -32,7 +32,7 @@ $factory->define(Multiversum\Webinar::class, function (Faker\Generator $faker) {
 $factory->define(Multiversum\Post::class, function (Faker\Generator $faker) {
     return [
         'name'         => join(" ", $faker->words(3)),
-        'content'      => join("\n\n", $faker->paragraphs(mt_rand(3, 6))),
+        'content'      => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
         'thumbnail'    => $faker->url,
         'picture'      => $faker->url,
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),

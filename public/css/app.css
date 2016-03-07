@@ -6361,26 +6361,39 @@ footer {
 .books-content .caption div {
   height: 100%; }
 
-.page-content.book-content {
+.page-content.book-content,
+.page-content.post-content {
   font-size: 18px;
   font-weight: 100;
   color: #EBE6EF;
   line-height: 1.6;
   letter-spacing: 1px; }
-  .page-content.book-content h1 {
+  .page-content.book-content h1,
+  .page-content.post-content h1 {
     float: none;
     margin-bottom: 30px; }
-  .page-content.book-content .book-wrapper {
+  .page-content.book-content .book-wrapper,
+  .page-content.book-content .post-wrapper,
+  .page-content.post-content .book-wrapper,
+  .page-content.post-content .post-wrapper {
     text-align: center; }
-    .page-content.book-content .book-wrapper img {
+    .page-content.book-content .book-wrapper img,
+    .page-content.book-content .post-wrapper img,
+    .page-content.post-content .book-wrapper img,
+    .page-content.post-content .post-wrapper img {
       box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12); }
-  .page-content.book-content span {
+  .page-content.book-content span,
+  .page-content.post-content span {
     color: #FFE2F2;
     font-style: italic;
     font-size: 14px;
     float: right; }
-  .page-content.book-content .book-description {
+  .page-content.book-content .book-description,
+  .page-content.post-content .book-description {
     margin-left: 235px; }
+
+.page-content.post-content .post-wrapper img {
+  width: 100%; }
 
 .buy-button {
   margin: 30px 0;

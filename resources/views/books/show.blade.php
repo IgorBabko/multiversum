@@ -4,6 +4,7 @@
     <div class="container">
         <div class="row">
             <h1>{{ $book->name }}</h1>
+            <hr class="light-line">
             <div class="book-wrapper col-xs-12 col-sm-4 col-md-3">
                 <img src="http://placehold.it/200x270" alt="Книга 1">
                 <br>

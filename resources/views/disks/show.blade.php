@@ -4,6 +4,7 @@
     <div class="container">
         <div class="row">
             <h1>{{ $disk->name }}</h1>
+            <hr class="light-line">
             <div class="disk-wrapper col-xs-12 col-sm-4 col-md-3">
                 <img src="http://placehold.it/220x220" alt="Книга 1">
                 <br>

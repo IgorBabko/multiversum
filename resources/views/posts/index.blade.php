@@ -45,7 +45,9 @@
                     <h3>{{ $post->name }}</h3>
                     <p class="short-content">{{ str_limit($post->content, 150) }}</p>
                     <p class="post-meta-info">{{ $post->published_at->format('m.d.Y') }}</p>
-                    <button class="btn btn-primary">Читать</button>
+                    <a href="/posts/{{ $post->slug }}">
+                        <button class="btn btn-primary">Читать</button>
+                    </a>
                 </div>
             </div>
             @empty

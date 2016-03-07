@@ -4,6 +4,7 @@
     <div class="container">
         <div class="row">
             <h1>{{ $webinar->name }}</h1>
+            <hr class="light-line">
             <div class="video-wrapper col-xs-12">
                 <img src="http://placehold.it/1440x900" alt="Видео 1">
                 <!-- <br> -->
