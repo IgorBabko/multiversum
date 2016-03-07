@@ -2,11 +2,20 @@
 
 namespace Multiversum;
 
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class Webinar extends Model
+class Webinar extends Model implements SluggableInterface
 {
-    protected $dates = ['date'];
+    use SluggableTrait;
+
+    protected $dates = ['published_at'];
+
+    protected $sluggable = [
+        'build_from' => 'name',
+        'save_to'    => 'slug',
+    ];
 
     protected $guarded = [];
 }
