@@ -176,4 +176,15 @@ $(function() {
             }) /*.addIndicators('hello')*/ .addTo(controller);
         });
     }
+
+    if (location.pathname == '/books') {
+        $('.book').each(function(i, book) {
+            new ScrollMagic.Scene({
+                triggerElement: book,
+                triggerHook: '0.9'
+            }).on('enter', function() {
+                $(book).addClass('visible');
+            }) /*.addIndicators('hello')*/ .addTo(controller);
+        });
+    }
 });

@@ -10,7 +10,7 @@
         </div>
         <div class="row centered">
             @forelse ($webinars as $webinar)
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="video">
                     <img src="http://placehold.it/300x250">
                     <div class="caption">

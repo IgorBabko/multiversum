@@ -17,6 +17,8 @@ class Post extends Model implements SluggableInterface
         'save_to'    => 'slug',
     ];
 
+    protected $guarded = [];
+
     /**
      * Get the category that owns the post.
      */
