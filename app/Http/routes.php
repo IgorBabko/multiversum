@@ -36,4 +36,9 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/posts', ['as' => 'posts', 'uses' => 'PostsController@index']);
     Route::get('/posts/{slug}', ['as' => 'post', 'uses' => 'PostsController@showPost']);
+
+    // dashboard
+
+    Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'Dashboard\DashboardController@index']);
+
 });

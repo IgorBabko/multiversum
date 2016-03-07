@@ -1,12 +1,11 @@
 <?php
 
-namespace Multiversum\Http\Controllers;
+namespace Multiversum\Http\Controllers\Dashboard;
 
 use Illuminate\Http\Request;
+use Multiversum\Http\Controllers\Controller;
 
-use Multiversum\Http\Requests;
-
-class DashboardPostsController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class DashboardPostsController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.layout');
     }
 
     /**
