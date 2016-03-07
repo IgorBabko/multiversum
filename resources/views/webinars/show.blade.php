@@ -4,12 +4,12 @@
     <div class="container">
         <div class="row">
             <h1>{{ $webinar->name }}</h1>
-            <div class="video-wrapper col-xs-12 col-sm-4 col-md-3">
-                <img src="http://placehold.it/200x270" alt="Видео 1">
-                <br>
-                <button class="btn buy-button">Посмотреть</button>
+            <div class="video-wrapper col-xs-12">
+                <img src="http://placehold.it/1440x900" alt="Видео 1">
+                <!-- <br> -->
+                <!-- <button class="btn buy-button">Посмотреть</button> -->
             </div>
-            <div class="col-xs-12 col-sm-8 col-md-9">
+            <div class="col-xs-12">
                 <p>{!! $webinar->description !!}</p>
                 <span>Дата публикации: {{ $webinar->published_at->format('m.d.Y') }}</span>
             </div>

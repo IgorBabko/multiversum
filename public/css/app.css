@@ -6401,6 +6401,27 @@ footer {
   .comments-block h1 {
     color: #402D4E !important; }
 
+.page-content.video-content {
+  font-size: 18px;
+  font-weight: 100;
+  color: #EBE6EF;
+  line-height: 1.6;
+  letter-spacing: 1px; }
+  .page-content.video-content img {
+    width: 100%;
+    height: 500px;
+    box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12); }
+  .page-content.video-content > div:first-child {
+    padding-bottom: 50px; }
+  .page-content.video-content h1 {
+    float: none;
+    margin-bottom: 30px; }
+  .page-content.video-content span {
+    color: #FFE2F2;
+    font-style: italic;
+    font-size: 14px;
+    float: right; }
+
 .page-content {
   padding-top: 100px; }
   .page-content .video,
