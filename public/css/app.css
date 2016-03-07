@@ -6369,6 +6369,8 @@ footer {
   color: #EBE6EF;
   line-height: 1.6;
   letter-spacing: 1px; }
+  .page-content.book-content > div:first-child {
+    padding-bottom: 50px; }
   .page-content.book-content h1 {
     float: none;
     margin-bottom: 30px; }
@@ -6392,6 +6394,12 @@ footer {
   font-size: 20px; }
   .buy-button:hover {
     background: #00e598; }
+
+.comments-block {
+  background: #F5E7FF;
+  padding-top: 50px; }
+  .comments-block h1 {
+    color: #402D4E !important; }
 
 .page-content {
   padding-top: 100px; }

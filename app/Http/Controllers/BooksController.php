@@ -2,6 +2,7 @@
 
 namespace Multiversum\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Multiversum\Book;
 
 class BooksController extends Controller
@@ -14,10 +15,10 @@ class BooksController extends Controller
         return view('books.index')->withBooks($books);
     }
 
-    public function showBook($slug)
+    public function showBook(Request $request, $slug)
     {
         $book = Book::whereSlug($slug)->firstOrFail();
 
-        return view('books.show')->withBook($book);
+        return view('books.show', compact('request', 'book'));
     }
 }
