@@ -11,13 +11,13 @@
         <div class="row centered">
             @forelse ($books as $book)
             <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-                <div class="book">
+                <a href="/books/{{ $book->slug }}" class="book">
                     <img src="http://placehold.it/200x270" alt="Книга 1">
                     <div class="caption">
                         <div>{{ str_limit($book->description, 150) }}</div>
                         <!-- <i class="fa fa-play"></i> -->
                     </div>
-                </div>
+                </a>
                 <div class="item-info">
                     <h3>{{ $book->name }}</h3>
                 </div>

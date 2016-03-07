@@ -54,7 +54,7 @@ $factory->define(Multiversum\Tag::class, function (Faker\Generator $faker) {
 $factory->define(Multiversum\Book::class, function (Faker\Generator $faker) {
     return [
         'name'         => $faker->word(2),
-        'description'  => join("\n\n", $faker->paragraphs(mt_rand(1, 2))),
+        'description'  => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
         'picture'      => $faker->url,
         'price'        => $faker->randomNumber(2),
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),

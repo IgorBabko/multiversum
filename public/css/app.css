@@ -6363,6 +6363,36 @@ footer {
 .books-content .caption div {
   height: 100%; }
 
+.page-content.book-content {
+  font-size: 18px;
+  font-weight: 100;
+  color: #EBE6EF;
+  line-height: 1.6;
+  letter-spacing: 1px; }
+  .page-content.book-content h1 {
+    float: none;
+    margin-bottom: 30px; }
+  .page-content.book-content .book-wrapper {
+    text-align: center; }
+    .page-content.book-content .book-wrapper img {
+      box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12); }
+  .page-content.book-content span {
+    color: #FFE2F2;
+    font-style: italic;
+    font-size: 14px;
+    float: right; }
+  .page-content.book-content .book-description {
+    margin-left: 235px; }
+
+.buy-button {
+  margin-top: 30px;
+  width: 100px;
+  background: aquamarine;
+  color: black;
+  font-size: 20px; }
+  .buy-button:hover {
+    background: #00e598; }
+
 .page-content {
   padding-top: 100px; }
   .page-content .video,
