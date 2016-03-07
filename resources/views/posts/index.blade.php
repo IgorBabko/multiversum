@@ -39,7 +39,7 @@
         </div>
         <div class="row centered">
             @forelse ($posts as $post)
-            <div class="post col-md-4 col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+            <div class="post col-md-4 col-sm-6 col-xs-12">
                 <img src="http://placehold.it/400x250" class="img-responsive post-thumbnail" alt="Статья 1">
                 <div class="post-info">
                     <h3>{{ $post->name }}</h3>

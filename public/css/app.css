@@ -6178,13 +6178,13 @@ footer {
     .posts-wrapper .posts .post {
       opacity: 0; }
     .posts-wrapper .posts .post-thumbnail {
-      box-shadow: 2px 2px 5px #AE9DB9;
+      box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12);
       margin: 0;
       display: inline-block; }
     .posts-wrapper .posts .post-info {
       height: 360px;
       text-align: left;
-      box-shadow: 2px 2px 5px #AE9DB9;
+      box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12);
       background: #FFF;
       padding: 20px;
       font-size: 16px;
@@ -6210,9 +6210,6 @@ footer {
       border-bottom: 1px solid #CCCCCC;
       margin-top: 20px;
       padding-bottom: 5px; }
-    .posts-wrapper .posts h1 {
-      text-align: center;
-      color: #483358; }
     .posts-wrapper .posts hr {
       border-top: 7px solid #AC77D4; }
     .posts-wrapper .posts #main-avatar {
@@ -6512,24 +6509,12 @@ footer {
     float: left;
     color: #FFADD6;
     text-align: center; }
-  .page-content p {
+  .page-content p.description {
     background: rgba(245, 231, 255, 0.22);
     padding: 30px; }
 
 .posts-content .post {
   left: 0; }
-
-.posts-content .search input {
-  border-bottom: 1px solid #AE9DB9;
-  color: #483358 !important; }
-  .posts-content .search input:focus {
-    outline: none !important;
-    border-bottom: 1px solid #483358; }
-
-.posts-content .search i {
-  color: #AE9DB9; }
-  .posts-content .search i:hover {
-    color: #483358 !important; }
 
 .search {
   text-align: right;
@@ -6603,12 +6588,11 @@ footer {
 
 .filters {
   margin-bottom: 30px;
-  text-align: center;
-  border-bottom: 1px solid #AE9DB9;
-  padding-bottom: 30px; }
+  text-align: center; }
 
 .bootstrap-select {
-  border: 1px solid #AE9DB9; }
+  border: 1px solid #AE9DB9;
+  margin-bottom: 30px; }
   .bootstrap-select button {
     background: white !important;
     border: none;

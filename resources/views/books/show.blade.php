@@ -10,7 +10,7 @@
                 <button class="btn buy-button">Купить</button>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-9">
-                <p>{!! $book->description !!}</p>
+                <p class="description">{!! $book->description !!}</p>
                 <span>Дата публикации: {{ $book->published_at->format('m.d.Y') }}</span>
             </div>
         </div>

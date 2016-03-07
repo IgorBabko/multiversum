@@ -10,7 +10,7 @@
                 <!-- <button class="btn buy-button">Посмотреть</button> -->
             </div>
             <div class="col-xs-12">
-                <p>{!! $webinar->description !!}</p>
+                <p class="description">{!! $webinar->description !!}</p>
                 <span>Дата публикации: {{ $webinar->published_at->format('m.d.Y') }}</span>
             </div>
         </div>
