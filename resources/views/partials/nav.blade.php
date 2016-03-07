@@ -30,11 +30,12 @@
                         </li>
                     </ul> -->
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="{{ (\Request::route()->getName() == 'index') ? 'active' :  '' }}"><a href="/">Главная<span class="sr-only">(current)</span></a></li>
-                        <li class="{{ (\Request::route()->getName() == 'webinars') ? 'active' :  '' }}"><a href="/webinars">Вебинары</a></li>
-                        <li class="{{ (\Request::route()->getName() == 'books') ? 'active' :  '' }}"><a href="/books">Книги</a></li>
-                        <li class="{{ (\Request::route()->getName() == 'disks') ? 'active' :  '' }}"><a href="#">Диски</a></li>
-                        <li class="{{ (\Request::route()->getName() == 'posts') ? 'active' :  '' }}"><a href="/posts">Статьи</a></li>
+
+                        <li class="{{ Request::is('/*') ? 'active' :  '' }}"><a href="/">Главная<span class="sr-only">(current)</span></a></li>
+                        <li class="{{ Request::is('webinar*') ? 'active' :  '' }}"><a href="/webinars">Вебинары</a></li>
+                        <li class="{{ Request::is('book*') ? 'active' :  '' }}"><a href="/books">Книги</a></li>
+                        <li class="{{ Request::is('disk*') ? 'active' :  '' }}"><a href="#">Диски</a></li>
+                        <li class="{{ Request::is('post*') ? 'active' :  '' }}"><a href="/posts">Статьи</a></li>
                     </ul>
                 </div>
             </div>
