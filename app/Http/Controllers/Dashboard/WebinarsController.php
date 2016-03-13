@@ -4,42 +4,52 @@ namespace Multiversum\Http\Controllers\Dashboard;
 
 use Illuminate\Http\Request;
 use Multiversum\Http\Controllers\Controller;
+use Multiversum\Http\Requests\StoreWebinarRequest;
+use Multiversum\Webinar;
+use Session;
 
-class DashboardController extends Controller
+class WebinarsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the webinars.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('dashboard.index');
+        $webinars = Webinar::orderBy('published_at', 'desc')->get();
+        return view('dashboard.webinars.index', compact('webinars'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new webinars.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return view('dashboard.webinars.create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created webinars in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, StoreWebinarRequest $storeWebinarReqest)
     {
-        //
+        $webinar = new Webinar($request->except('file'));
+
+        $webinar->save();
+
+        Session::flash('success', 'Вебинар добавлен успешно');
+
+        return redirect('dashboard/webinars');
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified webinars.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -50,7 +60,7 @@ class DashboardController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified webinars.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -61,7 +71,7 @@ class DashboardController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified webinars in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -73,13 +83,17 @@ class DashboardController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified webinar from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        Webinar::destroy($id);
+
+        Session::flash('success', 'Вебинар успешно удален');
+
+        return back();
     }
 }

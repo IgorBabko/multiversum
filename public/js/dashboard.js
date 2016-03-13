@@ -1,23 +1,28 @@
 $(function() {
     $('#table').bootstrapTable({
+        pagination: true,
+        search: true,
+        // pageSize: 10,
         columns: [{
             field: 'id',
-            title: 'Item ID'
+            title: '№',
+            sortable: true
         }, {
             field: 'name',
-            title: 'Item Name'
+            title: 'Название',
+            sortable: true
         }, {
-            field: 'price',
-            title: 'Item Price'
-        }],
-        data: [{
-            id: 1,
-            name: 'Item 1',
-            price: '$1'
+            field: 'publshed_at',
+            title: 'Дата публикации',
+            sortable: true
         }, {
-            id: 2,
-            name: 'Item 2',
-            price: '$2'
+            field: 'controls',
+            title: 'Управление'
         }]
+    });
+
+    $('.delete').on('click', function () {
+        console.log($(this).closest('tr').find('td:first-child').text());
+        $('.delete-form').attr('action', '/dashboard/webinars/' + $(this).closest('tr').find('td:first-child').text() );
     });
 });
