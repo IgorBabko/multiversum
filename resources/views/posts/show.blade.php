@@ -10,7 +10,7 @@
                 <!-- <br> -->
                 <!-- <button class="btn buy-button">Купить</button> -->
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-7">
+            <div class="col-xs-12 col-sm-12 col-md-7 description-block">
                 <p class="description">{!! $post->content !!}</p>
                 <span>Дата публикации: {{ $post->published_at->format('m.d.Y') }}</span>
             </div>

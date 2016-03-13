@@ -7,10 +7,9 @@
             <hr class="light-line">
             <div class="book-wrapper col-xs-12 col-sm-4 col-md-3">
                 <img src="http://placehold.it/200x270" alt="Книга 1">
-                <br>
                 <button class="btn buy-button">Купить</button>
             </div>
-            <div class="col-xs-12 col-sm-8 col-md-9">
+            <div class="col-xs-12 col-sm-8 col-md-9 description-block">
                 <p class="description">{!! $book->description !!}</p>
                 <span>Дата публикации: {{ $book->published_at->format('m.d.Y') }}</span>
             </div>

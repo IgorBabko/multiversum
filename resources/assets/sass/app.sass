@@ -19,24 +19,24 @@ body
 .scaled
     transform: scale(1) !important
 
-.caption
-    opacity: 0.6
-    font-weight: 100
-    width: 100%
-    height: 100%
-    overflow: hidden
-    // border-radius: 50%
-    text-align: center
-    position: absolute
-    background: #7FFFD4//#EC85C6
-    transition: all 0.2s ease-in-out
-    // display: flex
-    // justify-content: center
-    // align-items: center
-    top: -100%
-    left: 0
-    color: #18131D
-    font-size: 16px
+// .caption
+//     opacity: 0.6
+//     font-weight: 100
+//     width: 100%
+//     height: 100%
+//     overflow: hidden
+//     // border-radius: 50%
+//     text-align: center
+//     position: absolute
+//     background: #7FFFD4//#EC85C6
+//     transition: all 0.2s ease-in-out
+//     // display: flex
+//     // justify-content: center
+//     // align-items: center
+//     top: -100%
+//     left: 0
+//     color: #18131D
+//     font-size: 16px
     
     div
         text-align: left
@@ -50,13 +50,13 @@ body
         color: #4B0082
         font-size: 32px
 
-.video:hover,
-.book:hover,
-    .caption
-        -moz-transform: translateY(100%)
-        -o-transform: translateY(100%)
-        -webkit-transform: translateY(100%)
-        transform: translateY(100%)
+// .video:hover,
+// .book:hover,
+//     .caption
+//         -moz-transform: translateY(100%)
+//         -o-transform: translateY(100%)
+//         -webkit-transform: translateY(100%)
+//         transform: translateY(100%)
 
 @media only screen and (max-width : 920px)
     .video + h3
@@ -175,7 +175,8 @@ body
             font-size: 40px
     
     #navbar .navbar-nav > li > a
-        font-size: 16px
+        font-size: 14px
+        letter-spacing: 1.8px
     
     div.bounce
         bottom: 20px
@@ -388,12 +389,12 @@ header
     top: 0
     left: 0
     margin: 0
-    background: rgba(29,10,41,0.9)
+    background: rgba(29,10,41,0.75)
     border: none
     border-radius: 0
     
     &.navbar-default
-        border-bottom: 1px solid #7FFFD4//#FFADE1
+        // border-bottom: 1px solid #7FFFD4//#FFADE1
 
         .navbar-nav > li > a:hover,
         .navbar-nav > li > a:focus
@@ -413,7 +414,8 @@ header
         > li
             a
                 color: white
-                font-size: 16px
+                font-size: 14px
+                letter-spacing: 1.8px
                 font-weight: 100
                 text-transform: uppercase
             a:hover
@@ -431,14 +433,14 @@ header
                         color: #7FFFD4
 
 .video-block-wrapper
-    background: #402D4E//#2A1E33
+    background: #6A4388//#402D4E//#2A1E33
     // background-image: url('../img/portrait.jpg')
     background-position: 100% 0
     background-repeat: no-repeat
     background-size: contain
 
     h1
-        color: #FFADD6//rgba(127, 255, 212, 1)
+        color: #7FFFD4//#FFADD6//rgba(127, 255, 212, 1)
     
     color: white
     position: relative
@@ -454,25 +456,44 @@ header
             text-align: center
 
         .video
-            box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12)
+            box-shadow: 5px 5px 0 #473058
+            // box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12)
             overflow: hidden
             position: relative
             display: inline-block
             top: 0
             width: 300px
-            height: 250px
+            // height: 250px
             background: white
             margin: 0 auto 20px
             opacity: 0
             cursor: pointer
-            
-            + h3
-                margin-top: 0
+        
+            &:hover
+                i
+                    color: red
 
         
         button
             background: #C55D9F
             font-size: 24px
+
+.page-content,
+.video-block
+    .video,
+    .book,
+    .disk
+        h3
+            margin: 0
+            padding: 15px
+            background: #FFF
+            text-align: left
+            color: black
+            font-size: 20px
+            
+            i
+                transition: color 0.1s ease-in-out
+                color: #6A4388
 
 // footer
 footer
@@ -545,7 +566,9 @@ footer
 
         .post-thumbnail
             //box-shadow: 2px 2px 5px #AE9DB9
-            box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12)
+            box-shadow: 2px 2px 1px 1px #D9D1E0
+            
+            // box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12)
             margin: 0
             display: inline-block
         
@@ -553,7 +576,9 @@ footer
             height: 360px
             text-align: left
             //box-shadow: 2px 2px 5px #AE9DB9
-            box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12)
+            box-shadow: 2px 2px 1px 1px #D9D1E0
+            
+            // box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12)
             background: #FFF
             padding: 20px
             font-size: 16px
@@ -635,12 +660,12 @@ footer
 
 // email block
 .email-block
-    background: #402D4E//#2A1E33
+    background: #6A4388//#402D4E//#2A1E33
     // padding: 100px 0
     
     h1
         text-align: center
-        color: #FFADD6//rgba(127, 255, 212, 1)
+        color: #7FFFD4//#FFADD6//rgba(127, 255, 212, 1)
     
     input,
     textarea
@@ -762,19 +787,19 @@ footer
         display: inline-block
         top: 0
         width: 200px
-        height: 270px
+        // height: 270px
         background: white
         margin: 0 auto 20px
         opacity: 0
         cursor: pointer
         
-    h3
-        margin-top: 0
-        color: white
+        h3
+            margin-top: 0
+            text-align: center
     
-    .caption
-        div
-            height: 100%
+    // .caption
+    //     div
+    //         height: 100%
 
 // book page
 .page-content.book-content,
@@ -789,12 +814,6 @@ footer
         float: none
         margin-bottom: 30px
     
-    .book-wrapper,
-    .post-wrapper
-        text-align: center
-        img
-            box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12)
-    
     span
         color: #FFE2F2
         font-style: italic
@@ -804,6 +823,14 @@ footer
     .book-description
         margin-left: 235px
 
+.book-wrapper,
+.post-wrapper,
+.disk-wrapper,
+.video-wrapper
+    text-align: center
+    img
+        box-shadow: 5px 5px 0 #473058
+
 // post page
 .page-content.post-content
     .post-wrapper
@@ -811,11 +838,12 @@ footer
             width: 100%
 
 .buy-button
-    margin: 30px 0
+    margin: 15px 0
     width: 100px
     background: aquamarine
     color: black
     font-size: 20px
+    border-radius: 0
     &:hover
         background: darken(aquamarine, 30%)
 
@@ -859,39 +887,38 @@ footer
         display: inline-block
         top: 0
         width: 250px
-        height: 250px
-        border-radius: 50%
+        // height: 250px
+        // border-radius: 50%
         background: white
         margin: 0 auto 20px
         opacity: 0
         cursor: pointer
         
-        .caption
-            transform: scale(0)
-            border-radius: 50%
-            position: absolute
-            top: 0
-            left: 0
-            z-index: 44
-            background: #FFF 
+        // .caption
+        //     transform: scale(0)
+        //     border-radius: 50%
+        //     position: absolute
+        //     top: 0
+        //     left: 0
+        //     z-index: 44
+        //     background: #FFF 
             
-            div
-                height: 100%
-                padding: 45px
-                overflow: hidden
+        //     div
+        //         height: 100%
+        //         padding: 45px
+        //         overflow: hidden
         
-        &:hover
-            .caption
-                transform: scale(1)
+        // &:hover
+        //     .caption
+        //         transform: scale(1)
 
         // .caption
         //     border-radius: 50%
         //     div
         //         height: 100%
         
-    h3
-        margin-top: 0
-        color: white
+        h3
+            text-align: center 
     
     
 
@@ -907,13 +934,13 @@ footer
         float: none
         margin-bottom: 30px
     
-    .disk-wrapper
-        text-align: center
-        img
-            border-radius: 50%
-            width: 220px
-            height: 220px
-            box-shadow: 0px 0px 0px 10px rgba(204, 204, 204, 0.12)
+    // .disk-wrapper
+    //     text-align: center
+    //     img
+    //         border-radius: 50%
+    //         width: 220px
+    //         height: 220px
+    //         box-shadow: 0px 0px 0px 10px rgba(204, 204, 204, 0.12)
     
     span
         color: #FFE2F2
@@ -927,7 +954,7 @@ footer
 // page-content
 .page-content
     padding-top: 100px
-    background: url(../img/background3__.jpg)
+    background: #6A4388//url(../img/background3__.jpg)
     background-repeat: no-repeat
     background-attachment: fixed
 
@@ -937,14 +964,14 @@ footer
 
     .video,
     .book,
-    .post,
     .disk
         left: 0 !important
+        box-shadow: 5px 5px 0 #473058
         transition: opacity 0.4s ease-in-out
         opacity: 0
     
-    > div:first-child
-        padding-bottom: 100px 
+    // > div:first-child
+    //     padding-bottom: 100px 
 
     .meta-info
         display: flex
@@ -966,9 +993,13 @@ footer
         color: #FFADD6
         text-align: center
     
-    p.description
-        background: rgba(245, 231, 255, 0.22)
-        padding: 30px
+    .description-block
+        margin-bottom: 50px !important
+
+        p.description
+            background: rgb(245, 231, 255)
+            color: black
+            padding: 30px
 
 //posts page
 .posts-content
@@ -1077,8 +1108,7 @@ footer
 .filters
     margin-bottom: 30px
     text-align: center
-    // border-bottom: 1px solid #AE9DB9
-    // padding-bottom: 30px
+    border-bottom: 1px solid #9070A9
 
 // custom styles for bootstrap select plugin
 .bootstrap-select

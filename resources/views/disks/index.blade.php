@@ -13,14 +13,8 @@
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <a href="/disks/{{ $disk->slug }}" class="disk">
                     <img src="http://placehold.it/250x250" alt="Книга 1">
-                    <div class="caption">
-                        <div>{!! str_limit($disk->description, 100) !!}</div>
-                        <!-- <i class="fa fa-play"></i> -->
-                    </div>
-                </a>
-                <div class="item-info">
                     <h3>{{ $disk->name }}</h3>
-                </div>
+                </a>
             </div>
             @empty
             Книг нет
