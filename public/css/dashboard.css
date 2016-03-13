@@ -13,7 +13,8 @@ body {
   width: 100%;
   padding: 0;
   background-color: #fff;
-  padding-top: 75px !important; }
+  padding-top: 25px !important;
+  min-height: 100vh; }
 
 .huge {
   font-size: 50px;
