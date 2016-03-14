@@ -29,10 +29,12 @@ body {
   .navbar.navbar-animated {
     background: rgba(29, 10, 41, 0) !important;
     transition: padding 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out;
-    padding: 25px 0; }
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0) !important; }
   .navbar.navbar-animated.compact-navbar {
     background: rgba(29, 10, 41, 0.75) !important;
-    padding: 0 !important; }
+    padding: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important; }
   .bootstrap-select {
     width: 90% !important; } }
 
@@ -214,7 +216,7 @@ hr {
 
 body {
   font-family: 'Roboto Slab', serif;
-  background: #402D4E; }
+  background: #6A4388; }
 
 header {
   position: relative;
@@ -283,7 +285,8 @@ header {
   margin: 0;
   background: rgba(29, 10, 41, 0.75);
   border: none;
-  border-radius: 0; }
+  border-radius: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
   .navbar.navbar-default .navbar-nav > li > a:hover,
   .navbar.navbar-default .navbar-nav > li > a:focus {
     color: #FFC7E9; }
@@ -305,11 +308,11 @@ header {
   .navbar .navbar-nav > li:focus {
     color: #FFC7E9; }
   .navbar .navbar-nav > li.active a {
-    color: #FFFC8E;
+    color: #FFFDBA;
     background: none; }
     .navbar .navbar-nav > li.active a:hover {
       background: none;
-      color: #FFFC8E; }
+      color: #FFFDBA; }
 
 .video-block-wrapper {
   background: #6A4388;
@@ -483,20 +486,28 @@ footer {
 
 .books-and-disks-block .book:hover .item-info,
 .books-and-disks-block .disk:hover .item-info {
-  color: #7FFFD4; }
+  color: #F8FC8E; }
 
 .books-and-disks-block .item-info {
   color: white; }
   .books-and-disks-block .item-info p {
     font-size: 16px; }
 
-.email-block {
+.email-block,
+.login-block,
+.register-block {
   background: #6A4388; }
-  .email-block h1 {
+  .email-block h1,
+  .login-block h1,
+  .register-block h1 {
     text-align: center;
     color: #FFC7E9; }
   .email-block input,
-  .email-block textarea {
+  .email-block textarea,
+  .login-block input,
+  .login-block textarea,
+  .register-block input,
+  .register-block textarea {
     width: 100%;
     margin-bottom: 30px;
     height: 50px;
@@ -507,24 +518,34 @@ footer {
     font-size: 24px;
     padding-left: 20px; }
     .email-block input:focus,
-    .email-block textarea:focus {
-      color: #7FFFD4;
+    .email-block textarea:focus,
+    .login-block input:focus,
+    .login-block textarea:focus,
+    .register-block input:focus,
+    .register-block textarea:focus {
+      color: #FFC7E9;
       outline: none !important;
-      border-bottom: 1px solid #7FFFD4; }
-  .email-block textarea {
+      border-bottom: 1px solid #FFC7E9; }
+  .email-block textarea,
+  .login-block textarea,
+  .register-block textarea {
     height: 200px; }
-  .email-block button {
+  .email-block button,
+  .login-block button,
+  .register-block button {
     display: block;
     margin: 0 auto;
     border: 2px solid white;
-    width: 150px;
+    padding: 0 20px;
     height: 50px;
     background: none;
     color: white;
     font-size: 22px; }
-    .email-block button:hover {
-      color: #7FFFD4;
-      border-color: #7FFFD4; }
+    .email-block button:hover,
+    .login-block button:hover,
+    .register-block button:hover {
+      color: #FFC7E9;
+      border-color: #FFC7E9; }
 
 .bounce {
   display: none;
@@ -753,9 +774,9 @@ footer {
     text-align: left !important;
     padding-right: 30px; }
     .search input:focus {
-      color: #7FFFD4;
+      color: #FFC7E9;
       outline: none !important;
-      border-bottom: 1px solid #7FFFD4; }
+      border-bottom: 1px solid #FFC7E9; }
   .search i {
     font-size: 28px;
     position: absolute;
@@ -764,7 +785,7 @@ footer {
     cursor: pointer;
     color: #A9A9A9; }
     .search i:hover {
-      color: #7FFFD4; }
+      color: #FFC7E9; }
 
 .pagination-block {
   text-align: center; }
@@ -824,5 +845,121 @@ footer {
   .bootstrap-select .dropdown-menu > li > a:focus {
     background: #78598E;
     color: white; }
+
+.reset-password-span {
+  display: block;
+  text-align: center; }
+  .reset-password-span .reset-password {
+    color: #dab5f7;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px auto 0;
+    display: inline-block; }
+    .reset-password-span .reset-password:hover {
+      color: #dab5f7; }
+
+input.error {
+  border-color: #FFB1B1; }
+
+.error {
+  color: #FFB1B1;
+  font-weight: 500;
+  font-size: 20px; }
+
+*,
+*:after,
+*::before {
+  box-sizing: border-box; }
+
+.ac-custom {
+  max-width: 900px;
+  margin: 0 auto; }
+
+.ac-custom h2 {
+  font-size: 3em;
+  font-weight: 300;
+  padding: 0 0 0.5em;
+  margin: 0 0 30px; }
+
+.ac-custom ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 30px;
+  max-width: 800px; }
+
+.ac-custom li {
+  margin: 0 auto;
+  position: relative; }
+
+.ac-custom label {
+  display: inline-block;
+  position: relative;
+  font-size: 1.5em;
+  padding: 8px 0 0 60px;
+  color: #dab5f7;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-weight: 100; }
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"],
+.ac-custom label::before {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 5px;
+  margin-top: -16px;
+  position: absolute;
+  cursor: pointer; }
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"] {
+  opacity: 0;
+  -webkit-appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 100; }
+
+.ac-custom label::before {
+  content: '';
+  border: 2px solid #fff;
+  transition: opacity 0.3s; }
+
+.ac-custom input[type="checkbox"]:checked + label,
+.ac-custom input[type="radio"]:checked + label {
+  color: #fff; }
+
+.ac-custom input[type="checkbox"]:checked + label::before,
+.ac-custom input[type="radio"]:checked + label::before {
+  opacity: 0.8; }
+
+/* General SVG and path styles */
+.ac-custom svg {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+  left: 5px;
+  pointer-events: none; }
+
+.ac-custom svg path {
+  stroke: #fdfcd3;
+  stroke-width: 13px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none; }
+
+::-webkit-input-placeholder {
+  color: #dab5f7; }
+
+::-moz-placeholder {
+  color: #dab5f7; }
+
+:-moz-placeholder {
+  color: #dab5f7; }
+
+:-ms-input-placeholder {
+  color: #dab5f7; }
 
 /*# sourceMappingURL=app.css.map */
