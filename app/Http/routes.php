@@ -45,5 +45,9 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('webinars', 'Dashboard\WebinarsController', ['parameters' => [
             'webinars' => 'webinar',
         ]]);
+
+        Route::resource('books', 'Dashboard\BooksController', ['parameters' => [
+            'books' => 'book',
+        ]]);
     });
 });

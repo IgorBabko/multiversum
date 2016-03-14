@@ -4,7 +4,7 @@ namespace Multiversum\Http\Requests;
 
 use Multiversum\Http\Requests\Request;
 
-class StoreWebinarRequest extends Request
+class UpdateBookRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,6 +26,7 @@ class StoreWebinarRequest extends Request
         return [
             'name'        => 'required',
             'description' => 'required',
+            'price'       => 'required',
         ];
     }
 
@@ -34,6 +35,7 @@ class StoreWebinarRequest extends Request
         return [
             'name.required'        => 'Название не должно быть пустым',
             'description.required' => 'Описание не должно быть пустым',
+            'price.required'       => 'Ценв не должна быть пустой',
         ];
     }
 }

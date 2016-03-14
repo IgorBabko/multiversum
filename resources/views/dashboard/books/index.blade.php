@@ -1,25 +1,23 @@
 @extends ('dashboard.layout')
 @section('content')
-<h1>Вебинары</h1>
+<h1>Книги</h1>
 @include('dashboard.partials.session')
 <hr>
-<a href="/dashboard/webinars/create" class="btn btn-primary">добавить</a>
-<table id="webinars-table">
+<a href="/dashboard/books/create" class="btn btn-primary">добавить</a>
+<table id="books-table">
     <thead>
         <tr>
-            <th>№</th>
-            <th>Название</th>
-            <th>Дата публикации</th>
         </tr>
     </thead>
     <tbody>
-        @foreach($webinars as $webinar)
+        @foreach($books as $book)
         <tr>
-            <td>{{ $webinar->id }}</td>
-            <td>{{ $webinar->name }}</td>
-            <td>{{ $webinar->published_at }}</td>
+            <td>{{ $book->id }}</td>
+            <td>{{ $book->name }}</td>
+            <td>{{ $book->published_at }}</td>
+            <td>{{ $book->price }}</td>
             <td class="controls-block">
-                <a class="btn btn-info" href="/dashboard/webinars/{{ $webinar->id }}/edit">
+                <a class="btn btn-info" href="/dashboard/books/{{ $book->id }}/edit">
                     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                 </a>
                 <button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#deleteModal">

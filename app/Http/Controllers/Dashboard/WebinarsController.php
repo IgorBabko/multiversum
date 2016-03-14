@@ -78,9 +78,11 @@ class WebinarsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id, UpdateWebinarRequest $updateWebinarReqest)
+    public function update(Request $request, Book $book, UpdateWebinarRequest $updateWebinarReqest)
     {
-        Webinar::where('id', $id)->update($request->except('_token', '_method'));
+        $webinar->update(
+            $request->except('_token', '_method')
+        );
 
         Session::flash('success', 'Вебинар изменен успешно');
 
