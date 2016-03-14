@@ -17,7 +17,7 @@
                         <li class="{{ Request::is('dashboard/webinar*') ? 'active' :  '' }}"><a href="/dashboard/webinars">Вебинары</a></li>
                         <li class="{{ Request::is('dashboard/book*') ? 'active' :  '' }}"><a href="/dashboard/books">Книги</a></li>
                         <li class="{{ Request::is('dashboard/disk*') ? 'active' :  '' }}"><a href="/dashboard/disks">Диски</a></li>
-                        <li class="{{ Request::is('dshboard/post*') ? 'active' :  '' }}"><a href="/dashboard/posts">Статьи</a></li>
+                        <li class="{{ Request::is('dashboard/post*') ? 'active' :  '' }}"><a href="/dashboard/posts">Статьи</a></li>
                     </ul>
                 </div>
             </div>

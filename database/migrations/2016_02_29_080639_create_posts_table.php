@@ -19,11 +19,11 @@ class CreatePostsTable extends Migration
             $table->foreign('category_id')
                 ->references('id')->on('categories')
                 ->onDelete('cascade');
-            $table->string('thumbnail');
-            $table->string('picture');
+            $table->string('thumbnail')->nullable();
+            $table->string('picture')->nullable();
             $table->string('slug')->nullable();
             $table->text('content');
-            $table->timestamp('published_at')->index();
+            $table->timestamp('published_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamps();
         });
     }

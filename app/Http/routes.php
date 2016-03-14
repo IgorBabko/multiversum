@@ -53,5 +53,9 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('disks', 'Dashboard\DisksController', ['parameters' => [
             'disks' => 'disk',
         ]]);
+
+        Route::resource('posts', 'Dashboard\PostsController', ['parameters' => [
+            'posts' => 'post',
+        ]]);
     });
 });
