@@ -15,14 +15,14 @@
                     </span>
                     <input type="password" name="password" placeholder="Пароль" value="{{ old('password') }}">
                     <span class="help-block">
-                        <strong>{{ $errors->first('email') }}</strong>
+                        <strong>{{ $errors->first('password') }}</strong>
                     </span>
                     <ul>
                         <li><input id="cb6" name="cb6" type="checkbox"><label for="cb6">Запомнить меня</label></li>
                     </ul>
-                    <button type="submit">Login</button>
+                    <button type="submit">Войти</button>
                     <span class="reset-password-span">
-                        <a class="btn btn-link reset-password" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+                        <a class="btn btn-link reset-password" href="{{ url('/password/reset') }}">Забыли пароль?</a>
                     </span>
                 </form>
             </div>
