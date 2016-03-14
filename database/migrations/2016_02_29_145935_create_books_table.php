@@ -17,9 +17,9 @@ class CreateBooksTable extends Migration
             $table->string('name');
             $table->string('slug')->nullable();
             $table->text('description');
-            $table->string('picture');
+            $table->string('picture')->nullable();
             $table->float('price');
-            $table->timestamp('published_at')->index();
+            $table->timestamp('published_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamps();
         });
     }

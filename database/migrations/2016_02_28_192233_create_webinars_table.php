@@ -17,8 +17,8 @@ class CreateWebinarsTable extends Migration
             $table->string('name');
             $table->string('slug')->nullable();
             $table->text('description');
-            $table->timestamp('published_at')->index();
-            $table->string('path');
+            $table->timestamp('published_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->string('path')->nullable();
             $table->timestamps();
         });
     }

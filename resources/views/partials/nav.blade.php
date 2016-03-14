@@ -30,12 +30,18 @@
                         </li>
                     </ul> -->
                     <ul class="nav navbar-nav navbar-right">
-
                         <li class="{{ Request::is('/*') ? 'active' :  '' }}"><a href="/">Главная<span class="sr-only">(current)</span></a></li>
                         <li class="{{ Request::is('webinar*') ? 'active' :  '' }}"><a href="/webinars">Вебинары</a></li>
                         <li class="{{ Request::is('book*') ? 'active' :  '' }}"><a href="/books">Книги</a></li>
                         <li class="{{ Request::is('disk*') ? 'active' :  '' }}"><a href="/disks">Диски</a></li>
                         <li class="{{ Request::is('post*') ? 'active' :  '' }}"><a href="/posts">Статьи</a></li>
+                        @if (Auth::guest())
+                            <li class="{{ Request::is('login') ? 'active' :  '' }}"><a href="/login">Войти</a></li>
+                            <li class="{{ Request::is('register') ? 'active' :  '' }}"><a href="/register">Регистрация</a></li>
+                        @else
+                            <li><a href="{{ url('/logout') }}">Выйти</a></li>
+                        @endif
+                        <li><a href="/dashboard">Админка</a></li>
                     </ul>
                 </div>
             </div>

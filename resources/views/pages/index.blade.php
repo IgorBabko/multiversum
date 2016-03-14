@@ -5,7 +5,7 @@
         <div class="header-content">
             <h1>Главный заголовок</h1>
             <hr class="light-line">
-            <h3 id="quote">Здесь можно написать цитату</h3>
+            <h2 id="quote">Здесь можно написать цитату</h2>
             <div class="bounce"><i class="fa fa-angle-double-down"></i></div>
         </div>
     </header>
@@ -33,32 +33,32 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="video video1">
                         <img src="http://placehold.it/300x250">
-                        <span class="caption">
-                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
+                        <!-- <span class="caption">
+                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                             <i class="fa fa-play"></i>
-                        </span>
+                        </span> -->
+                        <h3>Видео 1<i class="fa fa-play pull-right"></i></h3>
                     </div>
-                    <h3>Видео 1</h3>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="video video2">
                         <img src="http://placehold.it/300x250">
-                        <span class="caption">
+                        <!-- <span class="caption">
                         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                             <i class="fa fa-play-circle"></i>
-                        </span>
+                        </span> -->
+                        <h3>Видео 2<i class="fa fa-play pull-right"></i></h3>
                     </div>
-                    <h3>Видео 2</h3>
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <div class="video video3">
                         <img src="http://placehold.it/300x250">
-                        <span class="caption">
-                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
+                        <!-- <span class="caption"> -->
+                        <!-- <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas suscipit, vel. Unde quasi distinctio iusto, reiciendis itaque, placeat quibusdam modi hic minima error laborum.</div>
                             <i class="fa fa-play-circle-o"></i>
-                        </span>
+                        </span> -->
+                        <h3>Видео 3<i class="fa fa-play pull-right"></i></h3>
                     </div>
-                    <h3>Видео 3</h3>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@
         <title>Laravel</title>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Exo+2:400,100,100italic,200italic,200,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/app.css">
         <link rel="stylesheet" href="/css/bootstrap-select.min.css">
         <link rel="stylesheet" href="/css/font-awesome.css">
@@ -25,5 +26,6 @@
         @include("partials.nav")
         @yield('content')
         @include("partials.footer")
+        <script src="/js/svgcheckbx.js"></script>
     </body>
 </html>
