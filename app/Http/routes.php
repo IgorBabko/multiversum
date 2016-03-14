@@ -36,4 +36,26 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/posts', ['as' => 'posts', 'uses' => 'PostsController@index']);
     Route::get('/posts/{slug}', ['as' => 'post', 'uses' => 'PostsController@showPost']);
+
+    // dashboard
+
+    Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'Dashboard\DashboardController@index']);
+
+    Route::group(['prefix' => 'dashboard'], function () {
+        Route::resource('webinars', 'Dashboard\WebinarsController', ['parameters' => [
+            'webinars' => 'webinar',
+        ]]);
+
+        Route::resource('books', 'Dashboard\BooksController', ['parameters' => [
+            'books' => 'book',
+        ]]);
+
+        Route::resource('disks', 'Dashboard\DisksController', ['parameters' => [
+            'disks' => 'disk',
+        ]]);
+
+        Route::resource('posts', 'Dashboard\PostsController', ['parameters' => [
+            'posts' => 'post',
+        ]]);
+    });
 });

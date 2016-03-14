@@ -13,15 +13,18 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <a href="/webinars/{{ $webinar->slug }}" class="video">
                     <img src="http://placehold.it/300x250">
-                    <div class="caption">
+                    <!-- <div class="caption">
                         <div>{{ str_limit($webinar->description, 150) }}</div>
                         <i class="fa fa-play"></i>
-                    </div>
+                    </div> -->
+                    <h3>{{ $webinar->name }}<i class="fa fa-play pull-right"></i></h3>
+
+                    <!-- <div class="meta-info">
+                        <span class="name">{{ $webinar->name }}</span>
+                        <span class="date">{{ $webinar->published_at->format('m.d.Y') }}</span>
+                    </div> -->
                 </a>
-                <div class="meta-info">
-                    <span class="name">{{ $webinar->name }}</span>
-                    <span class="date">{{ $webinar->published_at->format('m.d.Y') }}</span>
-                </div>
+
             </div>
             @empty
             Вебинаров нет
