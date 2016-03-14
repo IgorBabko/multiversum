@@ -49,5 +49,9 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('books', 'Dashboard\BooksController', ['parameters' => [
             'books' => 'book',
         ]]);
+
+        Route::resource('disks', 'Dashboard\DisksController', ['parameters' => [
+            'disks' => 'disk',
+        ]]);
     });
 });
