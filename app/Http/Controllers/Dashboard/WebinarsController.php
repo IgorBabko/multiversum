@@ -78,7 +78,7 @@ class WebinarsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Book $book, UpdateWebinarRequest $updateWebinarReqest)
+    public function update(Request $request, Webinar $webinar, UpdateWebinarRequest $updateWebinarReqest)
     {
         $webinar->update(
             $request->except('_token', '_method')

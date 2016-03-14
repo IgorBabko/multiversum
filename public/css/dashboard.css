@@ -2,10 +2,6 @@ body {
   margin-top: 100px;
   background-color: #222; }
 
-@media (min-width: 768px) {
-  body {
-    margin-top: 50px; } }
-
 #wrapper {
   padding-left: 0; }
 
@@ -200,14 +196,14 @@ body {
   font-size: 32px;
   margin-top: 5px; }
 
+body {
+  margin-top: 0; }
+
 body > .container {
   padding-top: 30px;
   padding-bottom: 30px; }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
   margin: 0;
   background: rgba(42, 5, 66, 0.75);
   border: none;

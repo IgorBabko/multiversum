@@ -199,11 +199,13 @@ body {
     left: 0; } }
 
 .logo {
-  color: #FFADCB !important;
+  color: white !important;
   font-weight: bold;
   font-style: italic;
   font-size: 32px;
   margin-top: 5px; }
+  .logo:hover {
+    color: #FFC7E9 !important; }
 
 hr {
   max-width: 100px;
@@ -233,7 +235,7 @@ header {
     font-size: 72px;
     font-weight: bold;
     text-align: center;
-    color: #7FFFD4;
+    color: #FEFB8E;
     text-transform: uppercase;
     text-shadow: 5px 5px 5px black; }
   header #quote {
@@ -284,7 +286,7 @@ header {
   border-radius: 0; }
   .navbar.navbar-default .navbar-nav > li > a:hover,
   .navbar.navbar-default .navbar-nav > li > a:focus {
-    color: #FFA0DC; }
+    color: #FFC7E9; }
   .navbar #navbar {
     border: none; }
   .navbar .nav {
@@ -299,15 +301,15 @@ header {
     font-weight: 100;
     text-transform: uppercase; }
   .navbar .navbar-nav > li a:hover {
-    color: #FFA0DC; }
+    color: #FFC7E9; }
   .navbar .navbar-nav > li:focus {
-    color: #FFA0DC; }
+    color: #FFC7E9; }
   .navbar .navbar-nav > li.active a {
-    color: #7FFFD4;
+    color: #FFFC8E;
     background: none; }
     .navbar .navbar-nav > li.active a:hover {
       background: none;
-      color: #7FFFD4; }
+      color: #FFFC8E; }
 
 .video-block-wrapper {
   background: #6A4388;
@@ -317,7 +319,7 @@ header {
   color: white;
   position: relative; }
   .video-block-wrapper h1 {
-    color: #7FFFD4; }
+    color: #FFC7E9; }
   .video-block-wrapper #portrait {
     position: absolute;
     right: 0;
@@ -415,13 +417,12 @@ footer {
     .posts-wrapper .posts .post {
       opacity: 0; }
     .posts-wrapper .posts .post-thumbnail {
-      box-shadow: 2px 2px 1px 1px #D9D1E0;
       margin: 0;
       display: inline-block; }
     .posts-wrapper .posts .post-info {
       height: 360px;
       text-align: left;
-      box-shadow: 2px 2px 1px 1px #D9D1E0;
+      width: 100%;
       background: #FFF;
       padding: 20px;
       font-size: 16px;
@@ -493,7 +494,7 @@ footer {
   background: #6A4388; }
   .email-block h1 {
     text-align: center;
-    color: #7FFFD4; }
+    color: #FFC7E9; }
   .email-block input,
   .email-block textarea {
     width: 100%;
@@ -725,7 +726,7 @@ footer {
       color: #978DBB; }
   .page-content h1 {
     float: left;
-    color: white;
+    color: #F8FC8E;
     text-align: center; }
   .page-content .description-block {
     margin-bottom: 50px !important; }
