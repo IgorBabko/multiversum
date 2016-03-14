@@ -433,11 +433,11 @@ header
                 
             &.active
                 a
-                    color: #FFFC8E//#7FFFD4
+                    color: #FFFDBA//#FFFC8E//#7FFFD4
                     background: none
                     &:hover
                         background: none
-                        color: #FFFC8E//#7FFFD4
+                        color: #FFFDBA//#FFFC8E//#7FFFD4
 
 .video-block-wrapper
     background: #6A4388//#402D4E//#2A1E33
@@ -1147,7 +1147,14 @@ footer
         
         &:hover
             color: #dab5f7
-            
+input.error
+    border-color: #FFB1B1//#FF8787
+
+.error
+    color: #FFB1B1//#FF8787
+    font-weight: 500
+    font-size: 20px 
+
 // custom checkbox
 *,
 *:after,
@@ -1238,3 +1245,13 @@ footer
     stroke-linecap: round
     stroke-linejoin: round
     fill: none
+
+// placeholders
+::-webkit-input-placeholder 
+    color: #dab5f7
+::-moz-placeholder 
+    color: #dab5f7
+:-moz-placeholder
+    color: #dab5f7
+:-ms-input-placeholder
+    color: #dab5f7

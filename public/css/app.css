@@ -308,11 +308,11 @@ header {
   .navbar .navbar-nav > li:focus {
     color: #FFC7E9; }
   .navbar .navbar-nav > li.active a {
-    color: #FFFC8E;
+    color: #FFFDBA;
     background: none; }
     .navbar .navbar-nav > li.active a:hover {
       background: none;
-      color: #FFFC8E; }
+      color: #FFFDBA; }
 
 .video-block-wrapper {
   background: #6A4388;
@@ -858,6 +858,14 @@ footer {
     .reset-password-span .reset-password:hover {
       color: #dab5f7; }
 
+input.error {
+  border-color: #FFB1B1; }
+
+.error {
+  color: #FFB1B1;
+  font-weight: 500;
+  font-size: 20px; }
+
 *,
 *:after,
 *::before {
@@ -941,5 +949,17 @@ footer {
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none; }
+
+::-webkit-input-placeholder {
+  color: #dab5f7; }
+
+::-moz-placeholder {
+  color: #dab5f7; }
+
+:-moz-placeholder {
+  color: #dab5f7; }
+
+:-ms-input-placeholder {
+  color: #dab5f7; }
 
 /*# sourceMappingURL=app.css.map */

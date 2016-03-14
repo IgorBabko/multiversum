@@ -1,5 +1,4 @@
 @extends('layout')
-
 @section('content')
 <div class="wrapper login-block">
     <div class="container">
@@ -9,14 +8,14 @@
                 <hr class="light-line">
                 <form method="POST" action="{{ url('/login') }}" class="ac-custom ac-checkbox ac-checkmark" autocomplete="off">
                     {!! csrf_field() !!}
-                    <input type="email" name="email" placeholder="Email" value="{{ old('email') }}">
-                    <span class="help-block">
-                        <strong>{{ $errors->first('email') }}</strong>
+                    <span class="help-block error">
+                        {{ $errors->first('email') }}
                     </span>
-                    <input type="password" name="password" placeholder="Пароль" value="{{ old('password') }}">
-                    <span class="help-block">
-                        <strong>{{ $errors->first('password') }}</strong>
+                    <input type="email" name="email" placeholder="Email" class="{{ $errors->first('email') ? 'error' : '' }}" value="{{ old('email') }}">
+                    <span class="help-block error">
+                        {{ $errors->first('password') }}
                     </span>
+                    <input type="password" name="password" class="{{ $errors->first('password') ? 'error' : '' }}" placeholder="Пароль" value="{{ old('password') }}">
                     <ul>
                         <li><input id="cb6" name="cb6" type="checkbox"><label for="cb6">Запомнить меня</label></li>
                     </ul>
