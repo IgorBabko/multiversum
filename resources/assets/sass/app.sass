@@ -324,7 +324,7 @@ hr
 
 body
     font-family: 'Roboto Slab', serif
-    background: #402D4E
+    background: #6A4388//#402D4E
 
 header
     position: relative
@@ -659,7 +659,7 @@ footer
     .book:hover,
     .disk:hover
         .item-info
-            color: #7FFFD4
+            color: #F8FC8E//#7FFFD4
 
     .item-info
         color: white
@@ -667,7 +667,8 @@ footer
             font-size: 16px
 
 // email block
-.email-block
+.email-block,
+.login-block
     background: #6A4388//#402D4E//#2A1E33
     // padding: 100px 0
     
@@ -688,9 +689,9 @@ footer
         padding-left: 20px
 
         &:focus
-            color: #7FFFD4//#FFD5F0
+            color: #FFC7E9//#7FFFD4//#FFD5F0
             outline: none !important
-            border-bottom: 1px solid #7FFFD4//#FFD5F0
+            border-bottom: 1px solid #FFC7E9//#7FFFD4//#FFD5F0
     
     textarea
         height: 200px
@@ -706,8 +707,8 @@ footer
         font-size: 22px
         
         &:hover
-            color: #7FFFD4//#FFA0DC
-            border-color: #7FFFD4//#FFA0DC
+            color: #FFC7E9//#7FFFD4//#FFA0DC
+            border-color: #FFC7E9//#7FFFD4//#FFA0DC
 
 // bouncing arrow
  
@@ -1045,9 +1046,9 @@ footer
         padding-right: 30px
 
         &:focus
-            color: #7FFFD4//#FFD5F0
+            color: #FFC7E9//#7FFFD4//#FFD5F0
             outline: none !important
-            border-bottom: 1px solid #7FFFD4//#FFD5F0
+            border-bottom: 1px solid #FFC7E9//#7FFFD4//#FFD5F0
     
     i
         font-size: 28px
@@ -1058,7 +1059,7 @@ footer
         color: #A9A9A9
 
         &:hover
-            color: #7FFFD4
+            color: #FFC7E9//#7FFFD4
 
 
 // pagination
@@ -1131,3 +1132,109 @@ footer
     .dropdown-menu > li > a:focus
         background: #78598E
         color: white
+
+
+.reset-password-span
+    display: block
+    text-align: center
+    .reset-password
+        color: #dab5f7
+        font-size: 18px
+        text-align: center
+        margin: 20px auto 0
+        display: inline-block
+        
+        &:hover
+            color: #dab5f7
+            
+// custom checkbox
+*,
+*:after,
+*::before
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+.ac-custom
+    padding: 0 3em
+    max-width: 900px
+    margin: 0 auto
+
+.ac-custom h2
+    font-size: 3em
+    font-weight: 300
+    padding: 0 0 0.5em
+    margin: 0 0 30px
+
+.ac-custom ul
+    list-style: none
+    padding: 0
+    margin: 0 auto 30px
+    max-width: 800px
+
+.ac-custom li
+    margin: 0 auto
+    position: relative
+
+.ac-custom label
+    display: inline-block
+    position: relative
+    font-size: 1.5em
+    padding: 8px 0 0 60px
+    // vertical-align: top
+    color: rgb(218, 181, 247)
+    cursor: pointer
+    -webkit-transition: color 0.3s
+    transition: color 0.3s
+    font-weight: 100 
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"],
+.ac-custom label::before
+    width: 40px
+    height: 40px
+    top: 50%
+    left: 5px
+    margin-top: -16px
+    position: absolute
+    cursor: pointer
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"]
+    opacity: 0
+    -webkit-appearance: none
+    display: inline-block
+    vertical-align: middle
+    z-index: 100
+
+.ac-custom label::before
+    content: ''
+    border: 2px solid #fff
+    -webkit-transition: opacity 0.3s
+    transition: opacity 0.3s
+
+.ac-custom input[type="checkbox"]:checked + label,
+.ac-custom input[type="radio"]:checked + label
+    color: #fff 
+
+.ac-custom input[type="checkbox"]:checked + label::before,
+.ac-custom input[type="radio"]:checked + label::before
+    opacity: 0.8
+
+/* General SVG and path styles */
+
+.ac-custom svg
+    position: absolute
+    width: 40px
+    height: 40px
+    top: 50%
+    margin-top: -20px
+    left: 5px
+    pointer-events: none
+
+.ac-custom svg path
+    stroke: #fdfcd3
+    stroke-width: 13px
+    stroke-linecap: round
+    stroke-linejoin: round
+    fill: none

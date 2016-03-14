@@ -26,5 +26,6 @@
         @include("partials.nav")
         @yield('content')
         @include("partials.footer")
+        <script src="/js/svgcheckbx.js"></script>
     </body>
 </html>
