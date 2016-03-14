@@ -5,6 +5,7 @@ namespace Multiversum\Http\Controllers\Dashboard;
 use Illuminate\Http\Request;
 use Multiversum\Http\Controllers\Controller;
 use Multiversum\Http\Requests\StoreWebinarRequest;
+use Multiversum\Http\Requests\UpdateWebinarRequest;
 use Multiversum\Webinar;
 use Session;
 
@@ -22,7 +23,7 @@ class WebinarsController extends Controller
     }
 
     /**
-     * Show the form for creating a new webinars.
+     * Show the form for creating a new webinar.
      *
      * @return \Illuminate\Http\Response
      */
@@ -32,7 +33,7 @@ class WebinarsController extends Controller
     }
 
     /**
-     * Store a newly created webinars in storage.
+     * Store a newly created webinar in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -49,7 +50,7 @@ class WebinarsController extends Controller
     }
 
     /**
-     * Display the specified webinars.
+     * Display the specified webinar.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -60,26 +61,30 @@ class WebinarsController extends Controller
     }
 
     /**
-     * Show the form for editing the specified webinars.
+     * Show the form for editing the specified webinar.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Webinar $webinar)
     {
-        //
+        return view('dashboard.webinars.edit', compact('webinar'));
     }
 
     /**
-     * Update the specified webinars in storage.
+     * Update the specified webinar in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, UpdateWebinarRequest $updateWebinarReqest)
     {
-        //
+        Webinar::where('id', $id)->update($request->except('_token', '_method'));
+
+        Session::flash('success', 'Вебинар изменен успешно');
+
+        return redirect('dashboard/webinars');
     }
 
     /**

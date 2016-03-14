@@ -42,6 +42,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'Dashboard\DashboardController@index']);
 
     Route::group(['prefix' => 'dashboard'], function () {
-        Route::resource('webinars', 'Dashboard\WebinarsController');
+        Route::resource('webinars', 'Dashboard\WebinarsController', ['parameters' => [
+            'webinars' => 'webinar',
+        ]]);
     });
 });

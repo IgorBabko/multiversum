@@ -10,7 +10,7 @@
     </div>
     <div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
         <label for="description" class="control-label">Описание:</label>
-        <span class="help-block">{{ $errors->first('name') }}</span>
+        <span class="help-block">{{ $errors->first('description') }}</span>
         <textarea rows="10" id="description" name="description" class="form-control">
             {{ old('description') }}
         </textarea>
