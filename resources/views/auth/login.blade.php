@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<div class="wrapper login-block">
+<div class="wrapper login-block page-content">
     <div class="container">
         <div class="row">
             <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
