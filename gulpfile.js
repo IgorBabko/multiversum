@@ -19,6 +19,8 @@ elixir(function(mix) {
 
     mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js/jquery.min.js');
 
+    mix.copy('bower_components/oh-snap/ohsnap.min.js', 'public/js/ohsnap.min.js');
+
     mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/fonts/bootstrap');
     mix.copy('node_modules/bootstrap/dist/css/bootstrap.min.css', 'public/css/bootstrap.min.css');
     mix.copy('node_modules/bootstrap/dist/js/bootstrap.min.js', 'public/js/bootstrap.min.js');

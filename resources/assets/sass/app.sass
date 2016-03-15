@@ -67,14 +67,14 @@ body
         background: rgba(29,10,41,0) !important
         transition: padding 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out
         padding: 25px 0
-        border-bottom: 1px solid rgba(255,255,255,0) !important
+        // border-bottom: 1px solid rgba(255,255,255,0) !important
         
         // border-bottom: 1px solid rgba(127, 255, 212,0) !important
 
     .navbar.navbar-animated.compact-navbar
         background: rgba(29,10,41,0.75) !important
         padding: 0 !important
-        border-bottom: 1px solid rgba(255,255,255,0.5) !important
+        // border-bottom: 1px solid rgba(255,255,255,0.5) !important
         // border-bottom: 1px solid rgba(127, 255, 212, 1) !important//rgba(255,173,225,1) !important
 
     .bootstrap-select
@@ -263,8 +263,6 @@ body
         left: 0
         
 @media only screen and (min-width : 1200px)
-    div.wrapper
-        padding: 100px 0
 
     #main-avatar
         transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out
@@ -390,6 +388,11 @@ header
 
 // navbar
 
+@media screen and (min-width: 768px)
+    .dropdown:hover .dropdown-menu
+        display: block
+        margin-top: 0
+
 .navbar
     position: fixed
     top: 0
@@ -398,7 +401,7 @@ header
     background: rgba(29,10,41,0.75)
     border: none
     border-radius: 0
-    border-bottom: 1px solid rgba(255,255,255,0.5)
+    // border-bottom: 1px solid rgba(255,255,255,0.5)
     
     &.navbar-default
         // border-bottom: 1px solid //#7FFFD4//#FFADE1
@@ -406,6 +409,13 @@ header
         .navbar-nav > li > a:hover,
         .navbar-nav > li > a:focus
             color: #FFC7E9//#FFA0DC
+            
+        .navbar-nav > .open > a,
+        .navbar-nav > .open > a:focus,
+        .navbar-nav > .open > a:hover
+            background: none
+        
+
 
     #navbar
         border: none
@@ -419,11 +429,23 @@ header
 
     .navbar-nav
         > li
+            .dropdown-menu
+                > .active > a,
+                > .active > a:focus,
+                > .active > a:hover
+                    color: #FCFFA5
+                    background: none 
+                background: rgba(29, 10, 41, 0.75)
+                > li
+                    > a:focus,
+                    > a:hover
+                        background: none
+                        color: #FFC7E9 
             a
                 color: white
                 font-size: 14px
                 letter-spacing: 1.8px
-                font-weight: bold
+                font-weight: 400
                 text-transform: uppercase
             a:hover
                 color: #FFC7E9//#FFA0DC
@@ -689,12 +711,12 @@ footer
         border-bottom: 1px solid white
         color: white
         font-size: 24px
-        padding-left: 20px
+        // padding-left: 20px
 
         &:focus
             // color: #FFC7E9//#7FFFD4//#FFD5F0
             outline: none !important
-            border-bottom: 1px solid #FCFFA5//#FFC7E9//#7FFFD4//#FFD5F0
+            // border-bottom: 1px solid #FCFFA5//#FFC7E9//#7FFFD4//#FFD5F0
     
     textarea
         height: 200px
@@ -702,11 +724,12 @@ footer
     button
         display: block
         margin: 0 auto
-        border: 2px solid white
+        border: 1px solid #A894B7//white
         padding: 0 20px
         height: 50px
+        width: 100%
         background: none
-        color: white
+        color: #A894B7//white
         font-size: 22px
         
         &:hover
@@ -862,6 +885,7 @@ footer
 .comments-block
     background: #F5E7FF
     padding-top: 50px
+    box-shadow: 0px -2px 10px 1px #301840
     h1
         color: #402D4E !important
 
@@ -971,10 +995,17 @@ footer
 
 // page-content
 .page-content
-    padding-top: 100px
-    background: #6A4388//url(../img/background3__.jpg)
-    background-repeat: no-repeat
-    background-attachment: fixed
+    padding-top: 70px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .content
+        background: #5A406D
+        box-shadow: 0px 0px 20px 1px #301840
+        padding: 40px
+        margin: 40px 40px 60px
+        max-width: 400px
 
     .centered
         > div
@@ -1010,14 +1041,18 @@ footer
         float: left
         color: #FCFFA5//white//#FFADD6
         text-align: center
+        margin-bottom: 40px
     
     .description-block
         margin-bottom: 50px !important
 
         p.description
-            background: rgb(245, 231, 255)
-            color: black
+            background: #5A406D//rgb(245, 231, 255)
+            color: #E0E0E0
             padding: 30px
+            padding-top: 0
+            font-size: 16px
+            line-height: 1.8
 
 //posts page
 .posts-content
@@ -1257,10 +1292,17 @@ input.error
 
 // placeholders
 ::-webkit-input-placeholder 
-    color: #dab5f7
+    color: #A894B7
 ::-moz-placeholder 
-    color: #dab5f7
+    color: #A894B7
 :-moz-placeholder
-    color: #dab5f7
+    color: #A894B7
 :-ms-input-placeholder
-    color: #dab5f7
+    color: #A894B7
+
+.success-alert
+    background: #5A406D
+    color: #72F7BE
+    padding: 15px
+    font-size: 22px
+    text-align: center
