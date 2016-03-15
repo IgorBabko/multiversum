@@ -511,13 +511,15 @@ footer {
 .login-block,
 .register-block,
 .email-reset-block,
-.reset-password-block {
+.reset-password-block,
+.email-block {
   background: #6A4388; }
   .email-block h1,
   .login-block h1,
   .register-block h1,
   .email-reset-block h1,
-  .reset-password-block h1 {
+  .reset-password-block h1,
+  .email-block h1 {
     text-align: center;
     color: #FCFFA5; }
   .email-block input,
@@ -529,7 +531,9 @@ footer {
   .email-reset-block input,
   .email-reset-block textarea,
   .reset-password-block input,
-  .reset-password-block textarea {
+  .reset-password-block textarea,
+  .email-block input,
+  .email-block textarea {
     width: 100%;
     margin-bottom: 30px;
     height: 50px;
@@ -547,19 +551,23 @@ footer {
     .email-reset-block input:focus,
     .email-reset-block textarea:focus,
     .reset-password-block input:focus,
-    .reset-password-block textarea:focus {
+    .reset-password-block textarea:focus,
+    .email-block input:focus,
+    .email-block textarea:focus {
       outline: none !important; }
   .email-block textarea,
   .login-block textarea,
   .register-block textarea,
   .email-reset-block textarea,
-  .reset-password-block textarea {
+  .reset-password-block textarea,
+  .email-block textarea {
     height: 200px; }
   .email-block button,
   .login-block button,
   .register-block button,
   .email-reset-block button,
-  .reset-password-block button {
+  .reset-password-block button,
+  .email-block button {
     display: block;
     margin: 0 auto;
     border: 1px solid #A894B7;
@@ -573,7 +581,8 @@ footer {
     .login-block button:hover,
     .register-block button:hover,
     .email-reset-block button:hover,
-    .reset-password-block button:hover {
+    .reset-password-block button:hover,
+    .email-block button:hover {
       color: #FCFFA5;
       border-color: #FCFFA5; }
 
@@ -645,24 +654,28 @@ footer {
     text-align: center; }
 
 .page-content.book-content,
-.page-content.post-content {
+.page-content.post-content,
+.page-content.email-block {
   font-size: 18px;
   font-weight: 100;
   color: #EBE6EF;
   line-height: 1.6;
   letter-spacing: 1px; }
   .page-content.book-content h1,
-  .page-content.post-content h1 {
+  .page-content.post-content h1,
+  .page-content.email-block h1 {
     float: none;
     margin-bottom: 30px; }
   .page-content.book-content span,
-  .page-content.post-content span {
+  .page-content.post-content span,
+  .page-content.email-block span {
     color: #FFE2F2;
     font-style: italic;
     font-size: 14px;
     float: right; }
   .page-content.book-content .book-description,
-  .page-content.post-content .book-description {
+  .page-content.post-content .book-description,
+  .page-content.email-block .book-description {
     margin-left: 235px; }
 
 .book-wrapper,
@@ -762,7 +775,7 @@ footer {
     box-shadow: 0px 0px 20px 1px #301840;
     padding: 40px;
     margin: 40px 40px 60px;
-    max-width: 400px; }
+    max-width: 600px; }
   .page-content .centered > div {
     margin: 20px 0 30px; }
   .page-content .video,

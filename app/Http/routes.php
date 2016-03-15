@@ -24,6 +24,8 @@
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('/', ['as' => 'index', 'uses' => 'PagesController@index']);
+    Route::get('/email', ['as' => 'email', 'uses' => 'PagesController@email']);
+    Route::post('/email', ['as' => 'sendEmail', 'uses' => 'PagesController@sendEmail']);
 
     Route::get('/webinars', ['as' => 'webinars', 'uses' => 'WebinarsController@index']);
     Route::get('/webinars/{slug}', ['as' => 'webinar', 'uses' => 'WebinarsController@showWebinar']);

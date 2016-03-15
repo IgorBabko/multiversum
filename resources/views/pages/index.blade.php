@@ -156,20 +156,5 @@
             </div>
         </div>
     </div>
-    <div class="wrapper email-block">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
-                    <h1>Связаться со мной</h1>
-                    <hr class="light-line">
-                    <form>
-                        <input type="text" placeholder="Имя">
-                        <input type="email" placeholder="Email">
-                        <textarea placeholder="Сообщение"></textarea>
-                        <button type="submit">Отправить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
 @endsection

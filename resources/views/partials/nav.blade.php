@@ -40,6 +40,7 @@
                                 <li><a href="/posts">Статьи</a></li>
                             </ul>
                         </li>
+                        <li class="{{ Request::is('email') ? 'active' :  '' }}"><a href="/email">Почта</a></li>
                         <li class="dropdown {{ Request::is('login') || Request::is('register') ? 'active' :  '' }}">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Аккаунт<span class="caret"></span></a>
                             <ul class="dropdown-menu">

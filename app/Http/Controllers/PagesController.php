@@ -10,4 +10,14 @@ class PagesController extends Controller
     {
         return view('pages.index');
     }
+
+    public function email()
+    {
+        return view('pages.email');
+    }
+
+    public function send()
+    {
+        return view('pages.index');
+    }
 }
