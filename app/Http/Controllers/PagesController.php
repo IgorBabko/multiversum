@@ -3,6 +3,7 @@
 namespace Multiversum\Http\Controllers;
 
 use Multiversum\Http\Controllers\Controller;
+use Multiversum\Http\Requests\SendEmailRequest;
 
 class PagesController extends Controller
 {
@@ -16,8 +17,9 @@ class PagesController extends Controller
         return view('pages.email');
     }
 
-    public function send()
+    public function sendEmail(SendEmailRequest $sendEmailRequest)
     {
+        // send email
         return view('pages.index');
     }
 }

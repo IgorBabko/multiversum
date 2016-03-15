@@ -35,9 +35,9 @@
                         <li class="dropdown {{ Request::is('book*') || Request::is('disk*') || Request::is('post*') ? 'active' :  '' }}">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Галерея<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/books">Книги</a></li>
-                                <li><a href="/disks">Диски</a></li>
-                                <li><a href="/posts">Статьи</a></li>
+                                <li class="{{ Request::is('book*') ? 'active' :  '' }}"><a href="/books">Книги</a></li>
+                                <li class="{{ Request::is('disk*') ? 'active' :  '' }}"><a href="/disks">Диски</a></li>
+                                <li class="{{ Request::is('post*') ? 'active' :  '' }}"><a href="/posts">Статьи</a></li>
                             </ul>
                         </li>
                         <li class="{{ Request::is('email') ? 'active' :  '' }}"><a href="/email">Почта</a></li>
@@ -45,10 +45,10 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Аккаунт<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 @if (Auth::guest())
-                                    <li><a href="/login">Войти</a></li>
-                                    <li><a href="/register">Регистрация</a></li>
+                                    <li class="{{ Request::is('login') ? 'active' :  '' }}"><a href="/login">Войти</a></li>
+                                    <li class="{{ Request::is('register') ? 'active' :  '' }}"><a href="/register">Регистрация</a></li>
                                 @else
-                                    <li><a href="{{ url('/profile') }}">Профиль</a></li>
+                                    <li class="{{ Request::is('profile') ? 'active' :  '' }}"><a href="{{ url('/profile') }}">Профиль</a></li>
                                     <li><a href="{{ url('/logout') }}">Выйти</a></li>
                                 @endif
                             </ul>
