@@ -10,9 +10,9 @@
         </div>
         <div class="row centered">
             @forelse ($webinars as $webinar)
-            <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-lg-4 col-sm-6 col-xs-12">
                 <a href="/webinars/{{ $webinar->slug }}" class="video">
-                    <img src="http://placehold.it/300x250">
+                    <img src="http://placehold.it/290x250">
                     <!-- <div class="caption">
                         <div>{{ str_limit($webinar->description, 150) }}</div>
                         <i class="fa fa-play"></i>

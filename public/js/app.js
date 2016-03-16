@@ -3,9 +3,9 @@ $(function() {
         imageSrc: '/img/background3.jpg'
     });
 
-    $('.books-and-disks-block').parallax({
-        imageSrc: '/img/background1.jpg'
-    });
+    // $('.books-and-disks-block').parallax({
+    //     imageSrc: '/img/background1.jpg'
+    // });
 
     $('header h1').fadeIn(1000, function() {
         $('.bounce').fadeIn(500);

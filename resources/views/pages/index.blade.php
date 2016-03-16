@@ -98,7 +98,7 @@
             </div>
         </div>
     </div>
-    <div class="wrapper books-and-disks-block">
+    <div class="wrapper books-and-disks-block-wrapper">
         <div class="container">
             <h1>Новые книги и диски</h1>
             <hr class="light-line">
@@ -155,6 +155,5 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection

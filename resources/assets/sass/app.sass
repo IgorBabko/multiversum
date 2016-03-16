@@ -302,7 +302,7 @@ body
     
 
 .logo
-    color: white !important//#FFADCB !important//rgba(127, 255, 212, 1) !important//#FFA0DC !important
+    color: #FFC7E9 !important//#FFADCB !important//rgba(127, 255, 212, 1) !important//#FFA0DC !important
     font-weight: bold
     font-style: italic
     font-size: 32px
@@ -313,7 +313,7 @@ body
     // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
     
     &:hover
-        color: #FFC7E9 !important
+        color: white !important
 
 hr
     max-width: 100px
@@ -463,14 +463,19 @@ header
                         background: none
                         color: #FFFDBA//#FFFC8E//#7FFFD4
 
-.video-block-wrapper
-    background: #6A4388//#402D4E//#2A1E33
-    // background-image: url('../img/portrait.jpg')
-    background-position: 100% 0
-    background-repeat: no-repeat
-    background-size: contain
 
+.page-content
+    .container
+        background: #5A406D
+        box-shadow: 0px 0px 20px 1px #301840
+        padding: 40px
+        margin: 40px 40px 60px
+        // max-width: 600px
+
+.video-block-wrapper,
+.books-and-disks-block-wrapper
     h1
+        text-align: center
         color: #FCFFA5//#FFC7E9//#7FFFD4//#FFADD6//rgba(127, 255, 212, 1)
     
     color: white
@@ -503,6 +508,9 @@ header
             &:hover
                 i
                     color: red
+            
+            img
+                margin: 5px
 
         
         button
@@ -814,10 +822,6 @@ footer
 
 
 // webinars page
-.videos-content
-    background: url(../img/background3__.jpg)
-    background-attachment: fixed
-    background-repeat: no-repeat 
 
 // books page
 .books-content
@@ -1006,6 +1010,7 @@ footer
     display: flex
     justify-content: center
     align-items: center
+    background: #6A4388
 
     .content
         background: #5A406D
@@ -1108,10 +1113,10 @@ footer
         top: 25px
         right: 0
         cursor: pointer
-        color: #A9A9A9
+        color: #A894B7//#A9A9A9
 
         &:hover
-            color: #FFC7E9//#7FFFD4
+            color: #FCFFA5//#FFC7E9//#7FFFD4
 
 
 // pagination
@@ -1122,7 +1127,8 @@ footer
         
         li.active
             span
-                background: #6A4388//#FFA0DC//#57DEB1
+                background: #5A406D//#6A4388//#FFA0DC//#57DEB1
+
 
     .pagination > li:first-child > a,
     .pagination > li:first-child > span,
@@ -1137,14 +1143,14 @@ footer
     .pagination > .active > span:hover,
     .pagination > .active > span:focus
         border: none !important
-        background: #6A4388//#57DEB1
+        background: #5A406D//#6A4388//#57DEB1
         color: white !important
 
     .pagination > li > a:hover,
     .pagination > li > a:focus,
     .pagination > li > span:hover,
     .pagination > li > span:focus
-        background: #FF72D4//#78598E//#FF7BCE
+        background: #978DBB//#6A4388//#FF72D4//#78598E//#FF7BCE
         border: none !important
         color: white
         

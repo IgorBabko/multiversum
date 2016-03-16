@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="/css/bootstrap-select.min.css">
         <link rel="stylesheet" href="/css/font-awesome.css">
         <script src="/js/jquery.min.js"></script>
-        <script src="/js/ohsnap.min.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/bootstrap-select.min.js"></script>

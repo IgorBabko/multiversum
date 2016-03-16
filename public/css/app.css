@@ -197,13 +197,13 @@ body {
     left: 0; } }
 
 .logo {
-  color: white !important;
+  color: #FFC7E9 !important;
   font-weight: bold;
   font-style: italic;
   font-size: 32px;
   margin-top: 5px; }
   .logo:hover {
-    color: #FFC7E9 !important; }
+    color: white !important; }
 
 hr {
   max-width: 100px;
@@ -331,23 +331,31 @@ header {
       background: none;
       color: #FFFDBA; }
 
-.video-block-wrapper {
-  background: #6A4388;
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-  background-size: contain;
+.page-content .container {
+  background: #5A406D;
+  box-shadow: 0px 0px 20px 1px #301840;
+  padding: 40px;
+  margin: 40px 40px 60px; }
+
+.video-block-wrapper,
+.books-and-disks-block-wrapper {
   color: white;
   position: relative; }
-  .video-block-wrapper h1 {
+  .video-block-wrapper h1,
+  .books-and-disks-block-wrapper h1 {
+    text-align: center;
     color: #FCFFA5; }
-  .video-block-wrapper #portrait {
+  .video-block-wrapper #portrait,
+  .books-and-disks-block-wrapper #portrait {
     position: absolute;
     right: 0;
     top: 0;
     height: 100%; }
-  .video-block-wrapper .video-block > div {
+  .video-block-wrapper .video-block > div,
+  .books-and-disks-block-wrapper .video-block > div {
     text-align: center; }
-  .video-block-wrapper .video-block .video {
+  .video-block-wrapper .video-block .video,
+  .books-and-disks-block-wrapper .video-block .video {
     overflow: hidden;
     position: relative;
     display: inline-block;
@@ -357,9 +365,14 @@ header {
     margin: 0 auto 20px;
     opacity: 0;
     cursor: pointer; }
-    .video-block-wrapper .video-block .video:hover i {
+    .video-block-wrapper .video-block .video:hover i,
+    .books-and-disks-block-wrapper .video-block .video:hover i {
       color: red; }
-  .video-block-wrapper .video-block button {
+    .video-block-wrapper .video-block .video img,
+    .books-and-disks-block-wrapper .video-block .video img {
+      margin: 5px; }
+  .video-block-wrapper .video-block button,
+  .books-and-disks-block-wrapper .video-block button {
     background: #C55D9F;
     font-size: 24px; }
 
@@ -637,11 +650,6 @@ footer {
     .navbar-default .navbar-header .navbar-toggle.collapsed .icon-bar {
       background: #FFA0DC; }
 
-.videos-content {
-  background: url(../img/background3__.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat; }
-
 .books-content .book {
   overflow: hidden;
   position: relative;
@@ -765,7 +773,8 @@ footer {
   justify-content: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  background: #6A4388; }
   .page-content .content {
     background: #5A406D;
     box-shadow: 0px 0px 20px 1px #301840;
@@ -834,16 +843,16 @@ footer {
     top: 25px;
     right: 0;
     cursor: pointer;
-    color: #A9A9A9; }
+    color: #A894B7; }
     .search i:hover {
-      color: #FFC7E9; }
+      color: #FCFFA5; }
 
 .pagination-block {
   text-align: center; }
   .pagination-block ul.pagination {
     font-size: 18px; }
     .pagination-block ul.pagination li.active span {
-      background: #6A4388; }
+      background: #5A406D; }
   .pagination-block .pagination > li:first-child > a,
   .pagination-block .pagination > li:first-child > span,
   .pagination-block .pagination > li:last-child > a,
@@ -856,13 +865,13 @@ footer {
   .pagination-block .pagination > .active > span:hover,
   .pagination-block .pagination > .active > span:focus {
     border: none !important;
-    background: #6A4388;
+    background: #5A406D;
     color: white !important; }
   .pagination-block .pagination > li > a:hover,
   .pagination-block .pagination > li > a:focus,
   .pagination-block .pagination > li > span:hover,
   .pagination-block .pagination > li > span:focus {
-    background: #FF72D4;
+    background: #978DBB;
     border: none !important;
     color: white; }
   .pagination-block .pagination > .disabled > span,
