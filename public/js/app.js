@@ -1,5 +1,5 @@
 $(function() {
-    $('header').parallax({
+    $('.header').parallax({
         imageSrc: '/img/background3.jpg'
     });
 
@@ -7,8 +7,8 @@ $(function() {
     //     imageSrc: '/img/background1.jpg'
     // });
 
-    $('header h1').fadeIn(1000, function() {
-        $('.bounce').fadeIn(500);
+    $('.header__heading').fadeIn(1000, function() {
+        $('.header__arrow').fadeIn(500);
     });
 
     var quotesArray = [
@@ -19,11 +19,11 @@ $(function() {
 
     function changeQuotes(counter) {
         var quote = quotesArray[counter];
-        $('#quote').html(quote).fadeIn(1000, function() {
+        $('.header__quote').html(quote).fadeIn(1000, function() {
             setTimeout(function() {
                 delete quotesArray[counter];
                 quotesArray.push(quote);
-                $('#quote').fadeOut(1000, function() {
+                $('.header__quote').fadeOut(1000, function() {
                     changeQuotes(counter + 1);
                 });
             }, 5000);
@@ -155,16 +155,16 @@ $(function() {
     }
 
 
-    if (location.pathname == '/webinars') {
-        $('.video').each(function(i, video) {
-            new ScrollMagic.Scene({
-                triggerElement: video,
-                triggerHook: '0.9'
-            }).on('enter', function() {
-                $(video).addClass('visible');
-            }) /*.addIndicators('hello')*/ .addTo(controller);
-        });
-    }
+    // if (location.pathname == '/webinars') {
+    //     $('.video').each(function(i, video) {
+    //         new ScrollMagic.Scene({
+    //             triggerElement: video,
+    //             triggerHook: '0.9'
+    //         }).on('enter', function() {
+    //             $(video).addClass('visible');
+    //         }) /*.addIndicators('hello')*/ .addTo(controller);
+    //     });
+    // }
 
     if (location.pathname == '/posts') {
         $('.post').each(function(i, post) {

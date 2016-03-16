@@ -1,16 +1,49 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap"
 
+// utilities
+@import 'utilities/colors'
+@import 'utilities/helpers'
+
+// animations
+@import 'animations/bouncing-arrow'
+
+// components
+@import 'components/Section'
+@import 'components/Gallery'
+@import 'components/Video'
+
+// partials
+@import 'partials/nav'
+@import 'partials/search'
+@import 'partials/pagination'
+@import 'partials/footer'
+
+// pages
+@import 'pages/index'
+
 // general
+@import 'general'
 
-html
-    height: 100%
 
-body
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    min-height: 100%
-    // font-family: 'Exo 2', sans-serif
+.logo
+    color: #FFC7E9 !important
+    font-weight: bold
+    font-style: italic
+    font-size: 32px
+    text-decoration: none
+    &:hover
+        color: white !important
+        text-decoration: none
+        
+// html
+//     height: 100%
+
+// body
+//     display: flex
+//     flex-direction: column
+//     justify-content: space-between
+//     min-height: 100%
+//     // font-family: 'Exo 2', sans-serif
 
 .visible
     opacity: 1 !important
@@ -38,19 +71,19 @@ body
 //     color: #18131D
 //     font-size: 16px
     
-    div
-        text-align: left
-        padding: 20px
-        background: #49047B//#402D4E
-        color: white 
-        height: 80%
+    // div
+    //     text-align: left
+    //     padding: 20px
+    //     background: #49047B//#402D4E
+    //     color: white 
+    //     height: 80%
     
-    i
-        margin-top: 9px
-        color: #4B0082
-        font-size: 32px
+    // i
+    //     margin-top: 9px
+    //     color: #4B0082
+    //     font-size: 32px
 
-// .video:hover,
+// .Video:hover,
 // .book:hover,
 //     .caption
 //         -moz-transform: translateY(100%)
@@ -58,22 +91,22 @@ body
 //         -webkit-transform: translateY(100%)
 //         transform: translateY(100%)
 
-@media only screen and (max-width : 920px)
-    .video + h3
-        margin-bottom: 40px
+// @media only screen and (max-width : 920px)
+//     .Video + h3
+//         margin-bottom: 40px
 
 @media only screen and (min-width : 768px)
-    .navbar.navbar-animated
-        background: rgba(29,10,41,0) !important
-        transition: padding 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out
-        padding: 25px 0
+    // .navbar.navbar-animated
+    //     background: rgba(29,10,41,0) !important
+    //     transition: padding 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out
+    //     padding: 25px 0
         // border-bottom: 1px solid rgba(255,255,255,0) !important
         
         // border-bottom: 1px solid rgba(127, 255, 212,0) !important
 
-    .navbar.navbar-animated.compact-navbar
-        background: rgba(29,10,41,0.75) !important
-        padding: 0 !important
+    // .navbar.navbar-animated.compact-navbar
+    //     background: rgba(29,10,41,0.75) !important
+    //     padding: 0 !important
         // border-bottom: 1px solid rgba(255,255,255,0.5) !important
         // border-bottom: 1px solid rgba(127, 255, 212, 1) !important//rgba(255,173,225,1) !important
 
@@ -85,27 +118,27 @@ body
     .bootstrap-select
         min-width: 300px !important
 
-    header .header-content
-        h1
-            font-size: 28px
-        #quote
-            font-size: 20px
+    // header .header-content
+    //     h1
+    //         font-size: 28px
+    //     #quote
+    //         font-size: 20px
 
-    div.bounce
-        bottom: 20px
+    // div.bounce
+    //     bottom: 20px
     
-    div.wrapper
-        padding: 50px 0
+    // div.wrapper
+    //     padding: 50px 0
     
-    #main-avatar
-        transition: opacity 0.5s ease-in-out
+    // #main-avatar
+    //     transition: opacity 0.5s ease-in-out
 
-    #about-info
-        transition: opacity 0.5s ease-in-out
-        padding-top: 25px
+    // #about-info
+    //     transition: opacity 0.5s ease-in-out
+    //     padding-top: 25px
     
-    .video
-        transition: opacity 0.8s ease-in-out
+    // .Video
+    //     transition: opacity 0.8s ease-in-out
     .post
         transition: opacity 0.8s ease-in-out
         left: 0
@@ -127,11 +160,11 @@ body
     .bootstrap-select
         min-width: 300px !important
 
-    header .header-content
-        h1
-            font-size: 36px
-        #quote
-            font-size: 28px
+    // header .header-content
+    //     h1
+    //         font-size: 36px
+    //     #quote
+    //         font-size: 28px
     
     div.bounce
         bottom: 20px
@@ -143,13 +176,13 @@ body
         transition: opacity 0.5s ease-in-out
         left: 0
 
-    #about-info
-        transition: opacity 0.5s ease-in-out
-        left: 0
-        padding-top: 25px
+    // #about-info
+    //     transition: opacity 0.5s ease-in-out
+    //     left: 0
+    //     padding-top: 25px
 
-    .video
-        transition: opacity 0.8s ease-in-out
+    // .Video
+    //     transition: opacity 0.8s ease-in-out
     .post
         transition: opacity 0.8s ease-in-out
         left: 0
@@ -171,11 +204,6 @@ body
     //     width: 40% !important
 
 @media only screen and (min-width : 768px) and (max-width : 920px)
-    header .header-content
-        h1
-            font-size: 48px
-        #quote
-            font-size: 40px
     
     #navbar .navbar-nav > li > a
         font-size: 14px
@@ -195,16 +223,16 @@ body
         transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out
         left: 100px
     
-    .video
-        transition: left 0.5s ease-in-out, opacity 0.8s ease-in-out
+    // .Video
+    //     transition: left 0.5s ease-in-out, opacity 0.8s ease-in-out
 
-    .video1
+    .Video1
         left: -100px
 
-    .video2
+    .Video2
         left: 100px
 
-    .video3
+    .Video3
         left: 0
     
     .post
@@ -236,17 +264,17 @@ body
         left: 100px
         padding-top: 0
     
-    .video,
+    // .Video,
     .post
         transition: left 0.5s ease-in-out, opacity 0.8s ease-in-out
 
-    .video1
+    .Video1
         left: -100px
 
-    .video2
+    .Video2
         left: 0
 
-    .video3
+    .Video3
         left: 100px
     
     .post1
@@ -273,17 +301,17 @@ body
         left: 100px
         padding-top: 0
 
-    .video,
+    // .Video,
     .post
         transition: left 0.5s ease-in-out, opacity 0.8s ease-in-out
 
-    .video1
+    .Video1
         left: -100px
 
-    .video2
+    .Video2
         left: 0
 
-    .video3
+    .Video3
         left: 100px
         
     .post1
@@ -298,22 +326,6 @@ body
     .visible
         opacity: 1
         left: 0
-    
-    
-
-.logo
-    color: #FFC7E9 !important//#FFADCB !important//rgba(127, 255, 212, 1) !important//#FFA0DC !important
-    font-weight: bold
-    font-style: italic
-    font-size: 32px
-    margin-top: 5px
-    // &:hover
-    //     color: #FFA0DC
-        
-    // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
-    
-    &:hover
-        color: white !important
 
 hr
     max-width: 100px
@@ -324,155 +336,59 @@ body
     font-family: 'Roboto Slab', serif
     background: #6A4388//#402D4E
 
-header
-    position: relative
-    min-height: 600px
-    width: 100vw
-    height: 100vh
-    display: flex
-    justify-content: center
-    align-items: center
-    
-    h1
-        display: none
-        font-size: 72px
-        font-weight: bold
-        text-align: center
-        color: #FEFB8E//#7FFFD4//#FFADD6//rgba(127, 255, 212, 1)//#FFF791
-        text-transform: uppercase
-        text-shadow: 5px 5px 5px black
-    
-    #quote
-        // display: none
-        text-align: center
-        font-size: 36px
-        color: white
 
-.about-me-wrapper
-    background: #F5E7FF
 
-    .about-me
-        font-size: 20px
-        font-weight: 300
-        line-height: 1.6
+// .about-me-wrapper
+//     background: #F5E7FF
 
-        h1
-            text-align: center
-            color: #483358
-        hr
-            border-top: 7px solid #AC77D4
+//     .about-me
+//         font-size: 20px
+//         font-weight: 300
+//         line-height: 1.6
+
+//         h1
+//             text-align: center
+//             color: #483358
+//         hr
+//             border-top: 7px solid #AC77D4
         
-        > div:first-child
-            text-align: center
+//         > div:first-child
+//             text-align: center
             
-        #main-avatar
-            opacity: 0
-            display: inline-block
-            position: relative
-            top: 0
-            &:before
-                content: ''
-                position: absolute
-                top: 0
-                left: 0
-                width: 100%
-                height: 100%
-                border-radius: 50%
-                box-shadow: inset 0 0 0 15px rgba(50,32,61,0.3)//rgba(0,0,0,0.3)
+//         #main-avatar
+//             opacity: 0
+//             display: inline-block
+//             position: relative
+//             top: 0
+//             &:before
+//                 content: ''
+//                 position: absolute
+//                 top: 0
+//                 left: 0
+//                 width: 100%
+//                 height: 100%
+//                 border-radius: 50%
+//                 box-shadow: inset 0 0 0 15px rgba(50,32,61,0.3)//rgba(0,0,0,0.3)
 
-        #about-info
-            text-align: left !important
-            opacity: 0
-            position: relative
-            top: 0
+//         #about-info
+//             text-align: left !important
+//             opacity: 0
+//             position: relative
+//             top: 0
 
 // navbar
 
-@media screen and (min-width: 768px)
-    .dropdown:hover .dropdown-menu
-        display: block
-        margin-top: 0
 
-.navbar
-    position: fixed
-    top: 0
-    left: 0
-    margin: 0
-    background: rgba(29,10,41,0.75)
-    border: none
-    border-radius: 0
-    // border-bottom: 1px solid rgba(255,255,255,0.5)
-    
-    &.navbar-default
-        // border-bottom: 1px solid //#7FFFD4//#FFADE1
-
-        .navbar-nav > li > a:hover,
-        .navbar-nav > li > a:focus
-            color: #FFC7E9//#FFA0DC
-            
-        .navbar-nav > .open > a,
-        .navbar-nav > .open > a:focus,
-        .navbar-nav > .open > a:hover
-            background: none
-        
-
-
-    #navbar
-        border: none
-
-    .nav
-        text-align: center
-        li
-            a
-                padding-top: 20px
-                padding-bottom: 20px
-
-    .navbar-nav
-        > li
-            .dropdown-menu
-                > .active > a,
-                > .active > a:focus,
-                > .active > a:hover
-                    color: #FCFFA5
-                    background: none 
-                background: rgba(29, 10, 41, 0.75)
-                > li
-                    > a
-                        color: white
-                    > a:focus,
-                    > a:hover
-                        background: none
-                        color: #FFC7E9 
-            a
-                color: white
-                font-size: 14px
-                letter-spacing: 1.8px
-                font-weight: 400
-                text-transform: uppercase
-            a:hover
-                color: #FFC7E9//#FFA0DC
-            
-            &:focus
-                color: #FFC7E9//#FFA0DC
-                
-            &.active
-                a
-                    color: #FFFDBA//#FFFC8E//#7FFFD4
-                    background: none
-                    &:hover
-                        background: none
-                        color: #FFFDBA//#FFFC8E//#7FFFD4
 
 
 .page-content
     .container
         background: #5A406D
         box-shadow: 0px 0px 20px 1px #301840
-        padding: 40px
+        padding: 30px
         margin: 40px 40px 60px
         // max-width: 600px
 
-.video-block-wrapper,
 .books-and-disks-block-wrapper
     h1
         text-align: center
@@ -487,42 +403,12 @@ header
         top: 0
         height: 100%
 
-    .video-block
-        > div
-            text-align: center
-
-        .video
-            // box-shadow: 2px 2px 5px #484848
-            // box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12)
-            overflow: hidden
-            position: relative
-            display: inline-block
-            top: 0
-            width: 300px
-            // height: 250px
-            background: white
-            margin: 0 auto 20px
-            opacity: 0
-            cursor: pointer
-        
-            &:hover
-                i
-                    color: red
-            
-            img
-                margin: 5px
-
-        
-        button
-            background: #C55D9F
-            font-size: 24px
-
 .page-content,
-.video-block
-    .video,
+.Video-block
+    // .Video,
     .book,
     .disk
-        h3
+        div
             margin: 0
             padding: 15px
             background: #FFF
@@ -533,56 +419,6 @@ header
             i
                 transition: color 0.1s ease-in-out
                 color: #6A4388
-
-// footer
-footer
-    width: 100%
-    background: #18131D
-    padding: 20px 0
-    font-size: 22px
-    
-    .item
-        height: 95px
-        padding: 20px 0
-        text-align: center
-        color: #978DBB
-        i
-            color: #FFA0DC
-            font-size: 36px
-            margin-right: 5px
-        
-        &:last-child
-            line-height: 1
-            border-right: none
-    
-    #email-link
-        color: #978DBB
-        
-    .social-icons-list
-        padding: 0
-        li
-            &:hover
-                background: #FFA0DC
-            cursor: pointer
-            display: inline-block
-            width: 45px
-            height: 45px
-            background: #978DBB
-            border-radius: 50%
-            margin-right: 20px
-            padding: 10px 0 0 5px
-            
-            &:last-child
-                margin-right: 0
-            
-            i
-                color: #1a1335
-                font-size: 28px
-    
-    #copyright
-        font-size: 16px
-
-
 
 // posts block
     
@@ -599,74 +435,7 @@ footer
         // padding: 100px 0
         // text-align: center
         
-        .post
-            opacity: 0
-
-
-        .post-thumbnail
-            //box-shadow: 2px 2px 5px #AE9DB9
-            // box-shadow: 2px 2px 1px 1px #D9D1E0
-            
-            // box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12)
-            margin: 0
-            display: inline-block
         
-        .post-info
-            height: 360px
-            text-align: left
-            width: 100%
-            //box-shadow: 2px 2px 5px #AE9DB9
-            // box-shadow: 2px 2px 1px 1px #D9D1E0
-            
-            // box-shadow: 10px 10px 0 rgba(204, 204, 204, 0.12)
-            background: #FFF
-            padding: 20px
-            font-size: 16px
-            max-width: 400px
-            margin: 0 0 30px 0
-            display: inline-block
-        
-            .short-content
-                max-height: 100px
-                overflow: hidden
-        
-            h3
-                min-height: 52px
-
-            button
-                float: right
-                margin: 10px 0
-                background: #49BF97
-                border-color: #49BF97
-                &:hover
-                    background: #1A986D
-                    border-color: #1A986D
-        
-        .post-meta-info
-            color: #909090
-            font-size: 16px
-            border-bottom: 1px solid #CCCCCC
-            margin-top: 20px
-            padding-bottom: 5px
-
-        // h1
-        //     text-align: center
-        //     color: #483358
-        hr
-            border-top: 7px solid #AC77D4
-            
-        #main-avatar
-            display: inline-block
-            position: relative
-            &:before
-                content: ''
-                position: absolute
-                top: 0
-                left: 0
-                width: 100%
-                height: 100%
-                border-radius: 50%
-                box-shadow: inset 0 0 0 15px rgba(0,0,0,0.3)
 
 // books and disks block
 .books-and-disks-block
@@ -748,77 +517,6 @@ footer
         &:hover
             color: #FCFFA5//#FFC7E9//#7FFFD4//#FFA0DC
             border-color: #FCFFA5//#FFC7E9//#7FFFD4//#FFA0DC
-        
-
-// bouncing arrow
- 
-.bounce
-    display: none
-    font-size: 48px
-    font-weight: 100
-    position: absolute
-    bottom: 60px
-    left: 50% 
-    width: 60px
-    height: 60px 
-    margin-left: -25px
-    -webkit-border-radius: 50%
-    -moz-border-radius: 50%
-    -ms-border-radius: 50%
-    border-radius: 50%
-    animation: bounce 2s infinite
-    -webkit-animation: bounce 2s infinite
-    -moz-animation: bounce 2s infinite
-    -o-animation: bounce 2s infinite
-    padding-left: 12.5px
-    color: #D7B3F3
- 
-@-webkit-keyframes bounce
-    0%, 20%, 50%, 80%, 100%
-        -webkit-transform: translateY(0) 
-    40%
-        -webkit-transform: translateY(-30px)
-    60%
-        -webkit-transform: translateY(-15px)
- 
-@-moz-keyframes bounce
-    0%, 20%, 50%, 80%, 100%
-        -moz-transform: translateY(0)
-    40%
-        -moz-transform: translateY(-30px)
-    60%
-        -moz-transform: translateY(-15px)
- 
-@-o-keyframes bounce
-    0%, 20%, 50%, 80%, 100%
-        -o-transform: translateY(0)
-    40%
-        -o-transform: translateY(-30px)
-    60%
-        -o-transform: translateY(-15px)
-
-
-@keyframes bounce
-    0%, 20%, 50%, 80%, 100%
-        transform: translateY(0)
-    40%
-        transform: translateY(-30px)
-    60%
-        transform: translateY(-15px)
-
-
-// hamburger menu
-.navbar-default .navbar-header .navbar-toggle
-    border-color: #FFA0DC
-    background: #FFA0DC
-    transition: all 0.1s ease-in-out
-    .icon-bar
-        background: #1D0A29
-
-    &.collapsed
-        background: none
-        .icon-bar
-            background: #FFA0DC
 
 
 // webinars page
@@ -872,7 +570,7 @@ footer
 .book-wrapper,
 .post-wrapper,
 .disk-wrapper,
-.video-wrapper
+.Video-wrapper
     text-align: center
     img
         // box-shadow: 5px 5px 0 #473058
@@ -900,8 +598,8 @@ footer
     h1
         color: #402D4E !important
 
-// video page
-.page-content.video-content
+//.Video page
+.page-content.Video-content
     img
         width: 80%//100%
         height: 500px
@@ -1023,13 +721,13 @@ footer
         > div
             margin: 20px 0 30px
 
-    .video,
+    // .Video,
     .book,
     .disk
         left: 0 !important
         // box-shadow: 5px 5px 0 #473058
         transition: opacity 0.4s ease-in-out
-        opacity: 0
+        // opacity: 0
     
     // > div:first-child
     //     padding-bottom: 100px 
@@ -1120,54 +818,7 @@ footer
 
 
 // pagination
-.pagination-block
-    text-align: center
-    ul.pagination
-        font-size: 18px
-        
-        li.active
-            span
-                background: #5A406D//#6A4388//#FFA0DC//#57DEB1
 
-
-    .pagination > li:first-child > a,
-    .pagination > li:first-child > span,
-    .pagination > li:last-child > a,
-    .pagination > li:last-child > span
-        border-radius: 0
-
-    .pagination > .active > a,
-    .pagination > .active > a:hover,
-    .pagination > .active > a:focus,
-    .pagination > .active > span,
-    .pagination > .active > span:hover,
-    .pagination > .active > span:focus
-        border: none !important
-        background: #5A406D//#6A4388//#57DEB1
-        color: white !important
-
-    .pagination > li > a:hover,
-    .pagination > li > a:focus,
-    .pagination > li > span:hover,
-    .pagination > li > span:focus
-        background: #978DBB//#6A4388//#FF72D4//#78598E//#FF7BCE
-        border: none !important
-        color: white
-        
-    .pagination > .disabled > span,
-    .pagination > .disabled > span:hover,
-    .pagination > .disabled > span:focus,
-    .pagination > .disabled > a,
-    .pagination > .disabled > a:hover,
-    .pagination > .disabled > a:focus
-        color: #ABABAB
-        background: #FFE2F1
-
-    .pagination > li > a,
-    .pagination > li > span
-        color: #8152A5
-        border: none
-        background: #FFE2F1
 
 // posts page
 .filters
@@ -1304,14 +955,7 @@ input.error
     fill: none
 
 // placeholders
-::-webkit-input-placeholder 
-    color: #A894B7
-::-moz-placeholder 
-    color: #A894B7
-:-moz-placeholder
-    color: #A894B7
-:-ms-input-placeholder
-    color: #A894B7
+
 
 .success-alert
     background: #5A406D
@@ -1319,3 +963,6 @@ input.error
     padding: 15px
     font-size: 22px
     text-align: center
+
+
+// 1327
