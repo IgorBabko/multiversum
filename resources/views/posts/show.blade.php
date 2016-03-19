@@ -12,5 +12,5 @@
         </div>
     </div>
     </div>
-    @include('partials.comments')
+    @include('partials.comments', ['resource' => $post])
 @endsection

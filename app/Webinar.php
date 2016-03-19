@@ -4,6 +4,7 @@ namespace Multiversum;
 
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
+use Embed;
 use Illuminate\Database\Eloquent\Model;
 
 class Webinar extends Model implements SluggableInterface
@@ -18,4 +19,9 @@ class Webinar extends Model implements SluggableInterface
     ];
 
     protected $guarded = [];
+
+    public function getIframeAttribute()
+    {
+        return Embed::make($this->url)->parseUrl()->getHtml();
+    }
 }

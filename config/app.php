@@ -160,6 +160,7 @@ return [
          * Vendor Service Providers...
          */
         Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
+        Cohensive\Embed\EmbedServiceProvider::class,
     ],
 
     /*
@@ -205,6 +206,9 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+
+        // vendor
+        'Embed'     => Cohensive\Embed\Facades\Embed::class,
 
     ],
 
