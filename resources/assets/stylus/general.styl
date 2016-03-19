@@ -1,8 +1,28 @@
-::-webkit-input-placeholder 
+input::placeholder
     color: #A894B7
-::-moz-placeholder 
+
+textarea::placeholder
     color: #A894B7
-:-moz-placeholder
-    color: #A894B7
-:-ms-input-placeholder
-    color: #A894B7
+
+html
+    height: 100%
+
+
+
+body
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-height: 100%
+    font-family: 'Roboto Slab', serif
+    background: #6A4388
+
+.logo
+    color: #FFC7E9 !important
+    font-weight: bold
+    font-style: italic
+    font-size: 32px
+    text-decoration: none
+    &:hover
+        color: white !important
+        text-decoration: none
