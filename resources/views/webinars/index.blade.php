@@ -1,37 +1,30 @@
 @extends("layout")
 @section("content")
-<div class="videos-content page-content video-block-wrapper">
-    <div class="container video-block">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Вебинары</h1>
-                @include('partials.search')
-            </div>
-        </div>
-        <div class="row centered">
+<div class="Page">
+    <div class="Page__content">
+        <h1 class="Page__heading">Вебинары</h1>
+        @include('partials.search')
+        <div class="Gallery">
             @forelse ($webinars as $webinar)
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <a href="/webinars/{{ $webinar->slug }}" class="video">
-                    <img src="http://placehold.it/300x250">
-                    <!-- <div class="caption">
-                        <div>{{ str_limit($webinar->description, 150) }}</div>
-                        <i class="fa fa-play"></i>
-                    </div> -->
-                    <h3>{{ $webinar->name }}<i class="fa fa-play pull-right"></i></h3>
-
-                    <!-- <div class="meta-info">
-                        <span class="name">{{ $webinar->name }}</span>
-                        <span class="date">{{ $webinar->published_at->format('m.d.Y') }}</span>
-                    </div> -->
-                </a>
-
+            <div>
+                <div class="Video">
+                    <a href="/webinars/{{ $webinar->slug }}" class="Video__link">
+                        <div>
+                            <div class="Video__overlay">
+                                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                            </div>
+                            <img src="{{ $webinar->thumbnail }}" class="Video__thumb">
+                        </div>
+                        <h3 class="Video__heading">{{ $webinar->name }}</h3>
+                    </a>
+                </div>
             </div>
             @empty
             Вебинаров нет
             @endforelse
-            <div class="col-xs-12 pagination-block">
-                {!! $webinars->links() !!}
-            </div>
+        </div>
+        <div class="pagination-block">
+            {!! $webinars->links() !!}
         </div>
     </div>
 </div>

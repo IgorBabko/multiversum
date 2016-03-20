@@ -1,27 +1,28 @@
 @extends("layout")
 @section("content")
-<div class="disks-content page-content disks-wrapper">
-    <div class="container disks-block">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Диски</h1>
-                @include('partials.search')
-            </div>
-        </div>
-        <div class="row centered">
+<div class="Page">
+    <div class="Page__content">
+        <h1 class="Page__heading">Диски</h1>
+        @include('partials.search')
+        <div class="Gallery">
             @forelse ($disks as $disk)
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                <a href="/disks/{{ $disk->slug }}" class="disk">
-                    <img src="http://placehold.it/250x250" alt="Книга 1">
-                    <h3>{{ $disk->name }}</h3>
-                </a>
+            <div>
+                <div class="Disk">
+                    <a href="/disks/{{ $disk->slug }}" class="Disk__link">
+                        <div class="Disk__overlay">
+                            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        </div>
+                        <img src="http://placehold.it/270x220" class="Disk__thumb">
+                        <h3 class="Disk__heading">{{ $disk->name }}</h3>
+                    </a>
+                </div>
             </div>
             @empty
             Книг нет
             @endforelse
-            <div class="col-xs-12 pagination-block">
-                {!! $disks->links() !!}
-            </div>
+        </div>
+        <div class="pagination-block">
+            {!! $disks->links() !!}
         </div>
     </div>
 </div>

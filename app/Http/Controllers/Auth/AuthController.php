@@ -2,11 +2,14 @@
 
 namespace Multiversum\Http\Controllers\Auth;
 
-use Multiversum\User;
-use Validator;
-use Multiversum\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Auth;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Http\Request;
+use Multiversum\Http\Controllers\Controller;
+use Multiversum\User;
+use Session;
+use Validator;
 
 class AuthController extends Controller
 {
@@ -19,7 +22,7 @@ class AuthController extends Controller
     | authentication of existing users. By default, this controller uses
     | a simple trait to add these behaviors. Why don't you explore it?
     |
-    */
+     */
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
@@ -49,8 +52,8 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'name'     => 'required|max:255',
+            'email'    => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
     }
@@ -63,10 +66,38 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+        Session::flash('notify', 'Регистрация прошла успешно');
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
+            'name'     => $data['name'],
+            'email'    => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    /**
+     * Send the response after the user was authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  App\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    protected function authenticated(Request $request, $user)
+    {
+        $successMessage = 'Добро пожаловать ' . Auth::user()->name . ', Вы были успешно авторизованы!';
+        $request->session()->flash('notify', $successMessage);
+        return redirect()->intended($this->redirectPath());
+    }
+
+    /**
+     * Log the user out of the application.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getLogout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->flash('notify', 'Выход произведен успешно!');
+        return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
+    }
+
 }

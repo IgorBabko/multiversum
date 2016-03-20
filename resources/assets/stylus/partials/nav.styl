@@ -1,0 +1,88 @@
+@media screen and (max-width: 768px)
+    .dropdown-menu
+        width: 100%
+        // background none !important
+        // a
+        //     background none !important
+    .navbar-collapse
+        background: rgba(61,43,72,0.85)
+
+.navbar
+    background: rgba(61,43,72,0.85)
+    border-radius: 0
+    height: 50px
+    border: none
+    
+    .navbar-collapse
+        border: none
+        // background rgba(61,43,72,0.85) !important
+        text-align center
+    
+    &.navbar-default
+        .navbar-nav > li > a:hover,
+        .navbar-nav > li > a:focus
+            color: #FFC7E9
+            
+        .navbar-nav > .open > a,
+        .navbar-nav > .open > a:focus,
+        .navbar-nav > .open > a:hover
+            background: none
+
+        .navbar-nav
+            > li
+                a
+                    color: white
+                    padding-left: 10px
+                    padding-right: 10px
+                .dropdown-menu
+                    text-align: center
+                    background: rgba(61,43,72,0.85)
+                    min-width: 104px
+                    > .active > a,
+                    > .active > a:focus,
+                    > .active > a:hover
+                        color: #FCFFA5
+                        // background: rgba(61,43,72,0.85)
+                    > li
+                        
+                        > a
+                            font-size: 12px
+                            padding-top: 10px
+                            padding-bottom: 10px
+                            color: white 
+                            
+                        > a:focus,
+                        > a:hover
+                            background: none
+                            color: #FFC7E9 
+                a
+                    font-size: 14px
+                    letter-spacing: 1.5px
+                    font-weight: 400
+                    text-transform: uppercase
+                a:hover
+                    color: #FFC7E9
+                
+                &:focus
+                    color: #FFC7E9
+                    
+                &.active
+                    a
+                        color: #FFFDBA
+                        background: none
+                        &:hover
+                            background: none
+                            color: #FFFDBA
+
+// hanburger menu
+.navbar-default .navbar-header .navbar-toggle
+    border-color: #FFA0DC
+    background: #FFA0DC
+    transition: all 0.1s ease-in-out
+    .icon-bar
+        background: #1D0A29
+
+    &.collapsed
+        background: none
+        .icon-bar
+            background: #FFA0DC

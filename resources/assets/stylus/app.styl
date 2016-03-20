@@ -1,0 +1,304 @@
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap"
+
+// vendor
+@import 'vendor/ohsnap'
+
+// utilities
+@import 'utilities/colors'
+@import 'utilities/helpers'
+
+// animations
+@import 'animations/bouncing-arrow'
+
+// components
+@import 'components/Page'
+@import 'components/Section'
+@import 'components/Gallery'
+@import 'components/Video'
+@import 'components/Iframe'
+@import 'components/Book'
+@import 'components/Disk'
+@import 'components/Post'
+@import 'components/Button'
+@import 'components/Input'
+@import 'components/Textarea'
+
+
+
+// partials
+@import 'partials/nav'
+@import 'partials/search'
+@import 'partials/pagination'
+@import 'partials/footer'
+@import 'partials/comments'
+
+// pages
+@import 'pages/index'
+@import 'pages/about'
+
+// general
+@import 'general'
+
+
+@media only screen and (min-width : 768px)
+    .bootstrap-select
+        width: 90% !important
+
+
+@media only screen and (max-width : 480px)
+    .bootstrap-select
+        min-width: 300px !important
+
+    .post
+        transition: opacity 0.8s ease-in-out
+        left: 0
+
+    .visible
+        opacity: 1
+        left: 0
+
+@media only screen and (min-width : 480px) and (max-width : 768px)
+    .bootstrap-select
+        min-width: 300px !important
+
+@media only screen and (min-width : 768px) and (max-width : 920px)
+    
+ 
+    // .Video
+    //     transition: left 0.5s ease-in-out, opacity 0.8s ease-in-out
+
+    .Video1
+        left: -100px
+
+    .Video2
+        left: 100px
+
+    .Video3
+        left: 0
+    
+    .post
+        transition: left 0.5s ease-in-out, opacity 0.8s ease-in-out
+
+    .post1
+        left: -100px
+
+    .post2
+        left: 100px
+
+    .post3
+        left: 0
+
+    .visible
+        opacity: 1
+        left: 0
+
+@media only screen and (min-width : 920px) and (max-width : 1200px)
+    
+    // .Video,
+    .post
+        transition: left 0.5s ease-in-out, opacity 0.8s ease-in-out
+
+    .Video1
+        left: -100px
+
+    .Video2
+        left: 0
+
+    .Video3
+        left: 100px
+    
+    .post1
+        left: -100px
+
+    .post2
+        left: 0
+
+    .post3
+        left: 100px
+
+    .visible
+        opacity: 1 !important
+        left: 0
+        
+@media only screen and (min-width : 1200px)
+
+    // .Video,
+    .post
+        transition: left 0.5s ease-in-out, opacity 0.8s ease-in-out
+
+    .Video1
+        left: -100px
+
+    .Video2
+        left: 0
+
+    .Video3
+        left: 100px
+        
+    .post1
+        left: -100px
+
+    .post2
+        left: 0
+
+    .post3
+        left: 100px
+
+
+
+
+
+
+
+
+
+
+
+// posts page
+.filters
+    margin-bottom: 30px
+    text-align: center
+    border-bottom: 1px solid #9070A9
+
+// custom styles for bootstrap select plugin
+.bootstrap-select
+    border: 1px solid #AE9DB9
+    margin-bottom: 30px
+    // width: 90% !important
+    button
+        background: white !important//#F2FF8A !important//#FFADD6 !important
+        border: none 
+        margin: 0 auto
+        display: block
+
+    .dropdown-menu > li > a:hover,
+    .dropdown-menu > li > a:focus
+        background: #78598E
+        color: white
+
+
+.reset-password-span
+    display: block
+    text-align: center
+    .reset-password
+        color: #dab5f7
+        font-size: 18px
+        text-align: center
+        margin: 20px auto 0
+        display: inline-block
+        
+        &:hover
+            color: #dab5f7
+input.error
+    border-color: #FFB1B1//#FF8787
+
+.error
+    color: #FFB1B1//#FF8787
+    font-weight: 400
+    font-size: 20px 
+
+// custom checkbox
+*,
+*:after,
+*::before
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+.ac-custom
+    max-width: 900px
+    margin: 0 auto
+
+.ac-custom h2
+    font-size: 3em
+    font-weight: 300
+    padding: 0 0 0.5em
+    margin: 0 0 30px
+
+.ac-custom ul
+    list-style: none
+    padding: 0
+    margin: 0 auto 30px
+    max-width: 800px
+
+.ac-custom li
+    margin: 0 auto
+    position: relative
+
+.ac-custom label
+    display: inline-block
+    position: relative
+    font-size: 1em
+    padding: 8px 0 0 60px
+    color: #A894B7
+    cursor: pointer
+    -webkit-transition: color 0.3s
+    transition: color 0.3s
+    font-weight: 100 
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"],
+.ac-custom label::before
+    width: 40px
+    height: 40px
+    top: 50%
+    left: 5px
+    margin-top: -16px
+    position: absolute
+    cursor: pointer
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"]
+    opacity: 0
+    -webkit-appearance: none
+    display: inline-block
+    vertical-align: middle
+    z-index: 100
+
+.ac-custom label::before
+    content: ''
+    border: 1px solid #a894b7
+    -webkit-transition: opacity 0.3s
+    transition: opacity 0.3s
+
+.ac-custom input[type="checkbox"]:checked + label,
+.ac-custom input[type="radio"]:checked + label
+    color: #fff 
+
+.ac-custom input[type="checkbox"]:checked + label::before,
+.ac-custom input[type="radio"]:checked + label::before
+    opacity: 0.8
+
+/* General SVG and path styles */
+
+.ac-custom svg
+    position: absolute
+    width: 40px
+    height: 40px
+    top: 50%
+    margin-top: -20px
+    left: 5px
+    pointer-events: none
+
+.ac-custom svg path
+    stroke: #fdfcd3
+    stroke-width: 13px
+    stroke-linecap: round
+    stroke-linejoin: round
+    fill: none
+
+// placeholders
+
+
+.success-alert
+    background: #5A406D
+    color: #72F7BE
+    padding: 15px
+    font-size: 22px
+    text-align: center
+
+
+// 1327
+// 933
+// 661
+// 309

@@ -2,8 +2,8 @@
 
 namespace Multiversum\Http\Controllers\Auth;
 
-use Multiversum\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Multiversum\Http\Controllers\Controller;
 
 class PasswordController extends Controller
 {
@@ -16,9 +16,11 @@ class PasswordController extends Controller
     | and uses a simple trait to include this behavior. You're free to
     | explore this trait and override any methods you wish to tweak.
     |
-    */
+     */
 
     use ResetsPasswords;
+
+    protected $redirectTo = '/';
 
     /**
      * Create a new password controller instance.
@@ -28,5 +30,17 @@ class PasswordController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    /**
+     * Get the response for after the reset link has been successfully sent.
+     *
+     * @param  string  $response
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    protected function getSendResetLinkEmailSuccessResponse($response)
+    {
+        \Session::flash('notify', \Lang::get('passwords.sent'));
+        return redirect()->back()->with('status', trans($response));
     }
 }

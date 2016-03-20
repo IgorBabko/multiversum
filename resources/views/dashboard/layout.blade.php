@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="/css/font-awesome.css">
         <link rel="stylesheet" href="/css/bootstrap-table.min.css">
         <script src="/js/jquery.min.js"></script>
+        <script src="/js/ohsnap.min.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/bootstrap-table.min.js"></script>

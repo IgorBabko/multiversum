@@ -1,23 +1,27 @@
 var elixir = require('laravel-elixir');
+var postStylus = require('poststylus');
 
 require('laravel-elixir-livereload');
+require('laravel-elixir-stylus');
 
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
- | file for our application, as well as publishing vendor resources.
- |
- */
 
 elixir(function(mix) {
-    mix.sass('app.sass');
-    mix.sass('dashboard.sass');
+
+    mix.stylus('app.styl', null, {
+        use: [
+            postStylus( [ 'autoprefixer', 'lost', 'rucksack-css' ] )
+        ]
+    });
+
+    mix.stylus('dashboard.styl', null, {
+        use: [
+            postStylus( [ 'autoprefixer', 'lost', 'rucksack-css' ] )
+        ]
+    });
 
     mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js/jquery.min.js');
+
+    mix.copy('bower_components/oh-snap/ohsnap.min.js', 'public/js/ohsnap.min.js');
 
     mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/fonts/bootstrap');
     mix.copy('node_modules/bootstrap/dist/css/bootstrap.min.css', 'public/css/bootstrap.min.css');
@@ -35,7 +39,6 @@ elixir(function(mix) {
     mix.copy('node_modules/bootstrap-table/dist/bootstrap-table.min.css', 'public/css/bootstrap-table.min.css');
     mix.copy('node_modules/bootstrap-table/dist/bootstrap-table.min.js', 'public/js/bootstrap-table.min.js');
     mix.copy('node_modules/bootstrap-table/dist/locale/bootstrap-table-ru-RU.min.js', 'public/js/bootstrap-table-ru-RU.min.js');
-
 
     mix.livereload();
 });
