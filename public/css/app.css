@@ -614,77 +614,15 @@
 .Post__button:hover {
   background: #432e51;
 }
-@media screen and (min-width: 768px) {
-  .Post {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    width: calc(99.99% * 1/2 - (20px - 20px * 1/2));
-    height: calc(99.99% * 1/2 - (20px - 20px * 1/2));
-  }
-  .Post:nth-child(1n) {
-    margin-right: 20px;
-    margin-bottom: 20px;
-  }
-  .Post:last-child {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-  .Post:nth-child(2n) {
-    margin-right: 0;
-    float: right;
-  }
-  .Post:nth-last-child(-n + 2) {
-    margin-bottom: 0;
-  }
+.Post-expanded__date {
+  text-align: center;
+  font-style: italic;
+  font-size: 16px;
 }
-@media screen and (min-width: 994px) {
-  .Post {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    width: calc(99.99% * 1/3 - (30px - 30px * 1/3));
-    height: calc(99.99% * 1/3 - (30px - 30px * 1/3));
-  }
-  .Post:nth-child(1n) {
-    margin-right: 30px;
-    margin-bottom: 30px;
-  }
-  .Post:last-child {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-  .Post:nth-child(3n) {
-    margin-right: 0;
-    float: right;
-  }
-  .Post:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .Post {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    width: calc(99.99% * 1/3 - (40px - 40px * 1/3));
-    height: calc(99.99% * 1/3 - (40px - 40px * 1/3));
-  }
-  .Post:nth-child(1n) {
-    margin-right: 40px;
-    margin-bottom: 40px;
-  }
-  .Post:last-child {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-  .Post:nth-child(3n) {
-    margin-right: 0;
-    float: right;
-  }
-  .Post:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-  }
+.Post-expanded__image {
+  display: block;
+  max-width: 80%;
+  margin: 30px auto;
 }
 .Button {
   display: block;
