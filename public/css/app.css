@@ -260,6 +260,7 @@
 .Video {
   width: 270px !important;
   box-shadow: 0 0 5px 1px #432e51;
+  overflow: hidden;
 }
 .Video__link {
   display: block;
@@ -272,6 +273,9 @@
 }
 .Video__link:hover .Video__overlay {
   opacity: 1;
+}
+.Video__thumb {
+  height: 220px;
 }
 .Video__overlay {
   transition: all 0.2s ease-in-out;
