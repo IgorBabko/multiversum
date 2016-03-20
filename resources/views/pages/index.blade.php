@@ -1,7 +1,6 @@
 @extends("layout")
 @section("content")
 <header class="header">
-    @include('partials.session')
     <h1 class="header__heading">Главный заголовок</h1>
     <h2 class="header__quote">Здесь можно написать цитату</h2>
     <div class="header__arrow"><i class="fa fa-angle-double-down"></i></div>
@@ -80,4 +79,5 @@
         @endforeach
     </div>
 </div>
+@include('partials.session')
 @endsection

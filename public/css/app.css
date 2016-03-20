@@ -1,3 +1,36 @@
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 0px;
+  position: fixed;
+  bottom: 0px;
+  right: 21px;
+  font-size: 16px;
+  z-index: 1000000;
+/* Each alert has its own width */
+  float: right;
+  clear: right;
+}
+.alert-red {
+  color: #fff;
+  background-color: #da4453;
+}
+.alert-green {
+  color: #fff;
+  background-color: #37bc9b;
+}
+.alert-blue {
+  color: #fff;
+  background-color: #4a89dc;
+}
+.alert-yellow {
+  color: #fff;
+  background-color: #f6bb42;
+}
+.alert-orange {
+  color: #fff;
+  background-color: #e9573f;
+}
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0);

@@ -1,5 +1,8 @@
-@foreach (session()->all() as $message)
-<div class="success-alert">
-    {{  var_dump($message) }}
-</div>
-@endforeach
+
+@if (session('notify'))
+<div id="ohsnap" data-notify="{{ session('notify') }}"></div>
+<script src="/js/ohsnap.min.js"></script>
+<script>
+    ohSnap($('#ohsnap').data('notify'), {color: 'green', icon: 'icon-alert'});
+</script>
+@endif

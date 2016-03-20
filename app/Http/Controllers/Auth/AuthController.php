@@ -66,7 +66,7 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        Session::flash('success', 'Регистрация прошла успешно');
+        Session::flash('notify', 'Регистрация прошла успешно');
         return User::create([
             'name'     => $data['name'],
             'email'    => $data['email'],
@@ -84,7 +84,7 @@ class AuthController extends Controller
     protected function authenticated(Request $request, $user)
     {
         $successMessage = 'Добро пожаловать ' . Auth::user()->name . ', Вы были успешно авторизованы!';
-        $request->session()->flash('success', $successMessage);
+        $request->session()->flash('notify', $successMessage);
         return redirect()->intended($this->redirectPath());
     }
 
@@ -96,7 +96,7 @@ class AuthController extends Controller
     public function getLogout(Request $request)
     {
         Auth::logout();
-        $request->session()->flash('success', 'Выход произведен успешно!');
+        $request->session()->flash('notify', 'Выход произведен успешно!');
         return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
     }
 
