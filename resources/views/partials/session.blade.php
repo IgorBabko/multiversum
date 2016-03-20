@@ -1,5 +1,5 @@
-@if (session('status'))
+@foreach (session()->all() as $message)
 <div class="success-alert">
-    {{ session('status') }}
+    {{  var_dump($message) }}
 </div>
-@endif
+@endforeach
