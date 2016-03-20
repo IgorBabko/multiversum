@@ -8,7 +8,7 @@
             @forelse ($books as $book)
             <div>
                 <div class="Book">
-                    <a href="/disks/{{ $book->slug }}" class="Book__link">
+                    <a href="/books/{{ $book->slug }}" class="Book__link">
                         <div class="Book__overlay">
                             <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                         </div>

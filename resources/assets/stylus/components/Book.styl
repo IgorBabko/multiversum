@@ -1,6 +1,7 @@
 .Book
     width: 220px !important
     box-shadow: 0 0 5px 1px #432E51
+    
 
     &__link
         display: block
@@ -35,12 +36,45 @@
         margin: 0
 
 .Book-expanded
+    display: flex
+    flex-wrap: wrap
+    
+    &__heading
+        flex-basis: 100%
     &__date
+        flex-basis: 100%
         text-align: center
         font-style: italic
         font-size: 16px
+        margin-bottom: 30px
+    
+    
+    &__wrapper
+        text-align: center
+        flex: 1
+        padding-right: 40px
+        
+    &__buy
+        background: #599062//#6A4388
+        border: none
+        color: white
+        &:hover
+            background: #43734B//#432E51
+            color: white
+        margin: 15px 0
+        font-size: 20px
+        border-radius: 0
+
+    &__description
+        display: inline
+        flex: 6 
         
     &__image
-        display: block
-        width: 200px
-        height: 500px
+        display: inline-block
+        box-shadow: 0 0 5px 1px #432e51
+        
+    @media screen and (max-width: 768px)
+        &__wrapper
+            text-align: center
+            flex-basis: 100%
+            padding-right: 0
