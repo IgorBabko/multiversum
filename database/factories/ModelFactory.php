@@ -25,7 +25,7 @@ $factory->define(Multiversum\Webinar::class, function (Faker\Generator $faker) {
         'name'         => $faker->word(2),
         'description'  => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
-        'path'         => $faker->url,
+        // 'youtube_id'         => $faker->url,
     ];
 });
 

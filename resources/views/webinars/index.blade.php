@@ -9,10 +9,12 @@
             <div>
                 <div class="Video">
                     <a href="/webinars/{{ $webinar->slug }}" class="Video__link">
-                        <div class="Video__overlay">
-                            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        <div>
+                            <div class="Video__overlay">
+                                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                            </div>
+                            <img src="{{ $webinar->thumbnail }}" class="Video__thumb">
                         </div>
-                        <img src="http://placehold.it/270x220" class="Video__thumb">
                         <h3 class="Video__heading">{{ $webinar->name }}</h3>
                     </a>
                 </div>

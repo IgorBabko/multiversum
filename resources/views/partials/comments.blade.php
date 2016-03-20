@@ -5,7 +5,7 @@
         <script>
         var disqus_config = function () {
         this.page.url = '{{ $request->url() }}';
-        this.page.identifier = '{{ $post->slug }}';
+        this.page.identifier = '{{ $resource->slug }}';
         };
         (function() {
         var d = document, s = d.createElement('script');

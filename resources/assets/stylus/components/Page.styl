@@ -16,6 +16,8 @@
         background: #5A406D
         box-shadow: 0px 0px 20px 1px #301840
         padding: 30px 50px 70px
+        font-size: responsive 16px 22px
+        font-weight: 100
     
     &__button
         display: block
@@ -34,16 +36,16 @@
             color: white
             border-color: white
 
-    &--is-light
-        &__content
-            background: #f5e7ff
-            color: black
-        
-        &__heading
-            color: #483358
-
 
     @media screen and (max-width: 994px)
         padding: 100px 30px 50px
         &__content
             padding: 20px
+
+.Page-light
+    &__content
+        background: #f5e7ff
+        color: black
+    
+    &__heading
+        color: #483358

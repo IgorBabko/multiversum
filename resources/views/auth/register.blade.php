@@ -1,9 +1,8 @@
 @extends('layout')
-
 @section('content')
 <div class="Page">
     <div class="Page__content register">
-        <form method="POST" action="{{ url('/register') }}" class="ac-custom ac-checkbox ac-checkmark" autocomplete="off">
+        <form method="POST" action="{{ url('/register') }}" autocomplete="off">
             <h1 class="Page__heading">Регистрация</h1>
             {!! csrf_field() !!}
             <span class="help-block error">
@@ -18,6 +17,9 @@
                 {{ $errors->first('password') }}
             </span>
             <input type="password" class="Input {{ $errors->first('password') ? 'error' : '' }}" name="password" placeholder="Пароль">
+            <span class="help-block error">
+                {{ $errors->first('password_confirmation') }}
+            </span>
             <input type="password" class="Input {{ $errors->first('password_confirmation') ? 'error' : '' }}" name="password_confirmation" placeholder="Подтвердить пароль">
             <button type="submit" class="Button">Создать аккаунт</button>
         </form>

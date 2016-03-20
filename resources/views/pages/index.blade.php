@@ -2,9 +2,6 @@
 @section("content")
 <header class="header">
     <h1 class="header__heading">Главный заголовок</h1>
-    <!-- <hr class="light-line"> -->
-    <iframe width="854" height="480" src="https://www.youtube.com/embed/FbkkMF4LMnw" frameborder="0" allowfullscreen></iframe>
-
     <h2 class="header__quote">Здесь можно написать цитату</h2>
     <div class="header__arrow"><i class="fa fa-angle-double-down"></i></div>
 </header>
