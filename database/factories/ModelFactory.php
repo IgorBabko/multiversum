@@ -55,7 +55,7 @@ $factory->define(Multiversum\Book::class, function (Faker\Generator $faker) {
     return [
         'name'         => $faker->word(2),
         'description'  => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
-        'picture'      => $faker->url,
+        'thumbnail'    => $faker->imageUrl($width = 220, $height = 250),
         'price'        => $faker->randomNumber(2),
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
     ];
@@ -65,7 +65,7 @@ $factory->define(Multiversum\Disk::class, function (Faker\Generator $faker) {
     return [
         'name'         => $faker->word(2),
         'description'  => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
-        'picture'      => $faker->url,
+        'thumbnail'    => $faker->imageUrl($width = 270, $height = 220),
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
         'price'        => $faker->randomNumber(2),
     ];

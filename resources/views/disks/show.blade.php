@@ -6,7 +6,7 @@
             <h1 class="Page__heading Page-light__heading">{{ $disk->name }}</h1>
             <div class="Disk-expanded__date">Дата публикации: {{ $disk->published_at->format('m.d.Y') }}</div>
             <div class="Disk-expanded__wrapper">
-                <img src="http://placehold.it/220x220" class="Disk-expanded__image"  alt="{{ $disk->name }}">
+                <img src="{{ $disk->thumbnail }}" class="Disk-expanded__image"  alt="{{ $disk->name }}">
                 <br>
                 <button class="btn Disk-expanded__buy">Купить</button>
             </div>
