@@ -95,6 +95,9 @@
       flex-basis: 100%;
   text-align: center;
   color: #fffdba;
+  font-family: 'Lobster', cursive;
+  font-size: 56px;
+  margin: 0;
 }
 .Page__content {
   background: #5a406d;
@@ -1004,12 +1007,12 @@
   -ms-flex: 1;
       flex: 1;
   text-align: left;
-  font-size: calc(16px + 6 * ((100vw - 420px) / 860));
+  font-size: calc(16px + 4 * ((100vw - 420px) / 860));
   font-weight: 100;
 }
 @media screen and (min-width: 1280px) {
   .about__bio {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 420px) {

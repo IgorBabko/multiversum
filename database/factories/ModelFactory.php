@@ -33,8 +33,8 @@ $factory->define(Multiversum\Post::class, function (Faker\Generator $faker) {
     return [
         'name'         => join(" ", $faker->words(3)),
         'content'      => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
-        'thumbnail'    => $faker->url,
-        'picture'      => $faker->url,
+        'thumbnail'    => $faker->imageUrl($width = 640, $height = 480),
+        'image'        => $faker->imageUrl($width = 1024, $height = 768),
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
     ];
 });

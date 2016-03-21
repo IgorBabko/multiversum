@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
                 ->references('id')->on('categories')
                 ->onDelete('cascade');
             $table->string('thumbnail')->nullable();
-            $table->string('picture')->nullable();
+            $table->string('image')->nullable();
             $table->string('slug')->nullable();
             $table->text('content');
             $table->timestamp('published_at')->default(\DB::raw('CURRENT_TIMESTAMP'));

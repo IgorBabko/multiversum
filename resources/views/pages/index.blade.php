@@ -15,7 +15,7 @@
                     <div class="Video__overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                     </div>
-                    <img src="http://placehold.it/270x220" class="Video__thumb">
+                    <img src="{{ $webinar->thumbnail }}" class="Video__thumb">
                     <h3 class="Video__heading">{{ $webinar->name }}</h3>
                 </a>
             </div>
@@ -29,7 +29,7 @@
         @foreach ($posts as $post)
         <div>
             <div class="Post">
-                <img src="http://placehold.it/300x200" class="img-responsive Post__thumb" alt="Статья 1">
+                <img src="{{ $post->thumbnail }}" class="img-responsive Post__thumb" alt="Статья 1">
                 <div class="Post__info">
                     <h3 class="Post__heading">{{ $post->name }}</h3>
                     <p class="Post__content">{{ str_limit($post->content, 150) }}</p>
