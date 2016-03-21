@@ -12,7 +12,7 @@
                         <div class="Disk__overlay">
                             <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                         </div>
-                        <img src="http://placehold.it/270x220" class="Disk__thumb">
+                        <img src="{{ $disk->thumbnail }}" class="Disk__thumb">
                         <h3 class="Disk__heading">{{ $disk->name }}</h3>
                     </a>
                 </div>

@@ -12,7 +12,7 @@
                         <div class="Book__overlay">
                             <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                         </div>
-                        <img src="http://placehold.it/220x250" class="Book__thumb">
+                        <img src="{{ $book->thumbnail }}" class="Book__thumb">
                         <h3 class="Book__heading">{{ $book->name }}</h3>
                     </a>
                 </div>

@@ -1,7 +1,7 @@
 @extends("layout")
 @section("content")
 <header class="header">
-    <h1 class="header__heading">Главный заголовок</h1>
+    <h1 class="header__heading">Человек как бесконечность</h1>
     <h2 class="header__quote">Здесь можно написать цитату</h2>
     <div class="header__arrow"><i class="fa fa-angle-double-down"></i></div>
 </header>
@@ -15,7 +15,7 @@
                     <div class="Video__overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                     </div>
-                    <img src="http://placehold.it/270x220" class="Video__thumb">
+                    <img src="{{ $webinar->thumbnail }}" class="Video__thumb">
                     <h3 class="Video__heading">{{ $webinar->name }}</h3>
                 </a>
             </div>
@@ -29,7 +29,7 @@
         @foreach ($posts as $post)
         <div>
             <div class="Post">
-                <img src="http://placehold.it/300x200" class="img-responsive Post__thumb" alt="Статья 1">
+                <img src="{{ $post->thumbnail }}" class="img-responsive Post__thumb" alt="Статья 1">
                 <div class="Post__info">
                     <h3 class="Post__heading">{{ $post->name }}</h3>
                     <p class="Post__content">{{ str_limit($post->content, 150) }}</p>
@@ -53,7 +53,7 @@
                     <div class="Book__overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                     </div>
-                    <img src="http://placehold.it/220x250" class="Book__thumb">
+                    <img src="{{ $book->thumbnail }}" class="Book__thumb">
                     <h3 class="Book__heading">{{ $book->name }}</h3>
                 </a>
             </div>
@@ -71,7 +71,7 @@
                     <div class="Disk__overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                     </div>
-                    <img src="http://placehold.it/270x220" class="Disk__thumb">
+                    <img src="{{ $disk->thumbnail }}" class="Disk__thumb">
                     <h3 class="Disk__heading">{{ $disk->name }}</h3>
                 </a>
             </div>
