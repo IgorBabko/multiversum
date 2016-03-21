@@ -103,17 +103,17 @@
   background: #5a406d;
   box-shadow: 0px 0px 20px 1px #301840;
   padding: 30px 50px 70px;
-  font-size: calc(16px + 6 * ((100vw - 420px) / 860));
+  font-size: calc(14px + 4 * ((100vw - 420px) / 860));
   font-weight: 100;
 }
 @media screen and (min-width: 1280px) {
   .Page__content {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 420px) {
   .Page__content {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 .Page__button {
@@ -158,6 +158,8 @@
   -ms-flex-preferred-size: 100%;
       -webkit-flex-basis: 100%;
       flex-basis: 100%;
+  font-family: 'Lobster', cursive;
+  font-size: 48px;
 }
 .Section--is-purple {
   background: #6a4388;
@@ -578,7 +580,7 @@
   height: calc(99.99% * 1/1 - (10px - 10px * 1/1));
   width: 300px !important;
   background: #fff;
-  box-shadow: 0 0 7px 0px #432e51;
+  box-shadow: 0 0 5px 1px #432e51;
 }
 .Post:nth-child(1n) {
   margin-right: 10px;
@@ -694,6 +696,7 @@
   border-radius: 0;
   height: 50px;
   border: none;
+  font-family: 'Lobster', cursive;
 }
 .navbar .navbar-collapse {
   border: none;
@@ -724,7 +727,7 @@
   color: #fcffa5;
 }
 .navbar.navbar-default .navbar-nav > li .dropdown-menu > li > a {
-  font-size: 12px;
+  font-size: 18px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: #fff;
@@ -735,10 +738,9 @@
   color: #ffc7e9;
 }
 .navbar.navbar-default .navbar-nav > li a {
-  font-size: 14px;
+  font-size: 22px;
   letter-spacing: 1.5px;
   font-weight: 400;
-  text-transform: uppercase;
 }
 .navbar.navbar-default .navbar-nav > li a:hover {
   color: #ffc7e9;
@@ -927,6 +929,7 @@
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  font-family: 'Lobster', cursive;
 }
 .header__heading {
   display: none;
@@ -1076,6 +1079,7 @@ body {
   background: #6a4388;
 }
 .logo {
+  font-family: 'Roboto Slab', serif;
   color: #ffc7e9 !important;
   font-weight: bold;
   font-style: italic;
