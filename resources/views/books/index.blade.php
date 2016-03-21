@@ -1,7 +1,7 @@
 @extends("layout")
 @section("content")
 <div class="Page">
-    <div class="Page__content">
+    <div class="Page__content Page__content--with-resource">
         <h1 class="Page__heading">Книги</h1>
         @include('partials.search')
         <div class="Gallery">

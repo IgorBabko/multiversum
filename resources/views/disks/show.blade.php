@@ -1,7 +1,7 @@
 @extends("layout")
 @section("content")
 <div class="Page Page-light">
-    <div class="Page__content Page-light__content">
+    <div class="Page__content Page-light__content Page__content--with-resource">
         <div class="Disk-expanded">
             <h1 class="Page__heading Page-light__heading">{{ $disk->name }}</h1>
             <div class="Disk-expanded__date">Дата публикации: {{ $disk->published_at->format('m.d.Y') }}</div>

@@ -1,7 +1,7 @@
 @extends("layout")
 @section("content")
 <div class="Page Page-light">
-    <div class="Page__content Page-light__content">
+    <div class="Page__content Page-light__content Page__content--with-resource">
         <div class="Post-expanded">
             <h1 class="Page__heading Page-light__heading">{{ $post->name }}</h1>
             <div class="Post-expanded__date">Дата публикации: {{ $post->published_at->format('m.d.Y') }}</div>

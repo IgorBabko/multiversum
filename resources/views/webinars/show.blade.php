@@ -1,7 +1,7 @@
 @extends("layout")
 @section("content")
 <div class="Page Page-light">
-    <div class="Page__content Page-light__content">
+    <div class="Page__content Page-light__content Page__content--with-resource">
         <h1 class="Page__heading Page-light__heading">{{ $webinar->name }}</h1>
         <div class="Video-expanded">
             <div class="Video-expanded__date">
