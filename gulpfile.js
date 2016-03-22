@@ -40,5 +40,8 @@ elixir(function(mix) {
     mix.copy('node_modules/bootstrap-table/dist/bootstrap-table.min.js', 'public/js/bootstrap-table.min.js');
     mix.copy('node_modules/bootstrap-table/dist/locale/bootstrap-table-ru-RU.min.js', 'public/js/bootstrap-table-ru-RU.min.js');
 
-    mix.livereload();
+    mix
+        .coffee('app.coffee', 'resources/assets/js')
+        .browserify('app.js')
+        .livereload();
 });
