@@ -34,7 +34,7 @@
         <div class="Gallery">
             @forelse ($posts as $post)
             <div>
-                <div class="Post">
+                <div class="resource Post">
                     <img src="{{ $post->thumbnail }}" class="img-responsive Post__thumb" alt="Статья 1">
                     <div class="Post__info">
                         <h3 class="Post__heading">{{ $post->name }}</h3>

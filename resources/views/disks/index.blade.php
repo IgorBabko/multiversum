@@ -7,7 +7,7 @@
         <div class="Gallery">
             @forelse ($disks as $disk)
             <div>
-                <div class="Disk">
+                <div class="resource Disk">
                     <a href="/disks/{{ $disk->slug }}" class="Disk__link">
                         <div class="Disk__overlay">
                             <span class="glyphicon glyphicon-play" aria-hidden="true"></span>

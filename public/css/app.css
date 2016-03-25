@@ -1118,6 +1118,15 @@ body {
   color: #fff !important;
   text-decoration: none;
 }
+.resource {
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.visible {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
 /*
 @media only screen and (min-width : 768px)
     .bootstrap-select

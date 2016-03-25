@@ -7,7 +7,7 @@
         <div class="Gallery">
             @forelse ($webinars as $webinar)
             <div>
-                <div class="Video">
+                <div class="resource Video">
                     <a href="/webinars/{{ $webinar->slug }}" class="Video__link">
                         <div>
                             <div class="Video__overlay">

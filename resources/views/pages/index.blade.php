@@ -10,7 +10,7 @@
     <div class="Gallery">
         @foreach ($webinars as $webinar)
         <div>
-            <div class="Video">
+            <div class="resource Video">
                 <a href="/webinars/{{ $webinar->slug }}" class="Video__link">
                     <div class="Video__overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
@@ -28,7 +28,7 @@
     <div class="Gallery">
         @foreach ($posts as $post)
         <div>
-            <div class="Post">
+            <div class="resource Post">
                 <img src="{{ $post->thumbnail }}" class="img-responsive Post__thumb" alt="Статья 1">
                 <div class="Post__info">
                     <h3 class="Post__heading">{{ $post->name }}</h3>
@@ -48,7 +48,7 @@
     <div class="Gallery">
         @foreach($books as $book)
         <div>
-            <div class="Book">
+            <div class="resource Book">
                 <a href="/disks/{{ $book->slug }}" class="Book__link">
                     <div class="Book__overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
@@ -66,7 +66,7 @@
     <div class="Gallery">
         @foreach($disks as $disk)
         <div>
-            <div class="Disk">
+            <div class="resource Disk">
                 <a href="/disks/{{ $disk->slug }}" class="Disk__link">
                     <div class="Disk__overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
