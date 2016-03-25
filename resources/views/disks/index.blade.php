@@ -3,7 +3,7 @@
 <div class="Page">
     <div class="Page__content Page__content--with-resource">
         <h1 class="Page__heading">Диски</h1>
-        @include('partials.search')
+        @include('partials.search', ['resource' => $disks, 'searchUrl'=> '/disks/?/search', 'resetUrl' => '/disks'])
         <div class="Gallery">
             @forelse ($disks as $disk)
             <div>

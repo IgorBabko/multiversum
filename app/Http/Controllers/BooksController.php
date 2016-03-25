@@ -21,4 +21,11 @@ class BooksController extends Controller
 
         return view('books.show', compact('request', 'book'));
     }
+
+    public function search($searchString)
+    {
+        $books = Book::search($searchString, false)->paginate(10);
+
+        return view('books.index', compact('books', 'searchString'));
+    }
 }

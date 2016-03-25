@@ -5,10 +5,11 @@ namespace Multiversum;
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
+use Sofa\Eloquence\Eloquence;
 
 class Book extends Model implements SluggableInterface
 {
-    use SluggableTrait;
+    use SluggableTrait, Eloquence;
 
     protected $dates = ['published_at'];
 

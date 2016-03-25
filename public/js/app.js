@@ -42,7 +42,7 @@
     $('.search form').submit(function (e) {
       e.preventDefault();
       if (/^\s*$/.test($('.search__input').val())) {
-        return location.href = '/webinars';
+        return location.href = location.href.match(/\/[^\/]+(\/[^\/]+)/)[1];
       } else {
         return location.href = $(this).attr('action').replace('?', $('.search__input').val());
       }

@@ -19,8 +19,6 @@ class Webinar extends Model implements SluggableInterface
         'save_to'    => 'slug',
     ];
 
-    protected $searchableColumns = ['name', 'description'];
-
     protected $guarded = [];
 
     public function getIframeAttribute()

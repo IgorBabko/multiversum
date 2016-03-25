@@ -43,7 +43,7 @@ $ ->
     $('.search form').submit (e) ->
         e.preventDefault()
         if /^\s*$/.test $('.search__input').val()
-            location.href = '/webinars'
+            location.href = location.href.match(/\/[^\/]+(\/[^\/]+)/)[1]
         else
             location.href = $(this).attr('action').replace('?', $('.search__input').val())
 

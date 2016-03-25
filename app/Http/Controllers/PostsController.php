@@ -22,4 +22,11 @@ class PostsController extends Controller
 
         return view('posts.show', compact('request', 'post'));
     }
+
+    public function search($searchString)
+    {
+        $posts = Post::search($searchString, false)->paginate(10);
+
+        return view('posts.index', compact('posts', 'searchString'));
+    }
 }
