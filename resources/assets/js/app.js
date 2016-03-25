@@ -36,6 +36,7 @@
         return $(resource).addClass('visible');
       }).addTo(controller);
     });
+    $('input[type!="hidden"]').first().focus();
     $('.search form').submit(function(e) {
       e.preventDefault();
       if (/^\s*$/.test($('.search__input').val())) {
