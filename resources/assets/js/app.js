@@ -28,13 +28,17 @@
     };
     changeQuotes(0);
     controller = new ScrollMagic.Controller();
-    return $('.resource').each(function(i, resource) {
+    $('.resource').each(function(i, resource) {
       return new ScrollMagic.Scene({
         triggerElement: resource,
         triggerHook: '0.9'
       }).on('enter', function() {
         return $(resource).addClass('visible');
       }).addTo(controller);
+    });
+    $('.search').submit(function(e) {
+      e.preventDefault();
+      return location.href = $(this).attr('action').replace('?', $('.search__input').val() || ' ');
     });
   });
 

@@ -38,3 +38,10 @@ $ ->
                 $(resource).addClass('visible')
             ).addTo(controller)
     )
+
+    # search
+    $('.search').submit (e) ->
+        e.preventDefault()
+        location.href = $(this).attr('action').replace('?', $('.search__input').val() || ' ')
+
+    return
