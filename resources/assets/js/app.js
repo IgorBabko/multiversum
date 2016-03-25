@@ -36,9 +36,13 @@
         return $(resource).addClass('visible');
       }).addTo(controller);
     });
-    $('.search').submit(function(e) {
+    $('.search form').submit(function(e) {
       e.preventDefault();
-      return location.href = $(this).attr('action').replace('?', $('.search__input').val() || ' ');
+      if (/^\s*$/.test($('.search__input').val())) {
+        return location.href = '/webinars';
+      } else {
+        return location.href = $(this).attr('action').replace('?', $('.search__input').val());
+      }
     });
   });
 

@@ -817,6 +817,7 @@
   font-size: 24px;
   text-align: left !important;
   padding-right: 30px;
+  padding-left: 30px;
 }
 .search__input:focus {
   outline: none !important;
@@ -833,10 +834,32 @@
   color: #a894b7;
 }
 .search__button:hover {
-  color: #fcffa5;
+  color: #fffdba;
 }
 .search__button:focus {
   outline: none;
+}
+.search__results {
+  color: #ffc7e9;
+  margin-top: 10px;
+  background: #4e385f;
+  padding: 10px;
+  box-shadow: inset 0 0 7px 0 #352540;
+}
+.search__results span {
+  color: #fffdba;
+}
+.search__reset {
+  position: absolute;
+  top: 21px;
+  left: 0;
+  cursor: pointer;
+  color: #a894b7;
+  font-size: 28px;
+  color: #ffb1b1;
+}
+.search__reset:hover {
+  color: #f77;
 }
 .pagination-block {
   text-align: center;

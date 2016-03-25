@@ -40,8 +40,11 @@ $ ->
     )
 
     # search
-    $('.search').submit (e) ->
+    $('.search form').submit (e) ->
         e.preventDefault()
-        location.href = $(this).attr('action').replace('?', $('.search__input').val() || ' ')
+        if /^\s*$/.test $('.search__input').val()
+            location.href = '/webinars'
+        else
+            location.href = $(this).attr('action').replace('?', $('.search__input').val())
 
     return

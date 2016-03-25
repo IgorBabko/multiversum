@@ -25,6 +25,6 @@ class WebinarsController extends Controller
     {
         $webinars = Webinar::search($searchString, false)->paginate(5);
 
-        return view('webinars.index', compact('webinars'));
+        return view('webinars.index', compact('webinars', 'searchString'));
     }
 }
