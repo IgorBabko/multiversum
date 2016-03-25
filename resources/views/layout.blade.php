@@ -24,6 +24,7 @@
         @endif
     </head>
     <body>
+        @include('partials.session')
         @include("partials.nav")
         @yield('content')
         @include("partials.footer")
