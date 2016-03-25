@@ -822,16 +822,21 @@
   outline: none !important;
   border-bottom: 1px solid #fff;
 }
-.search__icon {
+.search__button {
+  background: none;
+  border: none;
   font-size: 28px !important;
   position: absolute;
-  top: 25px;
+  top: 17px;
   right: 0;
   cursor: pointer;
   color: #a894b7;
 }
-.search__icon:hover {
+.search__button:hover {
   color: #fcffa5;
+}
+.search__button:focus {
+  outline: none;
 }
 .pagination-block {
   text-align: center;

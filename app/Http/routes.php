@@ -10,6 +10,7 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/webinars', ['as' => 'webinars', 'uses' => 'WebinarsController@index']);
     Route::get('/webinars/{slug}', ['as' => 'webinar', 'uses' => 'WebinarsController@showWebinar']);
+    Route::get('/webinars/search/{searchString}', ['as' => 'searchWebinars', 'uses' => 'WebinarsController@search']);
 
     Route::get('/books', ['as' => 'books', 'uses' => 'BooksController@index']);
     Route::get('/books/{slug}', ['as' => 'book', 'uses' => 'BooksController@showBook']);

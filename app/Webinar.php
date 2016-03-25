@@ -6,10 +6,11 @@ use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
 use Embed;
 use Illuminate\Database\Eloquent\Model;
+use Sofa\Eloquence\Eloquence;
 
 class Webinar extends Model implements SluggableInterface
 {
-    use SluggableTrait;
+    use SluggableTrait, Eloquence;
 
     protected $dates = ['published_at'];
 
@@ -17,6 +18,8 @@ class Webinar extends Model implements SluggableInterface
         'build_from' => 'name',
         'save_to'    => 'slug',
     ];
+
+    protected $searchableColumns = ['name', 'description'];
 
     protected $guarded = [];
 

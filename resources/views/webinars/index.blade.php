@@ -3,7 +3,7 @@
 <div class="Page">
     <div class="Page__content Page__content--with-resource">
         <h1 class="Page__heading">Вебинары</h1>
-        @include('partials.search')
+        @include('partials.search', ['url'=> '/webinars/search/'])
         <div class="Gallery">
             @forelse ($webinars as $webinar)
             <div>
