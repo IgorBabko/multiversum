@@ -8,6 +8,7 @@ use Multiversum\Http\Controllers\Controller;
 use Multiversum\Http\Requests\SendEmailRequest;
 use Multiversum\Post;
 use Multiversum\Webinar;
+use Session;
 
 class PagesController extends Controller
 {
@@ -34,6 +35,7 @@ class PagesController extends Controller
     public function sendEmail(SendEmailRequest $sendEmailRequest)
     {
         // send email
+        Session::flash('notify', 'Письмо отправлено успешно');
         return view('pages.email');
     }
 }

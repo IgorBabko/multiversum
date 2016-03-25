@@ -79,5 +79,4 @@
         @endforeach
     </div>
 </div>
-@include('partials.session')
 @endsection
