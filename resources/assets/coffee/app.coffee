@@ -39,6 +39,9 @@ $ ->
             ).addTo(controller)
     )
 
+    # focus on first input field
+    $('input[type!="hidden"]').first().focus();
+
     # search
     $('.search form').submit (e) ->
         e.preventDefault()
