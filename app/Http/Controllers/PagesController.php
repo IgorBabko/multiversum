@@ -34,6 +34,6 @@ class PagesController extends Controller
     public function sendEmail(SendEmailRequest $sendEmailRequest)
     {
         // send email
-        return view('pages.index');
+        return view('pages.email');
     }
 }
