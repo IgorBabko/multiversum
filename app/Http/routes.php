@@ -26,26 +26,26 @@ Route::group(['middleware' => ['web']], function () {
 
     // dashboard
 
-    Route::group(['prefix' => 'dashboard'], function () {
+    // Route::group(['prefix' => 'dashboard'], function () {
 
-        Route::get('/', ['as' => 'dashboard', 'uses' => 'Dashboard\DashboardController@index']);
+    //     Route::get('/', ['as' => 'dashboard', 'uses' => 'Dashboard\DashboardController@index']);
 
-        Route::resource('webinars', 'Dashboard\WebinarsController', ['parameters' => [
-            'webinars' => 'webinar',
-        ]]);
+    //     Route::resource('webinars', 'Dashboard\WebinarsController', ['parameters' => [
+    //         'webinars' => 'webinar',
+    //     ]]);
 
-        Route::resource('books', 'Dashboard\BooksController', ['parameters' => [
-            'books' => 'book',
-        ]]);
+    //     Route::resource('books', 'Dashboard\BooksController', ['parameters' => [
+    //         'books' => 'book',
+    //     ]]);
 
-        Route::resource('disks', 'Dashboard\DisksController', ['parameters' => [
-            'disks' => 'disk',
-        ]]);
+    //     Route::resource('disks', 'Dashboard\DisksController', ['parameters' => [
+    //         'disks' => 'disk',
+    //     ]]);
 
-        Route::resource('posts', 'Dashboard\PostsController', ['parameters' => [
-            'posts' => 'post',
-        ]]);
-    });
+    //     Route::resource('posts', 'Dashboard\PostsController', ['parameters' => [
+    //         'posts' => 'post',
+    //     ]]);
+    // });
 
     // auth
     Route::auth();
