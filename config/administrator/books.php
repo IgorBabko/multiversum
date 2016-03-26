@@ -8,9 +8,9 @@ return [
         'name'        => [
             'title' => 'назвние',
         ],
-        'thumbnail'   => [
-            'title'  => 'миниатюра',
-            'output' => '<img src="(:value)" height="100" />',
+        'image'       => [
+            'title'  => 'картинка',
+            'output' => '<img src="/uploads/images/books/(:value)" height="100" />',
         ],
         'description' => [
             'title' => 'описание',
@@ -26,16 +26,19 @@ return [
         'description' => [
             'type' => 'text',
         ],
-        'thumbnail'   => [
+        'image'       => [
             'type'     => 'image',
-            'location' => public_path() . '/',
+            'location' => public_path() . '/uploads/images/books/',
+            'sizes'    => array(
+                array(220, 225, 'crop', public_path() . '/uploads/images/books/', 100),
+            ),
         ],
         'price',
     ],
     'rules'       => array(
         'name'        => 'required',
         'description' => 'required',
-        'thumbnail'   => 'required',
+        'image'       => 'required',
         'price'       => 'required',
     ),
     'filters'     => [

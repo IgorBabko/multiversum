@@ -15,7 +15,7 @@
                     <div class="Overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                     </div>
-                    <img src="{{ $webinar->image }}" class="Video__image">
+                    <img src="/uploads/images/webinars/{{ $webinar->image }}" class="Video__image">
                     <h3 class="Video__heading">{{ $webinar->name }}</h3>
                 </a>
             </div>
@@ -53,7 +53,7 @@
                     <div class="Overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                     </div>
-                    <img src="/uploads/images/books/small/{{ $book->image }}" class="Book__image">
+                    <img src="/uploads/images/books/{{ $book->image }}" class="Book__image">
                     <h3 class="Book__heading">{{ $book->name }}</h3>
                 </a>
             </div>
@@ -71,7 +71,7 @@
                     <div class="Overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                     </div>
-                    <img src="/uploads/images/disks/small/{{ $disk->image }}" class="Disk__image">
+                    <img src="/uploads/images/disks/{{ $disk->image }}" class="Disk__image">
                     <h3 class="Disk__heading">{{ $disk->name }}</h3>
                 </a>
             </div>

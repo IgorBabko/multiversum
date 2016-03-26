@@ -9,8 +9,8 @@ return [
             'title' => 'назвние',
         ],
         'image'       => [
-            'title'  => 'миниатюра',
-            'output' => '<img src="/uploads/images/disks/small/(:value)" height="100" />',
+            'title'  => 'картинка',
+            'output' => '<img src="/uploads/images/disks/(:value)" height="100" />',
         ],
         'description' => [
             'title' => 'описание',
@@ -28,9 +28,9 @@ return [
         ],
         'image'       => [
             'type'     => 'image',
-            'location' => public_path() . '/uploads/images/disks/large/',
+            'location' => public_path() . '/uploads/images/disks/',
             'sizes'    => array(
-                array(300, 225, 'crop', public_path() . '/uploads/images/disks/small/', 100),
+                array(270, 225, 'crop', public_path() . '/uploads/images/disks/', 100),
             ),
         ],
         'price',
@@ -38,7 +38,7 @@ return [
     'rules'       => array(
         'name'        => 'required',
         'description' => 'required',
-        'thumbnail'   => 'required',
+        'image'       => 'required',
         'price'       => 'required',
     ),
     'filters'     => [

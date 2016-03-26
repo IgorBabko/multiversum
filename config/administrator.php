@@ -67,9 +67,11 @@ return array(
      */
     'menu'                 => [
         'webinars',
-        'posts',
         'books',
         'disks',
+        'posts',
+        'categories',
+        'tags',
     ],
 
     /**

@@ -13,7 +13,7 @@
                             <div class="Overlay">
                                 <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                             </div>
-                            <img src="{{ $webinar->thumbnail }}" class="Video__image">
+                            <img src="/uploads/images/webinars/{{ $webinar->image }}" class="Video__image">
                         </div>
                         <h3 class="Video__heading">{{ $webinar->name }}</h3>
                     </a>

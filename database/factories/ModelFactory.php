@@ -25,6 +25,7 @@ $factory->define(Multiversum\Webinar::class, function (Faker\Generator $faker) {
         'name'         => $faker->word(2),
         'description'  => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
+        'image'        => '06iGwM4W2dzix4HNwtYAqrUY7wMsh7k3.jpg',
         // 'youtube_id'         => $faker->url,
     ];
 });
@@ -33,7 +34,7 @@ $factory->define(Multiversum\Post::class, function (Faker\Generator $faker) {
     return [
         'name'         => join(" ", $faker->words(3)),
         'content'      => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
-        'image'        => 'cF7fdr8GzG4nTnqALVqqXpvYEdDziWAO.jpg', //$faker->imageUrl($width = 1024, $height = 768),
+        'image'        => 'Qo7PFPpE3Yx2PbdvYKbGlTB6kWYW0hGG.jpg', //$faker->imageUrl($width = 1024, $height = 768),
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
     ];
 });
@@ -54,7 +55,7 @@ $factory->define(Multiversum\Book::class, function (Faker\Generator $faker) {
     return [
         'name'         => $faker->word(2),
         'description'  => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
-        'image'        => 'cF7fdr8GzG4nTnqALVqqXpvYEdDziWAO.jpg', //$faker->imageUrl($width = 220, $height = 250),
+        'image'        => 'fSS3Y1pb5HUYgTKkKImqSbMSTp0ahXoV.jpg', //$faker->imageUrl($width = 220, $height = 250),
         'price'        => $faker->randomNumber(2),
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
     ];
@@ -64,7 +65,7 @@ $factory->define(Multiversum\Disk::class, function (Faker\Generator $faker) {
     return [
         'name'         => $faker->word(2),
         'description'  => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
-        'image'        => 'cF7fdr8GzG4nTnqALVqqXpvYEdDziWAO.jpg', //$faker->imageUrl($width = 270, $height = 220),
+        'image'        => '06iGwM4W2dzix4HNwtYAqrUY7wMsh7k3.jpg', //$faker->imageUrl($width = 270, $height = 220),
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
         'price'        => $faker->randomNumber(2),
     ];

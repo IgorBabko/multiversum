@@ -10,8 +10,10 @@ return [
         ],
         'description' => [
             'title' => 'описание',
-        ], 'youtube_id' => [
-            'title' => 'youtube id',
+        ],
+        'image'       => [
+            'title'  => 'картинка',
+            'output' => '<img src="/uploads/images/webinars/(:value)" height="100" />',
         ],
     ],
     'edit_fields' => [
@@ -21,8 +23,12 @@ return [
         'description' => [
             'type' => 'text',
         ],
-        'youtube_id'  => [
-            'type' => 'text',
+        'image'       => [
+            'type'     => 'image',
+            'location' => public_path() . '/uploads/images/webinars/',
+            'sizes'    => array(
+                array(270, 225, 'crop', public_path() . '/uploads/images/webinars/', 100),
+            ),
         ],
     ],
     'rules'       => [
