@@ -37,7 +37,7 @@
                                 @endif
                             </ul>
                           </li>
-                        <!-- <li><a href="/dashboard">Админка</a></li> -->
+                        <!-- <li><a href="/admin/webinars">Админка</a></li> -->
                     </ul>
                 </div>
             </div>
