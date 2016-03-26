@@ -5,42 +5,36 @@ return [
     'single'      => 'статья',
     'model'       => 'Multiversum\Post',
     'columns'     => [
-        'name'      => [
+        'name'    => [
             'title' => 'название',
         ],
-        'thumbnail' => [
-            'title'  => 'миниатюра',
-            'output' => '<img src="(:value)" height="100" />',
-        ],
-        'image'     => [
+        'image'   => [
             'title'  => 'картинка',
-            'output' => '<img src="(:value)" height="100" />',
+            'output' => '<img src="/uploads/images/posts/large/(:value)" height="100" />',
         ],
-        'content'   => [
+        'content' => [
             'title' => 'текст',
         ],
     ],
     'edit_fields' => [
-        'name'      => [
+        'name'    => [
             'type' => 'text',
         ],
-        'content'   => [
+        'content' => [
             'type' => 'text',
         ],
-        'image'     => [
+        'image'   => [
             'type'     => 'image',
-            'location' => public_path() . '/',
-        ],
-        'thumbnail' => [
-            'type'     => 'image',
-            'location' => public_path() . '/',
+            'location' => public_path() . '/uploads/images/posts/large/',
+            'sizes'    => array(
+                array(300, 225, 'crop', public_path() . '/uploads/images/posts/small/', 100),
+            ),
         ],
     ],
     'rules'       => array(
-        'name'      => 'required',
-        'thumbnail' => 'required',
-        'image'     => 'required',
-        'content'   => 'required',
+        'name'    => 'required',
+        'image'   => 'required',
+        'content' => 'required',
     ),
     'filters'     => [
         'name' => [

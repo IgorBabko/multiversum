@@ -8,9 +8,9 @@ return [
         'name'        => [
             'title' => 'назвние',
         ],
-        'thumbnail'   => [
+        'image'       => [
             'title'  => 'миниатюра',
-            'output' => '<img src="(:value)" height="100" />',
+            'output' => '<img src="/uploads/images/disks/small/(:value)" height="100" />',
         ],
         'description' => [
             'title' => 'описание',
@@ -26,9 +26,12 @@ return [
         'description' => [
             'type' => 'text',
         ],
-        'thumbnail'   => [
+        'image'       => [
             'type'     => 'image',
-            'location' => public_path() . '/',
+            'location' => public_path() . '/uploads/images/disks/large/',
+            'sizes'    => array(
+                array(300, 225, 'crop', public_path() . '/uploads/images/disks/small/', 100),
+            ),
         ],
         'price',
     ],

@@ -9,10 +9,10 @@
             <div>
                 <div class="resource Disk">
                     <a href="/disks/{{ $disk->slug }}" class="Disk__link">
-                        <div class="Disk__overlay">
+                        <div class="Overlay">
                             <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                         </div>
-                        <img src="{{ $disk->thumbnail }}" class="Disk__thumb">
+                        <img src="/uploads/images/disks/small/{{ $disk->image }}" class="Disk__image">
                         <h3 class="Disk__heading">{{ $disk->name }}</h3>
                     </a>
                 </div>

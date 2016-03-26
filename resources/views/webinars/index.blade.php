@@ -10,10 +10,10 @@
                 <div class="resource Video">
                     <a href="/webinars/{{ $webinar->slug }}" class="Video__link">
                         <div>
-                            <div class="Video__overlay">
+                            <div class="Overlay">
                                 <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                             </div>
-                            <img src="{{ $webinar->thumbnail }}" class="Video__thumb">
+                            <img src="{{ $webinar->thumbnail }}" class="Video__image">
                         </div>
                         <h3 class="Video__heading">{{ $webinar->name }}</h3>
                     </a>

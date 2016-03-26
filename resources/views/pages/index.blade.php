@@ -12,10 +12,10 @@
         <div>
             <div class="resource Video">
                 <a href="/webinars/{{ $webinar->slug }}" class="Video__link">
-                    <div class="Video__overlay">
+                    <div class="Overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                     </div>
-                    <img src="{{ $webinar->thumbnail }}" class="Video__thumb">
+                    <img src="{{ $webinar->image }}" class="Video__image">
                     <h3 class="Video__heading">{{ $webinar->name }}</h3>
                 </a>
             </div>
@@ -29,7 +29,7 @@
         @foreach ($posts as $post)
         <div>
             <div class="resource Post">
-                <img src="{{ $post->thumbnail }}" class="img-responsive Post__thumb" alt="Статья 1">
+                <img src="/uploads/images/posts/small/{{ $post->image }}" class="img-responsive Post__image" alt="Статья 1">
                 <div class="Post__info">
                     <h3 class="Post__heading">{{ $post->name }}</h3>
                     <p class="Post__content">{{ str_limit($post->content, 150) }}</p>
@@ -50,10 +50,10 @@
         <div>
             <div class="resource Book">
                 <a href="/books/{{ $book->slug }}" class="Book__link">
-                    <div class="Book__overlay">
+                    <div class="Overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                     </div>
-                    <img src="{{ $book->thumbnail }}" class="Book__thumb">
+                    <img src="/uploads/images/books/small/{{ $book->image }}" class="Book__image">
                     <h3 class="Book__heading">{{ $book->name }}</h3>
                 </a>
             </div>
@@ -68,10 +68,10 @@
         <div>
             <div class="resource Disk">
                 <a href="/disks/{{ $disk->slug }}" class="Disk__link">
-                    <div class="Disk__overlay">
+                    <div class="Overlay">
                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                     </div>
-                    <img src="{{ $disk->thumbnail }}" class="Disk__thumb">
+                    <img src="/uploads/images/disks/small/{{ $disk->image }}" class="Disk__image">
                     <h3 class="Disk__heading">{{ $disk->name }}</h3>
                 </a>
             </div>

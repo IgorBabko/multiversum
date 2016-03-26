@@ -177,6 +177,30 @@
 .Social__copiright {
   font-size: 16px;
 }
+.Overlay {
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 225px;
+  font-size: 48px;
+  background: rgba(24,19,29,0.7);
+}
+.Overlay:hover {
+  opacity: 1;
+}
 .Section {
   padding: 50px 0 100px;
   text-align: center;
@@ -339,32 +363,8 @@
 .Video__link:hover {
   color: #6a4388;
 }
-.Video__link:hover .Video__overlay {
-  opacity: 1;
-}
-.Video__thumb {
-  height: 220px;
-}
-.Video__overlay {
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  position: absolute;
-  color: #fff;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 220px;
-  font-size: 48px;
-  background: rgba(24,19,29,0.7);
+.Video__image {
+  height: 225px;
 }
 .Video__heading {
   background: #fff;
@@ -407,29 +407,8 @@
 .Book__link:hover {
   color: #6a4388;
 }
-.Book__link:hover .Book__overlay {
-  opacity: 1;
-}
-.Book__overlay {
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  position: absolute;
-  color: #fff;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 250px;
-  font-size: 48px;
-  background: rgba(24,19,29,0.7);
+.Book__image {
+  height: 225px;
 }
 .Book__heading {
   background: #fff;
@@ -511,29 +490,8 @@
 .Disk__link:hover {
   color: #6a4388;
 }
-.Disk__link:hover .Disk__overlay {
-  opacity: 1;
-}
-.Disk__overlay {
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  position: absolute;
-  color: #fff;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 220px;
-  font-size: 48px;
-  background: rgba(24,19,29,0.7);
+.Disk__image {
+  height: 225px;
 }
 .Disk__heading {
   background: #fff;
@@ -1183,6 +1141,7 @@ body {
   transition: all 0.3s ease-in-out;
   -webkit-transform: scale(0);
           transform: scale(0);
+  overflow: hidden;
 }
 .visible {
   -webkit-transform: scale(1);
