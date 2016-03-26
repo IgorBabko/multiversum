@@ -83,9 +83,9 @@ class AuthController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        $successMessage = 'Добро пожаловать ' . Auth::user()->name . ', Вы были успешно авторизованы!';
-        $request->session()->flash('notify', $successMessage);
-        return redirect()->intended($this->redirectPath());
+        return redirect()
+            ->intended($this->redirectPath())
+            ->with('notify', 'Добро пожаловать ' . $user->name . ', Вы были успешно авторизованы!');
     }
 
     /**
@@ -93,11 +93,11 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getLogout(Request $request)
+    public function logout()
     {
-        Auth::logout();
-        $request->session()->flash('notify', 'Выход произведен успешно!');
-        return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
-    }
+        Auth::guard($this->getGuard())->logout();
 
+        return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/')
+            ->with('notify', 'Выход произведен успешно');
+    }
 }
