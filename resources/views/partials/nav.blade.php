@@ -32,6 +32,9 @@
                                     <li class="{{ Request::is('login') ? 'active' :  '' }}"><a href="/login">Войти</a></li>
                                     <li class="{{ Request::is('register') ? 'active' :  '' }}"><a href="/register">Регистрация</a></li>
                                 @else
+                                    @can ('access-admin-area')
+                                        <li><a href="/admin/webinars">Админка</a></li>
+                                    @endcan
                                     <li class="{{ Request::is('profile') ? 'active' :  '' }}"><a href="{{ url('/profile') }}">Профиль</a></li>
                                     <li><a href="{{ url('/logout') }}">Выйти</a></li>
                                 @endif

@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 
     /**
      * Package URI
@@ -21,7 +21,10 @@ return array(
      *
      *  @type array
      */
-    'middleware'           => array(),
+    'middleware'           => [
+        'web',
+        'MustBeAdministrator' => Multiversum\Http\Middleware\MustBeAdministrator::class,
+    ],
 
     /**
      * Page title
@@ -148,5 +151,4 @@ return array(
      * @type array
      */
     'locales'              => ['en', 'ru'],
-
-);
+];
