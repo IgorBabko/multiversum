@@ -83,9 +83,9 @@ return [
      *
      * @type closure
      */
-    'permission'           => function () {
-        return true; //Auth::check();
-    },
+    // 'permission'           => function () {
+    //     return true; Auth::check();
+    // },
 
     /**
      * This determines if you will have a dashboard (whose view you provide in the dashboard_view option) or a non-dashboard home
@@ -107,7 +107,7 @@ return [
      *
      * @type string
      */
-    'home_page'            => '',
+    'home_page'            => 'webinars',
 
     /**
      * The route to which the user will be taken when they click the "back to site" button
