@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5e469b84e52209c7d81f7bd1f4852449",
-    "content-hash": "cd49c91d984db48bed2cc74b0fddb318",
+    "hash": "660931f3fb570d9fced559e19039f1df",
+    "content-hash": "50a8b1d8148e76e10287543d7af27b55",
     "packages": [
         {
             "name": "ckeditor/ckeditor",
@@ -3523,6 +3523,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
+        "ext-gd": "*",
         "php": ">=5.5.9"
     },
     "platform-dev": []

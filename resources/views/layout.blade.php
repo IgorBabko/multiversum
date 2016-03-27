@@ -29,5 +29,7 @@
         @yield('content')
         @include("partials.footer")
         <script src="/js/svgcheckbx.js"></script>
+        <!-- <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
+        <input type="filepicker" data-fp-apikey="YOUR_API_KEY" onchange="alert(event.fpfile.url)"> -->
     </body>
 </html>
