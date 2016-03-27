@@ -11,10 +11,10 @@ return [
         'description' => [
             'title' => 'описание',
         ],
-        'image'       => [
-            'title'  => 'картинка',
-            'output' => '<img src="/uploads/images/webinars/(:value)" height="100" />',
-        ],
+        // 'image'       => [
+        //     'title'  => 'картинка',
+        //     'output' => '<img src="/uploads/images/webinars/(:value)" height="100" />',
+        // ],
         'youtube_id'  => [
             'title' => 'youtube id',
         ],
@@ -29,14 +29,14 @@ return [
             'title' => 'описание',
             'type'  => 'text',
         ],
-        'image'       => [
-            'title'    => 'картинка',
-            'type'     => 'image',
-            'location' => public_path() . '/uploads/images/webinars/',
-            'sizes'    => array(
-                array(270, 225, 'crop', public_path() . '/uploads/images/webinars/', 100),
-            ),
-        ],
+        // 'image'       => [
+        //     'title'    => 'картинка',
+        //     'type'     => 'image',
+        //     'location' => public_path() . '/uploads/images/webinars/',
+        //     'sizes'    => array(
+        //         array(270, 225, 'crop', public_path() . '/uploads/images/webinars/', 100),
+        //     ),
+        // ],
         'youtube_id'  => [
             'title' => 'youtube id',
             'type'  => 'text',
