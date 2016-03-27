@@ -21,25 +21,31 @@ return [
     ],
     'edit_fields' => [
         'name'        => [
-            'type' => 'text',
+            'title' => 'назвние',
+            'type'  => 'text',
         ],
         'description' => [
-            'type' => 'text',
+            'title' => 'описание',
+            'type'  => 'text',
         ],
         'image'       => [
+            'title'    => 'картинка',
             'type'     => 'image',
             'location' => public_path() . '/uploads/images/disks/',
             'sizes'    => array(
                 array(270, 225, 'crop', public_path() . '/uploads/images/disks/', 100),
             ),
         ],
-        'price',
+        'price'       => [
+            'title' => 'цена',
+            'type'  => 'number',
+        ],
     ],
     'rules'       => array(
-        'name'        => 'required',
-        'description' => 'required',
-        'image'       => 'required',
-        'price'       => 'required',
+        'name'        => 'required|string',
+        'description' => 'required|string',
+        'image'       => 'required|image',
+        'price'       => 'required|numeric',
     ),
     'filters'     => [
         'name' => [

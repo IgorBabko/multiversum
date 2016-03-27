@@ -18,12 +18,15 @@ return [
     ],
     'edit_fields' => [
         'name'    => [
-            'type' => 'text',
+            'title' => 'название',
+            'type'  => 'text',
         ],
         'content' => [
-            'type' => 'text',
+            'title' => 'контент',
+            'type'  => 'text',
         ],
         'image'   => [
+            'title'    => 'картинка',
             'type'     => 'image',
             'location' => public_path() . '/uploads/images/posts/large/',
             'sizes'    => array(
@@ -32,9 +35,9 @@ return [
         ],
     ],
     'rules'       => array(
-        'name'    => 'required',
-        'image'   => 'required',
-        'content' => 'required',
+        'name'    => 'required|string',
+        'image'   => 'required|image',
+        'content' => 'required|string',
     ),
     'filters'     => [
         'name' => [

@@ -21,12 +21,16 @@ return [
     ],
     'edit_fields' => [
         'name'        => [
-            'type' => 'text',
+            'title' => 'название',
+            'type'  => 'text',
+
         ],
         'description' => [
-            'type' => 'text',
+            'title' => 'описание',
+            'type'  => 'text',
         ],
         'image'       => [
+            'title'    => 'картинка',
             'type'     => 'image',
             'location' => public_path() . '/uploads/images/webinars/',
             'sizes'    => array(
@@ -39,9 +43,9 @@ return [
         ],
     ],
     'rules'       => [
-        'name'        => 'required',
-        'description' => 'required',
-        'youtube_id'  => 'required',
+        'name'        => 'required|string',
+        'description' => 'required|string',
+        'youtube_id'  => 'required|string',
     ],
     'filters'     => [
         'name' => [

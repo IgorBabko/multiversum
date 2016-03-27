@@ -11,11 +11,12 @@ return [
     ],
     'edit_fields' => [
         'name' => [
-            'type' => 'text',
+            'title' => 'название',
+            'type'  => 'text',
         ],
     ],
     'rules'       => array(
-        'name' => 'required',
+        'name' => 'required|string',
     ),
     'filters'     => [
         'name' => [
