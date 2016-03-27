@@ -19,7 +19,6 @@ class CreatePostsTable extends Migration
             $table->foreign('category_id')
                 ->references('id')->on('categories')
                 ->onDelete('cascade');
-            $table->string('thumbnail')->nullable();
             $table->string('image')->nullable();
             $table->string('slug')->nullable();
             $table->text('content');

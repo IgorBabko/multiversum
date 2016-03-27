@@ -6,7 +6,7 @@
             <h1 class="Page__heading Page-light__heading">{{ $book->name }}</h1>
             <div class="Book-expanded__date">Дата публикации: {{ $book->published_at->format('m.d.Y') }}</div>
             <div class="Book-expanded__wrapper">
-                <img src="{{ $book->thumbnail }}" class="Book-expanded__image" alt="{{ $book->name }}">
+                <img src="/uploads/images/books/{{ $book->image }}" class="Book-expanded__image" alt="{{ $book->name }}">
                 <br>
                 <button class="btn buy-button Book-expanded__buy">Купить</button>
             </div>

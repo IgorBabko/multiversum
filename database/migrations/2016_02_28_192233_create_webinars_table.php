@@ -17,6 +17,7 @@ class CreateWebinarsTable extends Migration
             $table->string('name');
             $table->string('slug')->nullable();
             $table->text('description');
+            $table->string('image')->nullable();
             $table->timestamp('published_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->string('youtube_id')->default('FbkkMF4LMnw');
             $table->timestamps();

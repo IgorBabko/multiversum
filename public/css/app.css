@@ -153,22 +153,27 @@
 .Social {
   padding: 0;
   margin-bottom: 0;
+  list-style: none;
 }
 .Social__item {
-  cursor: pointer;
-  display: inline-block;
   width: 45px;
   height: 45px;
-  background: #978dbb;
-  border-radius: 50%;
   margin-right: 20px;
-  padding-top: 7px;
-}
-.Social__item:hover {
-  background: #ffa0dc;
 }
 .Social__item:last-child {
   margin-right: 0;
+}
+.Social__link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #978dbb;
+  padding-top: 7px;
+  cursor: pointer;
+}
+.Social__link:hover {
+  background: #ffa0dc;
 }
 .Social__icon {
   color: #1a1335;
@@ -176,6 +181,30 @@
 }
 .Social__copiright {
   font-size: 16px;
+}
+.Overlay {
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 225px;
+  font-size: 48px;
+  background: rgba(24,19,29,0.7);
+}
+.Overlay:hover {
+  opacity: 1;
 }
 .Section {
   padding: 50px 0 100px;
@@ -339,32 +368,8 @@
 .Video__link:hover {
   color: #6a4388;
 }
-.Video__link:hover .Video__overlay {
-  opacity: 1;
-}
-.Video__thumb {
-  height: 220px;
-}
-.Video__overlay {
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  position: absolute;
-  color: #fff;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 220px;
-  font-size: 48px;
-  background: rgba(24,19,29,0.7);
+.Video__image {
+  height: 225px;
 }
 .Video__heading {
   background: #fff;
@@ -407,29 +412,8 @@
 .Book__link:hover {
   color: #6a4388;
 }
-.Book__link:hover .Book__overlay {
-  opacity: 1;
-}
-.Book__overlay {
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  position: absolute;
-  color: #fff;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 250px;
-  font-size: 48px;
-  background: rgba(24,19,29,0.7);
+.Book__image {
+  height: 225px;
 }
 .Book__heading {
   background: #fff;
@@ -511,29 +495,8 @@
 .Disk__link:hover {
   color: #6a4388;
 }
-.Disk__link:hover .Disk__overlay {
-  opacity: 1;
-}
-.Disk__overlay {
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  position: absolute;
-  color: #fff;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 220px;
-  font-size: 48px;
-  background: rgba(24,19,29,0.7);
+.Disk__image {
+  height: 225px;
 }
 .Disk__heading {
   background: #fff;
@@ -1168,21 +1131,20 @@ body {
   background: #6a4388;
 }
 .logo {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Lobster', cursive;
   color: #ffc7e9 !important;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 32px;
-  text-decoration: none;
+  font-size: 40px;
+  text-shadow: 1px 1px 3px #000;
 }
 .logo:hover {
   color: #fff !important;
   text-decoration: none;
 }
 .resource {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s cubic-bezier(0.51, 0.43, 0.44, 1.15);
   -webkit-transform: scale(0);
           transform: scale(0);
+  overflow: hidden;
 }
 .visible {
   -webkit-transform: scale(1);

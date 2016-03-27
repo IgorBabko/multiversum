@@ -35,5 +35,4 @@ class Post extends Model implements SluggableInterface
     {
         return $this->belongsToMany(Tag::class);
     }
-
 }

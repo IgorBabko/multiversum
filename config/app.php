@@ -163,6 +163,7 @@ return [
         Cohensive\Embed\EmbedServiceProvider::class,
         // Barryvdh\Debugbar\ServiceProvider::class,
         Sofa\Eloquence\ServiceProvider::class,
+        Frozennode\Administrator\AdministratorServiceProvider::class,
     ],
 
     /*

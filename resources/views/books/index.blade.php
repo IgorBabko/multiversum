@@ -9,10 +9,10 @@
             <div>
                 <div class="resource Book">
                     <a href="/books/{{ $book->slug }}" class="Book__link">
-                        <div class="Book__overlay">
+                        <div class="Overlay">
                             <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                         </div>
-                        <img src="{{ $book->thumbnail }}" class="Book__thumb">
+                        <img src="/uploads/images/books/{{ $book->image }}" class="Book__image">
                         <h3 class="Book__heading">{{ $book->name }}</h3>
                     </a>
                 </div>

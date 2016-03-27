@@ -24,31 +24,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/posts/{slug}', ['as' => 'post', 'uses' => 'PostsController@showPost']);
     Route::get('/posts/{searchString}/search', ['as' => 'searchPosts', 'uses' => 'PostsController@search']);
 
-    // dashboard
-
-    Route::group(['prefix' => 'dashboard'], function () {
-
-        Route::get('/', ['as' => 'dashboard', 'uses' => 'Dashboard\DashboardController@index']);
-
-        Route::resource('webinars', 'Dashboard\WebinarsController', ['parameters' => [
-            'webinars' => 'webinar',
-        ]]);
-
-        Route::resource('books', 'Dashboard\BooksController', ['parameters' => [
-            'books' => 'book',
-        ]]);
-
-        Route::resource('disks', 'Dashboard\DisksController', ['parameters' => [
-            'disks' => 'disk',
-        ]]);
-
-        Route::resource('posts', 'Dashboard\PostsController', ['parameters' => [
-            'posts' => 'post',
-        ]]);
-    });
-
     // auth
     Route::auth();
 
-    Route::get('/home', 'HomeController@index');
+    // Route::get('/home', 'HomeController@index');
 });
