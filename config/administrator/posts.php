@@ -36,7 +36,7 @@ return [
     ],
     'rules'       => array(
         'name'    => 'required|string',
-        'image'   => 'required|image',
+        'image'   => 'required',
         'content' => 'required|string',
     ),
     'filters'     => [

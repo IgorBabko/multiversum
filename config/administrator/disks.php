@@ -44,7 +44,7 @@ return [
     'rules'       => array(
         'name'        => 'required|string',
         'description' => 'required|string',
-        'image'       => 'required|image',
+        'image'       => 'required',
         'price'       => 'required|numeric',
     ),
     'filters'     => [
