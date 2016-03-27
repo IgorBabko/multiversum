@@ -150,5 +150,5 @@ return [
      *
      * @type array
      */
-    'locales'              => ['en', 'ru'],
+    'locales'              => [],
 ];
