@@ -26,6 +26,4 @@ Route::group(['middleware' => ['web']], function () {
 
     // auth
     Route::auth();
-
-    // Route::get('/home', 'HomeController@index');
 });
