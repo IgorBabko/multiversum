@@ -12,10 +12,12 @@
         <div>
             <div class="resource Video">
                 <a href="/webinars/{{ $webinar->slug }}" class="Video__link">
-                    <div class="Overlay">
-                        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                    <div style="margin-left: -15px">
+                        <div class="Overlay">
+                            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        </div>
+                        <img src="{{ $webinar->image }}" class="Video__image">
                     </div>
-                    <img src="/uploads/images/webinars/{{ $webinar->image }}" class="Video__image">
                     <h3 class="Video__heading">{{ $webinar->name }}</h3>
                 </a>
             </div>

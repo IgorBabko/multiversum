@@ -15,6 +15,9 @@ return [
             'title'  => 'картинка',
             'output' => '<img src="/uploads/images/webinars/(:value)" height="100" />',
         ],
+        'youtube_id'  => [
+            'title' => 'youtube id',
+        ],
     ],
     'edit_fields' => [
         'name'        => [
@@ -29,6 +32,10 @@ return [
             'sizes'    => array(
                 array(270, 225, 'crop', public_path() . '/uploads/images/webinars/', 100),
             ),
+        ],
+        'youtube_id'  => [
+            'title' => 'youtube id',
+            'type'  => 'text',
         ],
     ],
     'rules'       => [

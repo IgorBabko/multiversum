@@ -25,8 +25,9 @@ class Webinar extends Model implements SluggableInterface
     {
         return Embed::make('https://youtu.be/' . $this->youtube_id)->parseUrl()->getHtml();
     }
-    // public function getYoutubeIdAttribute()
-    // {
-    //     return 'http://img.youtube.com/vi/' . $this->youtube_id . '/0.jpg';
-    // }
+
+    public function getImageAttribute()
+    {
+        return 'http://img.youtube.com/vi/' . $this->youtube_id . '/0.jpg';
+    }
 }
