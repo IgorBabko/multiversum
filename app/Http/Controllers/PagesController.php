@@ -2,13 +2,14 @@
 
 namespace Multiversum\Http\Controllers;
 
+use Illuminate\Http\Request;
+use Mail;
 use Multiversum\Book;
 use Multiversum\Disk;
 use Multiversum\Http\Controllers\Controller;
 use Multiversum\Http\Requests\SendEmailRequest;
 use Multiversum\Post;
 use Multiversum\Webinar;
-use Session;
 
 class PagesController extends Controller
 {
@@ -32,10 +33,12 @@ class PagesController extends Controller
         return view('pages.email');
     }
 
-    public function sendEmail(SendEmailRequest $sendEmailRequest)
+    public function sendEmail(Request $request, SendEmailRequest $sendEmailRequest)
     {
-        // send email
-        Session::flash('notify', 'Письмо отправлено успешно');
-        return view('pages.email');
+        Mail::send('emails.contact', ['text' => $request->message], function ($m) {
+            $m->to('i.i.babko@gmail.com', 'Игорь Бабко')->subject('Сообщение');
+        });
+
+        return back()->with('notify', 'Письмо отправлено успешно');
     }
 }
