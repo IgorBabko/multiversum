@@ -25,8 +25,10 @@ class PostsController extends Controller
 
     public function search($searchString)
     {
-        $posts = Post::search($searchString, false)->paginate(10);
+        $postsBuilder = Post::search($searchString);
+        $count        = $postsBuilder->get()->count();
+        $posts        = $postsBuilder->paginate(10);
 
-        return view('posts.index', compact('posts', 'searchString'));
+        return view('posts.index', compact('posts', 'searchString', 'count'));
     }
 }

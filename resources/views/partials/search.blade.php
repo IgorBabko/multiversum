@@ -7,6 +7,6 @@
         <button type="submit" class="search__button"><i class="fa fa-search"></i></button>
     </form>
     @if (isset($searchString))
-    <div class="search__results">По запросу <span>{{ $searchString }}</span> найдено результатов: <span>{{ $resource->count() }}</span></div>
+    <div class="search__results">По запросу <span>{{ $searchString }}</span> найдено результатов: <span>{{ $count }}</span></div>
     @endif
 </div>

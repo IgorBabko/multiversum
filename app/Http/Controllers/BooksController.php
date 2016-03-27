@@ -24,8 +24,10 @@ class BooksController extends Controller
 
     public function search($searchString)
     {
-        $books = Book::search($searchString, false)->paginate(10);
+        $booksBuilder = Book::search($searchString);
+        $count        = $booksBuilder->get()->count();
+        $books        = $booksBuilder->paginate(10);
 
-        return view('books.index', compact('books', 'searchString'));
+        return view('books.index', compact('books', 'searchString', 'count'));
     }
 }

@@ -825,6 +825,9 @@
 .search__reset:hover {
   color: #f77;
 }
+.search__reset:focus {
+  color: #f77;
+}
 .pagination-block {
   text-align: center;
   margin-top: 40px;

@@ -23,8 +23,10 @@ class WebinarsController extends Controller
 
     public function search($searchString)
     {
-        $webinars = Webinar::search($searchString, false)->paginate(5);
+        $webinarsBuilder = Webinar::search($searchString);
+        $count           = $webinarsBuilder->get()->count();
+        $webinars        = $webinarsBuilder->paginate(10);
 
-        return view('webinars.index', compact('webinars', 'searchString'));
+        return view('webinars.index', compact('webinars', 'searchString', 'count'));
     }
 }

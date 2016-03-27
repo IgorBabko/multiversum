@@ -20,6 +20,8 @@ class Post extends Model implements SluggableInterface
 
     protected $guarded = [];
 
+    protected $searchableColumns = ['name', 'content'];
+
     /**
      * Get the category that owns the post.
      */

@@ -24,8 +24,10 @@ class DisksController extends Controller
 
     public function search($searchString)
     {
-        $disks = Disk::search($searchString, false)->paginate(10);
+        $disksBuilder = Disk::search($searchString);
+        $count        = $disksBuilder->get()->count();
+        $disks        = $disksBuilder->paginate(10);
 
-        return view('disks.index', compact('disks', 'searchString'));
+        return view('disks.index', compact('disks', 'searchString', 'count'));
     }
 }

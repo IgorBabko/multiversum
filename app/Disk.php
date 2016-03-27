@@ -19,4 +19,6 @@ class Disk extends Model implements SluggableInterface
     ];
 
     protected $guarded = [];
+
+    protected $searchableColumns = ['name', 'description'];
 }
