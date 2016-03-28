@@ -8,6 +8,7 @@ use Multiversum\Book;
 use Multiversum\Disk;
 use Multiversum\Http\Controllers\Controller;
 use Multiversum\Http\Requests\SendEmailRequest;
+use Multiversum\Page;
 use Multiversum\Post;
 use Multiversum\Webinar;
 
@@ -25,7 +26,9 @@ class PagesController extends Controller
 
     public function about()
     {
-        return view('pages.about');
+        $page = Page::where('name', 'about')->first();
+
+        return view('pages.about', compact('page'));
     }
 
     public function email()

@@ -20,6 +20,15 @@ $factory->define(Multiversum\User::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(Multiversum\Page::class, function (Faker\Generator $faker) {
+    return [
+        'name'    => 'about',
+        'heading' => $faker->word(2),
+        'text'    => join("<br>", $faker->paragraphs(mt_rand(15, 20))),
+        'image'   => '06iGwM4W2dzix4HNwtYAqrUY7wMsh7k3.jpg',
+    ];
+});
+
 $factory->define(Multiversum\Webinar::class, function (Faker\Generator $faker) {
     return [
         'name'         => $faker->word(2),
