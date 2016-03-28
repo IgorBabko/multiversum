@@ -35,8 +35,9 @@ class PagesController extends Controller
 
     public function sendEmail(Request $request, SendEmailRequest $sendEmailRequest)
     {
-        Mail::send('emails.contact', ['text' => $request->message], function ($m) {
-            $m->to('i.i.babko@gmail.com', 'Игорь Бабко')->subject('Сообщение');
+        Mail::send('emails.contact', ['text' => $request->message], function ($m) use ($request) {
+            $m->from($request->email, $request->name);
+            $m->to('portaciya@gmail.com', 'Тина Васильева')->subject('Сообщение');
         });
 
         return back()->with('notify', 'Письмо отправлено успешно');
