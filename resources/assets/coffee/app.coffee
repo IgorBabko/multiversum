@@ -4,10 +4,10 @@ $ ->
     $('.header__heading').fadeIn 1000, ->
         $('.header__arrow').fadeIn 500
 
-    $('.navbar .dropdown').hover(
-        -> $(this).find('.dropdown-menu').first().stop(true, true).delay(1).slideDown(100)
-        -> $(this).find('.dropdown-menu').first().stop(true, true).delay(1).slideUp(100)
-    )
+    # $('.navbar .dropdown').hover(
+    #     -> $(this).find('.dropdown-menu').first().stop(true, true).delay(1).slideDown(100)
+    #     -> $(this).find('.dropdown-menu').first().stop(true, true).delay(1).slideUp(100)
+    # )
 
     quotesArray = [
         "Все стремится друг к другу"

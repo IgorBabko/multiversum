@@ -38,13 +38,13 @@
                     padding-right: 10px
                 .dropdown-menu
                     text-align: center
-                    background: rgba(61,43,72,0.85)
-                    min-width: 104px
+                    background: rgba(138, 95, 167, 0.64)
+                    min-width: 118px
                     > .active > a,
                     > .active > a:focus,
                     > .active > a:hover
                         color: #FCFFA5
-                        // background: rgba(61,43,72,0.85)
+                        background: none
                     > li
                         
                         > a
@@ -88,3 +88,59 @@
         background: none
         .icon-bar
             background: #FFA0DC
+
+
+
+@media screen and (min-width: 768px)
+    .dropdown
+        .dropdown-menu
+            background: rgba(61,43,72,0.85) !important
+            // transition: all 0.3s ease-in-out
+
+    .dropdown:hover .dropdown-menu
+        display: block
+        margin-top: 0
+    .dropdown-menu
+        a
+            padding: 5px !important
+
+@media screen and (max-width: 768px)
+    .navbar-nav
+        a
+            font-size: 24px !important
+            padding: 15px !important
+        .dropdown-menu
+            a
+                font-size: 18px !important
+                padding: 10px !important
+                
+
+@media screen and (min-width: 994px)
+    .navbar-nav
+        a
+            font-size: 24px !important
+        .dropdown-menu
+            a
+                font-size: 18px !important
+
+
+$speed = 200ms
+$easing = cubic-bezier(0.7, 0, 0, 0.7)
+
+.navbar-toggle
+    overflow: hidden
+
+    .icon-bar
+        transition: opacity, transform
+        transition-duration: $speed
+        transition-timing-function: $easing
+
+    &:not(.collapsed)
+        .icon-bar
+            &:nth-child(1)
+                transform: translateY(6px) rotate(45deg)
+            &:nth-child(2)
+                opacity: 0
+                transform: translateX(-100%)
+            &:nth-child(3)
+                transform: translateY(-6px) rotate(-45deg)

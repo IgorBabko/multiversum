@@ -7,11 +7,6 @@
     $('.header__heading').fadeIn(1000, function() {
       return $('.header__arrow').fadeIn(500);
     });
-    $('.navbar .dropdown').hover(function() {
-      return $(this).find('.dropdown-menu').first().stop(true, true).delay(1).slideDown(100);
-    }, function() {
-      return $(this).find('.dropdown-menu').first().stop(true, true).delay(1).slideUp(100);
-    });
     quotesArray = ["Все стремится друг к другу", "Мир не терпит пустоты", "Все стремится к покою"];
     changeQuotes = function(counter) {
       var quote;

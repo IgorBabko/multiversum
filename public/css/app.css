@@ -712,13 +712,14 @@
 }
 .navbar.navbar-default .navbar-nav > li .dropdown-menu {
   text-align: center;
-  background: rgba(61,43,72,0.85);
-  min-width: 104px;
+  background: rgba(138,95,167,0.64);
+  min-width: 118px;
 }
 .navbar.navbar-default .navbar-nav > li .dropdown-menu > .active > a,
 .navbar.navbar-default .navbar-nav > li .dropdown-menu > .active > a:focus,
 .navbar.navbar-default .navbar-nav > li .dropdown-menu > .active > a:hover {
   color: #fcffa5;
+  background: none;
 }
 .navbar.navbar-default .navbar-nav > li .dropdown-menu > li > a {
   font-size: 18px;
@@ -763,6 +764,60 @@
 }
 .navbar-default .navbar-header .navbar-toggle.collapsed .icon-bar {
   background: #ffa0dc;
+}
+@media screen and (min-width: 768px) {
+  .dropdown .dropdown-menu {
+    background: rgba(61,43,72,0.85) !important;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+  .dropdown-menu a {
+    padding: 5px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar-nav a {
+    font-size: 24px !important;
+    padding: 15px !important;
+  }
+  .navbar-nav .dropdown-menu a {
+    font-size: 18px !important;
+    padding: 10px !important;
+  }
+}
+@media screen and (min-width: 994px) {
+  .navbar-nav a {
+    font-size: 24px !important;
+  }
+  .navbar-nav .dropdown-menu a {
+    font-size: 18px !important;
+  }
+}
+.navbar-toggle {
+  overflow: hidden;
+}
+.navbar-toggle .icon-bar {
+  transition: opacity, -webkit-transform;
+  transition: opacity, transform;
+  transition: opacity, -webkit-transform, -webkit-transform;
+  transition: opacity, transform, -webkit-transform;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.7, 0, 0, 0.7);
+}
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(1) {
+  -webkit-transform: translateY(6px) rotate(45deg);
+          transform: translateY(6px) rotate(45deg);
+}
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(2) {
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(3) {
+  -webkit-transform: translateY(-6px) rotate(-45deg);
+          transform: translateY(-6px) rotate(-45deg);
 }
 .search {
   position: relative;
