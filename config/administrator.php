@@ -75,6 +75,7 @@ return [
         'posts',
         'categories',
         'tags',
+        'pages',
     ],
 
     /**
