@@ -8,6 +8,11 @@
       return $('.header__arrow').fadeIn(500);
     });
     quotesArray = ["Все стремится друг к другу", "Мир не терпит пустоты", "Все стремится к покою"];
+    $(window).keyup(function(e) {
+      if (e.keyCode === 27 && window.innerWidth < 768) {
+        return $('.navbar-toggle').trigger('click');
+      }
+    });
     changeQuotes = function(counter) {
       var quote;
       quote = quotesArray[counter];

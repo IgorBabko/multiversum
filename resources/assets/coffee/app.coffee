@@ -15,6 +15,11 @@ $ ->
         "Все стремится к покою"
     ]
 
+    # close/open nav menu when esc key is pressed (only if window width < 768)
+    $(window).keyup (e) ->
+        if e.keyCode == 27 and window.innerWidth < 768
+            $('.navbar-toggle').trigger 'click'
+
     changeQuotes = (counter) ->
         quote = quotesArray[counter]
         $('.header__quote').html(quote).fadeIn 1000, ->

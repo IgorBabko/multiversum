@@ -686,7 +686,7 @@
   }
 }
 .navbar {
-  background: rgba(61,43,72,0.85);
+  background: #3d2b48;
   border-radius: 0;
   height: 50px;
   border: none;
@@ -777,9 +777,8 @@
     padding: 5px !important;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .navbar-nav a {
-    font-size: 24px !important;
     padding: 15px !important;
   }
   .navbar-nav .dropdown-menu a {
@@ -788,9 +787,6 @@
   }
 }
 @media screen and (min-width: 994px) {
-  .navbar-nav a {
-    font-size: 24px !important;
-  }
   .navbar-nav .dropdown-menu a {
     font-size: 18px !important;
   }
