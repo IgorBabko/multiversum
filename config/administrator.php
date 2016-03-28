@@ -69,7 +69,7 @@ return [
      *    )
      */
     'menu'                 => [
-        'webinars',
+        'videos',
         'books',
         'disks',
         'posts',
@@ -108,7 +108,7 @@ return [
      *
      * @type string
      */
-    'home_page'            => 'webinars',
+    'home_page'            => 'videos',
 
     /**
      * The route to which the user will be taken when they click the "back to site" button

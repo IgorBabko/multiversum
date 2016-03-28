@@ -33,7 +33,7 @@
                                     <li class="{{ Request::is('register') ? 'active' :  '' }}"><a href="/register">Регистрация</a></li>
                                 @else
                                     @can ('access-admin-area')
-                                        <li><a href="/admin/webinars">Админка</a></li>
+                                        <li><a href="/admin">Админка</a></li>
                                     @endcan
                                     <li class="{{ Request::is('profile') ? 'active' :  '' }}"><a href="{{ url('/profile') }}">Профиль</a></li>
                                     <li><a href="{{ url('/logout') }}">Выйти</a></li>

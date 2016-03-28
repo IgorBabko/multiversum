@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'title'       => 'Вебинары',
-    'single'      => 'вебинар',
-    'model'       => 'Multiversum\Webinar',
+    'title'       => 'Видео анонсы',
+    'single'      => 'видео',
+    'model'       => 'Multiversum\Video',
     'columns'     => [
         'name'        => [
             'title' => 'название',

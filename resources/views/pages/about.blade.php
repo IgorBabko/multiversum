@@ -5,7 +5,7 @@
         <h1 class="Page__heading Page-light__heading">{{ $page->heading }}</h1>
         <img src="/uploads/images/pages/{{ $page->image }}" class="img-responsive img-circle about__avatar" alt="мой аватар">
         <div class="about__bio">
-            {{ $page->text }}
+            {!! $page->text !!}
         </div>
     </div>
 </div>
