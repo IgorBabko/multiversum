@@ -1,8 +1,8 @@
 @extends("layout")
 @section("content")
 <header class="header">
-    <h1 class="header__heading">Человек как бесконечность</h1>
-    <h2 class="header__quote">Здесь можно написать цитату</h2>
+    <h1 class="header__heading">{{ $page->heading }}</h1>
+    <h2 class="header__quote"></h2>
     <div class="header__arrow"><i class="fa fa-angle-double-down"></i></div>
 </header>
 <div class="Section Section--is-purple">

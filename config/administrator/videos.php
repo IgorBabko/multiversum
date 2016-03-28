@@ -23,7 +23,6 @@ return [
         'name'        => [
             'title' => 'название',
             'type'  => 'text',
-
         ],
         'description' => [
             'title' => 'описание',

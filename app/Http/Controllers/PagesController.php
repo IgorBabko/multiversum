@@ -16,17 +16,19 @@ class PagesController extends Controller
 {
     public function index()
     {
+        $page = Page::where('name', 'главная')->first();
+
         $videos = Video::orderBy('published_at', 'desc')->take(4)->get();
         $books  = Book::orderBy('published_at', 'desc')->take(4)->get();
         $disks  = Disk::orderBy('published_at', 'desc')->take(4)->get();
         $posts  = Post::orderBy('published_at', 'desc')->take(4)->get();
 
-        return view('pages.index', compact('videos', 'books', 'disks', 'posts'));
+        return view('pages.index', compact('page', 'videos', 'books', 'disks', 'posts'));
     }
 
     public function about()
     {
-        $page = Page::where('name', 'about')->first();
+        $page = Page::where('name', 'обо мне')->first();
 
         return view('pages.about', compact('page'));
     }
