@@ -15,10 +15,10 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="{{ Request::is('/*') ? 'active' :  '' }}"><a href="/">Главная<span class="sr-only">(current)</span></a></li>
                         <li class="{{ Request::is('about') ? 'active' :  '' }}"><a href="/about">Обо мне</a></li>
-                        <li class="dropdown {{ Request::is('webinar*') || Request::is('book*') || Request::is('disk*') || Request::is('post*') ? 'active' :  '' }}">
+                        <li class="dropdown {{ Request::is('video*') || Request::is('book*') || Request::is('disk*') || Request::is('post*') ? 'active' :  '' }}">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Галерея<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li class="{{ Request::is('webinar*') ? 'active' :  '' }}"><a href="/webinars">Вебинары</a></li>
+                                <li class="{{ Request::is('video*') ? 'active' :  '' }}"><a href="/videos">Видео</a></li>
                                 <li class="{{ Request::is('book*') ? 'active' :  '' }}"><a href="/books">Книги</a></li>
                                 <li class="{{ Request::is('disk*') ? 'active' :  '' }}"><a href="/disks">Диски</a></li>
                                 <li class="{{ Request::is('post*') ? 'active' :  '' }}"><a href="/posts">Статьи</a></li>

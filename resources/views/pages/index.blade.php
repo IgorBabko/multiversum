@@ -6,19 +6,19 @@
     <div class="header__arrow"><i class="fa fa-angle-double-down"></i></div>
 </header>
 <div class="Section Section--is-purple">
-    <h1 class="Section__heading">Недавние вебинары</h1>
+    <h1 class="Section__heading">Недавние видео анонсы</h1>
     <div class="Gallery">
-        @foreach ($webinars as $webinar)
+        @foreach ($videos as $video)
         <div>
             <div class="resource Video">
-                <a href="/webinars/{{ $webinar->slug }}" class="Video__link">
+                <a href="/videos/{{ $video->slug }}" class="Video__link">
                     <div style="margin-left: -15px">
                         <div class="Overlay">
                             <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                         </div>
-                        <img src="{{ $webinar->image }}" class="Video__image">
+                        <img src="{{ $video->image }}" class="Video__image">
                     </div>
-                    <h3 class="Video__heading">{{ $webinar->name }}</h3>
+                    <h3 class="Video__heading">{{ $video->name }}</h3>
                 </a>
             </div>
         </div>

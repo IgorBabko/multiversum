@@ -8,9 +8,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/email', ['as' => 'email', 'uses' => 'PagesController@email']);
     Route::post('/email', ['as' => 'sendEmail', 'uses' => 'PagesController@sendEmail']);
 
-    Route::get('/webinars', ['as' => 'webinars', 'uses' => 'WebinarsController@index']);
-    Route::get('/webinars/{slug}', ['as' => 'webinar', 'uses' => 'WebinarsController@showWebinar']);
-    Route::get('/webinars/{searchString}/search', ['as' => 'searchWebinars', 'uses' => 'WebinarsController@search']);
+    Route::get('/videos', ['as' => 'videos', 'uses' => 'VideosController@index']);
+    Route::get('/videos/{slug}', ['as' => 'video', 'uses' => 'VideosController@showVideo']);
+    Route::get('/videos/{searchString}/search', ['as' => 'searchVideos', 'uses' => 'VideosController@search']);
 
     Route::get('/books', ['as' => 'books', 'uses' => 'BooksController@index']);
     Route::get('/books/{slug}', ['as' => 'book', 'uses' => 'BooksController@showBook']);

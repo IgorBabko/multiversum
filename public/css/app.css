@@ -1103,6 +1103,7 @@
   -webkit-justify-content: center;
   -ms-flex-pack: center;
       justify-content: center;
+  width: 100%;
 }
 .about__avatar {
   height: 200px;

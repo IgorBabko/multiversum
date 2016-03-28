@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Multiversum\Video;
 
-class WebinarsTableSeeder extends Seeder
+class VideosTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +12,6 @@ class WebinarsTableSeeder extends Seeder
      */
     public function run()
     {
-        // factory(Webinar::class, 50)->create();
+        factory(Video::class, 50)->create();
     }
 }

@@ -29,17 +29,21 @@ class DatabaseSeeder extends Seeder
             'posts',
             'tags',
             'webinars',
+            'videos',
+            'pages',
         ];
 
         $this->command->info('Truncating existing tables');
         DB::statement('TRUNCATE TABLE ' . implode(',', $tables) . ' RESTART IDENTITY;');
 
         $this->call(WebinarsTableSeeder::class);
+        $this->call(VideosTableSeeder::class);
         $this->call(PostsTableSeeder::class);
         $this->call(CategoriesTableSeeder::class);
         $this->call(TagsTableSeeder::class);
         $this->call(BooksTableSeeder::class);
         $this->call(DisksTableSeeder::class);
+        $this->call(PagesTableSeeder::class);
 
         // supposed to only apply to a single connection and reset it's self
         // but I like to explicitly undo what I've done for clarity

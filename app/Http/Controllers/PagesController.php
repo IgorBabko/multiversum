@@ -10,18 +10,18 @@ use Multiversum\Http\Controllers\Controller;
 use Multiversum\Http\Requests\SendEmailRequest;
 use Multiversum\Page;
 use Multiversum\Post;
-use Multiversum\Webinar;
+use Multiversum\Video;
 
 class PagesController extends Controller
 {
     public function index()
     {
-        $webinars = Webinar::orderBy('published_at', 'desc')->take(4)->get();
-        $books    = Book::orderBy('published_at', 'desc')->take(4)->get();
-        $disks    = Disk::orderBy('published_at', 'desc')->take(4)->get();
-        $posts    = Post::orderBy('published_at', 'desc')->take(4)->get();
+        $videos = Video::orderBy('published_at', 'desc')->take(4)->get();
+        $books  = Book::orderBy('published_at', 'desc')->take(4)->get();
+        $disks  = Disk::orderBy('published_at', 'desc')->take(4)->get();
+        $posts  = Post::orderBy('published_at', 'desc')->take(4)->get();
 
-        return view('pages.index', compact('webinars', 'books', 'disks', 'posts'));
+        return view('pages.index', compact('videos', 'books', 'disks', 'posts'));
     }
 
     public function about()
