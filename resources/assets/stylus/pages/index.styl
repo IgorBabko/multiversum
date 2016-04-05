@@ -1,37 +1,26 @@
 .header
-    // min-height: 700px
+    min-height: 100vh
     width: 100vw
     color: white
-    font-family: 'Roboto Slab'//'Lobster', cursive
-    // background: url(../img/backgroundMain.jpg)
-    background-repeat: no-repeat
-    background-size: contain
-    background-position: right center
+    font-family: 'Roboto Slab'
+    font-size: 20px
+    font-weight: 100
     padding: 50px
     text-align: center
-    
-    @media screen and (max-width: 994px)
-        padding: 50px 10px
+    @media screen and (min-width: 994px)
+        background: url(../img/backgroundMain.jpg)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: right center
 
     &__container
-        display: flex
-        flex-wrap: wrap
         margin-top: 50px
-        width: auto
-
-        > div
-            lost-column: 1/2 2 0
-            
-            @media screen and (max-width: 994px)
-                lost-column: 1/1 1 0
-                text-align: center
-
-
+        text-align: center
 
     &__iframe
-        max-width: 100%
+        max-width: 700px
         position: relative
-        margin: 0 auto 50px
+        margin: 50px auto
     
     &__iframe__ratio
         width: 100%
@@ -45,10 +34,10 @@
     
 
     &__heading
+        font-family: 'Lobster', cursive
         margin-top: 0
-        font-size: 32px
-        color: white
-        text-transform: uppercase
+        font-size: 48px
+        color: $yellow
 
     &__button
         background: $yellow
