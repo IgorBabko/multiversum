@@ -51,16 +51,23 @@
         text-transform: uppercase
 
     &__button
-        background: #fffdba
+        background: $yellow
         color: black
         border-radius: 0
         font-size: 24px
         margin-top: 20px
+        
+        &--subscription
+            background: $green
+            
+            &:hover
+                background: $darkGreen
 
         &:hover
-            background: darken(#fffdba, 30%)
+            background: $darkYellow
 
-    &__webinar-date
+    &__buttons
+        display: flex
         font-size: 24px
         margin-top: 50px
         bottom: 50px

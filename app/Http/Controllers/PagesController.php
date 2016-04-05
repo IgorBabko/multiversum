@@ -18,12 +18,14 @@ class PagesController extends Controller
     {
         $page = Page::where('name', 'главная')->first();
 
+        $headerVideo = Video::where('name', 'вводное_слово')->first();
+
         $videos = Video::orderBy('published_at', 'desc')->take(4)->get();
         $books  = Book::orderBy('published_at', 'desc')->take(4)->get();
         $disks  = Disk::orderBy('published_at', 'desc')->take(4)->get();
         $posts  = Post::orderBy('published_at', 'desc')->take(4)->get();
 
-        return view('pages.index', compact('page', 'videos', 'books', 'disks', 'posts'));
+        return view('pages.index', compact('page', 'headerVideo', 'videos', 'books', 'disks', 'posts'));
     }
 
     public function about()

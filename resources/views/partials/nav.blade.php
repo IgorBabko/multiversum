@@ -35,7 +35,7 @@
                                     @can ('access-admin-area')
                                         <li><a href="/admin">Админка</a></li>
                                     @endcan
-                                    <li class="{{ Request::is('profile') ? 'active' :  '' }}"><a href="{{ url('/profile') }}">Профиль</a></li>
+                                    <!-- <li class="{{ Request::is('profile') ? 'active' :  '' }}"><a href="{{ url('/profile') }}">Профиль</a></li> -->
                                     <li><a href="{{ url('/logout') }}">Выйти</a></li>
                                 @endif
                             </ul>

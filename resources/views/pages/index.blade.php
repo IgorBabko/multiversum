@@ -6,16 +6,18 @@
         <div class="header__container__left-column">
             <div class="Iframe header__iframe">
                 <img class="header__iframe__ratio" src="http://placehold.it/16x9"/>
-                {!! $videos[0]->iframe !!}
+                {!! $headerVideo->iframe !!}
             </div>
-
         </div>
         <div class="header__about">
-            <h1 class="header__heading">Человек как бесконечность</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo deleniti itaque eum totam dolor vero nihil ratione, quae quia, illo laboriosam, eaque officiis facere! Enim ea quam neque ex repellat cumque a quasi quo, aspernatur laborum, possimus molestiae magni ratione cupiditate in magnam minima totam quos eligendi
+            <h1 class="header__heading">{{ $page->heading }}</h1>
+            {{ $page->text }}
         </div>
     </div>
-    <div class="header__webinar-date">Следующий вебинар на тему: "Время" (19.06.16 16:50)<br><button class="btn header__button">Записаться</button></div>
+    <!-- <div class="header__buttons"> -->
+        <!-- <div>Следующий вебинар на тему: "Время" (19.06.16 16:50)<br><button class="btn header__button">Записаться</button></div> -->
+        <!-- <div>Получайте последние <br><button class="btn header__button header__button--subscription">Подписаться</button></div> -->
+    <!-- </div> -->
 
     <!-- <div class="header__arrow"><i class="fa fa-angle-double-down"></i></div> -->
 </header>

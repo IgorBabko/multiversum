@@ -18,6 +18,7 @@ class CreatePagesTable extends Migration
             $table->string('heading')->nullable();
             $table->text('text');
             $table->string('image')->nullable();
+            $table->string('youtube_id')->nullable();
             $table->timestamps();
         });
     }
