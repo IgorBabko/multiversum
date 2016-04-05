@@ -8,7 +8,7 @@
             <div class="Book-expanded__wrapper">
                 <img src="/uploads/images/books/{{ $book->image }}" class="Book-expanded__image" alt="{{ $book->name }}">
                 <br>
-                <button class="btn buy-button Book-expanded__buy">Купить</button>
+                <!-- <button class="btn buy-button Book-expanded__buy">Купить</button> -->
             </div>
             <div class="Book-expanded__description">{!! $book->description !!}</div>
         </div>

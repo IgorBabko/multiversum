@@ -8,7 +8,7 @@
             <div class="Disk-expanded__wrapper">
                 <img src="/uploads/images/disks/{{ $disk->image }}" class="Disk-expanded__image"  alt="{{ $disk->name }}">
                 <br>
-                <button class="btn Disk-expanded__buy">Купить</button>
+                <!-- <button class="btn Disk-expanded__buy">Купить</button> -->
             </div>
             <div class="Disk-expanded__description">{!! $disk->description !!}</div>
         </div>

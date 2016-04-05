@@ -94,7 +94,7 @@
       -webkit-flex-basis: 100%;
       flex-basis: 100%;
   text-align: center;
-  color: #717171;
+  color: #66849c;
   font-family: 'Lobster', cursive;
   font-size: 56px;
   margin: 0 0 20px 0;
@@ -616,7 +616,7 @@
   font-size: 22px;
   font-weight: normal;
   outline: none;
-  box-shadow: 0 0 1px 1px #717171;
+  border: 1px solid #717171;
   float: right;
 }
 .Button:hover {
@@ -813,6 +813,9 @@
   border-bottom: 1px solid #fff;
 }
 .search__main .search__button {
+  color: #e7e7e7;
+}
+.search__main .search__button:hover {
   color: #fff;
 }
 .search__button {
@@ -1050,10 +1053,10 @@
   margin-top: 20px;
 }
 .header__button--subscription {
-  background: #bfa;
+  background: #37bc9b;
 }
 .header__button--subscription:hover {
-  background: #44ff15;
+  background: #247a65;
 }
 .header__button:hover {
   background: #fff920;
