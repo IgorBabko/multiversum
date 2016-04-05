@@ -1,5 +1,5 @@
 $ ->
-    $('.header').parallax imageSrc: '/img/background3.jpg'
+    # $('.header').parallax imageSrc: '/img/background3.jpg'
 
     $('.header__heading').fadeIn 1000, ->
         $('.header__arrow').fadeIn 500
@@ -8,6 +8,9 @@ $ ->
     #     -> $(this).find('.dropdown-menu').first().stop(true, true).delay(1).slideDown(100)
     #     -> $(this).find('.dropdown-menu').first().stop(true, true).delay(1).slideUp(100)
     # )
+
+    if $(".header__iframe iframe").length > 0
+        $(".header__iframe iframe")[0].src += "&autoplay=1";
 
     quotesArray = [
         "Все стремится друг к другу"

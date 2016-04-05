@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic")
+
 input::placeholder
-    color: #A894B7
+    color: #9C9C9C//#D6D6D6
 
 textarea::placeholder
-    color: #A894B7
+    color: #9C9C9C//#D6D6D6
 
 html
     height: 100%
@@ -15,22 +17,25 @@ body
     justify-content: space-between
     min-height: 100%
     font-family: 'Roboto Slab', serif
-    background: #6A4388
+    background: $lightBlue
+
 
 .logo
     font-family: 'Lobster', cursive
-    color: #FFC7E9 !important
+    color: black !important
     font-size: 40px
-    text-shadow: 1px 1px 3px #000
-    
-    &:hover
-        color: white !important
-        text-decoration: none
+
+    &__footer
+        text-decoration: none !important
+        color: $gray !important
 
 .resource
-    transition: all 0.4s cubic-bezier(0.51, 0.43, 0.44, 1.15)
+    text-align: center
+    transition: all 0.4s ease-in-out//cubic-bezier(0.51, 0.43, 0.44, 1.15)
     transform: scale(0)
     overflow: hidden
+    // margin: 0 auto
+    background: #ECECEC
 
 .visible
     transform: scale(1)

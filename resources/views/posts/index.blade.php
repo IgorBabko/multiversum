@@ -3,7 +3,7 @@
 <div class="Page">
     <div class="Page__content Page__content--with-resource">
         <h1 class="Page__heading">Статьи</h1>
-        @include('partials.search', ['resource' => $posts, 'searchUrl'=> '/posts/?/search', 'resetUrl' => '/posts'])
+        @include('partials.search', ['class' => '', 'resource' => $posts, 'searchUrl'=> '/posts/?/search', 'resetUrl' => '/posts'])
         <!-- <div>
             <div class="col-md-6">
                 <select class="selectpicker" title="Выбор категории" data-size="5">

@@ -6,6 +6,8 @@
 // utilities
 @import 'utilities/colors'
 @import 'utilities/helpers'
+@import 'utilities/vars'
+
 
 // animations
 @import 'animations/bouncing-arrow'
@@ -181,14 +183,15 @@
     display: block
     text-align: center
     .reset-password
-        color: #dab5f7
+        float: left
+        color: $darkGray
         font-size: 18px
         text-align: center
         margin: 20px auto 0
         display: inline-block
         
         &:hover
-            color: #dab5f7
+            color: black//#dab5f7
 input.error
     border-color: #FFB1B1//#FF8787
 

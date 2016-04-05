@@ -13,10 +13,10 @@
                 {{ $errors->first('password') }}
             </span>
             <input type="password" name="password" class="Input {{ $errors->first('password') ? 'error' : '' }}" placeholder="Пароль" value="{{ old('password') }}">
-            <ul>
+          <!--   <ul>
                 <li><input id="cb6" name="cb6" type="checkbox"><label for="cb6">Запомнить меня</label></li>
             </ul>
-            <button type="submit" class="Button">Войти</button>
+ -->            <button type="submit" class="Button">Войти</button>
             <span class="reset-password-span">
                 <a class="btn btn-link reset-password" href="{{ url('/password/reset') }}">Забыли пароль?</a>
             </span>

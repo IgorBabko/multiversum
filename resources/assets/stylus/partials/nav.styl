@@ -1,29 +1,26 @@
 @media screen and (max-width: 768px)
     .dropdown-menu
         width: 100%
-        // background none !important
-        // a
-        //     background none !important
     .navbar-collapse
-        background: rgba(61,43,72,0.85)
+        background: #f8f8f8
 
 .navbar
-    background: rgb(61, 43, 72)//rgba(61,43,72,0.85)
+    border-bottom: 1px solid #a9a9a9 !important
+    background: #f8f8f8
     border-radius: 0
+    margin-bottom: 0
     height: 50px
     border: none
-    font-family: 'Lobster', cursive
+    font-family: 'Roboto Slab', cursive
     
     
     .navbar-collapse
         border: none
-        // background rgba(61,43,72,0.85) !important
         text-align center
     
     &.navbar-default
         .navbar-nav > li > a:hover,
         .navbar-nav > li > a:focus
-            color: #FFC7E9
             
         .navbar-nav > .open > a,
         .navbar-nav > .open > a:focus,
@@ -33,89 +30,80 @@
         .navbar-nav
             > li
                 a
-                    color: white
+                    color: black
                     padding-left: 10px
                     padding-right: 10px
+                    padding-bottom: 14px
                 .dropdown-menu
                     text-align: center
-                    background: rgba(138, 95, 167, 0.64)
                     min-width: 118px
                     > .active > a,
                     > .active > a:focus,
                     > .active > a:hover
-                        color: #FCFFA5
-                        background: none
+                        background: $gray
                     > li
                         
                         > a
-                            font-size: 18px//12px
+                            font-size: 14px
                             padding-top: 10px
                             padding-bottom: 10px
                             color: white 
+                            background: none
                             
                         > a:focus,
                         > a:hover
-                            background: none
-                            color: #FFC7E9 
+                            background: $gray
+
                 a
-                    font-size: 20px //14px
-                    letter-spacing: 1.5px
-                    font-weight: 400
-                    // text-transform: uppercase
+                    font-size: 16px
+                    letter-spacing: 1.0px
                 a:hover
-                    color: #FFC7E9
+                    background: $gray
                 
                 &:focus
-                    color: #FFC7E9
+                    background: $gray
                     
                 &.active
                     a
-                        color: #FFFDBA
-                        background: none
+                        background: $gray
                         &:hover
-                            background: none
-                            color: #FFFDBA
+                            background: $gray
 
 // hanburger menu
 .navbar-default .navbar-header .navbar-toggle
-    border-color: #FFA0DC
-    background: #FFA0DC
+    background none 
+    border-color: black
     transition: all 0.1s ease-in-out
     .icon-bar
-        background: #1D0A29
+        color: black !important
+        background: black
 
     &.collapsed
         background: none
-        .icon-bar
-            background: #FFA0DC
 
 @media screen and (min-width: 768px)
     .dropdown
         .dropdown-menu
-            background: rgba(61,43,72,0.85) !important
-            // transition: all 0.3s ease-in-out
+            background: $lightGray !important
 
     .dropdown:hover .dropdown-menu
         display: block
         margin-top: 0
     .dropdown-menu
         a
+            color: black !important
             padding: 5px !important
 
 @media screen and (max-width: 767px)
+    .navbar-collapse
+        border-bottom: 1px solid #a9a9a9 !important
     .navbar-nav
         a
             padding: 15px !important
         .dropdown-menu
+            background $darkGray !important
             a
-                font-size: 18px !important
                 padding: 10px !important
-
-@media screen and (min-width: 994px)
-    .navbar-nav
-        .dropdown-menu
-            a
-                font-size: 18px !important
 
 $speed = 200ms
 $easing = cubic-bezier(0.7, 0, 0, 0.7)

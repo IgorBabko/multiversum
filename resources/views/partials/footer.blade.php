@@ -10,7 +10,7 @@
         </ul>
         <div>
             <div>
-                <a class="logo" href="/">Multiversum</a><br>
+                <a class="logo logo__footer" href="/">Multiversum</a><br>
                 <span class="footer__copyright">&copy; Все права защищены</span>
             </div>
         </div>

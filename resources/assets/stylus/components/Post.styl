@@ -1,13 +1,10 @@
 .Post
-    lost-waffle: 1/1 1 10px
-    width: 300px !important
-    background white
-    // box-shadow: 0 0 3px 0px #432e51
-    box-shadow: 0 0 5px 1px #432e51
+    max-width: 300px !important
+    margin: 0 auto
 
     &__heading
         margin: 0 0 20px 0
-        color: #5a406d
+        color: black
 
     &__info
         text-align: left
@@ -15,17 +12,17 @@
         font-size 14px
         padding: 20px
         display: flex
-        color: #5a406d
         flex-direction: column
         justify-content: space-between
 
     &__meta
-        color: #B29FC1
+        color: rgba(0,0,0,0.5)
         text-align: right
     
     &__button
-        background: #6A4388
+        background: $lightBlue
         border: none
+        
         &:hover
             background: #432E51
     

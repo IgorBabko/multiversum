@@ -1,4 +1,4 @@
-<div class="search">
+<div class="search {{ $class }}">
     <form action="{{ $searchUrl }}" class="search__form" autocomplete="off">
         @if (isset($searchString))
             <a href="{{ $resetUrl }}" class="search__reset"><i class="fa fa-remove"></i></a>

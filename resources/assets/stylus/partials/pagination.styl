@@ -6,7 +6,7 @@
         
         li.active
             span
-                background: #5A406D
+                background: $darkBlue//#5A406D
 
 
     .pagination > li:first-child > a,
@@ -22,14 +22,14 @@
     .pagination > .active > span:hover,
     .pagination > .active > span:focus
         border: none !important
-        background: #5A406D
+        background: $darkBlue//#5A406D
         color: white !important
 
     .pagination > li > a:hover,
     .pagination > li > a:focus,
     .pagination > li > span:hover,
     .pagination > li > span:focus
-        background: #978DBB
+        background: $blue//#978DBB
         border: none !important
         color: white
         
@@ -39,11 +39,17 @@
     .pagination > .disabled > a,
     .pagination > .disabled > a:hover,
     .pagination > .disabled > a:focus
-        color: #ABABAB
-        background: #FFE2F1
+        color: black//#ABABAB
+        background: #D8D8D8//#FFE2F1
 
     .pagination > li > a,
     .pagination > li > span
-        color: #8152A5
+        color: white//#8152A5
         border: none
-        background: #FFE2F1
+        margin: 10px
+        background: $lightBlue//#FFE2F1
+        
+        @media screen and (max-width: 480px)
+            &
+                margin: 0
+        

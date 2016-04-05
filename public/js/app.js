@@ -4,12 +4,12 @@
 (function () {
   $(function () {
     var _changeQuotes, controller, quotesArray;
-    $('.header').parallax({
-      imageSrc: '/img/background3.jpg'
-    });
     $('.header__heading').fadeIn(1000, function () {
       return $('.header__arrow').fadeIn(500);
     });
+    if ($(".header__iframe iframe").length > 0) {
+      $(".header__iframe iframe")[0].src += "&autoplay=1";
+    }
     quotesArray = ["Все стремится друг к другу", "Мир не терпит пустоты", "Все стремится к покою"];
     $(window).keyup(function (e) {
       if (e.keyCode === 27 && window.innerWidth < 768) {

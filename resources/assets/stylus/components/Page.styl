@@ -1,5 +1,5 @@
 .Page
-    color: #C2B1CE
+    color: black
     padding: 100px 50px 50px
     display: flex
     flex-direction: column
@@ -10,16 +10,17 @@
     &__heading
         flex-basis: 100%
         text-align: center
-        color: #fffdba
+        color: $darkGray
         font-family: 'Lobster', cursive
         font-size: 56px
-        margin: 0
+        margin: 0 0 20px 0
+        position: relative
 
     &__content
-        background: #5A406D
-        box-shadow: 0px 0px 20px 1px #301840
-        padding: 30px 50px 70px
-        font-size: responsive 14px 18px
+        background: white//#5A406D
+        box-shadow: 0px 0px 10px 0px #636363//#301840
+        padding: 30px 50px
+        font-size: responsive 14px 16px
         font-weight: 100
         
         &--with-resource
@@ -47,11 +48,3 @@
         padding: 100px 30px 50px
         &__content
             padding: 20px
-
-.Page-light
-    &__content
-        background: #f5e7ff
-        color: black
-    
-    &__heading
-        color: #483358
