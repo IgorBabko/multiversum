@@ -2,5 +2,5 @@
 
 return [
     'title'          => 'Multiversum',
-    'posts_per_page' => 9,
+    'posts_per_page' => 10,
 ];

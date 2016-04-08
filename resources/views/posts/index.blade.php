@@ -2,19 +2,40 @@
 @section("content")
 <div class="Page">
     <div class="Page__content Page__content--with-resource">
-        <h1 class="Page__heading">Статьи</h1>
+        <h1 class="Page__heading">Статьи
+        @if (Request::is('posts/category/*'))
+        из категории: <span class='filter-name'>{{ $name }}</span>
+        @elseif (Request::is('posts/tag/*'))
+        с тегом: <span class='filter-name'>{{ $name }}</span>
+        @endif
+        </h1>
         @include('partials.search', ['class' => '', 'searchUrl'=> '/posts/?/search', 'resetUrl' => '/posts'])
         <div class="filters">
-            <select class="selectpicker Filter" title="Выбор категории" data-size="5">
-                @foreach ($categories as $category)
-                    <option>{{ $category->name }}</option>
-                @endforeach
-            </select>
-            <select class="selectpicker Filter" title="Выбор тега" data-size="5">
-                @foreach ($tags as $tag)
-                    <option>{{ $tag->name }}</option>
-                @endforeach
-            </select>
+            <div class="btn-group Filter">
+                <a href="/posts">
+                    <button class="btn btn-default">Все</button>
+                </a>
+            </div>
+            <div class="btn-group Filter">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Категории <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    @foreach ($categories as $category)
+                    <li><a href="/posts/category/{{ $category->name }}">{{ $category->name }}</a></li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="btn-group Filter">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Теги <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    @foreach ($tags as $tag)
+                    <li><a href="/posts/tag/{{ $tag->name }}">{{ $tag->name }}</a></li>
+                    @endforeach
+                </ul>
+            </div>
         </div>
         <div class="Gallery">
             @forelse ($posts as $post)
