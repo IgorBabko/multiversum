@@ -10,7 +10,7 @@
         </button>
         <ul class="dropdown-menu">
             @foreach ($categories as $category)
-            <li><a href="/posts/category/{{ $category->name }}">{{ $category->name }}</a></li>
+            <li><a href="/posts/category/{{ $category->name }}">{{ $category->name }}<span class="pull-right">{{ $category->posts()->count() }}</span></a></li>
             @endforeach
         </ul>
     </div>
@@ -20,7 +20,7 @@
         </button>
         <ul class="dropdown-menu">
             @foreach ($tags as $tag)
-            <li><a href="/posts/tag/{{ $tag->name }}">{{ $tag->name }}</a></li>
+            <li><a href="/posts/tag/{{ $tag->name }}">{{ $tag->name }}<span class="pull-right">{{ $tag->posts()->count() }}</span></a></li>
             @endforeach
         </ul>
     </div>

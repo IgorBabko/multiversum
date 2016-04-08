@@ -1511,11 +1511,8 @@ input.error {
 .filters .Filter button:focus {
   outline: none !important;
 }
-.filters .Filter .dropdown-menu > li > a:hover,
-.filters .Filter .dropdown-menu > li > a:focus {
-  background: #e7e7e7;
-  color: #000;
-  outline: none;
+.filters .Filter .dropdown-menu a {
+  padding: 5px 15px !important;
 }
 
 /*# sourceMappingURL=app.css.map */
