@@ -1495,6 +1495,12 @@ input.error {
   margin: 0 auto;
   display: block;
   border-radius: 0;
+  font-size: 22px;
+}
+@media screen and (max-width: 768px) {
+  .filters .Filter button {
+    font-size: 18px;
+  }
 }
 .filters .Filter button:hover {
   background: #e7e7e7 !important;
