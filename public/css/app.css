@@ -172,7 +172,7 @@
   color: #002d53;
 }
 .Social__link:hover {
-  background: #0060b2;
+  background: #e47e00;
   color: #e7e7e7;
 }
 .Social__icon {
@@ -370,7 +370,7 @@
   height: 225px;
 }
 .Video__heading {
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   padding: 10px 10px;
   margin: 0;

@@ -64,7 +64,7 @@
             <div class="resource Book">
                 <a href="/books/{{ $book->slug }}" class="Book__link">
                     <div class="Overlay">
-                        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
                     </div>
                     <img src="/uploads/images/books/{{ $book->image }}" class="Book__image">
                     <h3 class="Book__heading">{{ $book->name }}</h3>
@@ -82,7 +82,7 @@
             <div class="resource Disk">
                 <a href="/disks/{{ $disk->slug }}" class="Disk__link">
                     <div class="Overlay">
-                        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
                     </div>
                     <img src="/uploads/images/disks/{{ $disk->image }}" class="Disk__image">
                     <h3 class="Disk__heading">{{ $disk->name }}</h3>
