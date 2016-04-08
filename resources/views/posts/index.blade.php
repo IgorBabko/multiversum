@@ -6,23 +6,14 @@
         @include('partials.search', ['class' => '', 'searchUrl'=> '/posts/?/search', 'resetUrl' => '/posts'])
         <div class="filters">
             <select class="selectpicker Filter" title="Выбор категории" data-size="5">
-                <option>Музыка</option>
-                <option>Культура</option>
-                <option>Живопись</option>
-                <option>Спорт</option>
-                <option>Технологии</option>
-                <option>Наука</option>
-                <option>Развлечения</option>
-                <option>Кино</option>
+                @foreach ($categories as $category)
+                    <option>{{ $category->name }}</option>
+                @endforeach
             </select>
             <select class="selectpicker Filter" title="Выбор тега" data-size="5">
-                <option>Город</option>
-                <option>Море</option>
-                <option>Медаль</option>
-                <option>Ноутбук</option>
-                <option>Шутка</option>
-                <option>Фильм</option>
-                <option>Вселенная</option>
+                @foreach ($tags as $tag)
+                    <option>{{ $tag->name }}</option>
+                @endforeach
             </select>
         </div>
         <div class="Gallery">
