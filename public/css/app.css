@@ -637,6 +637,9 @@
 .Input:focus {
   outline: none !important;
 }
+.Input--subscription {
+  background: #fff !important;
+}
 .Textarea {
   resize: none;
   width: 100%;
