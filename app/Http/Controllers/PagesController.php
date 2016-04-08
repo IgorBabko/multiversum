@@ -2,6 +2,7 @@
 
 namespace Multiversum\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 use Mail;
 use Multiversum\Book;
@@ -66,5 +67,11 @@ class PagesController extends Controller
         $posts         = $postsBuilder->get();
 
         return view('pages.search', compact('videos', 'books', 'disks', 'posts', 'searchString', 'count'));
+    }
+
+    public function profile( /* write request class */)
+    {
+        $user = Auth::user();
+        return view('pages.profile', compact('user'));
     }
 }
