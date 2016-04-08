@@ -169,11 +169,28 @@
   background: #e7e7e7;
   padding-top: 7px;
   cursor: pointer;
-  color: #002d53;
+  color: #fff;
 }
 .Social__link:hover {
-  background: #e47e00;
-  color: #e7e7e7;
+  color: #fff;
+}
+.Social__link--facebook {
+  background: #3c5a92;
+}
+.Social__link--facebook:hover {
+  background: #304875;
+}
+.Social__link--youtube {
+  background: #c82f31;
+}
+.Social__link--youtube:hover {
+  background: #a02627;
+}
+.Social__link--google {
+  background: #e04a39;
+}
+.Social__link--google:hover {
+  background: #c22f1e;
 }
 .Social__icon {
   font-size: 32px;
