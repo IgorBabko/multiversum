@@ -9,7 +9,7 @@
         с тегом: <span class='filter-name'>{{ $name }}</span>
         @endif
         </h1>
-        @include('partials.search', ['class' => '', 'searchUrl'=> '/posts/?/search', 'resetUrl' => '/posts'])
+        @include('partials.search', ['class' => '', 'searchUrl'=> '/posts/?/search', 'resetUrl' => '/posts', 'placeholder' => 'искать статьи'])
         @include('partials.filters')
         <div class="Gallery">
             @forelse ($posts as $post)

@@ -1,7 +1,7 @@
 @extends("layout")
 @section("content")
 <header class="header">
-    @include('partials.search', ['class' => 'search__main', 'searchUrl'=> '/?/search', 'resetUrl' => '/'])
+    @include('partials.search', ['class' => 'search__main', 'searchUrl'=> '/?/search', 'resetUrl' => '/', 'placeholder' => 'что вы ищите?'])
     <div class="Iframe header__iframe">
         <img class="header__iframe__ratio" src="http://placehold.it/16x9"/>
         {!! $headerVideo->iframe !!}

@@ -3,7 +3,7 @@
 <div class="Page">
     <div class="Page__content Page__content--with-resource">
         <h1 class="Page__heading">Книги</h1>
-        @include('partials.search', ['class' => '', 'searchUrl'=> '/books/?/search', 'resetUrl' => '/books'])
+        @include('partials.search', ['class' => '', 'searchUrl'=> '/books/?/search', 'resetUrl' => '/books', 'placeholder' => 'искать книги'])
         <div class="Gallery">
             @forelse ($books as $book)
             <div>
