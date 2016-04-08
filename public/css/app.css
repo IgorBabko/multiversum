@@ -621,9 +621,18 @@
   outline: none;
   float: right;
   transition: all 0.05s ease-in-out;
+  font-family: 'Roboto Slab', sans-serif;
 }
 .Button:hover {
   background: #166e00;
+}
+.Button--subscription {
+  background: #e47e00;
+  font-weight: 100;
+  font-size: 16px;
+}
+.Button--subscription:hover {
+  background: #b66500;
 }
 .Input {
   width: 100%;
@@ -633,12 +642,19 @@
   border: none;
   border-bottom: 1px solid #9c9c9c;
   font-size: 24px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 100;
 }
 .Input:focus {
   outline: none !important;
 }
 .Input--subscription {
-  background: #fff !important;
+  background: #fff;
+  border: none;
+  margin: 0;
+  color: #000;
+  padding-left: 10px;
+  font-size: 18px;
 }
 .Textarea {
   resize: none;
