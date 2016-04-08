@@ -4,33 +4,27 @@
     <div class="Page__content Page__content--with-resource">
         <h1 class="Page__heading">Статьи</h1>
         @include('partials.search', ['class' => '', 'searchUrl'=> '/posts/?/search', 'resetUrl' => '/posts'])
-        <!-- <div>
-            <div class="col-md-6">
-                <select class="selectpicker" title="Выбор категории" data-size="5">
-                    <option>Mustard</option>
-                    <option>Ketchup</option>
-                    <option>Relish</option>
-                    <option>Mustard</option>
-                    <option>Ketchup</option>
-                    <option>Relish</option>
-                    <option>Mustard</option>
-                    <option>Ketchup</option>
-                </select>
-            </div>
-            <div class="col-md-6">
-                <select class="selectpicker" title="Выбор тегов" data-size="5" data-selected-text-format="count > 3" multiple>
-                    <option>Mustard</option>
-                    <option>Ketchup</option>
-                    <option>Relish</option>
-                    <option>Mustard</option>
-                    <option>Ketchup</option>
-                    <option>Relish</option>
-                    <option>Mustard</option>
-                    <option>Ketchup</option>
-                    <option>Relish</option>
-                </select>
-            </div>
-        </div> -->
+        <div class="filters">
+            <select class="selectpicker Filter" title="Выбор категории" data-size="5">
+                <option>Музыка</option>
+                <option>Культура</option>
+                <option>Живопись</option>
+                <option>Спорт</option>
+                <option>Технологии</option>
+                <option>Наука</option>
+                <option>Развлечения</option>
+                <option>Кино</option>
+            </select>
+            <select class="selectpicker Filter" title="Выбор тега" data-size="5">
+                <option>Город</option>
+                <option>Море</option>
+                <option>Медаль</option>
+                <option>Ноутбук</option>
+                <option>Шутка</option>
+                <option>Фильм</option>
+                <option>Вселенная</option>
+            </select>
+        </div>
         <div class="Gallery">
             @forelse ($posts as $post)
             <div>

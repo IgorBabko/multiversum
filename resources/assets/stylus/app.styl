@@ -15,6 +15,7 @@
 // components
 @import 'components/Page'
 @import 'components/Social'
+@import 'components/Select'
 @import 'components/Overlay'
 @import 'components/Section'
 @import 'components/Gallery'
@@ -148,35 +149,7 @@
 
 
 
-
-
-
-
 */
-
-
-
-// posts page
-.filters
-    margin-bottom: 30px
-    text-align: center
-    border-bottom: 1px solid #9070A9
-
-// custom styles for bootstrap select plugin
-.bootstrap-select
-    border: 1px solid #AE9DB9
-    margin-bottom: 30px
-    // width: 90% !important
-    button
-        background: white !important//#F2FF8A !important//#FFADD6 !important
-        border: none 
-        margin: 0 auto
-        display: block
-
-    .dropdown-menu > li > a:hover,
-    .dropdown-menu > li > a:focus
-        background: #78598E
-        color: white
 
 
 .reset-password-span
@@ -289,19 +262,27 @@ input.error
     stroke-linecap: round
     stroke-linejoin: round
     fill: none
+    
+// posts filters
 
-// placeholders
-
-
-.success-alert
-    background: #5A406D
-    color: #72F7BE
-    padding: 15px
-    font-size: 22px
+.filters
+    margin-top: 20px
     text-align: center
+    .Filter
+        border: 1px solid $gray
+        margin-bottom: 30px
+        button
+            background: $lightGray !important
+            border: none 
+            margin: 0 auto
+            display: block
+            border-radius: 0
+            
+            &:focus
+                outline: none !important
 
-
-// 1327
-// 933
-// 661
-// 309
+        .dropdown-menu > li > a:hover,
+        .dropdown-menu > li > a:focus
+            background: $gray
+            color: black
+            outline: none

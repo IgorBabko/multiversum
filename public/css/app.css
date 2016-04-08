@@ -181,6 +181,9 @@
 .Social__copiright {
   font-size: 16px;
 }
+.Select button {
+  background: #ff5252 !important;
+}
 .Overlay {
   transition: all 0.2s ease-in-out;
   opacity: 0;
@@ -1350,31 +1353,7 @@ body {
 
 
 
-
-
-
-
 */
-.filters {
-  margin-bottom: 30px;
-  text-align: center;
-  border-bottom: 1px solid #9070a9;
-}
-.bootstrap-select {
-  border: 1px solid #ae9db9;
-  margin-bottom: 30px;
-}
-.bootstrap-select button {
-  background: #fff !important;
-  border: none;
-  margin: 0 auto;
-  display: block;
-}
-.bootstrap-select .dropdown-menu > li > a:hover,
-.bootstrap-select .dropdown-menu > li > a:focus {
-  background: #78598e;
-  color: #fff;
-}
 .reset-password-span {
   display: block;
   text-align: center;
@@ -1482,12 +1461,29 @@ input.error {
   stroke-linejoin: round;
   fill: none;
 }
-.success-alert {
-  background: #5a406d;
-  color: #72f7be;
-  padding: 15px;
-  font-size: 22px;
+.filters {
+  margin-top: 20px;
   text-align: center;
+}
+.filters .Filter {
+  border: 1px solid #e7e7e7;
+  margin-bottom: 30px;
+}
+.filters .Filter button {
+  background: #f8f8f8 !important;
+  border: none;
+  margin: 0 auto;
+  display: block;
+  border-radius: 0;
+}
+.filters .Filter button:focus {
+  outline: none !important;
+}
+.filters .Filter .dropdown-menu > li > a:hover,
+.filters .Filter .dropdown-menu > li > a:focus {
+  background: #e7e7e7;
+  color: #000;
+  outline: none;
 }
 
 /*# sourceMappingURL=app.css.map */
