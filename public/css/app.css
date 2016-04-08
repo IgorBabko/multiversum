@@ -614,6 +614,9 @@
 .Post__button:hover {
   background: #002d53;
 }
+.Post__button:focus {
+  outline: none !important;
+}
 .Post-expanded__date {
   text-align: center;
   font-style: italic;
@@ -1495,7 +1498,7 @@ input.error {
   margin: 0 auto;
   display: block;
   border-radius: 0;
-  font-size: 22px;
+  font-size: 20px;
 }
 @media screen and (max-width: 768px) {
   .filters .Filter button {

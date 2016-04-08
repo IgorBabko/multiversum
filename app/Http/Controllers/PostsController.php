@@ -55,9 +55,11 @@ class PostsController extends Controller
 
     public function showPost(Request $request, $slug)
     {
-        $post = Post::whereSlug($slug)->firstOrFail();
+        $categories = Category::all();
+        $tags       = Tag::all();
+        $post       = Post::whereSlug($slug)->firstOrFail();
 
-        return view('posts.show', compact('request', 'post'));
+        return view('posts.show', compact('request', 'post', 'categories', 'tags'));
     }
 
     public function search($searchString)
