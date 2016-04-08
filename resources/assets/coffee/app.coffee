@@ -48,14 +48,11 @@ $ ->
     )
 
     # focus on first input field
-    $('input[type!="hidden"]').first().focus();
+    $('input[type!="hidden"]').first().focus().select();
 
     # search
     $('.search form').submit (e) ->
         e.preventDefault()
-        if /^\s*$/.test $('.search__input').val()
-            location.href = location.href.match(/\/[^\/]+(\/[^\/]+)/)[1]
-        else
+        if ! /^\s*$/.test $('.search__input').val()
             location.href = $(this).attr('action').replace('?', $('.search__input').val())
-
     return

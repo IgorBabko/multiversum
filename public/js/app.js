@@ -39,12 +39,10 @@
         return $(resource).addClass('visible');
       }).addTo(controller);
     });
-    $('input[type!="hidden"]').first().focus();
+    $('input[type!="hidden"]').first().focus().select();
     $('.search form').submit(function (e) {
       e.preventDefault();
-      if (/^\s*$/.test($('.search__input').val())) {
-        return location.href = location.href.match(/\/[^\/]+(\/[^\/]+)/)[1];
-      } else {
+      if (!/^\s*$/.test($('.search__input').val())) {
         return location.href = $(this).attr('action').replace('?', $('.search__input').val());
       }
     });

@@ -49,4 +49,22 @@ class PagesController extends Controller
 
         return back()->with('notify', 'Письмо отправлено успешно');
     }
+
+    public function search($searchString)
+    {
+        $videosBuilder = Video::search($searchString);
+        $booksBuilder  = Book::search($searchString);
+        $disksBuilder  = Disk::search($searchString);
+        $postsBuilder  = Post::search($searchString);
+        $count         = $videosBuilder->get()->count();
+        $count         = $booksBuilder->get()->count() + $count;
+        $count         = $disksBuilder->get()->count() + $count;
+        $count         = $postsBuilder->get()->count() + $count;
+        $videos        = $videosBuilder->get();
+        $books         = $booksBuilder->get();
+        $disks         = $disksBuilder->get();
+        $posts         = $postsBuilder->get();
+
+        return view('pages.search', compact('videos', 'books', 'disks', 'posts', 'searchString', 'count'));
+    }
 }

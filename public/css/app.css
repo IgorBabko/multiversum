@@ -100,6 +100,9 @@
   margin: 0 0 20px 0;
   position: relative;
 }
+.Page__heading--sub {
+  font-size: 36px;
+}
 .Page__content {
   background: #fff;
   box-shadow: 0px 0px 10px 0px #717171;
@@ -656,7 +659,7 @@
   }
 }
 .navbar {
-  box-shadow: 0 1px 1px 1px #717171;
+  border-bottom: 1px solid #e7e7e7 !important;
   background: #f8f8f8;
   border-radius: 0;
   margin-bottom: 0;
@@ -1214,6 +1217,7 @@ body {
   -webkit-transform: scale(0);
           transform: scale(0);
   overflow: hidden;
+  margin-bottom: 30px;
   background: #ececec;
 }
 .visible {
