@@ -16,7 +16,7 @@
             <span class="help-block error">
                 {{ $errors->first('password') }}
             </span>
-            <input type="password" name="email" placeholder="Пароль" class="Input {{ $errors->first('password') ? 'error' : '' }}">
+            <input type="password" name="password" placeholder="Пароль" class="Input {{ $errors->first('password') ? 'error' : '' }}">
             <span class="help-block error">
                 {{ $errors->first('password_confirmation') }}
             </span>

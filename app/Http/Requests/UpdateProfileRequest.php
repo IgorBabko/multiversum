@@ -25,10 +25,9 @@ class UpdateProfileRequest extends Request
     public function rules()
     {
         return [
-            'name'                  => 'string',
-            'email'                 => 'email|unique:users,email,' . Auth::user()->id,
-            'password'              => 'string|min:8',
-            'password_confirmation' => 'same:password',
+            'name'     => 'required|string',
+            'email'    => 'email|unique:users,email,' . Auth::user()->id,
+            'password' => 'min:8|confirmed',
         ];
     }
 }

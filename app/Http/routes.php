@@ -4,7 +4,8 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', ['as' => 'index', 'uses' => 'PagesController@index']);
     Route::get('/about', ['as' => 'about', 'uses' => 'PagesController@about']);
-    Route::get('/profile', ['as' => 'profile', 'uses' => 'PagesController@profile']);
+    Route::get('/profile', ['as' => 'showProfile', 'uses' => 'PagesController@showProfile']);
+    Route::post('/profile', ['as' => 'updateProfile', 'uses' => 'PagesController@updateProfile']);
     Route::get('/{searchString}/search', ['as' => 'search', 'uses' => 'PagesController@search']);
 
     Route::get('/email', ['as' => 'email', 'uses' => 'PagesController@email']);
