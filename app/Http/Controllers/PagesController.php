@@ -91,4 +91,10 @@ class PagesController extends Controller
 
         return back()->with('notify', 'Профиль успешно обновлен');
     }
+
+    public function subscribe()
+    {
+
+        event(new UserSubscribed($request->input('email')));
+    }
 }

@@ -20,6 +20,12 @@ $factory->define(Multiversum\User::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(Multiversum\Subscription::class, function (Faker\Generator $faker) {
+    return [
+        'email' => $faker->safeEmail,
+    ];
+});
+
 $factory->define(Multiversum\Page::class, function (Faker\Generator $faker) {
     return [
         'name'       => 'about',

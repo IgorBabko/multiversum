@@ -37,6 +37,7 @@ class User extends Authenticatable
      * Hash user's password
      *
      * @param $password
+     * @return void
      */
     public function setPasswordAttribute($password)
     {
