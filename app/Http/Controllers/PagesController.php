@@ -69,7 +69,13 @@ class PagesController extends Controller
         return view('pages.search', compact('videos', 'books', 'disks', 'posts', 'searchString', 'count'));
     }
 
-    public function profile( /* write request class */)
+    public function showProfile()
+    {
+        $user = Auth::user();
+        return view('pages.profile', compact('user'));
+    }
+
+    public function updateProfile(UpdateProfileRequest $request)
     {
         $user = Auth::user();
         return view('pages.profile', compact('user'));

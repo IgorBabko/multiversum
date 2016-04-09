@@ -29,11 +29,11 @@ class UpdatePostRequest extends Request
         ];
     }
 
-    public function messages()
-    {
-        return [
-            'name.required'    => 'Название не должно быть пустым',
-            'content.required' => 'Описание не должно быть пустым',
-        ];
-    }
+    // public function messages()
+    // {
+    //     return [
+    //         'name.required'    => 'Название не должно быть пустым',
+    //         'content.required' => 'Описание не должно быть пустым',
+    //     ];
+    // }
 }
