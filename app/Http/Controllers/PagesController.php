@@ -3,7 +3,6 @@
 namespace Multiversum\Http\Controllers;
 
 use Auth;
-use Hash;
 use Illuminate\Http\Request;
 use Mail;
 use Multiversum\Book;
@@ -85,7 +84,7 @@ class PagesController extends Controller
         $user->email = $request->email;
 
         if (!empty($request->password)) {
-            $user->password = Hash::make($request->password);
+            $user->password = $request->password;
         }
 
         $user->save();
