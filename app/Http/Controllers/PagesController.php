@@ -2,12 +2,14 @@
 
 namespace Multiversum\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 use Mail;
 use Multiversum\Book;
 use Multiversum\Disk;
 use Multiversum\Http\Controllers\Controller;
 use Multiversum\Http\Requests\SendEmailRequest;
+use Multiversum\Http\Requests\UpdateProfileRequest;
 use Multiversum\Page;
 use Multiversum\Post;
 use Multiversum\Video;
@@ -66,5 +68,27 @@ class PagesController extends Controller
         $posts         = $postsBuilder->get();
 
         return view('pages.search', compact('videos', 'books', 'disks', 'posts', 'searchString', 'count'));
+    }
+
+    public function showProfile()
+    {
+        $user = Auth::user();
+        return view('pages.profile', compact('user'));
+    }
+
+    public function updateProfile(UpdateProfileRequest $request)
+    {
+        $user = Auth::user();
+
+        $user->name  = $request->name;
+        $user->email = $request->email;
+
+        if (!empty($request->password)) {
+            $user->password = $request->password;
+        }
+
+        $user->save();
+
+        return back()->with('notify', 'Профиль успешно обновлен');
     }
 }

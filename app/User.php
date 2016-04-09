@@ -2,6 +2,7 @@
 
 namespace Multiversum;
 
+use Hash;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -30,5 +31,15 @@ class User extends Authenticatable
     public function isAdmin()
     {
         return $this->email === env('EMAIL', 'portaciya@gmail.com');
+    }
+
+    /**
+     * Hash user's password
+     *
+     * @param $password
+     */
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = Hash::make($password);
     }
 }

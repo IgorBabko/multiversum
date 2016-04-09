@@ -2,9 +2,10 @@
 
 namespace Multiversum\Http\Requests;
 
+use Auth;
 use Multiversum\Http\Requests\Request;
 
-class UpdatePostRequest extends Request
+class UpdateProfileRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +14,7 @@ class UpdatePostRequest extends Request
      */
     public function authorize()
     {
-        return true;
+        return Auth::user();
     }
 
     /**
@@ -24,16 +25,9 @@ class UpdatePostRequest extends Request
     public function rules()
     {
         return [
-            'name'    => 'required',
-            'content' => 'required',
-        ];
-    }
-
-    public function messages()
-    {
-        return [
-            'name.required'    => 'Название не должно быть пустым',
-            'content.required' => 'Описание не должно быть пустым',
+            'name'     => 'required|string',
+            'email'    => 'email|unique:users,email,' . Auth::user()->id,
+            'password' => 'min:8|confirmed',
         ];
     }
 }
