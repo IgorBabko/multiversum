@@ -5,6 +5,9 @@ return [
     'single'      => 'тег',
     'model'       => 'Multiversum\Tag',
     'columns'     => [
+        'id'   => [
+            'title' => 'id',
+        ],
         'name' => [
             'title' => 'название',
         ],

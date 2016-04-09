@@ -5,27 +5,34 @@ return [
     'single'      => 'статья',
     'model'       => 'Multiversum\Post',
     'columns'     => [
-        'name'    => [
+        'category_id' => [
+            'title' => 'id категории',
+        ],
+        'name'        => [
             'title' => 'название',
         ],
-        'image'   => [
+        'image'       => [
             'title'  => 'картинка',
             'output' => '<img src="/uploads/images/posts/large/(:value)" height="100" />',
         ],
-        'content' => [
+        'content'     => [
             'title' => 'текст',
         ],
     ],
     'edit_fields' => [
-        'name'    => [
+        'category_id' => [
+            'title' => 'id категории',
+            'type'  => 'number',
+        ],
+        'name'        => [
             'title' => 'название',
             'type'  => 'text',
         ],
-        'content' => [
+        'content'     => [
             'title' => 'контент',
             'type'  => 'text',
         ],
-        'image'   => [
+        'image'       => [
             'title'    => 'картинка',
             'type'     => 'image',
             'location' => public_path() . '/uploads/images/posts/large/',

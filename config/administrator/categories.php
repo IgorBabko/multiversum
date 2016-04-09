@@ -5,6 +5,9 @@ return [
     'single'      => 'категория',
     'model'       => 'Multiversum\Category',
     'columns'     => [
+        'id'   => [
+            'title' => 'id',
+        ],
         'name' => [
             'title' => 'название',
         ],
