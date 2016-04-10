@@ -22,6 +22,14 @@ class UserSubscribed extends Event
     }
 
     /**
+     * Get email of subscribed user
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
      * Get the channels the event should be broadcast on.
      *
      * @return array

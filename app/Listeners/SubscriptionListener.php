@@ -2,9 +2,8 @@
 
 namespace Multiversum\Listeners;
 
+use Mail;
 use Multiversum\Events\UserSubscribed;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
 class SubscriptionListener
 {
@@ -26,10 +25,11 @@ class SubscriptionListener
      */
     public function handle(UserSubscribed $event)
     {
-        Mail::send('emails.notification', ['email' => $event->email]);
+        Mail::send('emails.notification', ['email' => $event->getEmail()], function ($mail) {});
 
-        Mail::send('email.subscription', function ($mail) use ($email = $event->email) {
-            $mail->to($email);
+        $email = $event->getEmail();
+        Mail::send('emails.subscription', [], function ($mail) use ($email) {
+            $mail->to($email); //->subject('Подписка');
         });
     }
 }

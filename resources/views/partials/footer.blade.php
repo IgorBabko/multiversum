@@ -1,8 +1,10 @@
 <footer class="footer">
     <div class="footer__content">
         <div>
-            <!-- <i class="fa fa-home footer__icon"></i>Наше расположение -->
-            <input type="email" class="Input Input--subscription" placeholder="Ваш email"><button class="Button Button--subscription">подписка</button>
+            <form action="/subscribe" method="POST">
+                {{ csrf_field() }}
+                <input type="email" name="email" class="Input Input--subscription" placeholder="Ваш email"><button type="submit" class="Button Button--subscription">подписка</button>
+            </form>
         </div>
         <ul class="Social">
             <li class="Social__item"><a class="Social__link Social__link--facebook" href="https://www.facebook.com/profile.php?id=100006293505911&fref=nf" target="_blank"><i class="fa fa-facebook Social__icon"></i></a></li>

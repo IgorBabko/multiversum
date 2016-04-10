@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use Mail;
 use Multiversum\Book;
 use Multiversum\Disk;
+use Multiversum\Events\UserSubscribed;
 use Multiversum\Http\Controllers\Controller;
 use Multiversum\Http\Requests\SendEmailRequest;
+use Multiversum\Http\Requests\SubscriptionRequest;
 use Multiversum\Http\Requests\UpdateProfileRequest;
 use Multiversum\Page;
 use Multiversum\Post;
@@ -52,6 +54,11 @@ class PagesController extends Controller
         return back()->with('notify', 'Письмо отправлено успешно');
     }
 
+    public function getCountOfFoundResources($searchString)
+    {
+
+    }
+
     public function search($searchString)
     {
         $videosBuilder = Video::search($searchString);
@@ -92,9 +99,10 @@ class PagesController extends Controller
         return back()->with('notify', 'Профиль успешно обновлен');
     }
 
-    public function subscribe()
+    public function subscribe(SubscriptionRequest $request)
     {
-
         event(new UserSubscribed($request->input('email')));
+
+        return back()->with('notify', 'Подписка оформлена успешно');
     }
 }
