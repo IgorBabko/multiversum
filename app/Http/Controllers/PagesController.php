@@ -112,4 +112,17 @@ class PagesController extends Controller
 
         return back()->with('notify', 'Подписка оформлена успешно');
     }
+
+    public function unsubscribe(SubscriptionRequest $request)
+    {
+        $email = $request->input('email');
+        Subscription::create(['email' => $email]);
+        event(new UserSubscribed($email));
+
+        if ($request->ajax()) {
+            return "Подписка оформлена успешно";
+        }
+
+        return back()->with('notify', 'Подписка оформлена успешно');
+    }
 }
