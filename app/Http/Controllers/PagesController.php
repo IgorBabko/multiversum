@@ -55,11 +55,6 @@ class PagesController extends Controller
         return back()->with('notify', 'Письмо отправлено успешно');
     }
 
-    public function getCountOfFoundResources($searchString)
-    {
-
-    }
-
     public function search($searchString)
     {
         $videosBuilder = Video::search($searchString);
@@ -113,16 +108,16 @@ class PagesController extends Controller
         return back()->with('notify', 'Подписка оформлена успешно');
     }
 
-    public function unsubscribe(SubscriptionRequest $request)
-    {
-        $email = $request->input('email');
-        Subscription::create(['email' => $email]);
-        event(new UserSubscribed($email));
+    // public function unsubscribe()
+    // {
+    //     $email = $request->input('email');
+    //     Subscription::where(['email', $email)->delete();
+    //     event(new UserUnsubscribed($email));
 
-        if ($request->ajax()) {
-            return "Подписка оформлена успешно";
-        }
+    //     if ($request->ajax()) {
+    //         return "Одписка оформлена успешно";
+    //     }
 
-        return back()->with('notify', 'Подписка оформлена успешно');
-    }
+    //     return back()->with('notify', 'Одписка оформлена успешно');
+    // }
 }
