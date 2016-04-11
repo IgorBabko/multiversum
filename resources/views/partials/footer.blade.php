@@ -1,23 +1,22 @@
 <footer class="footer">
     <div class="footer__content">
         <div>
-            {{ 'niko bellic' . $user }}
             @if ($user && $user->isSubscribed())
             <form action="/unsubscribe" method="POST" class="Subscription__form">
                 {{ csrf_field() }}
                 <input type="hidden" name="email" value="{{ $user->email }}">
-                <button type="submit" class="Button Button--subscription">отписаться</button>
+                <button type="submit" class="Button Button--unsubscribe">отписаться</button>
             </form>
             @elseif ($user)
             <form action="/subscribe" method="POST" class="Subscription__form">
                 {{ csrf_field() }}
                 <input type="hidden" name="email" value="{{ $user->email }}">
-                <button type="submit" class="Button Button--subscription">подписка</button>
+                <button type="submit" class="Button Button--subscribe">подписка</button>
             </form>
             @else
             <form action="/subscribe" method="POST" class="Subscription__form">
                 {{ csrf_field() }}
-                <input type="email" name="email" class="Input Input--subscription"><button type="submit" class="Button Button--subscription">подписка</button>
+                <input type="email" name="email" class="Input Input--subscribe"><button type="submit" class="Button Button--subscription">подписка</button>
             </form>
             @endif
         </div>

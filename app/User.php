@@ -4,6 +4,7 @@ namespace Multiversum;
 
 use Hash;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Multiversum\Subscription;
 
 class User extends Authenticatable
 {
@@ -31,6 +32,14 @@ class User extends Authenticatable
     public function isAdmin()
     {
         return $this->email === env('EMAIL', 'portaciya@gmail.com');
+    }
+
+    /**
+     * Check if user is subscribed
+     */
+    public function isSubscribed()
+    {
+        return Subscription::where('email', $this->email)->count() !== 0;
     }
 
     /**
