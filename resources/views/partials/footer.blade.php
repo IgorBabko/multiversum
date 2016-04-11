@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer__content">
         <div>
-            <form action="/subscribe" method="POST">
+            <form action="/subscribe" method="POST" class="Subscription__form">
                 {{ csrf_field() }}
                 <input type="email" name="email" class="Input Input--subscription" placeholder="Ваш email"><button type="submit" class="Button Button--subscription">подписка</button>
             </form>

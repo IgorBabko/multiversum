@@ -14,6 +14,7 @@ use Multiversum\Http\Requests\SubscriptionRequest;
 use Multiversum\Http\Requests\UpdateProfileRequest;
 use Multiversum\Page;
 use Multiversum\Post;
+use Multiversum\Subscription;
 use Multiversum\Video;
 
 class PagesController extends Controller
@@ -101,7 +102,13 @@ class PagesController extends Controller
 
     public function subscribe(SubscriptionRequest $request)
     {
-        event(new UserSubscribed($request->input('email')));
+        $email = $request->input('email');
+        Subscription::create(['email' => $email]);
+        event(new UserSubscribed($email));
+
+        if ($request->ajax()) {
+            return "Подписка оформлена успешно";
+        }
 
         return back()->with('notify', 'Подписка оформлена успешно');
     }

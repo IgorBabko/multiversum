@@ -55,4 +55,28 @@ $ ->
         e.preventDefault()
         if ! /^\s*$/.test $('.search__input').val()
             location.href = $(this).attr('action').replace('?', $('.search__input').val())
+
+
+    # subscription ajax request
+    $('.Subscription__form').submit (e) ->
+        e.preventDefault()
+
+        subscriptionRequest = $.ajax(
+            url: "/subscribe"
+            method: "POST"
+            data: $(this).serialize()
+        )
+
+        subscriptionRequest.done (msg) ->
+            # $('#ohsnap').remove();
+            $('body').append '<div id="ohsnap"></div>'
+            ohSnap msg , {color: 'green', icon: 'icon-alert'}
+            console.log 'success'
+         
+        subscriptionRequest.fail (jqXHR, textStatus) ->
+            $('#ohsnap').remove();
+            error = JSON.parse(jqXHR.responseText).email[0] ? 'Ошибка на сервере'
+            $('body').append '<div id="ohsnap"></div>'
+            ohSnap error, {color: 'red', icon: 'icon-alert'}
+
     return
