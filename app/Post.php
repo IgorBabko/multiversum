@@ -37,4 +37,17 @@ class Post extends Model implements SluggableInterface
     {
         return $this->belongsToMany(Tag::class);
     }
+
+    /**
+     * Fetch top rated posts.
+     *
+     * @param $query
+     * @param int $take
+     *
+     * @return Collection
+     */
+    public function scopeTopRated($query, $take = 10)
+    {
+        return $query->orderBy('rating', 'desc')->take($take)->get();
+    }
 }
