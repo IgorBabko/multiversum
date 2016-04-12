@@ -1075,7 +1075,7 @@
 }
 @media screen and (min-width: 994px) {
   .header {
-    background: url("../img/backgroundMain.jpg");
+    background: url("../img/back.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right center;
