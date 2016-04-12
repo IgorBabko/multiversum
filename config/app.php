@@ -155,6 +155,7 @@ return [
         Multiversum\Providers\AuthServiceProvider::class,
         Multiversum\Providers\EventServiceProvider::class,
         Multiversum\Providers\RouteServiceProvider::class,
+        Multiversum\Providers\ComposerServiceProvider::class,
 
         /*
          * Vendor Service Providers...

@@ -646,13 +646,21 @@
 .Button:hover {
   background: #166e00;
 }
-.Button--subscription {
+.Button--subscribe {
   background: #e47e00;
   font-weight: 100;
   font-size: 16px;
 }
-.Button--subscription:hover {
+.Button--subscribe:hover {
   background: #b66500;
+}
+.Button--unsubscribe {
+  background: #ff5252;
+  font-weight: 100;
+  font-size: 16px;
+}
+.Button--unsubscribe:hover {
+  background: #ca0000;
 }
 .Input {
   width: 100%;
@@ -675,6 +683,7 @@
   color: #000;
   padding-left: 10px;
   font-size: 18px;
+  width: 300px;
 }
 .Textarea {
   resize: none;

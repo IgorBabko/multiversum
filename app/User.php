@@ -4,6 +4,7 @@ namespace Multiversum;
 
 use Hash;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Multiversum\Subscription;
 
 class User extends Authenticatable
 {
@@ -34,9 +35,18 @@ class User extends Authenticatable
     }
 
     /**
+     * Check if user is subscribed
+     */
+    public function isSubscribed()
+    {
+        return Subscription::where('email', $this->email)->count() !== 0;
+    }
+
+    /**
      * Hash user's password
      *
      * @param $password
+     * @return void
      */
     public function setPasswordAttribute($password)
     {

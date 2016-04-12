@@ -46,6 +46,33 @@
         return location.href = $(this).attr('action').replace('?', $('.search__input').val());
       }
     });
+    $('.Subscription__form').submit(function (e) {
+      var subscriptionRequest;
+      e.preventDefault();
+      subscriptionRequest = $.ajax({
+        url: "/subscribe",
+        method: "POST",
+        data: $(this).serialize()
+      });
+      subscriptionRequest.done(function (msg) {
+        $('body').append('<div id="ohsnap"></div>');
+        ohSnap(msg, {
+          color: 'green',
+          icon: 'icon-alert'
+        });
+        return console.log('success');
+      });
+      return subscriptionRequest.fail(function (jqXHR, textStatus) {
+        var error, ref;
+        $('#ohsnap').remove();
+        error = (ref = JSON.parse(jqXHR.responseText).email[0]) != null ? ref : 'Ошибка на сервере';
+        $('body').append('<div id="ohsnap"></div>');
+        return ohSnap(error, {
+          color: 'red',
+          icon: 'icon-alert'
+        });
+      });
+    });
   });
 }).call(undefined);
 
