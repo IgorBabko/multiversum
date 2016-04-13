@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             'disks',
             'post_tag',
             'posts',
+            'lectures',
             'tags',
             'webinars',
             'videos',
@@ -40,6 +41,7 @@ class DatabaseSeeder extends Seeder
         $this->call(WebinarsTableSeeder::class);
         $this->call(VideosTableSeeder::class);
         $this->call(PostsTableSeeder::class);
+        $this->call(LecturesTableSeeder::class);
         $this->call(CategoriesTableSeeder::class);
         $this->call(TagsTableSeeder::class);
         $this->call(BooksTableSeeder::class);

@@ -60,6 +60,15 @@ $factory->define(Multiversum\Post::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(Multiversum\Lecture::class, function (Faker\Generator $faker) {
+    return [
+        'name'         => join(" ", $faker->words(3)),
+        'description'  => join("<br>", $faker->paragraphs(mt_rand(5, 7))),
+        'image'        => 'Qo7PFPpE3Yx2PbdvYKbGlTB6kWYW0hGG.jpg',
+        'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
+    ];
+});
+
 $factory->define(Multiversum\Category::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->word,
