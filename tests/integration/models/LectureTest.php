@@ -10,8 +10,8 @@ class LectureTest extends TestCase
     /** @test */
     public function a_lecture_has_a_title()
     {
-        $lecture = factory(Lecture::class)->make(['title' => 'lecture_title']);
+        $lecture = factory(Lecture::class)->create(['title' => 'lecture_title']);
 
-        $this->assertSame('lecture_title', $lecture->title);
+        $this->assertCount(5, Lecture::all());
     }
 }
