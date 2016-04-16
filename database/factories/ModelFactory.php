@@ -20,6 +20,16 @@ $factory->define(Multiversum\User::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(Multiversum\Lecture::class, function (Faker\Generator $faker) {
+    return [
+        'name'         => $faker->word(2),
+        'description'  => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
+        'published_at' => $faker->dateTimeBetween('-2 month', '-1 days'),
+        'image'        => $faker->imageUrl,
+        'cost'         => $faker->randomFloat,
+    ];
+});
+
 $factory->define(Multiversum\Subscription::class, function (Faker\Generator $faker) {
     return [
         'email' => $faker->safeEmail,
@@ -56,15 +66,6 @@ $factory->define(Multiversum\Post::class, function (Faker\Generator $faker) {
         'name'         => join(" ", $faker->words(3)),
         'content'      => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
         'image'        => 'Qo7PFPpE3Yx2PbdvYKbGlTB6kWYW0hGG.jpg', //$faker->imageUrl($width = 1024, $height = 768),
-        'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
-    ];
-});
-
-$factory->define(Multiversum\Lecture::class, function (Faker\Generator $faker) {
-    return [
-        'name'         => join(" ", $faker->words(3)),
-        'description'  => join("<br>", $faker->paragraphs(mt_rand(5, 7))),
-        'image'        => 'Qo7PFPpE3Yx2PbdvYKbGlTB6kWYW0hGG.jpg',
         'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
     ];
 });

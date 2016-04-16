@@ -165,6 +165,7 @@ return [
         // Barryvdh\Debugbar\ServiceProvider::class,
         Sofa\Eloquence\ServiceProvider::class,
         Frozennode\Administrator\AdministratorServiceProvider::class,
+        willvincent\Rateable\RateableServiceProvider::class
     ],
 
     /*
