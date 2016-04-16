@@ -46,7 +46,10 @@
                 <div class="Post__info">
                     <h3 class="Post__heading">{{ $post->name }}</h3>
                     <p class="Post__content">{{ str_limit($post->content, 150) }}</p>
-                    <p class="Post__meta">{{ $post->published_at->format('m.d.Y') }}</p>
+                    <div class="Post__meta">
+                        <span class="post__date">{{ $post->published_at->format('m.d.y') }}</span>
+                        <span class="post__rating">{{ $post->averageRating }}</span>
+                    </div>
                     <a href="/posts/{{ $post->slug }}">
                         <button class="btn btn-primary Post__button">Читать</button>
                     </a>
