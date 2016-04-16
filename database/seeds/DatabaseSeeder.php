@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
             'videos',
             'pages',
             'subscriptions',
+            'ratings'
         ];
 
         $this->command->info('Truncating existing tables');
@@ -48,6 +49,7 @@ class DatabaseSeeder extends Seeder
         $this->call(DisksTableSeeder::class);
         $this->call(PagesTableSeeder::class);
         $this->call(SubscriptionsTableSeeder::class);
+        $this->call(RatingsTableSeeder::class);
 
         // supposed to only apply to a single connection and reset it's self
         // but I like to explicitly undo what I've done for clarity
