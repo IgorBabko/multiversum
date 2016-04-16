@@ -25,7 +25,7 @@ $factory->define(willvincent\Rateable\Rating::class, function (Faker\Generator $
         'rating'           => $faker->randomDigit,
         'rateable_id'      => 1,
         'rateable_type'    => Multiversum\Post::class,
-        //'user_id'          => ,
+        'user_id'          => Multiversum\User::first()->id,
     ];
 });
 

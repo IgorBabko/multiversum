@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $tables = [
+            'users',
             'books',
             'categories',
             'disks',
@@ -39,6 +40,7 @@ class DatabaseSeeder extends Seeder
         $this->command->info('Truncating existing tables');
         DB::statement('TRUNCATE TABLE ' . implode(',', $tables) . ' RESTART IDENTITY;');
 
+        $this->call(UsersTableSeeder::class);
         $this->call(WebinarsTableSeeder::class);
         $this->call(VideosTableSeeder::class);
         $this->call(PostsTableSeeder::class);
