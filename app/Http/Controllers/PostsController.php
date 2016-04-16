@@ -73,4 +73,11 @@ class PostsController extends Controller
 
         return view('posts.index', compact('posts', 'categories', 'tags', 'searchString', 'count'));
     }
+
+    public function rate(Request $request, $rating)
+    {
+        $post = Post::find($request->input('post_id'));
+        $post->rate();
+    }
+    
 }
