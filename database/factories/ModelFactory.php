@@ -22,10 +22,10 @@ $factory->define(Multiversum\User::class, function (Faker\Generator $faker) {
 
 $factory->define(willvincent\Rateable\Rating::class, function (Faker\Generator $faker) {
     return [
-        'rating'           => $faker->randomDigit,
-        'rateable_id'      => 1,
-        'rateable_type'    => Multiversum\Post::class,
-        'user_id'          => Multiversum\User::first()->id,
+        'rating'        => $faker->randomDigit,
+        'rateable_id'   => 1,
+        'rateable_type' => Multiversum\Post::class,
+        'user_id'       => Multiversum\User::first()->id,
     ];
 });
 

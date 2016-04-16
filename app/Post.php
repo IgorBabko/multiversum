@@ -7,10 +7,11 @@ use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Sofa\Eloquence\Eloquence;
 use willvincent\Rateable\Rating;
+use willvincent\Rateable\Rateable;
 
 class Post extends Model implements SluggableInterface
 {
-    use SluggableTrait, Eloquence;
+    use SluggableTrait, Eloquence, Rateable;
 
     protected $dates = ['published_at'];
 
