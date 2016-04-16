@@ -12,12 +12,12 @@ class CreateRatingsTable extends Migration
         Schema::create('ratings', function ($table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('rating');
+            $table->integer('rating')->default(0);
             $table->morphs('rateable');
             $table->integer('user_id')->unsigned();
-            $table->index('user_id');
-            $table->index('rateable_id');
-            $table->index('rateable_type');
+            $table->index('user_id')->default(1);
+            $table->index('rateable_id')->default(1);
+            $table->index('rateable_type')->default('Multiversum\Post');
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
