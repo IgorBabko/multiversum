@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic")
 
-.header
-    input::placeholder
-        color: #EFEFEF
-
-    textarea::placeholder
-        color: #EFEFEF
-
 input::placeholder
-    color: #9C9C9C
+    color: $lightBlue
 
 textarea::placeholder
-    color: #9C9C9C
+    color: $lightBlue 
+
+.Page__content--center
+    input::placeholder
+        color: $darkGray 
+
+    textarea::placeholder
+        color: $darkGray 
+
 
 html
     height: 100%
@@ -24,14 +25,14 @@ body
     justify-content: space-between
     min-height: 100%
     font-family: 'Roboto Slab', serif
-    background: $lightBlue
+    background: $darkestBlue
 
 a
     text-decoration: none !important
 
 .logo
     font-family: 'Lobster', cursive
-    color: $darkRed !important
+    color: white !important
     font-size: 40px
 
     &__footer

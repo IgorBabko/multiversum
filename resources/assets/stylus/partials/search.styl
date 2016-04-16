@@ -5,37 +5,25 @@
     margin: 0 auto
     
     &__input
+        color: white
+        border-bottom: 1px solid $lightBlue !important
         margin-top: 15px
         height: 50px
         width: 100%
         font-weight: 100
         background: none
         border: none
-        border-bottom: 1px solid black
-        color: black
         font-size: 24px
         text-align: left !important
         padding-right: 30px
         padding-left: 30px
-
         &:focus
             outline: none !important
-            border-bottom: 1px solid black
-    
-    &__main
-        .search__input
+        &:hover
             color: white
-            border-bottom: 1px solid white
-            &:focus
-                outline: none !important
-                border-bottom: 1px solid white
-        
-        .search__button
-            color: $gray
-            &:hover
-                color: white
 
     &__button
+        color: $lightBlue
         background none
         border: none
         font-size: 28px !important
@@ -43,10 +31,8 @@
         top: 17px
         right: 0
         cursor: pointer
-        color: $darkGray
-        
         &:hover
-            color: black
+            color: white
 
         &:focus
             outline none

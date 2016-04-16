@@ -12,7 +12,6 @@ class PostsController extends Controller
 {
     public function index(Request $request)
     {
-        // dd(Post::where('id', 1)->get()[0]->ratings);
         $categories = category::all();
         $tags       = tag::all();
         $posts      = post::paginate(config('custom.posts_per_page'));

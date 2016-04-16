@@ -7,13 +7,12 @@
         {!! $headerVideo->iframe !!}
     </div>
     <h1 class="header__heading">{{ $page->heading }}</h1>
-    {{ $page->text }}
-    <!-- <h2 class="header__quote"></h2> -->
+    <h2 class="header__quote"></h2>
 
-    <!-- <div class="header__buttons"> -->
-    <!-- <div>Следующий вебинар на тему: "Время" (19.06.16 16:50)<br><button class="btn header__button">Записаться</button></div> -->
-    <!-- <div>Получайте последние <br><button class="btn header__button header__button--subscription">Подписаться</button></div> -->
-    <!-- </div> -->
+<!--    <div class="header__buttons">
+        <button class="btn header__button">Записаться</button></div>
+        <button class="btn header__button header__button--subscription">Подписаться</button>
+    <div> -->
     <!-- <div class="header__arrow"><i class="fa fa-angle-double-down"></i></div> -->
 </header>
 <div class="Section Section--is-purple">
