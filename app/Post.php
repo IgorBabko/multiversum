@@ -6,6 +6,7 @@ use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Sofa\Eloquence\Eloquence;
+use willvincent\Rateable\Rating;
 
 class Post extends Model implements SluggableInterface
 {
@@ -50,4 +51,15 @@ class Post extends Model implements SluggableInterface
     {
         return $query->orderBy('rating', 'desc')->take($take)->get();
     }
+
+    public function rate($rating)
+    {
+        $rating = new Rating;
+
+        $rating->rating = $rating;
+        $rating->user_id = Auth::id();
+
+        $post->ratings()->save($rating);
+    }
+ 
 }

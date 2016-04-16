@@ -31,6 +31,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/posts/{searchString}/search', ['as' => 'searchPosts', 'uses' => 'PostsController@search']);
     Route::get('/posts/category/{name}', ['as' => 'catagoryPosts', 'uses' => 'PostsController@showPostsFromCategory']);
     Route::get('/posts/tag/{name}', ['as' => 'tagPosts', 'uses' => 'PostsController@showPostsWithTag']);
+    Route::put('/posts/rate/{id}', ['as' => 'ratePost', 'uses' => 'PostsController@rate']);
 
     // auth
     Route::auth();

@@ -8,16 +8,4 @@ use Auth;
 
 class Lecture extends Model
 {
-    use Rateable;
-
-    public function rate($rating)
-    {
-        $rating = new Rating;
-
-        $rating->rating = $rating;
-        $rating->user_id = Auth::id();
-
-        $post->ratings()->save($rating);
-    }
-    
 }

@@ -79,4 +79,22 @@ $ ->
             $('body').append '<div id="ohsnap"></div>'
             ohSnap error, {color: 'red', icon: 'icon-alert'}
 
+    # rate post ajax request
+    $('.Subscription__form').submit (e) ->
+        e.preventDefault();
+
+        postId = $(this).find('input[name=id]').val();
+
+        rateRequest = $.ajax(
+            url: "/posts/rate/" + postId
+            method: "POST"
+            data: $(this).serialize()
+        )
+
+        rateRequest.done (msg) ->
+            console.log 'success'
+         
+        rateRequest.fail (jqXHR, textStatus) ->
+            console.log 'fail'
+
     return
