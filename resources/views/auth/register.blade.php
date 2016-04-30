@@ -1,9 +1,9 @@
 @extends('layout')
 @section('content')
 <div class="Page">
-    <div class="Page__content Page__content--center register">
+    <div class="Page__content Page__content--with-padding register">
         <form method="POST" action="{{ url('/register') }}" autocomplete="off">
-            <h1 class="Page__heading Page__heading--center">Регистрация</h1>
+            <h1 class="Page__heading Page__heading--blue">Регистрация</h1>
             {!! csrf_field() !!}
             <span class="help-block error">
                 {{ $errors->first('name') }}

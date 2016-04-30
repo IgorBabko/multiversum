@@ -1,23 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic")
 
 input::placeholder
-    color: $lightBlue
+    color: $darkGray 
 
 textarea::placeholder
-    color: $lightBlue 
-
-.Page__content--center
-    input::placeholder
-        color: $darkGray 
-
-    textarea::placeholder
-        color: $darkGray 
+    color: $darkGray 
 
 
 html
     min-height: 100vh
 
 
+.padding
+    padding: 0 50px 50px
+
+    @media screen and (max-width: 768px)
+        padding: 0 10px 10px
 
 body
     display: flex

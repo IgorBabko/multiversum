@@ -1,9 +1,9 @@
 @extends('layout')
 @section('content')
 <div class="Page">
-    <div class="Page__content Page__content--center login">
+    <div class="Page__content Page__content--with-padding login">
         <form method="POST" action="{{ url('/login') }}" class="ac-custom ac-checkbox ac-checkmark" autocomplete="off">
-            <h1 class="Page__heading Page__heading--center">Авторизация</h1>
+            <h1 class="Page__heading Page__heading--blue">Авторизация</h1>
             {!! csrf_field() !!}
             <span class="help-block error">
                 {{ $errors->first('email') }}

@@ -1,8 +1,8 @@
 @extends("layout")
 @section("content")
 <div class="Page">
-    <div class="Page__content Page__content--with-resource">
-        <h1 class="Page__heading">Видео анонсы</h1>
+    <div class="Page__content Page__content--transparent">
+        <h1 class="Page__heading Page__heading--yellow">Видео анонсы</h1>
         @include('partials.search', ['class' => '', 'searchUrl'=> '/videos/?/search', 'resetUrl' => '/videos', 'placeholder' => 'искать видео анонсы'])
         <div class="Gallery">
             @forelse ($videos as $video)

@@ -1,9 +1,9 @@
 @extends('layout')
 @section('content')
 <div class="Page">
-    <div class="Page__content Page__content--center email">
+    <div class="Page__content Page__content--with-padding email">
         <form action="/email" method="POST" autocomplete="off">
-            <h1 class="Page__heading Page__heading--center">Отправить письмо</h1>
+            <h1 class="Page__heading Page__heading--blue">Отправить письмо</h1>
             {!! csrf_field() !!}
             <span class="help-block error">
                 {{ $errors->first('name') }}

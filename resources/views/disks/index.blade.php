@@ -1,8 +1,8 @@
 @extends("layout")
 @section("content")
 <div class="Page">
-    <div class="Page__content Page__content--with-resource">
-        <h1 class="Page__heading">Диски</h1>
+    <div class="Page__content Page__content--transparent">
+        <h1 class="Page__heading Page__heading--yellow">Диски</h1>
         @include('partials.search', ['class' => '', 'searchUrl'=> '/disks/?/search', 'resetUrl' => '/disks', 'placeholder' => 'искать диски'])
         <div class="Gallery">
             @forelse ($disks as $disk)
