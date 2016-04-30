@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,800,700italic,800italic&subset=latin,cyrillic';
 .alert {
   padding: 15px;
   margin-bottom: 20px;
@@ -84,7 +85,7 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  min-height: calc(100vh - 128px) !important;
+  min-height: calc(100vh - 128px);
 }
 .Page__heading {
   -ms-flex-preferred-size: 100%;
@@ -100,35 +101,42 @@
 .Page__heading--sub {
   font-size: 36px;
 }
+.Page__heading--blue {
+  color: #00549a;
+}
 .Page__content {
   background: #002442;
   padding: 30px 50px;
   font-size: calc(14px + 4 * ((100vw - 420px) / 860));
-  margin: 70px 0;
   font-weight: 100;
   color: #c7c7c7;
 }
-@media screen and (min-width: 1280px) {
-  .Page__content {
+@media screen and (min-width: 1280px){
+  .Page__content{
     font-size: 18px;
   }
 }
-@media screen and (max-width: 420px) {
-  .Page__content {
+@media screen and (max-width: 420px){
+  .Page__content{
     font-size: 14px;
   }
 }
---with-resource {
+.Page__content--with-resource {
   min-width: 100%;
 }
---center {
+.Page__content--center {
   background: #f00 !important;
   margin: 70px 20px;
 }
-__heading--center {
+@media screen and (max-width: 768px) {
+  .Page__content {
+    padding: 30px 10px;
+  }
+}
+.Page__heading--center {
   color: #003c6e;
 }
-__button {
+.Page__button {
   display: block;
   margin: 0 auto;
   border: 1px solid #a894b7;
@@ -140,12 +148,12 @@ __button {
   font-size: 22px;
   outline: none;
 }
-__button:hover {
+.Page__button:hover {
   color: #fff;
   border-color: #fff;
 }
 @media screen and (max-width: 994px) {
-  __content {
+  .Page__content {
     padding: 20px;
   }
 }
@@ -275,19 +283,19 @@ __button:hover {
   width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
   height: calc(99.99% * 1/1 - (30px - 30px * 1/1));
 }
-.Gallery > div:nth-child(1n) {
+.Gallery > div:nth-child(1n){
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.Gallery > div:last-child {
+.Gallery > div:last-child{
   margin-right: 0;
   margin-bottom: 0;
 }
-.Gallery > div:nth-child(1n) {
+.Gallery > div:nth-child(1n){
   margin-right: 0;
   float: right;
 }
-.Gallery > div:nth-last-child(-n + 1) {
+.Gallery > div:nth-last-child(-n + 1){
   margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
@@ -298,19 +306,19 @@ __button:hover {
     width: calc(99.99% * 1/2 - (30px - 30px * 1/2));
     height: calc(99.99% * 1/2 - (30px - 30px * 1/2));
   }
-  .Gallery > div:nth-child(1n) {
+  .Gallery > div:nth-child(1n){
     margin-right: 30px;
     margin-bottom: 30px;
   }
-  .Gallery > div:last-child {
+  .Gallery > div:last-child{
     margin-right: 0;
     margin-bottom: 0;
   }
-  .Gallery > div:nth-child(2n) {
+  .Gallery > div:nth-child(2n){
     margin-right: 0;
     float: right;
   }
-  .Gallery > div:nth-last-child(-n + 2) {
+  .Gallery > div:nth-last-child(-n + 2){
     margin-bottom: 0;
   }
 }
@@ -322,19 +330,19 @@ __button:hover {
     width: calc(99.99% * 1/3 - (40px - 40px * 1/3));
     height: calc(99.99% * 1/3 - (40px - 40px * 1/3));
   }
-  .Gallery > div:nth-child(1n) {
+  .Gallery > div:nth-child(1n){
     margin-right: 40px;
     margin-bottom: 40px;
   }
-  .Gallery > div:last-child {
+  .Gallery > div:last-child{
     margin-right: 0;
     margin-bottom: 0;
   }
-  .Gallery > div:nth-child(3n) {
+  .Gallery > div:nth-child(3n){
     margin-right: 0;
     float: right;
   }
-  .Gallery > div:nth-last-child(-n + 3) {
+  .Gallery > div:nth-last-child(-n + 3){
     margin-bottom: 0;
   }
 }
@@ -346,19 +354,19 @@ __button:hover {
     width: calc(99.99% * 1/4 - (30px - 30px * 1/4));
     height: calc(99.99% * 1/4 - (30px - 30px * 1/4));
   }
-  .Gallery > div:nth-child(1n) {
+  .Gallery > div:nth-child(1n){
     margin-right: 30px;
     margin-bottom: 30px;
   }
-  .Gallery > div:last-child {
+  .Gallery > div:last-child{
     margin-right: 0;
     margin-bottom: 0;
   }
-  .Gallery > div:nth-child(4n) {
+  .Gallery > div:nth-child(4n){
     margin-right: 0;
     float: right;
   }
-  .Gallery > div:nth-last-child(-n + 4) {
+  .Gallery > div:nth-last-child(-n + 4){
     margin-bottom: 0;
   }
 }
@@ -408,16 +416,24 @@ __button:hover {
   font-size: 16px;
 }
 .Video-expanded__description {
-  margin: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  width: 90%;
+  color: #696969;
+  background: #f8f8f8;
+  padding: 30px 50px 50px;
+  line-height: 1.6;
+  margin: 0 auto 50px;
 }
 @media screen and (max-width: 768px) {
   .Video-expanded__description {
-    margin: 20px;
+    margin: 0 auto;
+    padding: 20px;
   }
 }
 .Iframe {
   position: relative;
-  margin: 30px auto;
+  margin: 80px auto 0;
   width: 90%;
 }
 .Iframe__ratio {
@@ -429,7 +445,6 @@ __button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 5px 1px #432e51;
 }
 .Book {
   max-width: 220px !important;
@@ -1037,16 +1052,16 @@ __button:hover {
   flex: 0 0 auto;
   width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
 }
-.footer__content > *:nth-child(1n) {
+.footer__content > *:nth-child(1n){
   margin-right: 30px;
 }
-.footer__content > *:last-child {
+.footer__content > *:last-child{
   margin-right: 0;
 }
-.footer__content > *:nth-child(1n) {
+.footer__content > *:nth-child(1n){
   float: right;
 }
-.footer__content > *:nth-child(1n) {
+.footer__content > *:nth-child(1n){
   margin-right: 0;
 }
 @media screen and (min-width: 1100px) {
@@ -1056,16 +1071,16 @@ __button:hover {
     flex: 0 0 auto;
     width: calc(99.99% * 1/3 - (30px - 30px * 1/3));
   }
-  .footer__content > *:nth-child(1n) {
+  .footer__content > *:nth-child(1n){
     margin-right: 30px;
   }
-  .footer__content > *:last-child {
+  .footer__content > *:last-child{
     margin-right: 0;
   }
-  .footer__content > *:nth-child(3n) {
+  .footer__content > *:nth-child(3n){
     float: right;
   }
-  .footer__content > *:nth-child(3n) {
+  .footer__content > *:nth-child(3n){
     margin-right: 0;
   }
 }
@@ -1185,13 +1200,13 @@ __button:hover {
   font-size: calc(14px + 4 * ((100vw - 420px) / 860));
   font-weight: 100;
 }
-@media screen and (min-width: 1280px) {
-  .about__bio {
+@media screen and (min-width: 1280px){
+  .about__bio{
     font-size: 18px;
   }
 }
-@media screen and (max-width: 420px) {
-  .about__bio {
+@media screen and (max-width: 420px){
+  .about__bio{
     font-size: 14px;
   }
 }

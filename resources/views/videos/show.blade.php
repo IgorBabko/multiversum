@@ -1,8 +1,7 @@
 @extends("layout")
 @section("content")
-<div class="Page Page-light">
-    <div class="Page__content Page-light__content Page__content--with-resource">
-        <h1 class="Page__heading Page-light__heading">{{ $video->name }}</h1>
+<div class="Page Page--light">
+    <div class="Page__content Page--light__content Page__content--with-resource">
         <div class="Video-expanded">
             <div class="Video-expanded__date">
                 Дата публикации: {{ $video->published_at->format('m.d.Y') }}
@@ -11,9 +10,10 @@
                 <img class="Iframe__ratio" src="http://placehold.it/16x9"/>
                 {!! $video->iframe !!}
             </div>
-            <p class="Video-expanded__description">
+            <div class="Video-expanded__description">
+                <h1 class="Page__heading Page__heading--blue">{{ $video->name }}</h1>
                 {!! $video->description !!}
-            </p>
+            </div>
         </div>
     </div>
 </div>
