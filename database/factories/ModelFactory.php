@@ -20,6 +20,25 @@ $factory->define(Multiversum\User::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(willvincent\Rateable\Rating::class, function (Faker\Generator $faker) {
+    return [
+        'rating'        => $faker->randomDigit,
+        'rateable_id'   => 1,
+        'rateable_type' => Multiversum\Post::class,
+        'user_id'       => Multiversum\User::first()->id,
+    ];
+});
+
+$factory->define(Multiversum\Lecture::class, function (Faker\Generator $faker) {
+    return [
+        'name'         => $faker->word(2),
+        'description'  => join("<br>", $faker->paragraphs(mt_rand(8, 10))),
+        'published_at' => $faker->dateTimeBetween('-2 month', '-1 days'),
+        'image'        => $faker->imageUrl,
+        'cost'         => $faker->randomFloat,
+    ];
+});
+
 $factory->define(Multiversum\Subscription::class, function (Faker\Generator $faker) {
     return [
         'email' => $faker->safeEmail,

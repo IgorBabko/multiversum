@@ -21,9 +21,9 @@ class PagesController extends Controller
 {
     public function index()
     {
-        $page = Page::where('name', 'главная')->first();
+        $page = Page::first();
 
-        $headerVideo = Video::where('name', 'вводное_слово')->first();
+        $headerVideo = Video::first();
 
         $videos = Video::orderBy('published_at', 'desc')->take(4)->get();
         $books  = Book::orderBy('published_at', 'desc')->take(4)->get();

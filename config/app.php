@@ -162,9 +162,10 @@ return [
          */
         Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
         Cohensive\Embed\EmbedServiceProvider::class,
-        // Barryvdh\Debugbar\ServiceProvider::class,
+        //Barryvdh\Debugbar\ServiceProvider::class,
         Sofa\Eloquence\ServiceProvider::class,
         Frozennode\Administrator\AdministratorServiceProvider::class,
+        willvincent\Rateable\RateableServiceProvider::class
     ],
 
     /*

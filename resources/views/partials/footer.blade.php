@@ -16,7 +16,7 @@
             @else
             <form action="/subscribe" method="POST" class="Subscription__form">
                 {{ csrf_field() }}
-                <input type="email" name="email" class="Input Input--subscribe"><button type="submit" class="Button Button--subscription">подписка</button>
+                <input type="email" name="email" class="Input Input--subscription" placeholder="Ваш email"><button type="submit" class="Button Button--subscribe">подписка</button>
             </form>
             @endif
         </div>

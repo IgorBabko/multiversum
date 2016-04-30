@@ -14,7 +14,9 @@
         "cohensive/embed": "5.0.*",
         "sofa/eloquence": "~5.2@dev",
         "frozennode/administrator": "5.*",
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^6.2",
+        "willvincent/laravel-rateable": "~1.0",
+        "kartik-v/bootstrap-star-rating": "4.*"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",

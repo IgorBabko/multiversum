@@ -1,9 +1,9 @@
 @extends('layout')
 @section('content')
 <div class="Page">
-    <div class="Page__content">
+    <div class="Page__content Page__content--center">
         <form method="POST" action="{{ url('/password/reset') }}" autocomplete="off">
-            <h1 class="Page__heading">Сброс пароля</h1>
+            <h1 class="Page__heading Page__heading--center">Сброс пароля</h1>
             {!! csrf_field() !!}
             <input type="hidden" name="token" value="{{ $token }}">
             <span class="help-block error">
@@ -17,8 +17,8 @@
             <span class="help-block error">
                 {{ $errors->first('password_confirmation') }}
             </span>
-            <input type="password" name="password_confirmation" class="Input {{ $errors->first('password_confirmation') ? 'error' : '' }}" placeholder="Подтвердить пароль">
-            <button type="submit" class="Button">Сбросить</button>
+            <input type="password" name="password_confirmation" class="input {{ $errors->first('password_confirmation') ? 'error' : '' }}" placeholder="подтвердить пароль">
+            <button type="submit" class="button">сбросить</button>
         </form>
     </div>
 </div>

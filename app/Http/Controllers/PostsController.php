@@ -12,9 +12,9 @@ class PostsController extends Controller
 {
     public function index(Request $request)
     {
-        $categories = Category::all();
-        $tags       = Tag::all();
-        $posts      = Post::paginate(config('custom.posts_per_page'));
+        $categories = category::all();
+        $tags       = tag::all();
+        $posts      = post::paginate(config('custom.posts_per_page'));
 
         return view('posts.index', compact('posts', 'categories', 'tags'));
     }
@@ -73,4 +73,10 @@ class PostsController extends Controller
 
         return view('posts.index', compact('posts', 'categories', 'tags', 'searchString', 'count'));
     }
+
+    public function rate( /*RateRequest $request, */$id)
+    {
+        Post::first($id)->rate();
+    }
+
 }

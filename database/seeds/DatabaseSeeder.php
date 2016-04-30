@@ -22,30 +22,36 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $tables = [
+            'users',
             'books',
             'categories',
             'disks',
             'post_tag',
             'posts',
+            'lectures',
             'tags',
             'webinars',
             'videos',
             'pages',
             'subscriptions',
+            'ratings'
         ];
 
         $this->command->info('Truncating existing tables');
         DB::statement('TRUNCATE TABLE ' . implode(',', $tables) . ' RESTART IDENTITY;');
 
+        $this->call(UsersTableSeeder::class);
         $this->call(WebinarsTableSeeder::class);
         $this->call(VideosTableSeeder::class);
         $this->call(PostsTableSeeder::class);
+        $this->call(LecturesTableSeeder::class);
         $this->call(CategoriesTableSeeder::class);
         $this->call(TagsTableSeeder::class);
         $this->call(BooksTableSeeder::class);
         $this->call(DisksTableSeeder::class);
         $this->call(PagesTableSeeder::class);
         $this->call(SubscriptionsTableSeeder::class);
+        $this->call(RatingsTableSeeder::class);
 
         // supposed to only apply to a single connection and reset it's self
         // but I like to explicitly undo what I've done for clarity

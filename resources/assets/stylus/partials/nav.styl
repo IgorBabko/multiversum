@@ -2,17 +2,16 @@
     .dropdown-menu
         width: 100%
     .navbar-collapse
-        background: #f8f8f8
+        padding: 0
+        background: $blue 
 
 .navbar
-    border-bottom: 1px solid $gray !important
-    background: #f8f8f8
+    background: $blue 
     border-radius: 0
     margin-bottom: 0
     height: 50px
     border: none
     font-family: 'Roboto Slab', cursive
-    
     
     .navbar-collapse
         border: none
@@ -28,22 +27,29 @@
             background: none
 
         .navbar-nav
+            margin: 0
+            background: $blue
+            .dropdown-toggle
+                &:focus
+                    color: white
             > li
                 a
-                    color: black
+                    color: white
                     padding-left: 10px
                     padding-right: 10px
                     padding-bottom: 14px
                 .dropdown-menu
+                    background: $blue
                     text-align: center
                     min-width: 118px
                     > .active > a,
                     > .active > a:focus,
                     > .active > a:hover
-                        background: $red
+                        background: $darkBlue 
                         color: white !important
                     > li
                         > a
+                            color: white  !important
                             font-size: 14px
                             padding-top: 10px
                             padding-bottom: 10px
@@ -52,28 +58,28 @@
                             
                         > a:focus,
                         > a:hover
-                            background: $red
+                            background: $darkBlue 
                             color: white !important
 
                 a
                     font-size: 16px
                     letter-spacing: 1.0px
                 a:hover
-                    background: $red !important
-                    border-bottom: 1px solid $red
+                    background: $darkBlue !important
+                    border-bottom: 1px solid $darkBlue 
                     color: white
                 
                 &:focus
-                    background: $red
+                    background: $darkBlue 
                     color: white
                     
                 &.active
                     a
-                        background: $red
-                        border-bottom: 1px solid $red
+                        background: $darkBlue
+                        border-bottom: 1px solid $darkBlue 
                         color: white
                         &:hover
-                            background: $red
+                            background: $darkBlue 
 
 // hanburger menu
 .navbar-default .navbar-header .navbar-toggle
@@ -88,10 +94,6 @@
         background: none
 
 @media screen and (min-width: 768px)
-    .dropdown
-        .dropdown-menu
-            background: $lightGray !important
-
     .dropdown:hover .dropdown-menu
         display: block
         margin-top: 0
@@ -101,17 +103,18 @@
             padding: 5px !important
 
 @media screen and (max-width: 767px)
-    .navbar-collapse
-        border-bottom: 1px solid #a9a9a9 !important
     .navbar-nav
         .active
             a
-                background $red !important
+                background $darkBlue !important
                 color: white
         a
             padding: 15px !important
         .dropdown-menu
+            padding: 0
             a
+                color: white !important
+                background: $blue !important
                 padding: 10px !important
 
 $speed = 200ms
@@ -119,8 +122,11 @@ $easing = cubic-bezier(0.7, 0, 0, 0.7)
 
 .navbar-toggle
     overflow: hidden
+    border-color: white !important
 
     .icon-bar
+        background: white !important
+        color: white
         transition: opacity, transform
         transition-duration: $speed
         transition-timing-function: $easing

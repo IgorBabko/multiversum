@@ -56,13 +56,13 @@ return [
 
     'connections' => [
 
-        'sqlite' => [
+        'sqlite'        => [
             'driver'   => 'sqlite',
             'database' => database_path('database.sqlite'),
             'prefix'   => '',
         ],
 
-        'mysql'  => [
+        'mysql'         => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
             'database'  => env('DB_DATABASE', 'forge'),
@@ -75,7 +75,7 @@ return [
             'engine'    => null,
         ],
 
-        'pgsql'  => [
+        'pgsql'         => [
             'driver'   => 'pgsql',
             'host'     => env('DB_HOST', isset($host) ? $host : 'localhost'),
             'database' => env('DB_DATABASE', isset($database) ? $database : 'homestead'),
@@ -86,7 +86,18 @@ return [
             'schema'   => 'public',
         ],
 
-        'sqlsrv' => [
+        'pgsql_testing' => [
+            'driver'   => 'pgsql',
+            'host'     => 'localhost',
+            'database' => 'multiversum_testing',
+            'username' => 'postgres',
+            'password' => '',
+            'charset'  => 'utf8',
+            'prefix'   => '',
+            'schema'   => 'public',
+        ],
+
+        'sqlsrv'        => [
             'driver'   => 'sqlsrv',
             'host'     => env('DB_HOST', 'localhost'),
             'database' => env('DB_DATABASE', 'forge'),

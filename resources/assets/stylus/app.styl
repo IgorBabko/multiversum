@@ -268,10 +268,10 @@ input.error
     margin-top: 20px
     text-align: center
     .Filter
-        border: 1px solid $gray
         margin-bottom: 30px
         button
-            background: $lightGray !important
+            background: $blue !important
+            color: white !important
             border: none 
             margin: 0 auto
             display: block
@@ -281,11 +281,15 @@ input.error
                 font-size: 18px
             
             &:hover
-                background: $gray !important
+                background: $darkBlue !important
             
             &:focus
                 outline: none !important
-        
+
         .dropdown-menu
+            background: $blue
             a
+                color: white !important
                 padding: 5px 15px !important
+                &:hover
+                    background: $darkerBlue

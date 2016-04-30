@@ -7,13 +7,12 @@
         {!! $headerVideo->iframe !!}
     </div>
     <h1 class="header__heading">{{ $page->heading }}</h1>
-    {{ $page->text }}
-    <!-- <h2 class="header__quote"></h2> -->
+    <h2 class="header__quote"></h2>
 
-    <!-- <div class="header__buttons"> -->
-    <!-- <div>Следующий вебинар на тему: "Время" (19.06.16 16:50)<br><button class="btn header__button">Записаться</button></div> -->
-    <!-- <div>Получайте последние <br><button class="btn header__button header__button--subscription">Подписаться</button></div> -->
-    <!-- </div> -->
+<!--    <div class="header__buttons">
+        <button class="btn header__button">Записаться</button></div>
+        <button class="btn header__button header__button--subscription">Подписаться</button>
+    <div> -->
     <!-- <div class="header__arrow"><i class="fa fa-angle-double-down"></i></div> -->
 </header>
 <div class="Section Section--is-purple">
@@ -46,7 +45,10 @@
                 <div class="Post__info">
                     <h3 class="Post__heading">{{ $post->name }}</h3>
                     <p class="Post__content">{{ str_limit($post->content, 150) }}</p>
-                    <p class="Post__meta">{{ $post->published_at->format('m.d.Y') }}</p>
+                    <div class="Post__meta">
+                        <span class="post__date">{{ $post->published_at->format('m.d.y') }}</span>
+                        <span class="post__rating">{{ $post->averageRating }}</span>
+                    </div>
                     <a href="/posts/{{ $post->slug }}">
                         <button class="btn btn-primary Post__button">Читать</button>
                     </a>

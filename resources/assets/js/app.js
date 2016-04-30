@@ -70,6 +70,22 @@
         });
       });
     });
+    $('.Subscription__form').submit(function(e) {
+      var postId, rateRequest;
+      e.preventDefault();
+      postId = $(this).find('input[name=id]').val();
+      rateRequest = $.ajax({
+        url: "/posts/rate/" + postId,
+        method: "POST",
+        data: $(this).serialize()
+      });
+      rateRequest.done(function(msg) {
+        return console.log('success');
+      });
+      return rateRequest.fail(function(jqXHR, textStatus) {
+        return console.log('fail');
+      });
+    });
   });
 
 }).call(this);
