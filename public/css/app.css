@@ -72,22 +72,19 @@
 }
 .Page {
   color: #000;
-  padding: 50px 0 0 0;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: center;
   -ms-flex-align: center;
       align-items: center;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  min-height: calc(100vh - 128px) !important;
 }
 .Page__heading {
   -ms-flex-preferred-size: 100%;
@@ -107,6 +104,7 @@
   background: #002442;
   padding: 30px 50px;
   font-size: calc(14px + 4 * ((100vw - 420px) / 860));
+  margin: 70px 0;
   font-weight: 100;
   color: #c7c7c7;
 }
@@ -124,7 +122,7 @@
   min-width: 100%;
 }
 --center {
-  background: #f8f8f8;
+  background: #f00 !important;
   margin: 70px 20px;
 }
 __heading--center {
@@ -150,6 +148,13 @@ __button:hover {
   __content {
     padding: 20px;
   }
+}
+.Page__content--center {
+  background: #f8f8f8;
+  margin-top: 100px;
+}
+.Page__heading--center {
+  color: #00549a;
 }
 .Social {
   padding: 0;
@@ -1255,7 +1260,7 @@ textarea::placeholder {
   color: #717171;
 }
 html {
-  height: 100%;
+  min-height: 100vh;
 }
 body {
   display: -webkit-flex;
