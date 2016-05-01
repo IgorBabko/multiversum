@@ -165,7 +165,8 @@ return [
         //Barryvdh\Debugbar\ServiceProvider::class,
         Sofa\Eloquence\ServiceProvider::class,
         Frozennode\Administrator\AdministratorServiceProvider::class,
-        willvincent\Rateable\RateableServiceProvider::class
+        willvincent\Rateable\RateableServiceProvider::class,
+        Netshell\Paypal\PaypalServiceProvider::class,
     ],
 
     /*
@@ -215,6 +216,7 @@ return [
         // vendor
         'Embed'     => Cohensive\Embed\Facades\Embed::class,
         // 'Debugbar'  => Barryvdh\Debugbar\Facade::class,
+        'Paypal' => Netshell\Paypal\Facades\Paypal::class,
     ],
 
 ];
