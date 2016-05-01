@@ -35,4 +35,8 @@ Route::group(['middleware' => ['web']], function () {
 
     // auth
     Route::auth();
+
+
+    // paypal
+    Route::get('/listPayments', 'PaymentsController@listPayments');
 });
