@@ -1,8 +1,8 @@
 @extends("layout")
 @section("content")
 <div class="Page">
-    <div class="Page__content Page__content--with-resource">
-        <h1 class="Page__heading">Статьи
+    <div class="Page__content Page__content--transparent">
+        <h1 class="Page__heading Page__heading--yellow">Статьи
         @if (Request::is('posts/category/*'))
         из категории: <span class='filter-name'>{{ $name }}</span>
         @elseif (Request::is('posts/tag/*'))
