@@ -38,5 +38,6 @@ Route::group(['middleware' => ['web']], function () {
 
 
     // paypal
+    Route::get('/getCheckout', 'PaymentsController@getCheckout');
     Route::get('/listPayments', 'PaymentsController@listPayments');
 });

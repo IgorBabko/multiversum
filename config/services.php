@@ -36,8 +36,8 @@ return [
     ],
 
     'paypal'   => [
-        'client_id' => env('PAYPAL_CLIENT_ID'),
-        'secret' => env('PAYPAL_SECRET'),
+        'client_id' => 'AVZbX-nFeRMo2v2e_9O9TBvOdRztb2yWzyLn1bN_pe1Xxf_SM2tus3kS5TWUTn9wrSNDjpA0KOVU4W-1',//env('PAYPAL_CLIENT_ID'),
+        'secret' => 'EPOAS3QwGm1AnsqtgTJFCWIF0MkD-D6x2u5r3AVsQd8PDHEVaaIhTF5Mrl3F7YDepxzlhjG-BFRtYla-',//env('PAYPAL_SECRET'),
     ],
 
 ];

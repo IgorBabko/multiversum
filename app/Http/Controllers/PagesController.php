@@ -21,7 +21,7 @@ class PagesController extends Controller
 {
     public function index()
     {
-        $page = Page::first();
+        $page = Page::where('name', 'главная')->first();
 
         $headerVideo = Video::first();
 
