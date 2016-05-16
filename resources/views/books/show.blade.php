@@ -6,7 +6,7 @@
         <div class="Book-expanded">
             <h1 class="Page__heading">{{ $book->name }}</h1>
             <div class="Book-expanded__date">Дата публикации: {{ $book->published_at->format('m.d.Y') }}</div>
-            <img src="/uploads/images/books/{{ $book->image }}" class="Page__image Page__image--book" alt="{{ $book->name }}">
+            <img src="{{ $book->image }}" class="Page__image Page__image--book" alt="{{ $book->name }}">
             <div class="Page__text">{!! $book->description !!}</div>
         </div>
     </div>

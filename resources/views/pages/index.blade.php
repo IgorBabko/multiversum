@@ -41,7 +41,7 @@
         @foreach ($posts as $post)
         <div>
             <div class="resource Post">
-                <img src="/uploads/images/posts/small/{{ $post->image }}" class="img-responsive Post__image" alt="Статья 1">
+                <img src="{{ $post->image }}" class="img-responsive Post__image" alt="Статья 1">
                 <div class="Post__info">
                     <h3 class="Post__heading">{{ $post->name }}</h3>
                     <p class="Post__content">{{ str_limit($post->content, 150) }}</p>
@@ -68,7 +68,7 @@
                     <div class="Overlay">
                         <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
                     </div>
-                    <img src="/uploads/images/books/{{ $book->image }}" class="Book__image">
+                    <img src="{{ $book->image }}" class="Book__image">
                     <h3 class="Book__heading">{{ $book->name }}</h3>
                 </a>
             </div>
@@ -86,7 +86,7 @@
                     <div class="Overlay">
                         <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
                     </div>
-                    <img src="/uploads/images/disks/{{ $disk->image }}" class="Disk__image">
+                    <img src="{{ $disk->image }}" class="Disk__image">
                     <h3 class="Disk__heading">{{ $disk->name }}</h3>
                 </a>
             </div>

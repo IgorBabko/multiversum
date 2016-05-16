@@ -40,7 +40,7 @@ class PaymentsController extends Controller
         $payer = Paypal::Payer();
         $payer->setPaymentMethod('paypal');
 
-        $amount = Paypal:: Amount();
+        $amount = Paypal::Amount();
         $amount->setCurrency('EUR');
         $amount->setTotal(42); // This is the simple way,
         // you can alternatively describe everything in the order separately;
@@ -48,22 +48,22 @@ class PaymentsController extends Controller
 
         $transaction = Paypal::Transaction();
         $transaction->setAmount($amount);
-        $transaction->setDescription('What are you selling?');
+        $transaction->setDescription('niko video');
 
         $redirectUrls = Paypal::RedirectUrls();
-        //$redirectUrls->setReturnUrl(action('PaymentsController@getDone'));
-        //$redirectUrls->setCancelUrl(action('PaymentsController@getCancel'));
+        $redirectUrls->setReturnUrl(action('PaymentsController@getDone'));
+        $redirectUrls->setCancelUrl(action('PaymentsController@getCancel'));
 
         $payment = Paypal::Payment();
         $payment->setIntent('sale');
         $payment->setPayer($payer);
         $payment->setRedirectUrls($redirectUrls);
-        $payment->setTransactions(array($transaction));
+        $payment->setTransactions([$transaction]);
 
         $response = $payment->create($this->apiContext);
         $redirectUrl = $response->links[1]->href;
 
-        return Redirect::to($redirectUrl);
+        return Redirect::to( $redirectUrl );
     }
 
     public function getDone(Request $request)
@@ -82,12 +82,12 @@ class PaymentsController extends Controller
         // Clear the shopping cart, write to database, send notifications, etc.
 
         // Thank the user for the purchase
-        return view('checkout.done');
+        return 'payment succeed ok';//view('checkout.done');
     }
 
     public function getCancel()
     {
         // Curse and humiliate the user for cancelling this most sacred payment (yours)
-        return view('checkout.cancel');
+        return 'canceled';//view('checkout.cancel');
     }
 }

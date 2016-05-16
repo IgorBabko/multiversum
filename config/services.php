@@ -36,8 +36,8 @@ return [
     ],
 
     'paypal'   => [
-        'client_id' => 'AVZbX-nFeRMo2v2e_9O9TBvOdRztb2yWzyLn1bN_pe1Xxf_SM2tus3kS5TWUTn9wrSNDjpA0KOVU4W-1',//env('PAYPAL_CLIENT_ID'),
-        'secret' => 'EPOAS3QwGm1AnsqtgTJFCWIF0MkD-D6x2u5r3AVsQd8PDHEVaaIhTF5Mrl3F7YDepxzlhjG-BFRtYla-',//env('PAYPAL_SECRET'),
+        'client_id' => 'AWi2BMF20tbJaqVYzMT19IhWNKcWn_eNo78BDqmdwDe9_qzBG0HjgY4peI-RkfouPsrXrZ5HRHJ934yz', //'AVZbX-nFeRMo2v2e_9O9TBvOdRztb2yWzyLn1bN_pe1Xxf_SM2tus3kS5TWUTn9wrSNDjpA0KOVU4W-1',//env('PAYPAL_CLIENT_ID'),
+        'secret' => 'EOHZG1HwCfA1RLOFi31wxxgab9plfVaOQ2F6JjwCHRUV17A0AqFW6bJVMJztyqFmOziiP-sOPyPCreB7', //'EPOAS3QwGm1AnsqtgTJFCWIF0MkD-D6x2u5r3AVsQd8PDHEVaaIhTF5Mrl3F7YDepxzlhjG-BFRtYla-',//env('PAYPAL_SECRET'),
     ],
 
 ];

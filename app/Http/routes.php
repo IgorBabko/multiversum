@@ -36,8 +36,9 @@ Route::group(['middleware' => ['web']], function () {
     // auth
     Route::auth();
 
-
     // paypal
     Route::get('/getCheckout', 'PaymentsController@getCheckout');
     Route::get('/listPayments', 'PaymentsController@listPayments');
+    Route::get('/paymentDone', 'PaymentsController@getDone');
+    Route::get('/paymentCanceled', 'PaymentsController@getCancel');
 });

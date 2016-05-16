@@ -10,7 +10,7 @@ class DisksController extends Controller
     public function index()
     {
         $disks = Disk::orderBy('published_at', 'desc')
-            ->paginate(config('custom.posts_per_page'));
+            ->paginate(config('coniustom.posts_per_page'));
 
         return view('disks.index')->withDisks($disks);
     }

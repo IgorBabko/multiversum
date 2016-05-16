@@ -12,7 +12,7 @@
                         <div class="Overlay">
                             <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
                         </div>
-                        <img src="/uploads/images/disks/{{ $disk->image }}" class="Disk__image">
+                        <img src="{{ $disk->image }}" class="Disk__image">
                         <h3 class="Disk__heading">{{ $disk->name }}</h3>
                     </a>
                 </div>

@@ -12,7 +12,7 @@
                         <div class="Overlay">
                             <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
                         </div>
-                        <img src="/uploads/images/books/{{ $book->image }}" class="Book__image">
+                        <img src="{{ $book->image }}" class="Book__image">
                         <h3 class="Book__heading">{{ $book->name }}</h3>
                     </a>
                 </div>
