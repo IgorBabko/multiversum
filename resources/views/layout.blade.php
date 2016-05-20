@@ -34,41 +34,48 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <main class="row">
-            <div>
+    <div>
+        <div class="container">
+            <main class="row">
                 <div>
-                    <h4 style="font-weight: 100; margin: 0">
-                        Добро пожаловать на курс:<br>
-                        <span style="font-weight: bold; font-size: 36px; color: #1EAEDB">Ментально-духовное развитие</span>
-                    </h1>
+                    <div>
+                        <h4 style="font-weight: 100; margin: 0">
+                            Добро пожаловать на курс:<br>
+                            <span style="font-weight: bold; font-size: 36px; color: #1EAEDB">Ментально-духовное развитие</span>
+                        </h1>
+                    </div>
+                    <div>
+                        <video class="u-max-full-width" style="margin: 30px 0" width="550" height="420" controls>
+                            <source src="https://s3.eu-central-1.amazonaws.com/multiversum/%d0%b2%d1%81%d1%82%d1%83%d0%bf%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5.mp4" type="video/mp4">
+                            ваш браузер не поддерживает воспроизведение видео
+                        </video>
+                    </div>
+                    <div>
+                        <a class="button button-primary" href="#">ознакомиться</a>
+                    </div>
                 </div>
-                <div>
-                    <video class="u-max-full-width" style="margin: 30px 0" width="550" height="420" controls>
-                        <source src="https://s3.eu-central-1.amazonaws.com/multiversum/%d0%b2%d1%81%d1%82%d1%83%d0%bf%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5.mp4" type="video/mp4">
-                        ваш браузер не поддерживает воспроизведение видео
-                    </video>
-                </div>
-                <div>
-                    <a class="button button-primary" href="#">ознакомиться</a>
-                </div>
+            </main>
+        </div>
+        <div style="background-color: #F0F0F0">
+            <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Свяжитесь со мной</h2> 
+            <div class="container">
+                <form method="POST">
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="name">Имя</label>
+                            <input class="u-full-width" type="text" id="name">
+                        </div>
+                        <div class="six columns">
+                            <label for="email">Почта</label>
+                            <input class="u-full-width" type="email" id="email">
+                        </div>
+                    </div>
+                    <label for="message">Сообщение</label>
+                    <textarea class="u-full-width" id="message"></textarea>
+                    <input class="button-primary" type="submit" value="Submit">
+                </form>
             </div>
-        </main>
-        <form>
-            <div class="row">
-                <div class="six columns">
-                    <label for="name">Имя</label>
-                    <input class="u-full-width" type="text" id="name">
-                </div>
-                <div class="six columns">
-                    <label for="email">Почта</label>
-                    <input class="u-full-width" type="email" id="email">
-                </div>
-            </div>
-            <label for="message">Сообщение</label>
-            <textarea class="u-full-width" id="message"></textarea>
-            <input class="button-primary" type="submit" value="Submit">
-        </form>
+        </div>
     </div>
 </body>
 
