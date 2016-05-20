@@ -18,7 +18,7 @@
     <nav>
         <div class="container">
             <div class="row nav-inner">
-                <div class="logo"><i class="fa fa-globe logo-icon" aria-hidden="true"></i>Multiversum</div>
+                <div class="logo"><a href="#"><i class="fa fa-globe logo-icon" aria-hidden="true"></i>Multiversum</a></div>
                 <ul class="u-pull-right nav-list">
                     <li class="nav-list-item"><a href="#" class="nav-list-link">Промо</a></li>
                     <li class="nav-list-item"><a href="#" class="nav-list-link">Оплата</a></li>
