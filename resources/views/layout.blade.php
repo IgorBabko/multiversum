@@ -5,16 +5,20 @@
     <title>Multiversum</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href="css/app.css" rel="stylesheet" type="text/css">
-    @if ( Config::get('app.debug') )
-        <script type="text/javascript">
-            document.write(
-                '<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>'
-            )
-        </script>
-    @endif
 </head>
-
 <body>
+    <nav>
+        <div class="container">
+            <div class="row nav-inner">
+                <div class="logo">Multiversum</div>
+                <ul class="u-pull-right nav-list">
+                    <li class="nav-list-item">Промо</li>
+                    <li class="nav-list-item">Оплата</li>
+                    <li class="nav-list-item">Почта</li>
+                </ul>
+            </div> 
+        </div>
+    </nav>
     <div class="container">
         <main class="row">
             <div class="six columns">

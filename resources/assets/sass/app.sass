@@ -1,8 +1,44 @@
 body
     font-family: 'Roboto Slab', serif
 
+nav
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: #FBFBFB
+    height: 50px
+    z-index: 1000
+    border-bottom: 1px solid #E6E6E6
+
+.nav-inner
+    height: 50px
+
+.nav-list
+    margin: 0
+    padding: 0
+    height: 50px
+    font-weight: 100
+
+.nav-list-item
+    display: inline-block
+    padding: 10px
+    margin: 0
+    transition: all 0.3s ease-in-out
+
+    &:hover
+        font-weight: 300
+
+.logo
+    font-size: 28px
+    font-weight: 100
+    display: inline-block
+
 main
     display: flex
     justify-content: center
     align-items: center
     height: 100vh
+
+
+
