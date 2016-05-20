@@ -4,7 +4,7 @@ require('laravel-elixir-livereload');
 
 elixir(function(mix) {
     mix
-        .sass('app.sass');
+        .sass('app.sass')
         .styles([
             'node_modules/skeleton-css/css/normalize.css',
             'node_modules/skeleton-css/css/skeleton.css',
