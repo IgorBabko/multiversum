@@ -9,6 +9,5 @@ elixir(function(mix) {
             'node_modules/skeleton-css/css/normalize.css',
             'node_modules/skeleton-css/css/skeleton.css',
             'public/css/app.css'
-        ], 'public/css/app.css', './')
-        .livereload();
+        ], 'public/css/app.css', './');
 });
