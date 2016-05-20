@@ -56,9 +56,15 @@
                 </div>
             </main>
         </div>
-        <div style="background-color: #F0F0F0; padding: 50px 0">
-            <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Свяжитесь со мной</h2> 
+        <div style="background-color: #33C3F0; height: 400px; padding: 50px 0; color: white">
             <div class="container">
+                <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Оплата</h2> 
+                some text     
+            </div>
+        </div>
+        <div style="background-color: #F0F0F0; padding: 50px 0">
+            <div class="container">
+                <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Свяжитесь со мной</h2> 
                 <form method="POST">
                     <div class="row">
                         <div class="six columns">
@@ -95,6 +101,7 @@
                         </a>
                     </li>
                 </ul>
+                <div style="color: white; padding: 10px 0 20px; color: gray">@ Все права защищены</div>
             </div>
         </div>
     </div>
