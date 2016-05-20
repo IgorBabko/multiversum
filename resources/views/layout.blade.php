@@ -3,28 +3,35 @@
 
 <head>
     <title>Multiversum</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic'
+    rel='stylesheet' type='text/css'>
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href="css/skeleton.css" rel="stylesheet" type="text/css">
     <link href="css/app.css" rel="stylesheet" type="text/css">
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-    @if ( Config::get('app.debug') )
-      <script type="text/javascript">
-        document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
-      </script> 
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">@if ( Config::get('app.debug') )
+    <script type="text/javascript">
+        document.write(
+            '<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>'
+        )
+    </script>
     @endif
 </head>
+
 <body>
     <nav>
         <div class="container">
             <div class="row nav-inner">
-                <div class="logo"><a href="#"><i class="fa fa-globe logo-icon" aria-hidden="true"></i>Multiversum</a></div>
+                <div class="logo"><a href="#"><i class="fa fa-globe logo-icon" aria-hidden="true"></i>Multiversum</a>
+                </div>
                 <ul class="u-pull-right nav-list">
-                    <li class="nav-list-item"><a href="#" class="nav-list-link">Промо</a></li>
-                    <li class="nav-list-item"><a href="#" class="nav-list-link">Оплата</a></li>
-                    <li class="nav-list-item"><a href="#" class="nav-list-link">Почта</a></li>
+                    <li class="nav-list-item"><a href="#" class="nav-list-link">Промо</a>
+                    </li>
+                    <li class="nav-list-item"><a href="#" class="nav-list-link">Оплата</a>
+                    </li>
+                    <li class="nav-list-item"><a href="#" class="nav-list-link">Почта</a>
+                    </li>
                 </ul>
-            </div> 
+            </div>
         </div>
     </nav>
     <div class="container">
@@ -47,6 +54,21 @@
                 </div>
             </div>
         </main>
+        <form>
+            <div class="row">
+                <div class="six columns">
+                    <label for="name">Имя</label>
+                    <input class="u-full-width" type="text" id="name">
+                </div>
+                <div class="six columns">
+                    <label for="email">Почта</label>
+                    <input class="u-full-width" type="email" id="email">
+                </div>
+            </div>
+            <label for="message">Сообщение</label>
+            <textarea class="u-full-width" id="message"></textarea>
+            <input class="button-primary" type="submit" value="Submit">
+        </form>
     </div>
 </body>
 
