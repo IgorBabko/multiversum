@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Multiversum\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use Multiversum\Http\Requests;
 
 class HomeController extends Controller
 {

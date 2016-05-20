@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Multiversum\Providers\AppServiceProvider::class,
+        Multiversum\Providers\AuthServiceProvider::class,
+        Multiversum\Providers\EventServiceProvider::class,
+        Multiversum\Providers\RouteServiceProvider::class,
 
     ],
 

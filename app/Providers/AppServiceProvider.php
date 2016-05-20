@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Multiversum\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Multiversum\Events;
 
 abstract class Event
 {
