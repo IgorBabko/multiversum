@@ -76,6 +76,11 @@
                 </form>
             </div>
         </div>
+        <div style="background: black; height: 100px">
+            <div class=container" style="text-align: center">
+                    some text        
+            </div>
+        </div>
     </div>
 </body>
 
