@@ -7,6 +7,7 @@
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href="css/skeleton.css" rel="stylesheet" type="text/css">
     <link href="css/app.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     @if ( Config::get('app.debug') )
       <script type="text/javascript">
         document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
@@ -17,7 +18,7 @@
     <nav>
         <div class="container">
             <div class="row nav-inner">
-                <div class="logo">Multiversum</div>
+                <div class="logo"><i class="fa fa-globe logo-icon" aria-hidden="true"></i>Multiversum</div>
                 <ul class="u-pull-right nav-list">
                     <li class="nav-list-item"><a href="#" class="nav-list-link">Промо</a></li>
                     <li class="nav-list-item"><a href="#" class="nav-list-link">Оплата</a></li>

@@ -11,6 +11,7 @@
     "laravel-elixir-livereload": "^1.1.4"
   },
   "dependencies": {
+    "font-awesome": "^4.6.1",
     "skeleton-css": "^2.0.4"
   }
 }
