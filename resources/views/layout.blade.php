@@ -56,7 +56,7 @@
                 </div>
             </main>
         </div>
-        <div style="background-color: #F0F0F0">
+        <div style="background-color: #F0F0F0; padding: 50px 0">
             <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Свяжитесь со мной</h2> 
             <div class="container">
                 <form method="POST">
@@ -76,9 +76,25 @@
                 </form>
             </div>
         </div>
-        <div style="background: black; height: 100px">
-            <div class=container" style="text-align: center">
-                    some text        
+        <div style="background: black; text-align: center">
+            <div class=container">
+                <ul class="social-list">
+                    <li class="social-list-item">
+                        <a href="https://www.facebook.com/profile.php?id=100006293505911&fref=nf" class="social-list-link" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="social-list-item">
+                        <a href="https://www.youtube.com/channel/UCZuPMVsytT-L-HVTAquUaCA" class="social-list-link" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="social-list-item">
+                        <a href="https://plus.google.com/109801612189366894181" class="social-list-link" target="_blank">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
