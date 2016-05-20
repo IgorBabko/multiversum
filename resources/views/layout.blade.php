@@ -19,26 +19,26 @@
             <div class="row nav-inner">
                 <div class="logo">Multiversum</div>
                 <ul class="u-pull-right nav-list">
-                    <li class="nav-list-item">Промо</li>
-                    <li class="nav-list-item">Оплата</li>
-                    <li class="nav-list-item">Почта</li>
+                    <li class="nav-list-item"><a href="#" class="nav-list-link">Промо</a></li>
+                    <li class="nav-list-item"><a href="#" class="nav-list-link">Оплата</a></li>
+                    <li class="nav-list-item"><a href="#" class="nav-list-link">Почта</a></li>
                 </ul>
             </div> 
         </div>
     </nav>
     <div class="container">
         <main class="row">
-            <div class="six columns">
+            <div>
                 <h4 style="font-weight: 100">
                     Добро пожаловать на курс:<br>
                     Ментально-духовное развитие
                 </h1>
                 <a class="button button-primary" href="#">ознакомиться</a>
             </div>
-            <div class="six columns">
+            <div>
                 <video class="u-max-full-width" width="550" height="420" controls>
-                    <source src="https://s3.eu-central-1.amazonaws.com/multiversum/%D0%B2%D1%81%D1%82%D1%83%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5.mp4" type="video/mp4">
-                    Ваш браузер не поддерживает воспроизведение видео
+                    <source src="https://s3.eu-central-1.amazonaws.com/multiversum/%d0%b2%d1%81%d1%82%d1%83%d0%bf%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5.mp4" type="video/mp4">
+                    ваш браузер не поддерживает воспроизведение видео
                 </video>
             </div>
         </main>
