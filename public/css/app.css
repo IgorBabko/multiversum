@@ -1,6 +1,35 @@
 body {
   font-family: 'Roboto Slab', serif; }
 
+h2 {
+  text-align: center;
+  font-weight: 100; }
+
+h3 {
+  text-align: left;
+  font-size: 30px;
+  font-weight: 100; }
+
+.centered {
+  text-align: center; }
+
+.last-link {
+  padding-right: 0; }
+
+.space-img {
+  width: 300px;
+  float: right;
+  margin-right: 30px; }
+
+.description {
+  font-size: 18px;
+  margin-bottom: 50px; }
+
+.program-list {
+  list-style: square;
+  font-size: 20px;
+  text-align: left; }
+
 .button {
   background-color: #388ECB !important;
   border: none !important; }
@@ -16,16 +45,46 @@ h1 {
     font-weight: bold; }
 
 .section {
-  height: 400px;
   padding: 50px 0; }
 
 .section-blue {
-  background-color: #388ECB;
+  background-color: #0597FF;
   color: white; }
 
-footer {
-  text-align: center;
-  background: #F0F0F0; }
+.section-red {
+  background: #F14040;
+  font-size: 26px;
+  color: white; }
+
+.price {
+  color: #42F742;
+  font-weight: bold; }
+
+.section-dark-blue {
+  background-color: #0C2232; }
+
+.register-button,
+.login-button {
+  width: 300px;
+  background-color: #56D056;
+  margin-right: 20px;
+  height: 70px;
+  font-size: 28px;
+  color: white;
+  border: none; }
+  .register-button:hover,
+  .login-button:hover {
+    background-color: #36BE36;
+    color: white; }
+
+.account-buttons {
+  margin-top: 50px; }
+
+.login-button {
+  margin: 0;
+  background-color: #FFCB0D; }
+  .login-button:hover {
+    background-color: #EBBA06; }
 
 nav {
   position: fixed;
@@ -44,7 +103,7 @@ nav {
 
 .hamburger-button {
   display: none;
-  padding: 0 15px;
+  padding: 0;
   margin: 3px 0;
   border: none;
   color: white;
@@ -88,18 +147,6 @@ a {
 .logo-icon {
   margin-right: 10px; }
 
-main {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100vh;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  text-align: center; }
-
 .social-list {
   list-style: none;
   margin: 0;
@@ -117,19 +164,30 @@ main {
   display: inline-block;
   font-size: 24px;
   border-radius: 50%;
-  border: 1px solid gray;
-  color: gray;
+  border: 1px solid silver;
+  color: silver;
   line-height: 2; }
   .social-list-link:hover {
-    border-color: black;
-    color: black; }
+    border-color: white;
+    color: white; }
 
 .copyright {
   padding: 10px 0 20px;
-  color: gray;
-  font-weight: 100; }
+  font-weight: 100;
+  color: silver; }
 
 @media screen and (min-width: 610px) {
+  main {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 100vh;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center; }
   .nav-list {
     float: right; } }
 
@@ -142,6 +200,12 @@ main {
   .open {
     height: auto; }
   .hamburger-button {
-    display: inline-block; } }
+    display: inline-block; }
+  main {
+    padding: 70px 0;
+    display: block;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center; } }
 
 /*# sourceMappingURL=app.css.map */

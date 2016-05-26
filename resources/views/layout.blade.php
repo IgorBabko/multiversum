@@ -25,12 +25,10 @@
                 </div>
                 <button class="hamburger-button u-pull-right"><i class="fa fa-bars" aria-hidden="true"></i></button>
                 <ul class="nav-list">
-                    <li class="nav-list-item"><a href="#" class="nav-list-link">Промо</a>
-                    </li>
-                    <li class="nav-list-item"><a href="#" class="nav-list-link">Оплата</a>
-                    </li>
-                    <li class="nav-list-item"><a href="#" class="nav-list-link">Почта</a>
-                    </li>
+                    <li class="nav-list-item"><a href="#" class="nav-list-link">Промо</a></li>
+                    <li class="nav-list-item"><a href="#" class="nav-list-link">О курсе</a></li>
+                    <li class="nav-list-item"><a href="#" class="nav-list-link">Аккаунт</a></li>
+                    <li class="nav-list-item"><a href="#" class="nav-list-link">Почта</a></li>
                 </ul>
             </div>
         </div>
@@ -59,62 +57,97 @@
         </div>
         <div class="section section-blue"> 
             <div class="container">
-                <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Стать членом сообщества</h2> 
-                <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
-                    {{ csrf_field() }}
-                    <div class="row">
-                        <div class="six columns form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name">Имя</label>
-                            <input type="text" class="u-full-width" name="name" id="name">
-                        </div>
-
-                        <div class="six columns form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="name">Email</label>
-                            <input type="email" class="u-full-width" name="email" id="email">
-                        </div>
-
-                        <div class="six columns form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="password">Пароль</label>
-                            <input type="password" class="u-full-width" name="password" id="password">
-                        </div>
-
-                        <div class="six columns form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="password_confirmation">Подтвердить пароль</label>
-                            <input type="password" class="u-full-width" name="password-confirmation" id="password_confirmation">
-                        </div>
-                    </div>
-                    <button class="button button-primary" type="submit"><i class="fa fa-btn fa-user"></i>Регистрация</button>
-                </form>
+                <h2>О курсе</h2>
+                <div class="description">
+                    <p>new york is a state in the northeastern united states and is the 27th-most extensive, fourth-most populous, and seventh-most densely populated u.s. state. new york is bordered by new jersey and pennsylvania to the south and connecticut, massachusetts, and vermont to the east. the state has a maritime border in the atlantic ocean with rhode island, east of long island, as well as an international border with the canadian provinces of quebec to the north and ontario to the west and north. the state of new york, with an estimated 19.              </p></div>
             </div>
         </div>
-        <div class="section"> 
+        <div class="section section-blue"> 
             <div class="container">
-                <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Стать членом сообщества</h2> 
-                <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
-                    {{ csrf_field() }}
-                        <div class="six columns form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name">Имя</label>
-                            <input type="text" class="u-full-width" name="name" id="name">
-                        </div>
-
-                        <div class="six columns form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="name">Email</label>
-                            <input type="email" class="u-full-width" name="email" id="email">
-                        </div>
-
-                        <div class="six columns form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="password">Пароль</label>
-                            <input type="password" class="u-full-width" name="password" id="password">
-                        </div>
-
-                        <div class="six columns form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="password_confirmation">Подтвердить пароль</label>
-                            <input type="password" class="u-full-width" name="password-confirmation" id="password_confirmation">
-                        </div>
-                    <button class="button button-primary" type="submit"><i class="fa fa-btn fa-user" style="font-size: 18px; margin-right: 5px"></i>Регистрация</button>
-                </form>
+                <h2>О курсе</h2>
+                <div class="description">
+                    <p>New York is a state in the Northeastern United States and is the 27th-most extensive, fourth-most populous, and seventh-most densely populated U.S. state. New York is bordered by New Jersey and Pennsylvania to the south and Connecticut, Massachusetts, and Vermont to the east. The state has a maritime border in the Atlantic Ocean with Rhode Island, east of Long Island, as well as an international border with the Canadian provinces of Quebec to the north and Ontario to the west and north. The state of New York, with an estimated 19.              </p></div>
+                <div class="row centered">
+                    <div class="six columns">
+                        <img src="/img/space.jpg" class="space-img">
+                    </div>
+                    <div class="six columns">
+                        <h3>Программа</h3>
+                        <ul class="program-list">
+                            <li>Человека и Вселенная</li>
+                            <li>Время и пространство</li>
+                            <li>Любовь</li>
+                            <li>Реинкарнация</li>
+                            <li>Время, в котором мы живем</li>
+                            <li>Этика</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="section section-red centered">
+            <div class="container">
+                <div class="row">Для получения полного доступа к курсе пройдите простую регистрацию ниже и оплатите курс всего за <span class="price">10 грн<span></div>
+                <div class="row account-buttons">
+                    <button class="register-button">Регистрация</button>
+                    <button class="login-button">Войти</button>
+                </div>
+            </div>
+        </div>
+        <div class="section centered">
+            <div class="container">
+            </div>
+        </div>
+        <!--<div class="section section-gray"> 
+            <div class="container">
+                <div class="row">
+                    <div class="six columns">
+                        <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Регистрация</h2> 
+                        <form method="POST" action="{{ url('/register') }}">
+                            {{ csrf_field() }}
+                            <div class="column form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label for="name">Email</label>
+                                <input type="email" class="u-full-width" name="email" id="email">
+                            </div>
+
+                            <div class="column form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label for="password">пароль</label>
+                                <input type="password" class="u-full-width" name="password" id="password">
+                            </div>
+
+                            <div class="column form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label for="password_confirmation">Подтвердить пароль</label>
+                                <input type="password" class="u-full-width" name="password-confirmation" id="password_confirmation">
+                            </div>
+                            <div class="column centered">
+                                <button class="button button-primary" type="submit">Регистрация</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="six columns">
+                        <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Войти</h2> 
+                        <form method="POST" action="{{ url('/login') }}">
+                            {{ csrf_field() }}
+                            <div class="column form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label for="name">Email</label>
+                                <input type="email" class="u-full-width" name="email" id="email">
+                            </div>
+
+                            <div class="column form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                <label for="password">Пароль</label>
+                                <input type="password" class="u-full-width" name="password" id="password">
+                            </div>
+
+                            <div class="column centered">
+                                <button class="button button-primary" type="submit">
+                                    Войти
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>-->
         <div class="section">
             <div class="container">
                 <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Свяжитесь со мной</h2> 
@@ -135,7 +168,7 @@
                 </form>
             </div>
         </div>
-        <footer>
+        <footer class="section-dark-blue centered">
             <div class=container">
                 <ul class="social-list">
                     <li class="social-list-item">
