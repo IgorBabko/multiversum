@@ -205,6 +205,9 @@ a {
   .remodal-confirm:hover {
     color: white; }
 
+.modal-form {
+  text-align: left; }
+
 .social-list-link {
   width: 100%;
   height: 100%;

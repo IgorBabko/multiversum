@@ -88,76 +88,11 @@
                 </div>
             </div>
         </div>
-        <!--<div class="section section-gray"> 
-            <div class="container">
-                <div class="row">
-                    <div class="six columns">
-                        <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Регистрация</h2> 
-                        <form method="POST" action="{{ url('/register') }}">
-                            {{ csrf_field() }}
-                            <div class="column form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="name">Email</label>
-                                <input type="email" class="u-full-width" name="email" id="email">
-                            </div>
-
-                            <div class="column form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="password">пароль</label>
-                                <input type="password" class="u-full-width" name="password" id="password">
-                            </div>
-
-                            <div class="column form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="password_confirmation">Подтвердить пароль</label>
-                                <input type="password" class="u-full-width" name="password-confirmation" id="password_confirmation">
-                            </div>
-                            <div class="column centered">
-                                <button class="button button-primary" type="submit">Регистрация</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="six columns">
-                        <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Войти</h2> 
-                        <form method="post" action="{{ url('/login') }}">
-                            {{ csrf_field() }}
-                            <div class="column form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="name">Email</label>
-                                <input type="email" class="u-full-width" name="email" id="email">
-                            </div>
-
-                            <div class="column form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label for="password">Пароль</label>
-                                <input type="password" class="u-full-width" name="password" id="password">
-                            </div>
-
-                            <div class="column centered">
-                                <button class="button button-primary" type="submit">
-                                    Войти
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>-->
         <div class="section" id="email-section">
             <div class="container centered">
                 <h2 class="email-heading">Свяжитесь со мной</h2> 
                 <img src="/img/mail.jpg" class="mail-img">
-                <a class="email-button link-button">Написать</a>
-                <!--<form method="POST">
-                    <div class="row">
-                        <div class="six columns">
-                            <label for="name">Имя</label>
-                            <input class="u-full-width" type="text" id="name">
-                        </div>
-                        <div class="six columns">
-                            <label for="email">Почта</label>
-                            <input class="u-full-width" type="email" id="email">
-                        </div>
-                    </div>
-                    <label for="message">Сообщение</label>
-                    <textarea class="u-full-width" id="message"></textarea>
-                    <button class="button button-primary" type="submit">Submt</button
-                </form>-->
+                <a class="email-button link-button" href="#email">Написать</a>
             </div>
         </div>
         <footer class="section-dark-blue centered">
@@ -185,36 +120,60 @@
     </div>
     <div class="remodal" data-remodal-id="register">
         <button data-remodal-action="close" class="remodal-close"></button>
-            <h1>Создать аккаунт</h1>
-            <form method="POST" action="{{ url('/register') }}" style="text-align: left">
-                {{ csrf_field() }}
-                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                    <label for="name">Email</label>
-                    <input type="email" class="u-full-width" name="email" id="email">
-                </div>
+        <h1>Создать аккаунт</h1>
+        <form method="POST" action="{{ url('/register') }}" class="modal-form">
+            {{ csrf_field() }}
+            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                <label for="name">Email</label>
+                <input type="email" class="u-full-width" name="email" id="email">
+            </div>
 
-                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                    <label for="password">пароль</label>
-                    <input type="password" class="u-full-width" name="password" id="password">
-                </div>
+            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                <label for="password">пароль</label>
+                <input type="password" class="u-full-width" name="password" id="password">
+            </div>
 
-                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                    <label for="password_confirmation">Подтвердить пароль</label>
-                    <input type="password" class="u-full-width" name="password-confirmation" id="password_confirmation">
+            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                <label for="password_confirmation">Подтвердить пароль</label>
+                <input type="password" class="u-full-width" name="password-confirmation" id="password_confirmation">
+            </div>
+            <div class="modal-actions">
+                <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
+                <button data-remodal-action="confirm" class="remodal-confirm" type="submit">Регистрация</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="remodal" data-remodal-id="email">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Написать письмо</h1>
+        <form method="POST" action="{{ url('/email') }}" class="modal-form">
+            {{ csrf_field() }}
+            <div class="row">
+                <div class="six columns">
+                    <label for="name">Имя</label>
+                    <input class="u-full-width" type="text" id="name">
                 </div>
-                <div class="modal-actions">
-                    <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
-                    <button data-remodal-action="confirm" class="remodal-confirm" type="submit">Регистрация</button>
+                <div class="six columns">
+                    <label for="email">Почта</label>
+                    <input class="u-full-width" type="email" id="email">
                 </div>
-            </form>
-            <br>
+            </div>
+            <label for="message">Сообщение</label>
+            <textarea class="u-full-width" id="message"></textarea>
+            <div class="modal-actions">
+                <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
+                <button data-remodal-action="confirm" class="remodal-confirm" type="submit">Регистрация</button>
+            </div>
+        </form>
     </div>
 
 
     <div class="remodal" data-remodal-id="login">
         <button data-remodal-action="close" class="remodal-close"></button>
             <h1>Войти</h1>
-            <form method="POST" action="{{ url('/login') }}" style="text-align: left">
+            <form method="POST" action="{{ url('/login') }}" class="modal-form">
                 {{ csrf_field() }}
 
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">

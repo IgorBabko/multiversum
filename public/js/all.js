@@ -65,13 +65,23 @@
         }
     }); 
 
+    var updateValidErrors = function ($form, validErrors) { 
+        $form.find('input').each(function (index, input) { 
+            var $input = $(input);
+            var fieldName = $input.attr('name');
+            var $errorBlock = $input.next('.Error');
+            var $errorMsg = validErrors[fieldName] == true ? validErrors[fieldName][0] : '';
+            $errorBlock.text($errorMsg);
+        });
+    });
+
     $('.form').submit(function (e) { 
         e.preventDefault();
 
         var $this = $(this);
 
         var request = $.ajax({
-            url: $this.attr 'action',
+            url: $this.attr('action'),
             method: 'POST',
             data: $this.serialize()
         });
