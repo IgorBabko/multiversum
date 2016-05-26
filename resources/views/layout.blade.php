@@ -50,7 +50,7 @@
                         </video>
                     </div>
                     <div>
-                        <button class="button button-primary button">ознакомиться</button>
+                        <button class="button-primary main-button">ознакомиться</button>
                     </div>
                 </div>
             </main>
@@ -58,18 +58,11 @@
         <div class="section section-blue"> 
             <div class="container">
                 <h2>О курсе</h2>
-                <div class="description">
+                <div class="description centered">
                     <p>new york is a state in the northeastern united states and is the 27th-most extensive, fourth-most populous, and seventh-most densely populated u.s. state. new york is bordered by new jersey and pennsylvania to the south and connecticut, massachusetts, and vermont to the east. the state has a maritime border in the atlantic ocean with rhode island, east of long island, as well as an international border with the canadian provinces of quebec to the north and ontario to the west and north. the state of new york, with an estimated 19.              </p></div>
-            </div>
-        </div>
-        <div class="section section-blue"> 
-            <div class="container">
-                <h2>О курсе</h2>
-                <div class="description">
-                    <p>New York is a state in the Northeastern United States and is the 27th-most extensive, fourth-most populous, and seventh-most densely populated U.S. state. New York is bordered by New Jersey and Pennsylvania to the south and Connecticut, Massachusetts, and Vermont to the east. The state has a maritime border in the Atlantic Ocean with Rhode Island, east of Long Island, as well as an international border with the Canadian provinces of Quebec to the north and Ontario to the west and north. The state of New York, with an estimated 19.              </p></div>
                 <div class="row centered">
                     <div class="six columns">
-                        <img src="/img/space.jpg" class="space-img">
+                        <img src="/img/space.jpg" class="space">
                     </div>
                     <div class="six columns">
                         <h3>Программа</h3>
@@ -92,10 +85,6 @@
                     <button class="register-button">Регистрация</button>
                     <button class="login-button">Войти</button>
                 </div>
-            </div>
-        </div>
-        <div class="section centered">
-            <div class="container">
             </div>
         </div>
         <!--<div class="section section-gray"> 
@@ -149,9 +138,11 @@
             </div>
         </div>-->
         <div class="section">
-            <div class="container">
-                <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Свяжитесь со мной</h2> 
-                <form method="POST">
+            <div class="container centered">
+                <h2 class="email-heading">Свяжитесь со мной</h2> 
+                <img src="/img/mail.jpg" class="mail-img">
+                <button class="email-button">Написать</button>
+                <!--<form method="POST">
                     <div class="row">
                         <div class="six columns">
                             <label for="name">Имя</label>
@@ -165,7 +156,7 @@
                     <label for="message">Сообщение</label>
                     <textarea class="u-full-width" id="message"></textarea>
                     <button class="button button-primary" type="submit">Submt</button
-                </form>
+                </form>-->
             </div>
         </div>
         <footer class="section-dark-blue centered">
@@ -193,6 +184,7 @@
     </div>
 
     <script src="/js/jquery.min.js"></script>
+    <script src="/js/parallax.min.js"></script>
     <script src="/js/all.js"></script>
 </body>
 

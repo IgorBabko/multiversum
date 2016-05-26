@@ -3,12 +3,15 @@ body
 
 h2
     text-align: center
-    font-weight: 100
+    font-weight: normal
+
+.email-heading
+    color: #575757
 
 h3
     text-align: left
     font-size: 30px
-    font-weight: 100
+    font-weight: normal 
 
 .centered
     text-align: center
@@ -16,19 +19,29 @@ h3
 .last-link
     padding-right: 0
 
-.space-img
+.space
     width: 300px
+    height: 300px
     float: right
     margin-right: 30px
+    border-radius: 50%
 
 .description
-    font-size: 18px
+    font-size: 20px
     margin-bottom: 50px
 
 .program-list
     list-style: square
     font-size: 20px
     text-align: left
+    margin-top: 25px
+
+.mail-img
+    margin: 0 auto 50px
+    display: block
+    width: 300px
+
+
 
 .button
     background-color: #388ECB !important
@@ -60,6 +73,11 @@ h1
     font-size: 26px
     color: white
 
+.section-green
+    background: #00C834
+    color: white
+    font-weight: 300
+
 .price
     color: #42F742 
     font-weight: bold
@@ -68,7 +86,9 @@ h1
     background-color: #0C2232
 
 .register-button,
-.login-button
+.login-button,
+.email-button,
+.main-button
     width: 300px 
     background-color: #56D056
     margin-right: 20px
@@ -92,6 +112,20 @@ h1
     &:hover
         background-color: #EBBA06
 
+.email-button
+    margin: 0
+    background-color: #03A9F4 
+
+    &:hover
+        background-color: #0389C6
+
+.main-button
+    margin: 0
+    background-color: #FF5757
+
+    &:hover
+        background-color: #FF3333
+
 nav
     position: fixed
     top: 0
@@ -107,7 +141,7 @@ nav
         color: white
 
         &:hover
-            color: yellow
+            color: #78D5FF
 
 .hamburger-button
     display: none
@@ -146,9 +180,9 @@ a
         color: black
 
 .nav-list-link
-    padding: 10px
-    font-weight: 300
-    font-size: 16px
+    padding: 6px 10px
+    font-weight: normal 
+    font-size: 20px
     display: inline-block
 
 .logo
@@ -176,13 +210,14 @@ a
     display: inline-block
     font-size: 24px
     border-radius: 50%
-    border: 1px solid silver 
+    border: 2px solid silver 
     color: silver 
     line-height: 2
 
     &:hover
         border-color: white 
-        color: white
+        color: #0C2232
+        background: white
 
 .copyright
     padding: 10px 0 20px

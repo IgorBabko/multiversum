@@ -1,6 +1,8 @@
 (function($){
 
-    console.log('niko');
+    // parallax js
+    $('.space').parallax({imageSrc: '/img/background3.jpg'});
+     
 
     $window = $(window);
     nav = $('nav');
