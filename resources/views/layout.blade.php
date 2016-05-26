@@ -116,7 +116,7 @@
                     </div>
                     <div class="six columns">
                         <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Войти</h2> 
-                        <form method="POST" action="{{ url('/login') }}">
+                        <form method="post" action="{{ url('/login') }}">
                             {{ csrf_field() }}
                             <div class="column form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label for="name">Email</label>
@@ -205,6 +205,31 @@
                 <div class="modal-actions">
                     <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
                     <button data-remodal-action="confirm" class="remodal-confirm" type="submit">Регистрация</button>
+                </div>
+            </form>
+            <br>
+    </div>
+
+
+    <div class="remodal" data-remodal-id="login">
+        <button data-remodal-action="close" class="remodal-close"></button>
+            <h1>Войти</h1>
+            <form method="POST" action="{{ url('/login') }}" style="text-align: left">
+                {{ csrf_field() }}
+
+                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                    <label for="name">Email</label>
+                    <input type="email" class="u-full-width" name="email" id="email">
+                </div>
+
+                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                    <label for="password">Пароль</label>
+                    <input type="password" class="u-full-width" name="password" id="password">
+                </div>
+
+                <div class="modal-actions">
+                    <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
+                    <button data-remodal-action="confirm" class="remodal-confirm" type="submit">Войти</button>
                 </div>
             </form>
             <br>
