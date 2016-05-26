@@ -13,7 +13,8 @@ elixir(function(mix) {
         .copy('bower_components/parallax.js/parallax.min.js', 'public/js')
         .copy('node_modules/remodal/dist/remodal.css', 'public/css')
         .copy('node_modules/remodal/dist/remodal-default-theme.css', 'public/css')
-        .copy('node_modules/remodal/dist/remodal.min.js', 'public/js');
+        .copy('node_modules/remodal/dist/remodal.min.js', 'public/js')
+        .copy('bower_components/oh-snap/ohsnap.min.js', 'public/js');
 
     mix
         .sass('app.sass')

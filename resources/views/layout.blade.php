@@ -197,6 +197,7 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/parallax.min.js"></script>
     <script src="/js/remodal.min.js"></script>
+    <script src="/js/ohsnap.min.js"></script>
     <script src="/js/all.js"></script>
 </body>
 

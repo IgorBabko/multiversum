@@ -73,7 +73,7 @@
             var $errorMsg = validErrors[fieldName] == true ? validErrors[fieldName][0] : '';
             $errorBlock.text($errorMsg);
         });
-    });
+    };
 
     $('.form').submit(function (e) { 
         e.preventDefault();
