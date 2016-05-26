@@ -1,6 +1,37 @@
 body
     font-family: 'Roboto Slab', serif
 
+button
+    background-color: #388ECB !important
+    border: none !important
+
+    &:hover,
+    &:active,
+    &:focus
+        background-color: #0B4975 !important
+
+h1
+    font-size: 36px
+    font-weight: 100
+    margin: 0
+
+    span
+        color: #0B4975
+        font-weight: bold 
+
+.section
+    height: 400px
+    padding: 50px 0
+
+.section-blue
+    background-color: #388ECB
+    color: white
+    
+
+footer
+    text-align: center 
+    background: #F0F0F0
+
 nav
     position: fixed
     top: 0
@@ -93,13 +124,18 @@ main
     display: inline-block
     font-size: 24px
     border-radius: 50%
-    border: 2px solid gray
-    color: gray
+    border: 1px solid gray 
+    color: gray 
     line-height: 2
 
     &:hover
-        border-color: white
-        color: white
+        border-color: black 
+        color: black
+
+.copyright
+    padding: 10px 0 20px
+    color: gray
+    font-weight: 100
 
 @media screen and (min-width: 610px)
     .nav-list

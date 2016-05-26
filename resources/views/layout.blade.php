@@ -40,13 +40,13 @@
             <main class="row">
                 <div>
                     <div>
-                        <h4 style="font-weight: 100; margin: 0">
+                        <h1>
                             Добро пожаловать на курс:<br>
-                            <span style="font-weight: bold; font-size: 36px; color: #1EAEDB">Ментально-духовное развитие</span>
+                            <span>Ментально-духовное развитие</span>
                         </h1>
                     </div>
                     <div>
-                        <video class="u-max-full-width" style="margin: 30px 0" width="550" height="420" controls>
+                        <video class="u-max-full-width" style="margin: 30px 0" width="640" height="480" controls>
                             <source src="https://s3.eu-central-1.amazonaws.com/multiversum/%d0%b2%d1%81%d1%82%d1%83%d0%bf%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5.mp4" type="video/mp4">
                             ваш браузер не поддерживает воспроизведение видео
                         </video>
@@ -57,13 +57,13 @@
                 </div>
             </main>
         </div>
-        <div style="background-color: #33C3F0; height: 400px; padding: 50px 0; color: white">
+        <div class="section section-blue"> 
             <div class="container">
                 <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Стать членом сообщества</h2> 
                 some text     
             </div>
         </div>
-        <div style="background-color: #F0F0F0; padding: 50px 0">
+        <div class="section">
             <div class="container">
                 <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Свяжитесь со мной</h2> 
                 <form method="POST">
@@ -79,11 +79,11 @@
                     </div>
                     <label for="message">Сообщение</label>
                     <textarea class="u-full-width" id="message"></textarea>
-                    <input class="button-primary" type="submit" value="Submit">
+                    <button class="button-primary" type="submit">Submt</button
                 </form>
             </div>
         </div>
-        <div style="background: black; text-align: center">
+        <footer>
             <div class=container">
                 <ul class="social-list">
                     <li class="social-list-item">
@@ -102,9 +102,9 @@
                         </a>
                     </li>
                 </ul>
-                <div style="color: white; padding: 10px 0 20px; color: gray">@ Все права защищены</div>
+                <div class="copyright">&copy; Multiversum 2016 - Все права защищены</div>
             </div>
-        </div>
+        </footer>
     </div>
 
     <script src="/js/jquery.min.js"></script>
