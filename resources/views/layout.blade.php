@@ -23,7 +23,8 @@
             <div class="row nav-inner">
                 <div class="logo"><a href="#"><i class="fa fa-globe logo-icon" aria-hidden="true"></i>Multiversum</a>
                 </div>
-                <ul class="u-pull-right nav-list">
+                <button class="hamburger-button u-pull-right"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                <ul class="nav-list">
                     <li class="nav-list-item"><a href="#" class="nav-list-link">Промо</a>
                     </li>
                     <li class="nav-list-item"><a href="#" class="nav-list-link">Оплата</a>
@@ -31,7 +32,6 @@
                     <li class="nav-list-item"><a href="#" class="nav-list-link">Почта</a>
                     </li>
                 </ul>
-                <button class="hamburger-button"><i class="fa fa-bars" aria-hidden="true"></i></button>
             </div>
         </div>
     </nav>
@@ -108,7 +108,7 @@
     </div>
 
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="/js/all.js"></script>
 </body>
 
 </html>

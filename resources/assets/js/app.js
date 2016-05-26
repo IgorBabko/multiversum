@@ -1,27 +1,29 @@
 (function($){
 
+    console.log('niko');
+
     $window = $(window);
-    navMenu = $('.nav-list');
     nav = $('nav');
 
     $('.hamburger-button').click(function() {
 
-        if (navMenu.hasClass('open')) {
-            navMenu.removeClass('open');
+        if (nav.hasClass('open')) {
+            nav.removeClass('open');
             return;
         }
 
-        navMenu.addClass('open');
+        nav.addClass('open');
     });
 
     $(window).resize(function () {
-        if ($window.width > 768 && isScreenLarge === false) {
+        if ($window.width > 610 && isScreenLarge === false) {
             isScreenLarge = true;
             nav.removeClass('compact'); 
-            navMenu.removeClass('open');
+            nav.removeClass('open');
+            hamburgerButton.removeClass('active');
         } 
 
-        if ($window <= 768 && isScreenLarge === true) {
+        if ($window <= 610 && isScreenLarge === true) {
             isScreenLarge = false;
             nav.addClass('compact');
         }
