@@ -7,6 +7,8 @@
     rel='stylesheet' type='text/css'>
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href="css/skeleton.css" rel="stylesheet" type="text/css">
+    <link href="css/remodal.css" rel="stylesheet" type="text/css">
+    <link href="css/remodal-default-theme.css" rel="stylesheet" type="text/css">
     <link href="css/app.css" rel="stylesheet" type="text/css">
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css">@if ( Config::get('app.debug') )
     <script type="text/javascript">
@@ -35,13 +37,12 @@
     </nav>
     <div>
         <div class="container">
-            <main class="row">
+            <main class="row" style="padding-top: 20px">
                 <div>
                     <div>
-                        <h1>
-                            Добро пожаловать на курс:<br>
-                            <span>Ментально-духовное развитие</span>
-                        </h1>
+                        <h2 class="email-heading">
+                            Ментально-духовное развитие
+                        </h2>
                     </div>
                     <div>
                         <video class="u-max-full-width" style="margin: 30px 0" width="640" height="480" controls>
@@ -50,7 +51,7 @@
                         </video>
                     </div>
                     <div>
-                        <button class="button-primary main-button">ознакомиться</button>
+                        <button class="main-button">ознакомиться</button>
                     </div>
                 </div>
             </main>
@@ -182,9 +183,21 @@
             </div>
         </footer>
     </div>
+    <div class="remodal" data-remodal-id="modal">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <h1>Remodal</h1>
+      <p>
+        Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+      </p>
+      <br>
+      <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+      <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+    </div>
+    <a href="#modal">Call the modal with data-remodal-id="modal"</a>
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/parallax.min.js"></script>
+    <script src="/js/remodal.min.js"></script>
     <script src="/js/all.js"></script>
 </body>
 

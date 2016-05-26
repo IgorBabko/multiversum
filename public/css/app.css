@@ -115,6 +115,8 @@ h1 {
 .main-button {
   margin: 0;
   background-color: #FF5757; }
+  .main-button:hover {
+    background-color: #FF3333; }
 
 nav {
   position: fixed;
