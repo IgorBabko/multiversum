@@ -41,16 +41,17 @@ h3
     display: block
     width: 300px
 
-
-
-.button
-    background-color: #388ECB !important
-    border: none !important
-
-    &:hover,
-    &:active,
-    &:focus
-        background-color: #0B4975 !important
+.link-button
+    border-radius: 4px
+    color: white
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 26px
+    padding-top: 10px
+    cursor: pointer
+    width: 300px
+    height: 50px
+    display: inline-block
 
 h1
     font-size: 36px
@@ -85,25 +86,13 @@ h1
 .section-dark-blue
     background-color: #0C2232
 
-.register-button,
-.login-button,
-.email-button,
-.main-button
-    width: 300px 
+.register-button
     background-color: #56D056
     margin-right: 20px
-    height: 70px
-    font-size: 28px
-    color: white
-    border: none
 
     &:hover
         background-color: #36BE36
         color: white
-
-.account-buttons
-    margin-top: 50px
-
 
 .login-button
     margin: 0
@@ -111,6 +100,7 @@ h1
 
     &:hover
         background-color: #EBBA06
+        color: white
 
 .email-button
     margin: 0
@@ -118,6 +108,7 @@ h1
 
     &:hover
         background-color: #0389C6
+        color: white
 
 .main-button
     margin: 0
@@ -125,6 +116,10 @@ h1
 
     &:hover
         background-color: #FF3333
+        color: white
+
+.account-buttons
+    margin-top: 50px
 
 nav
     position: fixed
@@ -174,10 +169,6 @@ nav
 
 a
     text-decoration: none
-    color: black
-
-    &:hover
-        color: black
 
 .nav-list-link
     padding: 6px 10px
@@ -203,6 +194,25 @@ a
     height: 50px
     display: inline-block
     margin: 0 10px
+
+.modal-actions
+    text-align: right
+
+.remodal-cancel
+    margin-right: 10px
+
+.remodal
+    max-width: 500px
+    padding-bottom: 0
+
+.remodal-cancel,
+.remodal-confirm
+    height: 40px
+    color: white
+    padding: 10px 10px 35px
+
+    &:hover
+        color: white
 
 .social-list-link
     width: 100%

@@ -51,7 +51,7 @@
                         </video>
                     </div>
                     <div>
-                        <button class="main-button">ознакомиться</button>
+                        <a class="main-button link-button">ознакомиться</a>
                     </div>
                 </div>
             </main>
@@ -83,8 +83,8 @@
             <div class="container">
                 <div class="row">Для получения полного доступа к курсе пройдите простую регистрацию ниже и оплатите курс всего за <span class="price">10 грн<span></div>
                 <div class="row account-buttons">
-                    <button class="register-button">Регистрация</button>
-                    <button class="login-button">Войти</button>
+                    <a class="register-button link-button" href="#register">Регистрация</a>
+                    <a class="login-button link-button" href="#login">Войти</a>
                 </div>
             </div>
         </div>
@@ -142,7 +142,7 @@
             <div class="container centered">
                 <h2 class="email-heading">Свяжитесь со мной</h2> 
                 <img src="/img/mail.jpg" class="mail-img">
-                <button class="email-button">Написать</button>
+                <a class="email-button link-button">Написать</a>
                 <!--<form method="POST">
                     <div class="row">
                         <div class="six columns">
@@ -183,17 +183,32 @@
             </div>
         </footer>
     </div>
-    <div class="remodal" data-remodal-id="modal">
-      <button data-remodal-action="close" class="remodal-close"></button>
-      <h1>Remodal</h1>
-      <p>
-        Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
-      </p>
-      <br>
-      <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
-      <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+    <div class="remodal" data-remodal-id="register">
+        <button data-remodal-action="close" class="remodal-close"></button>
+            <h1>Создать аккаунт</h1>
+            <form method="POST" action="{{ url('/register') }}" style="text-align: left">
+                {{ csrf_field() }}
+                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                    <label for="name">Email</label>
+                    <input type="email" class="u-full-width" name="email" id="email">
+                </div>
+
+                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                    <label for="password">пароль</label>
+                    <input type="password" class="u-full-width" name="password" id="password">
+                </div>
+
+                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                    <label for="password_confirmation">Подтвердить пароль</label>
+                    <input type="password" class="u-full-width" name="password-confirmation" id="password_confirmation">
+                </div>
+                <div class="modal-actions">
+                    <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
+                    <button data-remodal-action="confirm" class="remodal-confirm" type="submit">Регистрация</button>
+                </div>
+            </form>
+            <br>
     </div>
-    <a href="#modal">Call the modal with data-remodal-id="modal"</a>
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/parallax.min.js"></script>
