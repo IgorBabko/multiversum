@@ -12,5 +12,6 @@ elixir(function(mix) {
 
     mix
         .sass('app.sass')
+        .scripts(['app.js'])
         .livereload();
 });

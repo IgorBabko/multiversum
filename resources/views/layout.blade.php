@@ -58,7 +58,7 @@
         </div>
         <div style="background-color: #33C3F0; height: 400px; padding: 50px 0; color: white">
             <div class="container">
-                <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Оплата</h2> 
+                <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Стать членом сообщества</h2> 
                 some text     
             </div>
         </div>
@@ -105,6 +105,9 @@
             </div>
         </div>
     </div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
