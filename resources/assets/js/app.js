@@ -1,11 +1,45 @@
 (function($){
 
-    // parallax js
-    $('.space').parallax({imageSrc: '/img/background3.jpg'});
-     
+    var aboutSection = $('.section-blue');
 
-    $window = $(window);
-    nav = $('nav');
+    $('.main-button').click(function () {
+        $('html, body').animate({
+            scrollTop: aboutSection.offset().top
+        }, 500);
+        return false;
+    });
+
+    var $window = $(window);
+    var nav = $('nav');
+    var $navLinks = $('.nav-list-link');
+    var $htmlAndBody = $('html, body');
+    var $sections = $('.section');
+
+    $navLinks.on("click", function(e) {
+        e.preventDefault();
+        var $self = $(this);
+        var sectionId = $self.data("section-id");
+
+        $htmlAndBody.animate({
+            scrollTop: $("#" + sectionId)
+                .offset()
+                .top - 50
+        }, 300, function() {
+            $navLinks.removeClass("active");
+            $self.addClass("active");
+        });
+    });
+
+    $window.on('mousewheel scroll', function() {
+        console.log('ni');
+        var aboveBlocks = $sections.map(function(i, section) {
+            if (section.getBoundingClientRect().top <= $window.height() / 3) {
+                return section;
+            }
+        });
+        $navLinks.removeClass("active");
+        $($navLinks[aboveBlocks.length - 1]).addClass("active");
+    });
 
     $('.hamburger-button').click(function() {
 
@@ -30,6 +64,8 @@
             nav.addClass('compact');
         }
     }); 
+
+
 
 
 

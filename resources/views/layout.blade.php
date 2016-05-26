@@ -27,17 +27,17 @@
                 </div>
                 <button class="hamburger-button u-pull-right"><i class="fa fa-bars" aria-hidden="true"></i></button>
                 <ul class="nav-list">
-                    <li class="nav-list-item"><a href="#" class="nav-list-link">Промо</a></li>
-                    <li class="nav-list-item"><a href="#" class="nav-list-link">О курсе</a></li>
-                    <li class="nav-list-item"><a href="#" class="nav-list-link">Аккаунт</a></li>
-                    <li class="nav-list-item"><a href="#" class="nav-list-link">Почта</a></li>
+                <li class="nav-list-item"><a href="#" data-section-id="promo-section" class="nav-list-link" class="active">Промо</a></li>
+                    <li class="nav-list-item"><a href="#" data-section-id="about-section" class="nav-list-link">О курсе</a></li>
+                    <li class="nav-list-item"><a href="#" data-section-id="account-section" class="nav-list-link">Аккаунт</a></li>
+                    <li class="nav-list-item"><a href="#" data-section-id="home-section" class="nav-list-link">Почта</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div>
         <div class="container">
-            <main class="row" style="padding-top: 20px">
+            <main class="row section" style="padding-top: 20px" id="promo-section">
                 <div>
                     <div>
                         <h2 class="email-heading">
@@ -56,7 +56,7 @@
                 </div>
             </main>
         </div>
-        <div class="section section-blue"> 
+        <div class="section section-blue" id="about-section"> 
             <div class="container">
                 <h2>О курсе</h2>
                 <div class="description centered">
@@ -79,7 +79,7 @@
                 </div>
             </div>
         </div>
-        <div class="section section-red centered">
+        <div class="section section-red centered" id="account-section">
             <div class="container">
                 <div class="row">Для получения полного доступа к курсе пройдите простую регистрацию ниже и оплатите курс всего за <span class="price">10 грн<span></div>
                 <div class="row account-buttons">
@@ -138,7 +138,7 @@
                 </div>
             </div>
         </div>-->
-        <div class="section">
+        <div class="section" id="email-section">
             <div class="container centered">
                 <h2 class="email-heading">Свяжитесь со мной</h2> 
                 <img src="/img/mail.jpg" class="mail-img">
