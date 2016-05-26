@@ -60,7 +60,59 @@
         <div class="section section-blue"> 
             <div class="container">
                 <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Стать членом сообщества</h2> 
-                some text     
+                <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                    {{ csrf_field() }}
+                    <div class="row">
+                        <div class="six columns form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="name">Имя</label>
+                            <input type="text" class="u-full-width" name="name" id="name">
+                        </div>
+
+                        <div class="six columns form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="name">Email</label>
+                            <input type="email" class="u-full-width" name="email" id="email">
+                        </div>
+
+                        <div class="six columns form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="password">Пароль</label>
+                            <input type="password" class="u-full-width" name="password" id="password">
+                        </div>
+
+                        <div class="six columns form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="password_confirmation">Подтвердить пароль</label>
+                            <input type="password" class="u-full-width" name="password-confirmation" id="password_confirmation">
+                        </div>
+                    </div>
+                    <button class="button button-primary" type="submit"><i class="fa fa-btn fa-user"></i>Регистрация</button>
+                </form>
+            </div>
+        </div>
+        <div class="section"> 
+            <div class="container">
+                <h2 style="text-align: center; font-weight: 100; margin-bottom: 50px">Стать членом сообщества</h2> 
+                <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                    {{ csrf_field() }}
+                        <div class="six columns form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="name">Имя</label>
+                            <input type="text" class="u-full-width" name="name" id="name">
+                        </div>
+
+                        <div class="six columns form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="name">Email</label>
+                            <input type="email" class="u-full-width" name="email" id="email">
+                        </div>
+
+                        <div class="six columns form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="password">Пароль</label>
+                            <input type="password" class="u-full-width" name="password" id="password">
+                        </div>
+
+                        <div class="six columns form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="password_confirmation">Подтвердить пароль</label>
+                            <input type="password" class="u-full-width" name="password-confirmation" id="password_confirmation">
+                        </div>
+                    <button class="button button-primary" type="submit"><i class="fa fa-btn fa-user" style="font-size: 18px; margin-right: 5px"></i>Регистрация</button>
+                </form>
             </div>
         </div>
         <div class="section">
@@ -79,7 +131,7 @@
                     </div>
                     <label for="message">Сообщение</label>
                     <textarea class="u-full-width" id="message"></textarea>
-                    <button class="button-primary" type="submit">Submt</button
+                    <button class="button button-primary" type="submit">Submt</button
                 </form>
             </div>
         </div>
