@@ -31,6 +31,7 @@
                     <li class="nav-list-item"><a href="#" class="nav-list-link">Почта</a>
                     </li>
                 </ul>
+                <button class="hamburger-button"><i class="fa fa-bars" aria-hidden="true"></i></button>
             </div>
         </div>
     </nav>
