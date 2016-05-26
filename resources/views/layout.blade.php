@@ -30,7 +30,7 @@
                 <li class="nav-list-item"><a href="#" data-section-id="promo-section" class="nav-list-link" class="active">Промо</a></li>
                     <li class="nav-list-item"><a href="#" data-section-id="about-section" class="nav-list-link">О курсе</a></li>
                     <li class="nav-list-item"><a href="#" data-section-id="account-section" class="nav-list-link">Аккаунт</a></li>
-                    <li class="nav-list-item"><a href="#" data-section-id="home-section" class="nav-list-link">Почта</a></li>
+                    <li class="nav-list-item"><a href="#" data-section-id="email-section" class="nav-list-link">Почта</a></li>
                 </ul>
             </div>
         </div>
@@ -40,7 +40,7 @@
             <main class="row section" style="padding-top: 20px" id="promo-section">
                 <div>
                     <div>
-                        <h2 class="email-heading">
+                        <h2 class="main-heading">
                             Ментально-духовное развитие
                         </h2>
                     </div>
