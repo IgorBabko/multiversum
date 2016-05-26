@@ -52,7 +52,7 @@
                         </video>
                     </div>
                     <div>
-                        <a class="button button-primary" href="#">ознакомиться</a>
+                        <button class="button button-primary button">ознакомиться</button>
                     </div>
                 </div>
             </main>
