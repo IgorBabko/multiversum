@@ -139,7 +139,7 @@
             </div>
             <div class="modal-actions">
                 <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
-                <button data-remodal-action="confirm" class="remodal-confirm" type="submit">Регистрация</button>
+                <button class="remodal-confirm" type="submit">Регистрация</button>
             </div>
         </form>
     </div>
@@ -164,7 +164,7 @@
             <textarea class="u-full-width" id="message"></textarea>
             <div class="modal-actions">
                 <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
-                <button data-remodal-action="confirm" class="remodal-confirm" type="submit">Регистрация</button>
+                <button class="remodal-confirm" type="submit">Регистрация</button>
             </div>
         </form>
     </div>
@@ -188,7 +188,7 @@
 
                 <div class="modal-actions">
                     <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
-                    <button data-remodal-action="confirm" class="remodal-confirm" type="submit">Войти</button>
+                    <button class="remodal-confirm" type="submit">Войти</button>
                 </div>
             </form>
             <br>

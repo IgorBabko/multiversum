@@ -63,7 +63,10 @@
             nav.addClass('compact');
         }
     }); 
-    console.log ('mik');
+
+    $(document).on('confirmation', '.remodal', function () {
+        $(this).find("form").submit();
+    });
 
     var updateValidErrors = function ($form, validErrors) { 
         $form.find('input').each(function (index, input) { 
