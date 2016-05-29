@@ -27,9 +27,18 @@ class HomeController extends Controller
         return view('layout');
     }
 
-    public function sendEmail(Request $request)
+    public function email(Request $request)
     {
-        \Mail::send('emails.contact', ['text' => $request->message], function ($m) use ($request) {
+        $validator = \Validator::make($request->all(), [
+            'name'    => 'required|string',
+            'email'   => 'required|email',
+            'message' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+        \Mail::send('emails.feedback', ['text' => $request->message], function ($m) use ($request) {
             $m->from($request->email, $request->name);
             $m->to('portaciya@gmail.com', 'Тина Васильева')->subject('Сообщение');
         });
@@ -37,7 +46,7 @@ class HomeController extends Controller
         return response()->json(['message' => 'Письмо отправлено успешно']);
     }
 
-    public function updateProfile(Request $request)
+    public function profile(Request $request)
     {
         $validator = \Validator::make($request->all(), [
             'email'    => 'email|unique:users,email,' . Auth::user()->id,
