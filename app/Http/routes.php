@@ -20,3 +20,4 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 Route::post('/profile', 'HomeController@profile');
 Route::post('/email', 'HomeController@email');
+Route::get('/video/{id}', 'HomeController@video');

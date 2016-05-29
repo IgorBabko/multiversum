@@ -4,6 +4,7 @@ namespace Multiversum\Http\Controllers;
 
 use Multiversum\Http\Requests;
 use Illuminate\Http\Request;
+use Multiversum\Video;
 
 class HomeController extends Controller
 {
@@ -24,7 +25,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('layout');
+        $previews = Video::where('type', 'preview')->get();
+        $lectures = Video::where('type', 'lecture')->get();
+
+        return view('index', compact('videos', 'lectures'));
+    }
+
+    /**
+     * Show the specified video.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function video($id, Request $request)
+    {
+        $video = Video::find($id);
+
+        return view('video', compact('video', 'request'));
     }
 
     public function email(Request $request)
@@ -40,7 +56,7 @@ class HomeController extends Controller
         }
         \Mail::send('emails.feedback', ['text' => $request->message], function ($m) use ($request) {
             $m->from($request->email, $request->name);
-            $m->to('portaciya@gmail.com', 'Тина Васильева')->subject('Сообщение');
+            $m->to('i.i.babko@gmail.com', 'Тина Васильева')->subject('Сообщение');
         });
 
         return response()->json(['message' => 'Письмо отправлено успешно']);

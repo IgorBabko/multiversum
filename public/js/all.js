@@ -69,7 +69,21 @@
             var $input = $(input);
             var fieldName = $input.attr('name');
             var $errorBlock = $input.next('.error');
-            var $errorMsg = validErrors[fieldName] != null ? validErrors[fieldName][0] : '';
+            var $errorMsg; 
+
+            if (validErrors[fieldName] != null) {
+                switch(fieldName) {
+                    case 'email':
+                        $errorMsg = validErrors[fieldName][0];
+                        break;
+                    case 'password':
+                        $errorMsg = validErrors[fieldName][0].replace('password', 'пароль');
+                        break;
+                    case 'message':
+                        $errorMsg = validErrors[fieldName][0].replace('message', 'сообщение');
+                }
+            }
+
             $errorBlock.text($errorMsg);
         });
     };

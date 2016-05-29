@@ -17,7 +17,7 @@ class CreateVideosTable extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('type');
-            $table->string('url');
+            $table->text('url');
             $table->timestamp('published_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamps();
         });
