@@ -28,7 +28,7 @@ class HomeController extends Controller
         $previews = Video::where('type', 'preview')->get();
         $lectures = Video::where('type', 'lecture')->get();
 
-        return view('index', compact('videos', 'lectures'));
+        return view('index', compact('previews', 'lectures'));
     }
 
     /**
@@ -59,7 +59,7 @@ class HomeController extends Controller
             $m->to('i.i.babko@gmail.com', 'Тина Васильева')->subject('Сообщение');
         });
 
-        return response()->json(['message' => 'Письмо отправлено успешно']);
+        return response()->json(['notify' => 'Письмо отправлено успешно']);
     }
 
     public function profile(Request $request)
@@ -79,6 +79,6 @@ class HomeController extends Controller
 
         $user->save();
 
-        return response()->json(['message' => 'Профиль успешно обновлен']);
+        return response()->json(['notify' => 'Профиль успешно обновлен']);
     }
 }

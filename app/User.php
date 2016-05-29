@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'email', 'password', 'isPremium'
     ];
 
     /**
@@ -23,4 +23,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    /**
+     * Define if the user is made a payment for the course.
+     *
+     * @return bool
+     */
+    public function isPremium()
+    {
+        return $this->isPremium;
+    }
 }

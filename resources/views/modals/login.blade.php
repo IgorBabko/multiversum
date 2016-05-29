@@ -15,6 +15,7 @@
         <div class="modal-actions">
             <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
             <button class="remodal-confirm" type="submit">Войти</button>
+            <i class="fa fa-spinner fa-pulse fa-fw"></i>
         </div>
     </form>
     <br>

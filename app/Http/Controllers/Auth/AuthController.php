@@ -88,7 +88,7 @@ class AuthController extends Controller
 
         Auth::guard($this->getGuard())->login($this->create($request->all()));
 
-        return response()->json(['message' => 'Аккаунт успешно создан!'], 200);
+        return response()->json(['notify' => 'Аккаунт успешно создан!'], 200);
     }
 
     public function login(Request $request)
@@ -104,7 +104,7 @@ class AuthController extends Controller
             $this->fireLockoutEvent($request);
             
             $seconds = $this->secondsRemainingOnLockout($request);
-            return response()->json(['message' => 'Слишком много попыток, попробуйте через '.$seconds.' секунд.'], 422);
+            return response()->json(['notify' => 'Слишком много попыток, попробуйте через '.$seconds.' секунд.'], 422);
         }
 
         $credentials = $this->getCredentials($request);
@@ -118,7 +118,7 @@ class AuthController extends Controller
                 return $this->authenticated($request, Auth::guard($this->getGuard())->user());
             }
 
-            return response()->json(['message' => 'Вы успешно авторизованы!'], 200);
+            return response()->json(['notify' => 'Вы успешно авторизованы!'], 200);
         }
 
         // If the login attempt was unsuccessful we will increment the number of attempts
@@ -128,7 +128,7 @@ class AuthController extends Controller
             $this->incrementLoginAttempts($request);
         }
 
-        return response()->json(['message' => 'Неверные учетные данные'], 422);
+        return response()->json(['notify' => 'Неверные учетные данные'], 422);
     }
 
     /**

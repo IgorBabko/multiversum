@@ -4,12 +4,11 @@
     @include ('sections.main')
     @include ('sections.about')
     @include ('sections.previews')
-    @if (Auth::check())
+    @if ( Auth::user() && Auth::user()->isPremium() )
         @include ('sections.lectures')
     @else
-        @include ('sections.account')
+        @include ('sections.payment')
     @endif
     @include ('sections.email')
-    @include ('partials.footer')
     @include ('modals.index')
 @stop

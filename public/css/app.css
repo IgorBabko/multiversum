@@ -54,10 +54,23 @@ video {
 
 .video-heading {
   padding: 80px 0 0;
-  margin: 0; }
+  margin: 0;
+  color: #FF5757 !important;
+  font-weight: bold; }
+
+.main-heading {
+  color: #FF5757 !important;
+  font-weight: bold; }
+
+.comments__heading {
+  color: #0B4975; }
 
 body {
   font-family: 'Roboto Slab', serif; }
+
+.modal-actions i {
+  color: green;
+  visibility: hidden; }
 
 h2 {
   text-align: center;
@@ -132,8 +145,8 @@ h1 {
 .section {
   padding: 50px 30px; }
 
-.section-green {
-  background-color: green;
+.section-orange {
+  background-color: #E17200;
   color: white; }
 
 .section-blue {
@@ -156,6 +169,13 @@ h1 {
 
 .section-dark-blue {
   background-color: #0C2232; }
+
+.payment-button {
+  background-color: #56D056;
+  margin-right: 20px; }
+  .payment-button:hover {
+    background-color: #36BE36;
+    color: white; }
 
 .register-button {
   background-color: #56D056;
@@ -246,7 +266,8 @@ a {
   display: inline-block; }
 
 .logo-icon {
-  margin-right: 10px; }
+  margin-right: 10px;
+  color: #FFCB0D; }
 
 .social-list {
   list-style: none;

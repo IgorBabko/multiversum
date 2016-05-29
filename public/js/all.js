@@ -11,7 +11,7 @@
 
     var $window = $(window);
     var nav = $('nav');
-    var $navLinks = $('.nav-list-link');
+    var $navLinks = $('.nav-list-link:not(.normal)');
     var $htmlAndBody = $('html, body');
     var $sections = $('.section');
 
@@ -65,6 +65,7 @@
     }); 
 
     var updateValidErrors = function ($form, validErrors) { 
+        console.log(validErrors);
         $form.find('input, textarea').each(function (index, input) { 
             var $input = $(input);
             var fieldName = $input.attr('name');
@@ -82,9 +83,10 @@
                     case 'message':
                         $errorMsg = validErrors[fieldName][0].replace('message', 'сообщение');
                 }
+                $errorBlock.text($errorMsg);
+            } else {
+                $errorBlock.text('');
             }
-
-            $errorBlock.text($errorMsg);
         });
     };
 
@@ -93,6 +95,8 @@
 
         var $this = $(this);
 
+        $this.find('i').css('visibility', 'visible');
+
         var request = $.ajax({
             url: $this.attr('action'),
             method: 'POST',
@@ -100,23 +104,32 @@
         });
 
         request.done(function (response) {
+            $this.find('i').css('visibility', 'hidden');
             if ($this.closest('.remodal').length != 0) {
+                 console.log(response);
 //                $('.Nav__item--modal').remove();
 //                $('.Nav__list').append('<li class="Nav__item"><a href="/profile" class="Nav__link"><span>My profile</span></a></li>');
 //                $('.Nav__list').append('<li class="Nav__item"><a href="/logout" class="Nav__link"><span>Logout</span></a></li>');
-                ohSnap(response.message, {color: 'green'});
+                ohSnap(response.notify, {color: 'green'});
             } else {
-                updateValidErrors($this, {});
-                ohSnap(response.notifyMessage, {color: 'green'});
-                $this.next().html(response.message);
-                $('html, body').animate({scrollTop: $('.Block').position().top}, 'slow');
+                //updateValidErrors($this, {});
+                //console.log('second');
+                //ohSnap(response.notifyMessage, {color: 'green'});
+                //$this.next().html(response.notify);
+                //$('html, body').animate({scrollTop: $('.Block').position().top}, 'slow');
             }
             $this.find('.remodal-cancel').trigger('click');
         });
 
         request.fail(function (response) { 
-            ohSnap(response.responseText.message || 'пожалуйста, исправьте ошибки в форме', {color: 'red'});
-            updateValidErrors($this, JSON.parse(response.responseText));
+            $this.find('i').css('visibility', 'hidden');
+            var errors = JSON.parse(response.responseText); 
+            if (errors.notify) {
+                updateValidErrors($this, {});
+            } else {
+                updateValidErrors($this, errors);
+            }
+            ohSnap(errors.notify || 'пожалуйста, исправьте ошибки в форме', {color: 'red'});
         });
     });
 

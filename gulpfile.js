@@ -16,7 +16,7 @@ elixir(function(mix) {
         .copy('node_modules/remodal/dist/remodal.min.js', 'public/js')
         .copy('bower_components/oh-snap/ohsnap.js', 'public/js')
         .copy('node_modules/video.js/dist/video-js.min.css', 'public/css')
-        .copy('node_modules/video.js/dist/ie8/videojs-ie8.min.css', 'public/js')
+        .copy('node_modules/video.js/dist/ie8/videojs-ie8.min.js', 'public/js')
         .copy('node_modules/video.js/dist/video.min.js', 'public/js');
 
     mix
