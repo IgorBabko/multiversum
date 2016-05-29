@@ -123,8 +123,7 @@
     <div class="remodal" data-remodal-id="register">
         <button data-remodal-action="close" class="remodal-close"></button>
         <h1>Создать аккаунт</h1>
-        <form method="POST" action="{{ url('/register') }}" class="modal-form">
-            {{ csrf_field() }}
+        <form method="POST" action="/register" class="modal-form">
             <div class="form-group">
                 <label for="name">Email</label>
                 <input type="email" class="u-full-width" name="email" id="email">
@@ -152,8 +151,7 @@
     <div class="remodal" data-remodal-id="login">
         <button data-remodal-action="close" class="remodal-close"></button>
             <h1>Войти</h1>
-            <form method="POST" action="{{ url('/login') }}" class="modal-form">
-                {{ csrf_field() }}
+            <form method="POST" action="/login" class="modal-form">
 
                 <div class="form-group">
                     <label for="name">Email</label>
@@ -178,8 +176,7 @@
     <div class="remodal" data-remodal-id="email">
         <button data-remodal-action="close" class="remodal-close"></button>
         <h1>Написать письмо</h1>
-        <form method="POST" action="{{ url('/email') }}" class="modal-form">
-            {{ csrf_field() }}
+        <form method="POST" action="/email" class="modal-form">
             <div class="row">
                 <div class="six columns">
                     <label for="name">Имя</label>
@@ -196,7 +193,7 @@
             <textarea class="u-full-width" id="message"></textarea>
             <div class="modal-actions">
                 <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
-                <button class="remodal-confirm" type="submit">Регистрация</button>
+                <button class="remodal-confirm" type="submit">Отправить</button>
             </div>
         </form>
     </div>
@@ -204,8 +201,7 @@
     <div class="remodal" data-remodal-id="edit">
         <button data-remodal-action="close" class="remodal-close"></button>
         <h1>Редактировать профиль</h1>
-        <form method="POST" action="{{ url('/updateProfile') }}" class="modal-form">
-            {{ csrf_field() }}
+        <form method="POST" action="/updateProfile" class="modal-form">
             <div class="form-group">
                 <label for="name">Email</label>
                 <input type="email" class="u-full-width" name="email" id="email">
@@ -229,8 +225,6 @@
             </div>
         </form>
     </div>
-
-
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/remodal.min.js"></script>

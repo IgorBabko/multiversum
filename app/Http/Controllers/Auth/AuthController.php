@@ -80,9 +80,10 @@ class AuthController extends Controller
         $validator = $this->validator($request->all());
 
         if ($validator->fails()) {
-            $this->throwValidationException(
-                $request, $validator
-            );
+            return response()->json($validator->errors()->all(), 422);
+//            $this->throwValidationException(
+//                $request, $validator
+//            );
         }
 
         Auth::guard($this->getGuard())->login($this->create($request->all()));

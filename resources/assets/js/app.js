@@ -66,11 +66,11 @@
 
     var updateValidErrors = function ($form, validErrors) { 
         $form.find('input').each(function (index, input) { 
-            console.log('mke');
-            console.log(validErrors);
             var $input = $(input);
+            console.log($(this));
             var fieldName = $input.attr('name');
-            var $errorBlock = $input.next('.error');
+            var $errorBlock = $input.next();
+            //console.log($errorBlock);
             var $errorMsg = validErrors[fieldName] == true ? validErrors[fieldName][0] : '';
             $errorBlock.text($errorMsg);
         });
@@ -104,7 +104,7 @@
         });
 
         request.fail(function (response) { 
-            console.log('error error error');
+            console.log(response);
             ohSnap(response.responseJSON.message || 'Пожалуйста, исправьте ошибки в форме', {color: 'red'});
             updateValidErrors($this, response.responseJSON);
         });
@@ -115,8 +115,5 @@
     if (flashMessage != null) { 
         ohSnap(flashMessage, {color: 'green'});
     }
-
-    ohSnap('Пожалуйста, исправьте ошибки в форме', {color: 'red'});
-    ohSnap('Пожалуйста, исправьте ошибки в форме', {color: 'green'});
 
 })(jQuery);
