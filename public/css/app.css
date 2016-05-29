@@ -39,7 +39,6 @@ button {
 
 .error {
   color: red;
-  margin-top: 5px;
   display: block;
   font-size: 16px;
   text-align: right; }
@@ -221,8 +220,15 @@ a {
   display: inline-block;
   margin: 0 10px; }
 
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 10px; }
+
 .modal-actions {
-  text-align: right; }
+  text-align: right;
+  margin-top: 10px; }
 
 .remodal-cancel {
   margin-right: 10px; }

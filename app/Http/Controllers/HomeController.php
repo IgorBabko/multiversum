@@ -27,6 +27,16 @@ class HomeController extends Controller
         return view('layout');
     }
 
+    public function sendEmail(Request $request)
+    {
+        \Mail::send('emails.contact', ['text' => $request->message], function ($m) use ($request) {
+            $m->from($request->email, $request->name);
+            $m->to('portaciya@gmail.com', 'Тина Васильева')->subject('Сообщение');
+        });
+
+        return response()->json(['message' => 'Письмо отправлено успешно']);
+    }
+
     public function updateProfile(Request $request)
     {
         $validator = \Validator::make($request->all(), [

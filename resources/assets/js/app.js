@@ -65,13 +65,14 @@
     }); 
 
     var updateValidErrors = function ($form, validErrors) { 
+        console.log(validErrors);
         $form.find('input').each(function (index, input) { 
             var $input = $(input);
-            console.log($(this));
             var fieldName = $input.attr('name');
-            var $errorBlock = $input.next();
-            //console.log($errorBlock);
-            var $errorMsg = validErrors[fieldName] == true ? validErrors[fieldName][0] : '';
+            console.log(fieldName);
+            var $errorBlock = $input.next('.error');
+            console.log($errorBlock);
+            var $errorMsg = 'niko';//validErrors[fieldName][0] == true ? validErrors[fieldName][0] : '';
             $errorBlock.text($errorMsg);
         });
     };
@@ -104,9 +105,8 @@
         });
 
         request.fail(function (response) { 
-            console.log(response);
-            ohSnap(response.responseJSON.message || 'Пожалуйста, исправьте ошибки в форме', {color: 'red'});
-            updateValidErrors($this, response.responseJSON);
+            ohSnap(response.responseText.message || 'пожалуйста, исправьте ошибки в форме', {color: 'red'});
+            updateValidErrors($this, JSON.parse(response.responseText));
         });
     });
 
