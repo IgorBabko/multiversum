@@ -123,19 +123,22 @@
         <h1>Создать аккаунт</h1>
         <form method="POST" action="{{ url('/register') }}" class="modal-form">
             {{ csrf_field() }}
-            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+            <div class="form-group">
                 <label for="name">Email</label>
                 <input type="email" class="u-full-width" name="email" id="email">
+                <span class="error"></span>
             </div>
 
-            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                <label for="password">пароль</label>
+            <div class="form-group">
+                <label for="password">Пароль</label>
                 <input type="password" class="u-full-width" name="password" id="password">
+                <span class="error"></span>
             </div>
 
-            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+            <div class="form-group">
                 <label for="password_confirmation">Подтвердить пароль</label>
-                <input type="password" class="u-full-width" name="password-confirmation" id="password_confirmation">
+                <input type="password" class="u-full-width" name="password_confirmation" id="password_confirmation">
+                <span class="error"></span>
             </div>
             <div class="modal-actions">
                 <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
@@ -153,11 +156,13 @@
             <div class="row">
                 <div class="six columns">
                     <label for="name">Имя</label>
-                    <input class="u-full-width" type="text" id="name">
+                    <input class="u-full-width" type="text" name="name" id="name">
+                    <span class="error"></span>
                 </div>
                 <div class="six columns">
                     <label for="email">Почта</label>
-                    <input class="u-full-width" type="email" id="email">
+                    <input class="u-full-width" type="email" name="email" id="email">
+                    <span class="error"></span>
                 </div>
             </div>
             <label for="message">Сообщение</label>
@@ -176,14 +181,16 @@
             <form method="POST" action="{{ url('/login') }}" class="modal-form">
                 {{ csrf_field() }}
 
-                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                <div class="form-group">
                     <label for="name">Email</label>
                     <input type="email" class="u-full-width" name="email" id="email">
+                    <span class="error"></span>
                 </div>
 
-                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                <div class="form-group">
                     <label for="password">Пароль</label>
                     <input type="password" class="u-full-width" name="password" id="password">
+                    <span class="error"></span>
                 </div>
 
                 <div class="modal-actions">
@@ -193,6 +200,7 @@
             </form>
             <br>
     </div>
+    @include ('partials.notifications')
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/parallax.min.js"></script>

@@ -66,6 +66,8 @@
 
     var updateValidErrors = function ($form, validErrors) { 
         $form.find('input').each(function (index, input) { 
+            console.log('mke');
+            console.log(validErrors);
             var $input = $(input);
             var fieldName = $input.attr('name');
             var $errorBlock = $input.next('.error');
@@ -84,7 +86,7 @@
             method: 'POST',
             data: $this.serialize()
         });
-        $this.clsest('.remodal').trigger('closing');
+//        $this.find('.remodal-cancel').trigger('click');
 
         request.done(function (response) {
             if ($this.closest('.remodal').length != 0) {
@@ -102,9 +104,12 @@
         });
 
         request.fail(function (response) { 
+            console.log('error error error');
             ohSnap(response.responseJSON.message || 'Пожалуйста, исправьте ошибки в форме', {color: 'red'});
             updateValidErrors($this, response.responseJSON);
         });
     });
+
+    ohSnap('Пожалуйста, исправьте ошибки в форме', {color: 'red'});
 
 })(jQuery);
