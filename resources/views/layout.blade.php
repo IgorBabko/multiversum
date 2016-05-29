@@ -190,7 +190,8 @@
                 </div>
             </div>
             <label for="message">Сообщение</label>
-            <textarea class="u-full-width" id="message"></textarea>
+            <textarea class="u-full-width" name="message" id="message"></textarea>
+            <span class="error"></span>
             <div class="modal-actions">
                 <button data-remodal-action="cancel" class="remodal-cancel">Назад</button>
                 <button class="remodal-confirm" type="submit">Отправить</button>

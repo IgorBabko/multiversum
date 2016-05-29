@@ -66,7 +66,7 @@
 
     var updateValidErrors = function ($form, validErrors) { 
         console.log(validErrors);
-        $form.find('input').each(function (index, input) { 
+        $form.find('input, textarea').each(function (index, input) { 
             var $input = $(input);
             var fieldName = $input.attr('name');
             console.log(fieldName);
