@@ -64,10 +64,6 @@
         }
     }); 
 
-    $(document).on('confirmation', '.remodal', function () {
-        $(this).find("form").submit();
-    });
-
     var updateValidErrors = function ($form, validErrors) { 
         $form.find('input').each(function (index, input) { 
             var $input = $(input);
@@ -80,7 +76,6 @@
 
     $('.modal-form').submit(function (e) { 
         e.preventDefault();
-        console.log('inikob bellic');
 
         var $this = $(this);
 
@@ -89,6 +84,7 @@
             method: 'POST',
             data: $this.serialize()
         });
+        $this.clsest('.remodal').trigger('closing');
 
         request.done(function (response) {
             if ($this.closest('.remodal').length != 0) {

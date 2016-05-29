@@ -9,6 +9,18 @@ h2 {
 .email-heading {
   color: #575757; }
 
+button {
+  color: white; }
+  button:hover, button:active, button:focus {
+    color: white; }
+
+.error {
+  color: red;
+  margin-top: 5px;
+  display: block;
+  font-size: 16px;
+  text-align: right; }
+
 h3 {
   text-align: left;
   font-size: 30px;
