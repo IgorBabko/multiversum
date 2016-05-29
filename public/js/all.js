@@ -31,7 +31,6 @@
     });
 
     $window.on('mousewheel scroll', function() {
-        console.log('ni');
         var aboveBlocks = $sections.map(function(i, section) {
             if (section.getBoundingClientRect().top <= $window.height() / 3) {
                 return section;
@@ -64,19 +63,21 @@
             nav.addClass('compact');
         }
     }); 
+    console.log ('mik');
 
     var updateValidErrors = function ($form, validErrors) { 
         $form.find('input').each(function (index, input) { 
             var $input = $(input);
             var fieldName = $input.attr('name');
-            var $errorBlock = $input.next('.Error');
+            var $errorBlock = $input.next('.error');
             var $errorMsg = validErrors[fieldName] == true ? validErrors[fieldName][0] : '';
             $errorBlock.text($errorMsg);
         });
     };
 
-    $('.form').submit(function (e) { 
+    $('.modal-form').submit(function (e) { 
         e.preventDefault();
+        console.log('inikob bellic');
 
         var $this = $(this);
 
@@ -87,12 +88,12 @@
         });
 
         request.done(function (response) {
-            if ($this.closest('.Modal').length != 0) {
+            if ($this.closest('.remodal').length != 0) {
                 $('.Nav__item--modal').remove();
                 $('.Nav__list').append('<li class="Nav__item"><a href="/profile" class="Nav__link"><span>My profile</span></a></li>');
                 $('.Nav__list').append('<li class="Nav__item"><a href="/logout" class="Nav__link"><span>Logout</span></a></li>');
                 ohSnap(response.message, {color: 'green'});
-                $('.Modal__overlay').trigger('click');
+             //   $('.remodal-cancel').trigger('click');
             } else {
                 updateValidErrors($this, {});
                 ohSnap(response.notifyMessage, {color: 'green'});
@@ -102,10 +103,10 @@
         });
 
         request.fail(function (response) { 
-            ohSnap(response.responseJSON.message || 'Please, fix valid errors', {color: 'red'});
+            ohSnap(response.responseJSON.message || 'Пожалуйста, исправьте ошибки в форме', {color: 'red'});
             updateValidErrors($this, response.responseJSON);
         });
-    }};
+    });
 
 })(jQuery);
 
