@@ -14,7 +14,7 @@ elixir(function(mix) {
         .copy('node_modules/remodal/dist/remodal.css', 'public/css')
         .copy('node_modules/remodal/dist/remodal-default-theme.css', 'public/css')
         .copy('node_modules/remodal/dist/remodal.min.js', 'public/js')
-        .copy('bower_components/oh-snap/ohsnap.min.js', 'public/js');
+        .copy('bower_components/oh-snap/ohsnap.js', 'public/js');
 
     mix
         .sass('app.sass')

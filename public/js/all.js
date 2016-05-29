@@ -110,7 +110,14 @@
         });
     });
 
+    //show flash message in alert
+    var flashMessage = $('#ohsnap').data('notify')
+    if (flashMessage != null) { 
+        ohSnap(flashMessage, {color: 'green'});
+    }
+
     ohSnap('Пожалуйста, исправьте ошибки в форме', {color: 'red'});
+    ohSnap('Пожалуйста, исправьте ошибки в форме', {color: 'green'});
 
 })(jQuery);
 

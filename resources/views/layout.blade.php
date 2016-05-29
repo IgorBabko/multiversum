@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    @include ('partials.notifications')
     <nav>
         <div class="container">
             <div class="row nav-inner">
@@ -200,12 +201,10 @@
             </form>
             <br>
     </div>
-    @include ('partials.notifications')
 
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/parallax.min.js"></script>
     <script src="/js/remodal.min.js"></script>
-    <script src="/js/ohsnap.min.js"></script>
+    <script src="/js/ohsnap.js"></script>
     <script src="/js/all.js"></script>
 </body>
 

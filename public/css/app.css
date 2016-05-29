@@ -1,3 +1,26 @@
+#ohsnap {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  margin: 0;
+  z-index: 10000000001; }
+
+.alert {
+  text-align: right;
+  padding: 15px;
+  margin: 0 0 5px 0;
+  border-radius: 0;
+  float: right;
+  clear: right;
+  color: white;
+  font-size: 14px; }
+
+.alert-red {
+  background-color: red; }
+
+.alert-green {
+  background-color: green; }
+
 body {
   font-family: 'Roboto Slab', serif; }
 
@@ -274,28 +297,5 @@ a {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     text-align: center; } }
-
-#ohsnap {
-  position: fixed;
-  bottom: 5px;
-  right: 5px;
-  margin: 0;
-  z-index: 100001; }
-
-.alert {
-  text-align: right;
-  padding: 15px;
-  margin: 0 0 5px 0;
-  border-radius: 0;
-  float: right;
-  clear: right;
-  color: white;
-  font-size: 14px; }
-
-.alert-red {
-  background-color: red; }
-
-.alert-green {
-  background-color: green; }
 
 /*# sourceMappingURL=app.css.map */
