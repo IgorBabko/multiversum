@@ -262,6 +262,8 @@ fieldset {
     border-color: white;
     color: #0C2232;
     background: white; }
+  .social-list-link i {
+    padding-top: 12px; }
 
 .copyright {
   padding: 10px 0 20px;

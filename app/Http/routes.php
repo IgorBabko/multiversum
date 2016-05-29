@@ -1,5 +1,7 @@
 <?php
 
+//echo 'nikob bllic' . \App::getLocale();
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
