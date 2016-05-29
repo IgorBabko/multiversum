@@ -84,21 +84,20 @@
             method: 'POST',
             data: $this.serialize()
         });
-//        $this.find('.remodal-cancel').trigger('click');
 
         request.done(function (response) {
             if ($this.closest('.remodal').length != 0) {
-                $('.Nav__item--modal').remove();
-                $('.Nav__list').append('<li class="Nav__item"><a href="/profile" class="Nav__link"><span>My profile</span></a></li>');
-                $('.Nav__list').append('<li class="Nav__item"><a href="/logout" class="Nav__link"><span>Logout</span></a></li>');
+//                $('.Nav__item--modal').remove();
+//                $('.Nav__list').append('<li class="Nav__item"><a href="/profile" class="Nav__link"><span>My profile</span></a></li>');
+//                $('.Nav__list').append('<li class="Nav__item"><a href="/logout" class="Nav__link"><span>Logout</span></a></li>');
                 ohSnap(response.message, {color: 'green'});
-             //   $('.remodal-cancel').trigger('click');
             } else {
                 updateValidErrors($this, {});
                 ohSnap(response.notifyMessage, {color: 'green'});
                 $this.next().html(response.message);
                 $('html, body').animate({scrollTop: $('.Block').position().top}, 'slow');
             }
+            $this.find('.remodal-cancel').trigger('click');
         });
 
         request.fail(function (response) { 
