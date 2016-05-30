@@ -61,11 +61,12 @@ video {
   background: yellow; }
 
 .video-js {
-  margin: 20px auto 50px; }
+  margin: 30px auto 0; }
 
 .video-heading {
   padding: 80px 0 0;
   margin: 0;
+  margin-top: 50px;
   color: #FF5757 !important;
   font-weight: bold; }
 
@@ -212,7 +213,7 @@ h1 {
     color: white; }
 
 .main-button {
-  margin: 0;
+  margin: 50px 0 0 0;
   background-color: #FF5757; }
   .main-button:hover {
     background-color: #FF3333;
