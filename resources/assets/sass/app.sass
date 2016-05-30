@@ -2,13 +2,20 @@
     margin-top: 50px 
 
 .Video
-    margin: 30px 0 10px 0
+    margin: 30px 0 50px 0
 
 .Video__heading
     margin: 0 0 10px 0
+    color: white
+    //yellow
+
+.Video__description
+    font-size: 18px 
+    font-weight: normal
 
 .Video__button
-    margin: 10px 0
+    float: right
+    margin: 10px 0 30px
     background-color: #4CAF50
     border: none
     color: white
@@ -18,6 +25,16 @@
     &:focus
         background-color: #1E8C22
         color: white
+
+    &--lecture
+        background-color: #8400D6
+
+        &:hover,
+        &:active,
+        &:focus
+            background-color: #5B0691
+            color: white
+
 
 #ohsnap
     position: fixed
@@ -64,6 +81,8 @@ video
 .main-heading
     color: #FF5757 !important
     font-weight: bold
+
+.lectures-button
 
 .comments__heading
     color: #0B4975
@@ -152,11 +171,14 @@ h1
     padding: 50px 30px 
 
 .section-orange
-    background-color: #E17200
+    background-color: #FF5200
     color: white
 
+    .Video__heading
+        color: white
+
 .section-blue
-    background-color: #0597FF
+    background-color: #0597ff
     color: white
 
 .section-red

@@ -2,19 +2,30 @@
   margin-top: 50px; }
 
 .Video {
-  margin: 30px 0 10px 0; }
+  margin: 30px 0 50px 0; }
 
 .Video__heading {
-  margin: 0 0 10px 0; }
+  margin: 0 0 10px 0;
+  color: white; }
+
+.Video__description {
+  font-size: 18px;
+  font-weight: normal; }
 
 .Video__button {
-  margin: 10px 0;
+  float: right;
+  margin: 10px 0 30px;
   background-color: #4CAF50;
   border: none;
   color: white; }
   .Video__button:hover, .Video__button:active, .Video__button:focus {
     background-color: #1E8C22;
     color: white; }
+  .Video__button--lecture {
+    background-color: #8400D6; }
+    .Video__button--lecture:hover, .Video__button--lecture:active, .Video__button--lecture:focus {
+      background-color: #5B0691;
+      color: white; }
 
 #ohsnap {
   position: fixed;
@@ -146,11 +157,13 @@ h1 {
   padding: 50px 30px; }
 
 .section-orange {
-  background-color: #E17200;
+  background-color: #FF5200;
   color: white; }
+  .section-orange .Video__heading {
+    color: white; }
 
 .section-blue {
-  background-color: #0597FF;
+  background-color: #0597ff;
   color: white; }
 
 .section-red {

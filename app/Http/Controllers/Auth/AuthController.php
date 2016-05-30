@@ -88,7 +88,8 @@ class AuthController extends Controller
 
         Auth::guard($this->getGuard())->login($this->create($request->all()));
 
-        return response()->json(['notify' => 'Аккаунт успешно создан!'], 200);
+        //return redirect('/')->with('notify' => 'Аккаунт успешно создан!');
+        $request->session()->flash('notify', 'Аккаунт успешно создан!');
     }
 
     public function login(Request $request)
@@ -118,7 +119,11 @@ class AuthController extends Controller
                 return $this->authenticated($request, Auth::guard($this->getGuard())->user());
             }
 
-            return response()->json(['notify' => 'Вы успешно авторизованы!'], 200);
+            //return redirect('/')->with('notify' => 'Вы успешно авторизованы!');
+
+            $request->session()->flash('notify', 'Вы успешно авторизованы');
+            return;
+            //return response()->json(['notify' => 'Вы успешно авторизованы!'], 200);
         }
 
         // If the login attempt was unsuccessful we will increment the number of attempts
@@ -128,7 +133,7 @@ class AuthController extends Controller
             $this->incrementLoginAttempts($request);
         }
 
-        return response()->json(['notify' => 'Неверные учетные данные'], 422);
+        return response()->json(['notify' => 'niko Неверные учетные данные'], 422);
     }
 
     /**
