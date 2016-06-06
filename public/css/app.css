@@ -167,8 +167,19 @@ h1 {
   background-color: #0597ff;
   color: white; }
 
+.book-icon {
+  width: 300px; }
+
+.books-block {
+  margin-top: 50px; }
+
 .section-red {
   background: #F14040;
+  font-size: 26px;
+  color: white; }
+
+.section-brown {
+  background: #723737;
   font-size: 26px;
   color: white; }
 
@@ -217,6 +228,16 @@ h1 {
   background-color: #FF5757; }
   .main-button:hover {
     background-color: #FF3333;
+    color: white; }
+
+.download-button {
+  margin-bottom: 50px;
+  font-size: 16px;
+  width: 200px !important;
+  height: 35px !important;
+  background-color: #0BC10B; }
+  .download-button:hover {
+    background-color: #0aa90a;
     color: white; }
 
 .account-buttons {

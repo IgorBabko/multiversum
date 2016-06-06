@@ -120,6 +120,7 @@
             if ($this.attr('action') != '/email') {
                 document.location = '/';
             } else {
+                console.log('niko');
                 ohSnap(response.notify, {color: 'green'});
                 $this.find('.remodal-cancel').trigger('click');
             }

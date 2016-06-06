@@ -9,6 +9,7 @@
     @else
         @include ('sections.payment')
     @endif
+    @include ('sections.books')
     @include ('sections.email')
     @include ('modals.index')
 @stop

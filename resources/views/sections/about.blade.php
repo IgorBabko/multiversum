@@ -2,15 +2,10 @@
     <div class="container">
         <h2>О курсе</h2>
         <div class="description centered">
-            <p>new york is a state in the northeastern united states and is the 27th-most
-                extensive, fourth-most populous, and seventh-most densely populated
-                u.s. state. new york is bordered by new jersey and pennsylvania
-                to the south and connecticut, massachusetts, and vermont to the
-                east. the state has a maritime border in the atlantic ocean with
-                rhode island, east of long island, as well as an international
-                border with the canadian provinces of quebec to the north and ontario
-                to the west and north. the state of new york, with an estimated
-                19.</p>
+            <p>
+                
+                
+            </p>
         </div>
         <div class="row centered">
             <div class="six columns">
