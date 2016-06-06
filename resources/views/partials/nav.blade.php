@@ -16,6 +16,8 @@
                     @if ( ! Auth::check() )
                         <li class="nav-list-item"><a href="#" data-section-id="payment-section" class="nav-list-link">Оплата</a>
                         </li>
+                        <li class="nav-list-item"><a href="#" data-section-id="books-section" class="nav-list-link">Книги</a>
+                        </li>
                         <li class="nav-list-item"><a href="#" data-section-id="email-section" class="nav-list-link">Почта</a>
                         </li>
                     @else
@@ -23,6 +25,8 @@
                             <li class="nav-list-item"><a href="#" data-section-id="payment-section" class="nav-list-link">Оплата</a>
                             </li>
                         @endif
+                        <li class="nav-list-item"><a href="#" data-section-id="books-section" class="nav-list-link">Книги</a>
+                        </li>
                         <li class="nav-list-item"><a href="#" data-section-id="email-section" class="nav-list-link">Почта</a>
                         </li>
                         <li class="nav-list-item"><a href="/logout" class="nav-list-link normal">Выйти</a></li>
