@@ -13,13 +13,13 @@
         @else
             <div class="row">Для получения полного курса внесите оплату в размере <span class="price">10 грн<span></div>
             <div class="row account-buttons">
-                <form method="POST" accept-charset="utf-8" action="https://www.liqpay.com/api/3/checkout">
-                    <input type="hidden" name="data" value="eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXkiLCJwdWJsaWNfa2V5IjoiaTMwNzcxOTUzNDA0IiwiYW1vdW50IjoiMTAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0JrRg9GA0YEg0LvQtdC60YbQuNC5IiwidHlwZSI6ImJ1eSIsInNlcnZlcl91cmwiOiJodHRwOi8vbXVsdGl2ZXJzdW0ubWwiLCJsYW5ndWFnZSI6InJ1In0=" />
-                    <input type="hidden" name="signature" value="1dO4H/6f0D17m7DlPQFP4xmvNbE=" />
-                    <input type="hidden" name="public_key" value="i20047806537" />
-                    <input type="hidden" name="result_url" value="http://multiversum.ml/payment" />
-                    <input type="image" src="//static.liqpay.com/buttons/p1ru.radius.png" name="btn_text" />
-                </form>
+            <form method="POST" accept-charset="utf-8" action="https://www.liqpay.com/api/3/checkout">
+                <input type="hidden" name="data" value="eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXkiLCJwdWJsaWNfa2V5IjoiaTIwMDQ3ODA2NTM3IiwiYW1vdW50IjoiMTAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0JLQuNC00LXQviDQutGD0YDRgSBcIk11bHRpdmVyc3VtXCIiLCJ0eXBlIjoiYnV5Iiwic2VydmVyX3VybCI6Imh0dHA6Ly9tdWx0aXZlcnN1bS5tbCIsImxhbmd1YWdlIjoicnUifQ==" />
+                <input type="hidden" name="signature" value="BQHknCP51DyuL+4tp7flId3xiRo=" />
+                <input type="hidden" name="public_key" value="i20047806537" />
+                <input type="hidden" name="result_url" value="http://multiversum.ml/payment" />
+                <input type="image" src="//static.liqpay.com/buttons/p1ru.radius.png" name="btn_text" />
+            </form>
                 <!--<a class="payment-button link-button" href="/payment">Оплатить</a>-->
             </div>
         @endif
