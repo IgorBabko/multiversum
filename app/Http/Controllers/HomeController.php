@@ -54,6 +54,7 @@ class HomeController extends Controller
         if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
         }
+
         \Mail::send('emails.feedback', ['text' => $request->message], function ($m) use ($request) {
             $m->from($request->email, $request->name);
             $m->to('i.i.babko@gmail.com', 'Тина Васильева')->subject('Сообщение');
@@ -80,5 +81,19 @@ class HomeController extends Controller
         $user->save();
 
         return response()->json(['notify' => 'Профиль успешно обновлен']);
+    }
+
+    public function payment(Request $request)
+    {
+        echo $request->input('public_key');
+        echo 'mike!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!';
+
+        $user = \Auth::user();
+
+        $user->isPremium = true;
+
+        $user->save();
+
+        return redirect('/');
     }
 }
