@@ -86,6 +86,6 @@ class HomeController extends Controller
 
     public function payment(Request $request)
     {
-        User::where('email', $request->input('order_id'))->update(['isPremium' => true]);
+        User::where('email', 'k@gmail.com')->update(['isPremium' => true]);
     }
 }
