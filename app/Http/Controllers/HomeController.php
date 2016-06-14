@@ -5,6 +5,7 @@ namespace Multiversum\Http\Controllers;
 use Multiversum\Http\Requests;
 use Illuminate\Http\Request;
 use Multiversum\Video;
+use Multiversum\User;
 
 class HomeController extends Controller
 {
@@ -85,15 +86,6 @@ class HomeController extends Controller
 
     public function payment(Request $request)
     {
-        echo $request->input('public_key');
-        echo 'mike!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!';
-
-        $user = \Auth::user();
-
-        $user->isPremium = true;
-
-        $user->save();
-
-        return redirect('/');
+        User::where('email', $request->input('order_id'))->update(['isPremium' => true]);
     }
 }

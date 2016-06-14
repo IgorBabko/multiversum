@@ -22,4 +22,5 @@ Route::post('/profile', 'HomeController@profile');
 Route::post('/email', 'HomeController@email');
 Route::get('/video/{id}', 'HomeController@video');
 
+Route::get('/payment', 'HomeController@payment');
 Route::post('/payment', 'HomeController@payment');

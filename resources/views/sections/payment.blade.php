@@ -17,7 +17,9 @@
                 <input type="hidden" name="data" value="eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXkiLCJwdWJsaWNfa2V5IjoiaTIwMDQ3ODA2NTM3IiwiYW1vdW50IjoiMTAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0JLQuNC00LXQviDQutGD0YDRgSBcIk11bHRpdmVyc3VtXCIiLCJ0eXBlIjoiYnV5Iiwic2VydmVyX3VybCI6Imh0dHA6Ly9tdWx0aXZlcnN1bS5tbCIsImxhbmd1YWdlIjoicnUifQ==" />
                 <input type="hidden" name="signature" value="BQHknCP51DyuL+4tp7flId3xiRo=" />
                 <input type="hidden" name="public_key" value="i20047806537" />
-                <input type="hidden" name="result_url" value="http://multiversum.ml/payment" />
+                <input type="hidden" name="order_id" value="{{ Auth::user()->email }}" />
+                <input type="hidden" name="server_url" value="http://multiversum.ml/payment" />
+                <input type="hidden" name="result_url" value="http://multiversum.ml" />
                 <input type="image" src="//static.liqpay.com/buttons/p1ru.radius.png" name="btn_text" />
             </form>
                 <!--<a class="payment-button link-button" href="/payment">Оплатить</a>-->
