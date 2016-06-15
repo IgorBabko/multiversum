@@ -6,6 +6,7 @@ use Multiversum\Http\Requests;
 use Illuminate\Http\Request;
 use Multiversum\Video;
 use Multiversum\User;
+use Log;
 
 class HomeController extends Controller
 {
@@ -86,6 +87,13 @@ class HomeController extends Controller
 
     public function payment(Request $request)
     {
+        $data = base64_decode($request->data);
+        $dataObject = json_decode($data, true);
+
+        Log::info($request);
+        Log::info($data);
+        Log::info($dataObject);
+
         User::where('email', 'k@gmail.com')->update(['isPremium' => true]);
     }
 }
