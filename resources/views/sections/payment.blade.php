@@ -1,32 +1,28 @@
 @if ( Auth::user() && !Auth::user()->isPremium() || !Auth::user() )
-<form action="/payment" method="POST">
-    <input type="hidden" name="name" value="igor babko">
-    <button type="submit">submit</button>
-</form>
 <div class="section section-red centered" id="payment-section">
     <div class="container">
         <h2>Оплата</h2>
         @if ( !Auth::user() )
-        <div class="row">Для получения полного доступа к курсу пройдите простую регистрацию ниже
+        <div class="row">
+            Для получения полного доступа к курсу пройдите простую регистрацию ниже
             и оплатите курс всего за <span class="price">10 грн<span>
-            </div>
-            <div class="row account-buttons">
-                <a class="register-button link-button" href="#register">Регистрация</a>
-                <a class="login-button link-button" href="#login">Войти</a>
-            </div>
+        </div>
+        <div class="row
+            <a class="register-button link-button" href="#register">Регистрация</a>
+            <a class="login-button link-button" href="#login">Войти</a>
+        </div>
         @else
-            <div class="row">Для получения полного курса внесите оплату в размере <span class="price">10 грн<span></div>
-            <div class="row account-buttons">
+        <div class="row">
+            Для получения полного курса внесите оплату в размере <span class="price">10 грн<span>
+        </div>
+        <div class="row account-buttons">
+            {{ $unique_id = uniqid('php_'); }}
             <form method="POST" accept-charset="utf-8" action="https://www.liqpay.com/api/3/checkout">
-                <input type="hidden" name="data" value="eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXkiLCJwdWJsaWNfa2V5IjoiaTIwMDQ3ODA2NTM3IiwiYW1vdW50IjoiMiIsImN1cnJlbmN5IjoiVUFIIiwiZGVzY3JpcHRpb24iOiLQmtGD0YDRgSIsInR5cGUiOiJidXkiLCJzZXJ2ZXJfdXJsIjoiaHR0cDovL211bHRpdmVyc3VtLm1sL3BheW1lbnQiLCJsYW5ndWFnZSI6InJ1In0=" />
-                <input type="hidden" name="signature" value="5lrH7GWW/bGa4u1VVhPr06/5QI4=" />
-                <input type="hidden" name="description" value="игорь134234234324324324234" />
-                <input type="hidden" name="server_url" value="http://multiversum.ml/payment" />
-                <input type="hidden" name="result_url" value="http://multiversum.ml/payment" />
+                <input type="hidden" name="data" value='{{ base64_encode("{\"result_url\": \"http://multiversum.ml", \"server_url\": \"http://multiversum.ml/payment\", \"order_id\": \"" . $unique_id . "\", \"description\": \"" . Auth::user()->email . "\", \"amount\": 2, \"currency\": \"UAH\", \"action\": \"pay\", \"public_key\": \"i20047806537\"}") }}' />
+                <input type="hidden" name="signature" value='{{ base64_encode( sha1( env('LIQPAY_PRIVATE_KEY') . base64_encode("{\"result_url\": \"http://multiversum.ml", \"server_url\": \"http://multiversum.ml/payment\", \"order_id\": \"" . $unique_id . "\", \"description\": \"" . Auth::user()->email . "\", \"amount\": 2, \"currency\": \"UAH\", \"action\": \"pay\", \"public_key\": \"i20047806537\"}") . env('LIQPAY_PRIVATE_KEY'), 1 ) ) }}' />
                 <input type="image" src="//static.liqpay.com/buttons/p1ru.radius.png" name="btn_text" />
             </form>
-                <!--<a class="payment-button link-button" href="/payment">Оплатить</a>-->
-            </div>
+        </div>
         @endif
     </div>
 </div>
