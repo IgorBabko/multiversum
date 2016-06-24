@@ -5,7 +5,7 @@
         @if ( !Auth::user() )
         <div class="row">
             Для получения полного доступа к курсу пройдите простую регистрацию ниже
-            и оплатите курс всего за <span class="price">10 грн<span>
+            и оплатите курс всего за <span class="price">25 грн<span>
         </div>
         <div class="row" style="margin-top: 30px">
             <a class="register-button link-button" href="#register">Регистрация</a>
@@ -13,7 +13,7 @@
         </div>
         @else
         <div class="row">
-            Для получения полного курса внесите оплату в размере <span class="price">10 грн<span>
+            Для получения полного курса внесите оплату в размере <span class="price">25 грн<span>
         </div>
         <div class="row account-buttons">
             <?php $unique_id = uniqid('php_'); ?> 
