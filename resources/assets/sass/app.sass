@@ -62,6 +62,8 @@ h5
 .alert-red
     background-color: red
 
+.video-js
+
 .alert-green
     background-color: green 
 
@@ -75,9 +77,6 @@ video
     margin: 0
     background: yellow
 
-.video-js
-    margin: 30px auto 0
-
 .video-heading
     padding: 80px 0 0 
     margin: 0
@@ -88,6 +87,7 @@ video
 .main-heading
     color: #ff5757 
     font-weight: bold
+    margin-bottom: 50px
 
 .lectures-button
 
@@ -178,10 +178,13 @@ h1
 .section
     padding: 50px 30px 
 
+main
+    padding: 100px 0 50px
+    min-height: calc(100vh - 150px)
+
 .section-main
     padding: 0
     background: #2d7198
-    height: 100vh
 
 .section-orange
     background-color: #FF5200
@@ -416,14 +419,6 @@ fieldset
     color: silver
 
 @media screen and (min-width: 850px)
-    main
-        display: flex
-        justify-content: center
-        align-items: center
-        min-height: 100vh
-        flex-wrap: wrap
-        text-align: center
-
     .nav-list
         float: right
 
