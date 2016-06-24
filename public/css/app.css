@@ -4,13 +4,19 @@
 .Video {
   margin: 30px 0 50px 0; }
 
+h5 {
+  font-weight: bold; }
+
+.thumb {
+  width: 300px; }
+
 .Video__heading {
   margin: 0 0 10px 0;
   color: white; }
 
 .Video__description {
-  font-size: 18px;
-  font-weight: normal; }
+  font-size: 16px;
+  font-weight: 300; }
 
 .Video__button {
   float: right;
@@ -71,13 +77,14 @@ video {
   font-weight: bold; }
 
 .main-heading {
-  color: #FF5757 !important;
+  color: beige !important;
   font-weight: bold; }
 
 .comments__heading {
   color: #0B4975; }
 
 body {
+  background: #2d7198;
   font-family: 'Roboto Slab', serif; }
 
 .modal-actions i {
@@ -157,6 +164,9 @@ h1 {
 .section {
   padding: 50px 30px; }
 
+.section-main {
+  height: 100vh; }
+
 .section-orange {
   background-color: #FF5200;
   color: white; }
@@ -164,8 +174,13 @@ h1 {
     color: white; }
 
 .section-blue {
-  background-color: #0597ff;
+  background-color: #505050;
   color: white; }
+  .section-blue .description {
+    font-weight: 300; }
+
+.section-email {
+  background: white; }
 
 .book-icon {
   width: 300px; }

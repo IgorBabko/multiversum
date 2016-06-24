@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container section-main">
     <main class="row section" style="padding-top: 20px" id="promo-section">
         <div>
             <div>
