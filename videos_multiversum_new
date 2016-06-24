@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.1
 -- Dumped by pg_dump version 9.5.2
 
--- Started on 2016-06-24 21:00:16 EEST
+-- Started on 2016-06-24 21:08:03 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -80,10 +80,10 @@ ALTER TABLE ONLY videos ALTER COLUMN id SET DEFAULT nextval('videos_id_seq'::reg
 --
 
 COPY videos (id, title, description, type, img, url, published_at, created_at, updated_at) FROM stdin;
-8	Заказ Земли людям. (ХХ век) - об освобождении от энергоресурсов.	\N	preview	\N	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%97%D0%B0%D0%BA%D0%B0%D0%B7+%D0%97%D0%B5%D0%BC%D0%BB%D0%B8++%D0%BB%D1%8E%D0%B4%D1%8F%D0%BC+(+%D0%A5%D0%A5+%D0%B2%D0%B5%D0%BA)-+%D0%BE%D0%B1+%D0%BE%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B8+%D0%BE%D1%82+%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D0%BE%D0%B2.mp4	2016-05-30 10:58:37	\N	\N
-11	Неполное познание информации - ложь?	\N	preview	\N	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%9D%D0%B5%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5+%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%B8-+%D0%BB%D0%BE%D0%B6%D1%8C.+%D0%90%D0%BD%D0%BE%D0%BD%D1%81.mp4	2016-05-30 11:01:07	\N	\N
+8	Заказ Земли людям. (ХХ век) - об освобождении от энергоресурсов.	\N	preview	заказ земли(ан).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%97%D0%B0%D0%BA%D0%B0%D0%B7+%D0%97%D0%B5%D0%BC%D0%BB%D0%B8++%D0%BB%D1%8E%D0%B4%D1%8F%D0%BC+(+%D0%A5%D0%A5+%D0%B2%D0%B5%D0%BA)-+%D0%BE%D0%B1+%D0%BE%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B8+%D0%BE%D1%82+%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D0%BE%D0%B2.mp4	2016-05-30 10:58:37	\N	\N
 19	Время в котором мы живем (часть 1).	<p>Прежде чем наука что-то откроет, докажет, создаст закон,  иногда проходит несколько поколений. Но ведь люди не ждут доказательств , они все же фантазируют, творят, создают, верят, мечтают… Живут.  Человеческая фантазия –это не пустой звук. Вспомним Циолковского, Галилея, Джордано Бруно, Коперника и др.  Наука все постепенно доказывает,  медленно плетясь в хвосте, как бы предупреждая человека: не жди меня, иди за фантазией, за мечтой – это главное , ты – Человек. Для тебя важнее - вера, а не доказательства.</p>	lecture	время, в котором мы живем(л. 5).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/lectures/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F_%D0%B2_%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%BC_%D0%BC%D1%8B_%D0%B6%D0%B8%D0%B2%D0%B5%D0%BC.mp4	2016-05-30 11:04:42	\N	\N
-10	Не познавший любви уходит в прошлое.	\N	preview	\N	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%9D%D0%B5+%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D0%B2%D1%88%D0%B8%D0%B8%CC%86+%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8+%D1%83%D1%85%D0%BE%D0%B4%D0%B8%D1%82+%D0%B2+%D0%BF%D1%80%D0%BE%D1%88%D0%BB%D0%BE%D0%B5.mp4	2016-05-30 10:59:55	\N	\N
+11	Неполное познание информации - ложь?	\N	preview	информация.jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%9D%D0%B5%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5+%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%B8-+%D0%BB%D0%BE%D0%B6%D1%8C.+%D0%90%D0%BD%D0%BE%D0%BD%D1%81.mp4	2016-05-30 11:01:07	\N	\N
+10	Не познавший любви уходит в прошлое.	\N	preview	любовь, волокна  любви.jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%9D%D0%B5+%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D0%B2%D1%88%D0%B8%D0%B8%CC%86+%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8+%D1%83%D1%85%D0%BE%D0%B4%D0%B8%D1%82+%D0%B2+%D0%BF%D1%80%D0%BE%D1%88%D0%BB%D0%BE%D0%B5.mp4	2016-05-30 10:59:55	\N	\N
 5	Время. Путешествие во времени. Машина времени.	\N	preview	путешествие во времени(ан).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%92%D1%80%D0%B5%D0%BC%D1%8F.%D0%9F%D1%83%D1%82%D0%B5%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D0%B5+%D0%B2%D0%BE+%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8%3B+%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0+%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8%3B.mp4	2016-05-30 10:55:14	\N	\N
 2	Большая миграция. Проблема беженцев.	\N	preview	большая миграция(ан).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%BC%D0%B8%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F.+%D0%9F%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0+%D0%B1%D0%B5%D0%B6%D0%B5%D0%BD%D1%86%D0%B5%D0%B2.+%D0%90%D0%BD%D0%BE%D0%BD%D1%81+(1).mp4	2016-05-30 10:49:34	\N	\N
 6	Все ищет друг друга. Второй закон.	\N	preview	все ищет друг друга (анонс).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%92%D1%81%D0%B5+%D0%B8%D1%89%D0%B5%D1%82+%D0%B4%D1%80%D1%83%D0%B3+%D0%B4%D1%80%D1%83%D0%B3%D0%B0.+%D0%92%D1%82%D0%BE%D1%80%D0%BE%D0%B8%CC%86+%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD.+%D0%90%D0%BD%D0%BE%D0%BD%D1%81.mp4	2016-05-30 10:55:56	\N	\N
@@ -123,7 +123,7 @@ ALTER TABLE ONLY videos
     ADD CONSTRAINT videos_pkey PRIMARY KEY (id);
 
 
--- Completed on 2016-06-24 21:00:16 EEST
+-- Completed on 2016-06-24 21:08:03 EEST
 
 --
 -- PostgreSQL database dump complete
