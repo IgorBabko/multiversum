@@ -18,7 +18,7 @@
                                 </p>
                     </video>
                     <div>
-                        <img style="margin-left: 50px" src="img/quote.jpg">
+                        <img style="box-shadow: 0 5px 10px 0px #464646; margin-left: 50px" src="img/quote.jpg">
                     </div>
                 </div>
             </div>

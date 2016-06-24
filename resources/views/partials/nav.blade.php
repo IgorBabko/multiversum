@@ -24,6 +24,8 @@
                         @if ( ! Auth::user()->isPremium() ) 
                             <li class="nav-list-item"><a href="#" data-section-id="payment-section" class="nav-list-link">Оплата</a>
                             </li>
+                        @else
+                            <li class="nav-list-item"><a href="#" data-section-id="lectures-section" class="nav-list-link">Лекции</a></li>
                         @endif
                         <li class="nav-list-item"><a href="#" data-section-id="books-section" class="nav-list-link">Книги</a>
                         </li>

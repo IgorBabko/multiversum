@@ -24,10 +24,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $previews = Video::where('type', 'preview')->get();
-        $lectures = Video::where('type', 'lecture')->get();
+        $previews = Video::orderBy('id', 'asc')->where('type', 'preview')->get();
+        $lectures = Video::orderBy('id', 'asc')->where('type', 'lecture')->get();
+
+        if ($request->paid) {
+            $request->session()->flash('notify', 'Спасибо за оплату, теперь Вам доступны видео-лекции');
+        }
 
         return view('index', compact('previews', 'lectures'));
     }

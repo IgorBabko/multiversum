@@ -1,6 +1,5 @@
 <div class="comments">
     <div class="comments__content">
-        <h2 class="comments__heading">Комментарии</h2>
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function()

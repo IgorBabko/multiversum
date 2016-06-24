@@ -165,21 +165,24 @@ main {
   padding: 100px 0 50px;
   min-height: calc(100vh - 150px); }
 
+.video-item {
+  margin: 0 auto; }
+
 .section-main {
   padding: 0;
-  background: #2d7198; }
+  background: #3aa1ea; }
 
 .section-orange {
   background-color: #FF5200;
   color: white; }
+  .section-orange .description {
+    font-weight: 300; }
   .section-orange .Video__heading {
     color: white; }
 
 .section-blue {
-  background-color: #505050;
+  background-color: #bf4d4d;
   color: white; }
-  .section-blue .description {
-    font-weight: 300; }
 
 .section-email {
   background: white; }
