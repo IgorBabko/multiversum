@@ -1,6 +1,5 @@
 <div class="section section-blue" id="about-section">
     <div class="container">
-        <h2>О курсе</h2>
         <div class="row centered">
             <div class="six columns">
                 <img src="/img/space.jpg" class="space">
