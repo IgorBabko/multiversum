@@ -172,6 +172,10 @@ main {
   padding: 0;
   background: #3aa1ea; }
 
+@media screen and (max-width: 768px) {
+  .full {
+    width: 100% !important; } }
+
 .section-orange {
   background-color: #FF5200;
   color: white; }
