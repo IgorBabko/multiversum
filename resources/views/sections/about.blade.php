@@ -1,11 +1,15 @@
 <div class="section section-blue" id="about-section">
     <div class="container">
+        <h3 style="text-align: center">Тематика предстоящих вебинаров<br> по ментально- духовному развитию и этике</h3>
         <div class="row centered">
-            <div class="six columns">
-                <img src="/img/space.jpg" class="space">
+            <div class="six columns" style="padding-right: 50px">
+                <img src="/img/quote1.jpg" class="quote-img">
+                <img src="/img/quote2.jpg" class="quote-img">
+                <img src="/img/quote3.jpg" class="quote-img">
+                <img src="/img/quote5.jpg" class="quote-img">
+                <img src="/img/quote6.jpg" class="quote-img">
             </div>
             <div class="six columns">
-                <h3>Тематика предстоящих вебинаров по ментально- духовному развитию и этике</h3>
                 <ul class="program-list">
                     <!--<li>Человека и Вселенная</li>
                     <li>Время и пространство</li>
