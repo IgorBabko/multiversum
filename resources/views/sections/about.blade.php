@@ -3,11 +3,11 @@
         <h3 style="text-align: center">Тематика предстоящих вебинаров<br> по ментально- духовному развитию и этике</h3>
         <div class="row centered">
             <div class="six columns" style="padding-right: 50px">
-                <img src="/img/quote1.jpg" class="quote-img">
+                <img src="/img/egypt.jpg" class="quote-img">
                 <img src="/img/quote2.jpg" class="quote-img">
                 <img src="/img/quote3.jpg" class="quote-img">
                 <img src="/img/quote5.jpg" class="quote-img">
-                <img src="/img/quote6.jpg" class="quote-img">
+                <img src="/img/quote8.jpg" class="quote-img">
             </div>
             <div class="six columns">
                 <ul class="program-list">

@@ -21,7 +21,8 @@
                     </video>
                     </div>
                     <div>
-                        <img style="box-shadow: 0 5px 10px 0px #464646; margin-left: 50px" src="img/quote.jpg">
+                        <img style="box-shadow: 0 5px 10px 0px #464646; margin-left: 50px" src="img/quote.jpg"><br>
+                        <img style="box-shadow: 0 5px 10px 0px #464646; margin: 50px 0 0 50px; width: 450px" src="img/sense_of_life.jpg">
                     </div>
                 </div>
             </div>
