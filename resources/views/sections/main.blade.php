@@ -10,7 +10,7 @@
                         <h3 class="main-heading subheading" style="text-align: center; margin-bottom: 10px; color: beige">О курсе</h3>
                     <video id="my-video" class="video-js" controls preload="auto" width="640" height="480"
                     poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-                        <source src="https://s3.eu-central-1.amazonaws.com/multiversum/%d0%b2%d1%81%d1%82%d1%83%d0%bf%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5.mp4"
+                        <source src="https://s3.eu-central-1.amazonaws.com/multiversum/%D0%B2%D1%81%D1%82%D1%83%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5+%D0%BA+%D0%BA%D1%83%D1%80%D1%81%D1%83+%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B4%D1%83%D1%85%D0%BE%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8F.mp4"
                         type='video/mp4'>
                             <source src="MY_VIDEO.webm" type='video/webm'>
                                 <p class="vjs-no-js">
