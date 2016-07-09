@@ -4,6 +4,8 @@ namespace Multiversum\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Log;
+use Mail;
+use Auth;
 use Multiversum\User;
 use Multiversum\Video;
 
@@ -60,7 +62,7 @@ class HomeController extends Controller
             return response()->json($validator->errors(), 422);
         }
 
-        \Mail::send('emails.feedback', ['text' => $request->message], function ($m) use ($request) {
+        Mail::send('emails.feedback', ['text' => $request->message], function ($m) use ($request) {
             $m->from($request->email, $request->name);
             $m->to('i.i.babko@gmail.com', 'Тина Васильева')->subject('Сообщение');
         });
@@ -98,5 +100,16 @@ class HomeController extends Controller
         Log::info($dataObject);
 
         User::where('email', $dataObject['description'])->update(['isPremium' => true]);
+    }
+
+    public function webinarEmail()
+    {
+        Mail::send('emails.webinar', function ($m) use ($request) {
+            $m->from('portaciya@gmail.com', 'Александр Васильев');
+            $m->to(Auth::user()->email)->subject('Подписка на вебинар');
+        });
+
+        return response()->json(['notify' => 'Письмо отправлено успешно']);
+          
     }
 }

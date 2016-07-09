@@ -9,9 +9,15 @@ h5 {
 
 .main-questions {
   margin: 50px 0 0 70px;
-  color: white;
   font-size: 22px;
-  list-style: disc; }
+  color: black;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px #525252;
+  border-radius: 10px; }
+  .main-questions form {
+    text-align: center;
+    margin: 20px 0 0; }
 
 .thumb {
   width: 300px; }
