@@ -2,10 +2,10 @@
 
 namespace Multiversum\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 use Log;
 use Mail;
-use Auth;
 use Multiversum\User;
 use Multiversum\Video;
 
@@ -110,6 +110,6 @@ class HomeController extends Controller
         });
 
         return response()->json(['notify' => 'Письмо отправлено успешно']);
-          
+
     }
 }

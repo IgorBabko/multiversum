@@ -28,10 +28,10 @@
                                 <span style="font-size: 14px">Для регистрации на вебинар <a href="#login">войдите</a> в аккаунт</span>
                             @else
                                 <span style="font-size: 14px">После оплаты Вам на почту будут высланы ссылка и пароль на вебинар</span>
-                                <?php $unique_id = uniqid('php_'); ?> 
+                                <?php $unique_id = uniqid('php_');?>
                                 <form method="POST" accept-charset="utf-8" action="https://www.liqpay.com/api/3/checkout">
-                                    <input type="hidden" name="data" value='{{ base64_encode("{\"language\": \"ru\", \"result_url\": \"http://multiversum.ml\", \"server_url\": \"http://multiversum.ml/payment\", \"order_id\": \"" . $unique_id . "\", \"description\": \"" . Auth::user()->email . "\", \"amount\": 1, \"currency\": \"UAH\", \"action\": \"pay\", \"public_key\": \"i20047806537\"}") }}' />
-                                    <input type="hidden" name="signature" value='{{ base64_encode( sha1( env('LIQPAY_PRIVATE_KEY') . base64_encode("{\"language\": \"ru\", \"result_url\": \"http://multiversum.ml\", \"server_url\": \"http://multiversum.ml/payment\", \"order_id\": \"" . $unique_id . "\", \"description\": \"" . Auth::user()->email . "\", \"amount\": 1, \"currency\": \"UAH\", \"action\": \"pay\", \"public_key\": \"i20047806537\"}") . env('LIQPAY_PRIVATE_KEY'), 1 ) ) }}' />
+                                    <input type="hidden" name="data" value='{{ base64_encode("{\"language\": \"ru\", \"result_url\": \"http://multiversum.ml\", \"server_url\": \"http://multiversum.ml/webinar\", \"order_id\": \"" . $unique_id . "\", \"description\": \"" . Auth::user()->email . "\", \"amount\": 1, \"currency\": \"UAH\", \"action\": \"pay\", \"public_key\": \"i20047806537\"}") }}' />
+                                    <input type="hidden" name="signature" value='{{ base64_encode( sha1( env('LIQPAY_PRIVATE_KEY') . base64_encode("{\"language\": \"ru\", \"result_url\": \"http://multiversum.ml\", \"server_url\": \"http://multiversum.ml/webinar\", \"order_id\": \"" . $unique_id . "\", \"description\": \"" . Auth::user()->email . "\", \"amount\": 1, \"currency\": \"UAH\", \"action\": \"pay\", \"public_key\": \"i20047806537\"}") . env('LIQPAY_PRIVATE_KEY'), 1 ) ) }}' />
                                     <input type="image" src="//static.liqpay.com/buttons/p1ru.radius.png" name="btn_text" />
                                 </form>
                             @endif
