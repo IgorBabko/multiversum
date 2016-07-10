@@ -104,12 +104,9 @@ class HomeController extends Controller
 
     public function webinarEmail()
     {
-        Mail::send('emails.webinar', function ($m) use ($request) {
+        Mail::send('emails.webinar', [], function ($m) {
             $m->from('portaciya@gmail.com', 'Александр Васильев');
             $m->to(Auth::user()->email)->subject('Подписка на вебинар');
         });
-
-        return response()->json(['notify' => 'Письмо отправлено успешно']);
-
     }
 }

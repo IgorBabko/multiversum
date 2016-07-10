@@ -27,7 +27,8 @@
                             @if ( ! Auth::user() )
                                 <span style="font-size: 14px">Для регистрации на вебинар <a href="#login">войдите</a> в аккаунт</span>
                             @else
-                                <span style="font-size: 14px">После оплаты Вам на почту будут высланы ссылка и пароль на вебинар</span>
+                            <span>Стоимость вебинара: <strong style="color: #c11515">1$</strong></span><br>
+                            <span style="font-size: 14px">После оплаты Вам на почту будут высланы ссылка и пароль на вебинар</span>
                                 <?php $unique_id = uniqid('php_');?>
                                 <form method="POST" accept-charset="utf-8" action="https://www.liqpay.com/api/3/checkout">
                                     <input type="hidden" name="data" value='{{ base64_encode("{\"language\": \"ru\", \"result_url\": \"http://multiversum.ml\", \"server_url\": \"http://multiversum.ml/webinar\", \"order_id\": \"" . $unique_id . "\", \"description\": \"" . Auth::user()->email . "\", \"amount\": 1, \"currency\": \"UAH\", \"action\": \"pay\", \"public_key\": \"i20047806537\"}") }}' />
