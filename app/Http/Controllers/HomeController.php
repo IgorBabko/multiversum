@@ -6,7 +6,6 @@ use Auth;
 use Illuminate\Http\Request;
 use Log;
 use Mail;
-use Queue;
 use Multiversum\User;
 use Multiversum\Video;
 use Queue;
@@ -107,18 +106,17 @@ class HomeController extends Controller
     public function webinarEmail()
     {
         try {
-            Queue::push(function ($job) {
+            // Queue::push(function ($job) {
 
-                Log::('email was greacefully sent!!!');
-
-                Mail::send('emails.webinar', [], function ($m) {
-                    $m->from('portaciya@gmail.com', 'Александр Васильев');
-                    $m->to(Auth::user()->email)->subject('Подписка на вебинар');
-                });
-
-                $job->delete();
-
+            Mail::queue('emails.webinar', [], function ($m) {
+                Log::info('email was greacefully sent!!!');
+                // $m->from('portaciya@gmail.com', 'Александр Васильев');
+                $m->to(Auth::user()->email)->subject('Подписка на вебинар');
             });
+
+            // $job->delete();
+
+            // });
         } catch (\Exception $ex) {
             Log::info($ex);
         }
