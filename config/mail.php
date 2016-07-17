@@ -54,7 +54,7 @@ return [
     |
      */
 
-    'from'       => ['address' => 'i.i.babko@gmail.com', 'name' => 'Multiversum'],
+    'from'       => ['address' => 'portaciya@gmail.com', 'name' => 'Multiversum'],
 
     /*
     |--------------------------------------------------------------------------
@@ -66,7 +66,7 @@ return [
     | used globally for all e-mails that are sent by your application.
     |
      */
-    'to'         => ['address' => 'i.i.babko@gmail.com', 'name' => 'Multiversum'],
+    // 'to'         => ['address' => 'i.i.babko@gmail.co', 'name' => 'Multiversum'],
 
     /*
     |--------------------------------------------------------------------------

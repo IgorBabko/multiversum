@@ -103,20 +103,16 @@ class HomeController extends Controller
         User::where('email', $dataObject['description'])->update(['isPremium' => true]);
     }
 
-    public function webinarEmail()
+    public function webinarEmail(Request $request)
     {
+        $data       = base64_decode($request->data);
+        $dataObject = json_decode($data, true);
+        $email = $dataObject['description'];
+
         try {
-            // Queue::push(function ($job) {
-
-            Mail::queue('emails.webinar', [], function ($m) {
-                Log::info('email was greacefully sent!!!');
-                // $m->from('portaciya@gmail.com', 'Александр Васильев');
-                $m->to(Auth::user()->email)->subject('Подписка на вебинар');
+            Mail::send('emails.webinar', [], function ($m) {
+                $m->to($email)->subject('Подписка на вебинар');
             });
-
-            // $job->delete();
-
-            // });
         } catch (\Exception $ex) {
             Log::info($ex);
         }

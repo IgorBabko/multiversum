@@ -25,5 +25,4 @@ Route::get('/video/{id}', 'HomeController@video');
 Route::get('/payment', 'HomeController@payment');
 Route::post('/payment', 'HomeController@payment');
 
-Route::get('/webinar', 'HomeController@webinarEmail');
 Route::post('/webinar', 'HomeController@webinarEmail');
