@@ -10,8 +10,6 @@
                     <li class="nav-list-item"><a href="#" data-section-id="promo-section" class="nav-list-link"
                         class="active">Промо</a>
                     </li>
-                    <li class="nav-list-item"><a href="#" data-section-id="categories-section" class="nav-list-link">Категории</a>
-                    </li>
                     <li class="nav-list-item"><a href="#" data-section-id="about-section" class="nav-list-link">О курсе</a>
                     </li>
                     <li class="nav-list-item"><a href="#" data-section-id="previews-section" class="nav-list-link">Анонсы</a>
