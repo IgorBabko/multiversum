@@ -2,6 +2,8 @@
 
 @section('content')
     @include ('sections.main')
+    @include ('sections.categories')
+    @include ('sections.livestream')
     @include ('sections.about')
     @include ('sections.previews')
     @if ( Auth::user() && Auth::user()->isPremium )

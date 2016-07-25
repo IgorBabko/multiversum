@@ -7,17 +7,58 @@
 h5 {
   font-weight: bold; }
 
+.webinar-icon {
+  width: 350px; }
+
 .main-questions {
-  margin: 50px 0 0 70px;
+  box-shadow: 1px 1px 5px black;
+  text-align: left;
+  margin: 70px 0 0 0;
   font-size: 22px;
   color: black;
   background: white;
-  padding: 20px;
-  box-shadow: 0 0 10px #525252;
-  border-radius: 10px; }
+  padding: 20px; }
   .main-questions form {
     text-align: center;
     margin: 20px 0 0; }
+
+.clear {
+  clear: both; }
+
+.section-light-blue {
+  background: #f3faff; }
+  .section-light-blue h3 {
+    color: #0b4975;
+    margin: 0 0 50px 0; }
+  .section-light-blue h5 {
+    color: #0b4975;
+    font-weight: 300;
+    font-size: 24px;
+    margin: 0; }
+  .section-light-blue .photo {
+    width: 100%;
+    box-shadow: 1px 1px 5px #6f6f6f; }
+  .section-light-blue ul {
+    list-style: none;
+    text-align: left;
+    margin: 160px 0 0 0; }
+    .section-light-blue ul li p {
+      margin: 0; }
+    .section-light-blue ul li img {
+      float: left;
+      height: 100%;
+      width: 64px;
+      margin-right: 25px; }
+
+.Category__button {
+  float: right;
+  margin: 10px 0 30px;
+  background-color: #4CAF50;
+  border: none;
+  color: white; }
+  .Category__button:hover, .Category__button:active, .Category__button:focus {
+    background-color: #1E8C22;
+    color: white; }
 
 .thumb {
   width: 300px; }
@@ -252,12 +293,25 @@ main {
     background-color: #EBBA06;
     color: white; }
 
+.section-light-green {
+  background: #8af1e7;
+  padding: 50px 30px; }
+
 .email-button {
   margin: 0;
   background-color: #03A9F4; }
   .email-button:hover {
     background-color: #0389C6;
     color: white; }
+
+.main-video-wrapper {
+  margin: 0 40px; }
+
+.section-main img {
+  width: 400px;
+  box-shadow: 1px 1px 5px black;
+  display: block;
+  margin: 10px 0; }
 
 .main-button {
   margin: 50px 0 0 0;

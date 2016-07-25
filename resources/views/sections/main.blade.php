@@ -6,7 +6,7 @@
                     <h2 class="main-heading" style="color: white">Ментально-духовное развитие </h2>
                 </div>
                 <div style="display: flex; justify-content: center; align-items: center">
-                    <div>
+                    <div class="main-video-wrapper">
                         <!--<h3 class="main-heading subheading" style="text-align: center; margin-bottom: 10px; color: beige">О курсе</h3>-->
                         <video id="my-video" class="video-js" controls preload="auto" width="640" height="480"
                         poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
@@ -20,29 +20,10 @@
                                     </p>
                         </video>
                     </div>
-                    <div>
-                        <div class="main-questions" style="background: white; width: 400px">
-                            <span>Ближайший вебинар:<br><strong style="color: #c11515">Работа</strong></span><br>
-                            <span>Дата: <strong style="color: #c11515">27.07.2016 в 16.00 (по Киевскому времени)</strong></span><br>
-                            @if ( ! Auth::user() )
-                                <span style="font-size: 14px">Для регистрации на вебинар <a href="#login">войдите</a> в аккаунт</span>
-                            @else
-                            <span>Стоимость вебинара: <strong style="color: #c11515">1$</strong></span><br>
-                            <span style="font-size: 14px">После оплаты Вам на почту будут высланы ссылка и пароль на вебинар</span>
-                                <?php $unique_id = uniqid('php_');?>
-                                <form method="POST" accept-charset="utf-8" action="https://www.liqpay.com/api/3/checkout">
-                                    <input type="hidden" name="data" value='{{ base64_encode("{\"language\": \"ru\", \"result_url\": \"https://multiversum.in.ua\", \"server_url\": \"https://multiversum.in.ua/webinar\", \"order_id\": \"" . $unique_id . "\", \"description\": \"" . Auth::user()->email . "\", \"amount\": 1, \"currency\": \"USD\", \"action\": \"pay\", \"public_key\": \"i20047806537\"}") }}' />
-                                    <input type="hidden" name="signature" value='{{ base64_encode( sha1( env('LIQPAY_PRIVATE_KEY') . base64_encode("{\"language\": \"ru\", \"result_url\": \"https://multiversum.in.ua\", \"server_url\": \"https://multiversum.in.ua/webinar\", \"order_id\": \"" . $unique_id . "\", \"description\": \"" . Auth::user()->email . "\", \"amount\": 1, \"currency\": \"USD\", \"action\": \"pay\", \"public_key\": \"i20047806537\"}") . env('LIQPAY_PRIVATE_KEY'), 1 ) ) }}' />
-                                    <input type="image" src="//static.liqpay.com/buttons/p1ru.radius.png" name="btn_text" />
-                                </form>
-                            @endif
-                        </div>
-              <!--          <img style="box-shadow: 0 5px 10px 0px #464646; margin-left: 50px" src="img/quote.jpg">-->
-                            <!--<ul class="main-questions">
-                                <li>в чем смысл жизни?</li>
-                                <li>что такое судьба?</li>
-                                <li>Что есть Я?</li>
-                            </ul>-->
+                    <div style="display: flex; flex-direction: column; justify-content: center">
+                        <img src="img/quote.jpg">
+                        <img src="img/quote5.jpg">
+                    </div>
                 </div>
         </main>
         </div>
