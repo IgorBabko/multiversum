@@ -3,7 +3,7 @@
         <main class="row" id="promo-section">
             <div>
                 <div>
-                    <h2 class="main-heading" style="color: white">Ментально-духовное развитие </h2>
+                    <h3 style="color: white; text-align: center">О чем этот курс?</h3>
                 </div>
                 <div style="display: flex; justify-content: center; align-items: center">
                     <div class="main-video-wrapper">

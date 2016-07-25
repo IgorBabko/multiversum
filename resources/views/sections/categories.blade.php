@@ -1,6 +1,6 @@
 <div class="section section-light-blue" id="categories-section">
     <div class="container">
-        <h3 style="text-align: center; color: #0b4975">Категории материалов</h3>
+        <h2 class="main-heading" style="text-align: center; color: #0b4975">Ментально-духовное развитие</h2>
         <div class="row centered">
             <div class="six columns">
                 <img src="img/photo.jpg" class="photo">

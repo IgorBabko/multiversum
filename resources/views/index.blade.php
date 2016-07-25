@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('content')
-    @include ('sections.main')
     @include ('sections.categories')
+    @include ('sections.main')
     @include ('sections.livestream')
     @include ('sections.about')
     @include ('sections.previews')

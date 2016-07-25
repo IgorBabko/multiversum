@@ -25,7 +25,12 @@ h5 {
 .clear {
   clear: both; }
 
+main {
+  padding: 50px 0; }
+
 .section-light-blue {
+  min-height: calc(100vh - 150px);
+  padding: 100px 0 50px !important;
   background: #f3faff; }
   .section-light-blue h3 {
     color: #0b4975;
@@ -213,10 +218,6 @@ h1 {
 
 .section {
   padding: 50px 30px; }
-
-main {
-  padding: 100px 0 50px;
-  min-height: calc(100vh - 150px); }
 
 .video-item {
   margin: 0 auto; }
