@@ -1,5 +1,5 @@
 <h1>Благодарю за подписку на вебинар</h1>
 <div>
-    <span>Ссылка: <strong>http://smotri.com/live/portaciya</strong></span>
-    <span>Пароль: <strong>0177</strong></span>
+    <span>Ссылка: <a href="https://smotri.com/live/portaciya/"><strong>Работа</strong></a></span>
+    <span>Пароль: <strong>7777</strong></span>
 </div>

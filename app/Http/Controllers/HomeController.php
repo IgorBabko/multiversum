@@ -110,7 +110,8 @@ class HomeController extends Controller
         $email = $dataObject['description'];
 
         try {
-            Mail::send('emails.webinar', [], function ($m) {
+            Mail::send('emails.webinar', [], function ($m) use ($email) {
+		Log::info($email);
                 $m->to($email)->subject('Подписка на вебинар');
             });
         } catch (\Exception $ex) {
