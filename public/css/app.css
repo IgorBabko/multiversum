@@ -11,9 +11,10 @@ h5 {
   width: 350px; }
 
 .main-questions {
-  box-shadow: 1px 1px 5px black;
+  margin-right: 0 !important;
+  box-shadow: 1px 1px 5px #6f6f6f;
   text-align: left;
-  margin: 70px 0 0 0;
+  margin: 20px 0 0 0;
   font-size: 22px;
   color: black;
   background: white;

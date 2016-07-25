@@ -6,7 +6,7 @@
                 <img class="webinar-icon" src="img/livestream.png">
             </div>
             <div class="six columns">
-                <div class="main-questions" style="background: white; width: 400px">
+                <div class="main-questions" style="margin: 70px 0 0 0; background: white; width: 400px">
                     <span>Тема: <strong style="color: #c11515">Вопросы и ответы</strong></span><br>
                     <span>Дата: <strong style="color: #c11515">27.07.2016 в 16.00 (по Киевскому времени)</strong></span><br>
                     @if ( ! Auth::user() )
