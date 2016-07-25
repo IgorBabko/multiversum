@@ -22,7 +22,6 @@
                     </div>
                     <div style="display: flex; flex-direction: column; justify-content: center">
                         <img src="img/quote.jpg">
-                        <img src="img/quote5.jpg">
                     </div>
                 </div>
         </main>
