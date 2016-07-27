@@ -1,0 +1,333 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.5.3
+-- Dumped by pg_dump version 9.5.1
+
+-- Started on 2016-07-27 19:41:12 EEST
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 1 (class 3079 OID 12623)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2405 (class 0 OID 0)
+-- Dependencies: 1
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 181 (class 1259 OID 16832)
+-- Name: migrations; Type: TABLE; Schema: public; Owner: IgorBabko
+--
+
+CREATE TABLE migrations (
+    migration character varying(255) NOT NULL,
+    batch integer NOT NULL
+);
+
+
+ALTER TABLE migrations OWNER TO "IgorBabko";
+
+--
+-- TOC entry 182 (class 1259 OID 16835)
+-- Name: password_resets; Type: TABLE; Schema: public; Owner: IgorBabko
+--
+
+CREATE TABLE password_resets (
+    email character varying(255) NOT NULL,
+    token character varying(255) NOT NULL,
+    created_at timestamp(0) without time zone NOT NULL
+);
+
+
+ALTER TABLE password_resets OWNER TO "IgorBabko";
+
+--
+-- TOC entry 183 (class 1259 OID 16841)
+-- Name: users; Type: TABLE; Schema: public; Owner: IgorBabko
+--
+
+CREATE TABLE users (
+    id integer NOT NULL,
+    email character varying(255) NOT NULL,
+    password character varying(255) NOT NULL,
+    "isPremium" boolean DEFAULT false NOT NULL,
+    remember_token character varying(100),
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone,
+    "paidForLectures" boolean DEFAULT false NOT NULL,
+    "paidForWebinars" boolean DEFAULT false NOT NULL
+);
+
+
+ALTER TABLE users OWNER TO "IgorBabko";
+
+--
+-- TOC entry 184 (class 1259 OID 16850)
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: IgorBabko
+--
+
+CREATE SEQUENCE users_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE users_id_seq OWNER TO "IgorBabko";
+
+--
+-- TOC entry 2406 (class 0 OID 0)
+-- Dependencies: 184
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: IgorBabko
+--
+
+ALTER SEQUENCE users_id_seq OWNED BY users.id;
+
+
+--
+-- TOC entry 185 (class 1259 OID 16852)
+-- Name: videos; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE videos (
+    id integer NOT NULL,
+    title character varying(255) NOT NULL,
+    description text,
+    type character varying(255) NOT NULL,
+    img character varying(255),
+    url text NOT NULL,
+    published_at timestamp(0) without time zone DEFAULT now() NOT NULL,
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone
+);
+
+
+ALTER TABLE videos OWNER TO postgres;
+
+--
+-- TOC entry 186 (class 1259 OID 16859)
+-- Name: videos_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE videos_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE videos_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2407 (class 0 OID 0)
+-- Dependencies: 186
+-- Name: videos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE videos_id_seq OWNED BY videos.id;
+
+
+--
+-- TOC entry 2267 (class 2604 OID 16861)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: IgorBabko
+--
+
+ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
+
+
+--
+-- TOC entry 2269 (class 2604 OID 16862)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY videos ALTER COLUMN id SET DEFAULT nextval('videos_id_seq'::regclass);
+
+
+--
+-- TOC entry 2392 (class 0 OID 16832)
+-- Dependencies: 181
+-- Data for Name: migrations; Type: TABLE DATA; Schema: public; Owner: IgorBabko
+--
+
+COPY migrations (migration, batch) FROM stdin;
+2014_10_12_000000_create_users_table	1
+2014_10_12_100000_create_password_resets_table	1
+2016_05_26_183735_create_videos_table	1
+2016_07_27_152840_add_paidForLectures_field_to_users_table	2
+2016_07_27_152848_add_paidForWebinars_field_to_users_table	2
+\.
+
+
+--
+-- TOC entry 2393 (class 0 OID 16835)
+-- Dependencies: 182
+-- Data for Name: password_resets; Type: TABLE DATA; Schema: public; Owner: IgorBabko
+--
+
+COPY password_resets (email, token, created_at) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2394 (class 0 OID 16841)
+-- Dependencies: 183
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: IgorBabko
+--
+
+COPY users (id, email, password, "isPremium", remember_token, created_at, updated_at, "paidForLectures", "paidForWebinars") FROM stdin;
+2	k@gmail.com	$2y$10$dv3nZrbmNbG19LDI0VK...x2Vt2V.rpbit3iSP.wZKMk49BQbf9V2	f	WAexlsqAt73f1uBF3SoSsQm06daHYic1IAL0NxuXWEEtgLLjMO717y0f2X33	2016-06-24 09:43:14	2016-06-24 09:44:44	f	f
+3	setbook@ukr.net	$2y$10$bosrTBf4kwEahlpqAwPc8OA.Tai2llVB860vwWSjInWsd/9Q1UgsK	t	\N	2016-06-24 09:45:32	2016-06-24 10:47:10	f	f
+16	vasilevvanya@ukr.net	$2y$10$PBdgCggjNr.UGGFT7d5OJO3O7tqwOx97Twd1u8fYyL5zhcMqqlx.W	t	sKOlSMKCECkYP8Mt0ZY8iN136mhCbwV6dYmpGMzJ7yGtoYNbaPrUQkO9Epb0	2016-07-17 15:43:02	2016-07-17 15:57:26	f	f
+1	o@gmail.com	$2y$10$ROy/1fKjNOZ0X8ZK60HxQek61ftudnuWCJUqIolHtOpCEyZVP/d.G	t	zCdjSXwrKcP2RimZS5L9UvfxYyyLLxp7XFQx2fPmMknwmVy9OSE1lBm0jgYu	2016-06-24 09:10:19	2016-06-24 18:11:06	f	f
+5	jerry@gmail.com	$2y$10$He4uDlVedMPpc94XsUztju7gb3yE2T8Qg8FCCbFt6cLs6qYnNR0zG	f	V38w8Rttsi6PAUIGHo4K63JbwhotsDcC3EQTPsMJziz7n0ba3a4BC6FVvJtt	2016-06-24 18:11:20	2016-06-24 18:13:10	f	f
+17	belozer31@mail.ru	$2y$10$bcOa7WKhHX7EskV1mWXmTOfLQD1GXjTRBK8h4Dly4omXz4gteyGBm	f	\N	2016-07-20 12:50:28	2016-07-20 12:50:28	f	f
+18	andrey.v94@mail.ru	$2y$10$UNr6UnVjbA1IOFjEOdNi2.0ydyhPIOv0rUcDoeboMH8sLio0/r8Lm	f	\N	2016-07-21 11:18:00	2016-07-21 11:18:00	f	f
+4	qq1168@mail.ru	$2y$10$IkhL2o8OxaSD.gJIBpYmUeVIE2ypE/Um3ifhjQS1rUCnsLXf19gLy	t	VaU1sSQiiI2w5Fm8yOvHYDmunTPUPKOIgZUna12UkkkDy2GCQ72LGEUmZsYX	2016-06-24 14:56:32	2016-06-24 19:03:00	f	f
+10	i.i.babko@gmail.com	$2y$10$zjwOs1m68e13qz.l45TSIOFwW8ZGLkrbVDXE91R2gNfbrxBOOS1Kq	t	or1NdG3Fpj1CyicGPfVi7AODeSIWwGBcP5srvvFTMwPuxSCu88l8iFRReFSm	2016-07-10 07:46:50	2016-07-25 17:29:44	f	f
+7	ler.vasilieva2017@yandex.ru	$2y$10$6R0I/sVfw8faWtoXG4zW0OGhN6ju9ng39X8C/vKfLxG7cDR.Zl7fm	t	fhrGyqupnsH8pqJzIDPHUXqmt1mGbgDplT9DZA3dSoKusYvt4lC5wg1p4ceb	2016-06-24 19:06:51	2016-06-24 19:12:30	f	f
+6	tommy@gmail.com	$2y$10$fAkU10J5Rm2ExH7OdeTNYerHLbi6fxbjaXFlflKMopTwEJttcMFVa	t	NDhhRtjeXifTD1BWhuTmqgsW0rfUEV6c4UdRSTHXUxhOGsB7RJ8LA5QqvgUq	2016-06-24 18:13:21	2016-06-24 19:24:38	f	f
+8	e@gmail.com	$2y$10$O6Gw/y1kY90chJ9XiojClepj.hBR2jdbxCjUr/LZEsyfYzvXcHWAi	f	\N	2016-06-24 19:48:24	2016-06-24 19:48:24	f	f
+19	niko@gmail.com	$2y$10$PQsF1Us2rCTVR5La.JYVy.A/7RPIouQ1HKxrYYhl/472VE2610TvG	f	\N	2016-07-25 17:30:03	2016-07-25 17:30:03	f	f
+9	p@gmail.com	$2y$10$HW4EkmyXu6V0AFywIq389u0nKzyfChCodbadGoC25I2pwCDsu29ia	t	Wwu1gqdVINExP2r6VtDxYsFW3cegUSBEZfWafbsX6NGp98rImRi4rHCqIPpt	2016-07-10 07:34:44	2016-07-10 08:35:26	f	f
+11	nik@gmail.com	$2y$10$8KHKBYJCfZ8jeaLa2OhPveCmiPVGRRxAC5olYuSkAAd11MTAakSbu	f	\N	2016-07-10 10:09:10	2016-07-10 10:09:10	f	f
+\.
+
+
+--
+-- TOC entry 2408 (class 0 OID 0)
+-- Dependencies: 184
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: IgorBabko
+--
+
+SELECT pg_catalog.setval('users_id_seq', 19, true);
+
+
+--
+-- TOC entry 2396 (class 0 OID 16852)
+-- Dependencies: 185
+-- Data for Name: videos; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY videos (id, title, description, type, img, url, published_at, created_at, updated_at) FROM stdin;
+8	Заказ Земли людям. (ХХ век) - об освобождении от энергоресурсов.	\N	preview	заказ земли(ан).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%97%D0%B0%D0%BA%D0%B0%D0%B7+%D0%97%D0%B5%D0%BC%D0%BB%D0%B8++%D0%BB%D1%8E%D0%B4%D1%8F%D0%BC+(+%D0%A5%D0%A5+%D0%B2%D0%B5%D0%BA)-+%D0%BE%D0%B1+%D0%BE%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B8+%D0%BE%D1%82+%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D0%BE%D0%B2.mp4	2016-05-30 10:58:37	\N	\N
+10	Не познавший любви уходит в прошлое?	\N	preview	любовь, волокна  любви.jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%9D%D0%B5+%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D0%B2%D1%88%D0%B8%D0%B8%CC%86+%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8+%D1%83%D1%85%D0%BE%D0%B4%D0%B8%D1%82+%D0%B2+%D0%BF%D1%80%D0%BE%D1%88%D0%BB%D0%BE%D0%B5.mp4	2016-05-30 10:59:55	\N	\N
+11	Неполное познание информации - ложь?	\N	preview	информация.jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%9D%D0%B5%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5+%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%B8-+%D0%BB%D0%BE%D0%B6%D1%8C.+%D0%90%D0%BD%D0%BE%D0%BD%D1%81.mp4	2016-05-30 11:01:07	\N	\N
+5	Время. Путешествие во времени. Машина времени.	\N	preview	путешествие во времени(ан).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%92%D1%80%D0%B5%D0%BC%D1%8F.%D0%9F%D1%83%D1%82%D0%B5%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D0%B5+%D0%B2%D0%BE+%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8%3B+%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0+%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8%3B.mp4	2016-05-30 10:55:14	\N	\N
+2	Большая миграция. Проблема беженцев.	\N	preview	большая миграция(ан).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%BC%D0%B8%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F.+%D0%9F%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0+%D0%B1%D0%B5%D0%B6%D0%B5%D0%BD%D1%86%D0%B5%D0%B2.+%D0%90%D0%BD%D0%BE%D0%BD%D1%81+(1).mp4	2016-05-30 10:49:34	\N	\N
+6	Все ищет друг друга. Второй закон.	\N	preview	все ищет друг друга (анонс).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%92%D1%81%D0%B5+%D0%B8%D1%89%D0%B5%D1%82+%D0%B4%D1%80%D1%83%D0%B3+%D0%B4%D1%80%D1%83%D0%B3%D0%B0.+%D0%92%D1%82%D0%BE%D1%80%D0%BE%D0%B8%CC%86+%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD.+%D0%90%D0%BD%D0%BE%D0%BD%D1%81.mp4	2016-05-30 10:55:56	\N	\N
+7	Дух. Душа. Шагреневая кожа. Отец, Сын и Дух - триединство человека.	\N	preview	душа - шагреневая кожа...(ан).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%94%D1%83%D1%85.+%D0%94%D1%83%D1%88%D0%B0+-+%D1%88%D0%B0%D0%B3%D1%80%D0%B5%D0%BD%D0%B5%D0%B2%D0%B0%D1%8F+%D0%BA%D0%BE%D0%B6%D0%B0.++%D0%9E%D1%82%D0%B5%D1%86%2C+%D0%A1%D1%8B%D0%BD+%D0%B8+%D0%94%D1%83%D1%85-+%D1%82%D1%80%D0%B8%D0%B5%D0%B4%D0%B8%D0%BD%D1%81%D1%82%D0%B2%D0%BE+%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0.mp4	2016-05-30 10:57:30	\N	\N
+12	Человек создает свою жизнь, выстраивает пространство. Инструменты.	\N	preview	человек создает свою жизнь(анонс).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%A7%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA+%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B5%D1%82+%D1%81%D0%B2%D0%BE%D1%8E+%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C%2C+%D0%B2%D1%8B%D1%81%D1%82%D1%80%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D1%82+%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE.+%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B.mp4	2016-05-30 11:01:58	\N	\N
+19	Время в котором мы живем (часть 1).	<p>Прежде чем наука что-то откроет, докажет, создаст закон,  иногда проходит несколько поколений. Но ведь люди не ждут доказательств , они все же фантазируют, творят, создают, верят, мечтают… Живут.  Человеческая фантазия –это не пустой звук. Вспомним Циолковского, Галилея, Джордано Бруно, Коперника и др.  Наука все постепенно доказывает,  медленно плетясь в хвосте, как бы предупреждая человека: не жди меня, иди за фантазией, за мечтой – это главное , ты – Человек. Для тебя важнее - вера, а не доказательства.\r</p>	lecture	время, в котором мы живем(л. 5).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/lectures/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F_%D0%B2_%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%BC_%D0%BC%D1%8B_%D0%B6%D0%B8%D0%B2%D0%B5%D0%BC.mp4	2016-05-30 11:04:42	\N	\N
+13	Человек и Вселенная	\N	lecture	человек и вселенная(лек.1).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/lectures/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F+1+%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B4%D1%83%D1%85%D0%BE%D0%B2%D0%BD%D0%BE%D0%B5+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5+(1).mp4	2016-06-06 12:48:42	\N	\N
+15	Время.	\N	lecture	время(лекция2).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/lectures/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F.mp4	2016-05-30 11:03:39	\N	\N
+3	Брать ответственность на себя - есть Работа. Дар Божий.	\N	preview	работа(ан).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%91%D1%80%D0%B0%D1%82%D1%8C+%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C+%D0%BD%D0%B0+%D1%81%D0%B5%D0%B1%D1%8F+-+%D0%B5%D1%81%D1%82%D1%8C+%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.+%D0%94%D0%B0%D1%80+%D0%91%D0%BE%D0%B6%D0%B8%D0%B8%CC%86.+%D0%90%D0%BD%D0%BE%D0%BD%D1%81.mp4	2016-05-30 10:50:23	\N	\N
+17	Лирическое отступление	\N	lecture	bardovskaja_pesnja_galereja.jpg	https://s3.eu-central-1.amazonaws.com/multiversum/lectures/%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C_%D0%B8%D0%B3%D0%BE%D1%80%D1%8C_%D0%BA%D0%B0%D1%81%D1%8C%D1%8F%D0%BD%D0%B5%D0%BD%D0%BA%D0%BE.mp4	2016-05-30 11:09:00	\N	\N
+1	Реинкарнация, или очередной приход человека на Землю.	\N	preview	все ищет друг друга (анонс).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%90%D0%BD%D0%BE%D0%BD%D1%81.+%D0%A0%D0%B5%D0%B8%D0%BD%D0%BA%D0%B0%D1%80%D0%BD%D0%B0%D1%86%D0%B8%D1%8F+%2C+%D0%B8%D0%BB%D0%B8+%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D0%BD%D0%BE%D0%B8%CC%86+%D0%BF%D1%80%D0%B8%D1%85%D0%BE%D0%B4+%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%97%D0%B5%D0%BC%D0%BB%D1%8E.mp4	2016-05-30 10:48:37	\N	\N
+18	Реинкарнация.	Реинкарнация, или перевоплощение, переход, повторный приход в следующее временное пространство(в следующую жизнь)- это есть учение. Оказывается, можно придти в то же время, но надо самому его выстроить здесь на земле.  А можно попасть в будущее, неведомое доселе. Как это может быть, если мы не подготовлены даже к той мысли, что живем не одну жизнь, как принято думать? Можно попасть в прошлое (например, темное средневековье). Как это, если оно давно ушло, и его нет? - это для нас его нет…  \r       Мы прекрасно понимаем высказывание:  «Жизнь дается один раз, и нужно прожить ее так…». Но зачем же проживать ее так, если она дается один раз? \r        И совсем не понимаем великого А. Блока, который говорит о вечности жизни.  Сколько же сохранено нашей информации во Вселенной!  и ее можно оживить, посетить... Почему мы не знаем прошлого пути?  И как происходит, что одному  человеку дано быть великим  ученым, а другому – отличным  слесарем, или врачом, а третьему - многое дано, но он стал алкоголиком, или наркоманом? Плохо учился в школе? Нет, дело в  другом… Реинкарнация  как  учение  на сегодня забыто и сокрыто. Открывая его, мы увидим, как сразу все изменится, и мир весь изменится, и мы в этом мире поменяем отношение ко всему…  Но об этом речь впереди.	lecture	реинкарнация(лекция4).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/lectures/%D1%80%D0%B5%D0%B8%D0%BD%D0%BA%D0%B0%D1%80%D0%BD%D0%B0%D1%86%D0%B8%D1%8F.mp4	2016-05-30 11:08:31	\N	\N
+16	Любовь. Тактильные волокна.	\N	lecture	Любовь(лекция).jpg	https://s3.eu-central-1.amazonaws.com/multiversum/lectures/%D0%9B%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C_%D1%82%D0%B0%D0%BA%D1%82%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D0%B2%D0%BE%D0%BB%D0%BE%D0%BA%D0%BD%D0%B0.mp4	2016-05-30 11:03:14	\N	\N
+14	Человек и Вселенная (вопросы & ответы)	\N	lecture	человек и вселенная(лекция1.jpg	https://s3.eu-central-1.amazonaws.com/multiversum/lectures/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F+1+-+%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B.mp4	2016-06-06 12:51:45	\N	\N
+22	Этика	Исходя из теории построения человеком временного пространства (или проще: что такое судьба), следующий вопрос, который имеет место быть – этика. Каков подход самого человека ко всему его окружающему глядя сквозь призму   этой теории?\rПо сути – ничего сложного, если мы знаем закон или правило, постулат: «сколько энергии взял, столько же и отдай», или все, что  входит в понимание сути «брать ответственность на себя»(в том числе и брать огонь на себя, героизм), ибо это есть благо для окружающих и для самого человека, его развития, для эволюции.\rНо ведь жизнь богата спорными ситуациями, которые по-разному выглядят, смотря с какой стороны на них взглянуть. Наши болезни, искривления судьбы, мании, беды любого характера, семейные вопросы - как быть с этим? Как подобные вопросы  решаются в свете данной теории о времени? \rВебинары  и индивидуальное общение дают возможность идти от общего к частному,  вплотную к конкретной ситуации.\rВебинары проходят в доступной форме на русском языке, не усложненном задачливой терминологией, которую надо расшифровывать. \rМы все замечаем,  что система образования многое теряет именно из-за того, что в своей неплохой основе(базисе) приобретает с каждым годом чуждую  восприятию надстройку. Другими словами, многие преподаватели учебных заведений стремятся не преподать доходчиво предмет, а наоборот сложной терминологией уводя в непонятные дебри, отталкивают основной контингент учащихся. Во многом опыт подсказывает, что чем запутаннее и  непонятнее преподается предмет, тем ниже уровень знаний преподавателя.\rПринимая во внимание и такой вопрос, наши с вами вебинары строятся на принципах  доступности даже самых трудных для восприятия  разделов. Материал не может быть сложным, если ко времени появился интерес.	lecture	к теме этика.jpg	https://s3.eu-central-1.amazonaws.com/multiversum/lectures/%D1%8D%D1%82%D0%B8%D0%BA%D0%B0.mp4	2016-06-24 19:41:47	\N	\N
+4	Время. Что такое время. Временное пространство. Построение времени.	Почему мы часто не можем понять друг друга? То что доступно одному,  непосильное достижение для другого. Говорят,  плохо работаем,  или нет желания, нет веры.  Все мы разные. Каждый человек приходит из Вечности, имея свой багаж, свое предназначение. Он проживает только свою жизнь, свою судьбу.Фатализм? Все гораздо глубже, интереснее.  Прекрасно, что мы не можем физически подействовать друг на друга, иначе мир бы давно перестал существовать. Закон "все ищет друг друга"-  в чем он?.. Элементарно и в хорошем и в плохом - встречи в жизни предназначены судьбою. Убийца никогда не убьет, если не судьба. Любовный поцелуй никогда не состоится, если не судьба.  Но -все зависит от человека. Что же можем мы и в каких случаях это возможно?Где же эта эволюция? Где оно - развитие? Когда и как мы можем меняться? Какие инструменты нужны для этого? Об  этом речь  впереди...	preview	время, временное пространство.jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%92%D1%80%D0%B5%D0%BC%D1%8F.+%D0%A7%D1%82%D0%BE+%D1%82%D0%B0%D0%BA%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F.+%D0%92%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5+%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE.+%D0%9F%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8.mp4	2016-05-30 10:54:26	\N	\N
+9	Любовь не каждому дана?	\N	preview	к  теме Любовь анонс.jpg	https://s3.eu-central-1.amazonaws.com/multiversum/previews/%D0%9B%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C+%D0%BD%D0%B5+%D0%BA%D0%B0%D0%B6%D0%B4%D0%BE%D0%BC%D1%83+%D0%B4%D0%B0%D0%BD%D0%B0.(%D0%B0%D0%BD%D0%BE%D0%BD%D1%81).mp4	2016-05-30 10:59:12	\N	\N
+20	Время в которм мы живем (часть 2).	<p>Кто двигает науку, кто ее развивает?  Нет, не материалисты – прагматики, циники,  рационалисты,  не люди с отлично развитой логикой, математическим мышлением. Это другая категория людей, над которыми часто подшучивают. Они – предмет насмешек (ибо непрактичны, не приспособлены к жизни), нередко осуждены или внесены в список еретиков. Они долгое время  остаются непонятыми миром. Изобретатели, фантасты, оптимисты, глядящие  вперед, в будущее…  Мечтатели. Они дают почву науке, одно из заданий которой – фантастику превращать в реальность, сказку превращать в быль. Но это один из способов – наука.\r</p>	lecture	время, в котором мы живем.jpg лекция 5.jpg	https://s3.eu-central-1.amazonaws.com/multiversum/lectures/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F_%D0%B2_%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%BC_%D0%BC%D1%8B_%D0%B6%D0%B8%D0%B2%D0%B5%D0%BC_2.mp4	2016-05-30 11:05:21	\N	\N
+21	Время в котором мы живем (часть 3).	<p>Человек  всегда смотрит в будущее. Оно манит своей таинственностью.  Что там дальше, за горизонтом? Можно ли путешествовать во времени? Можно ли научиться  летать? Казалось бы, детские вопросы. Но если пройдет по миру молва о полете человека в пространстве – самые отъявленные  циники не останутся равнодушными. Не ради любопытства, пустого интереса мы задаемся подобными вопросами. В этом – природа человека. И если одному необходимы доказательства, чтобы пробудить в себе веру, то другой уже нуждается в понятиях более высокого порядка. Все разные. Почему? Об этом речь впереди.\rМы будем открывать для себя удивительный мир познания, сможем увидеть и нарисовать саму модель нашего временного пространства – Дом, в котором  живем… </p>	lecture	pIazJ27G2_k.jpg	https://s3.eu-central-1.amazonaws.com/multiversum/lectures/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F_%D0%B2_%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%BE%D0%BC_%D0%BC%D1%8B_%D0%B6%D0%B8%D0%B2%D0%B5%D0%BC_3.mp4	2016-05-30 11:05:58	\N	\N
+23	Судьба. Судьбоносное время.	 	webinar	к теме этика.jpg	https://s3.eu-central-1.amazonaws.com/multiversum/webinars/%D0%A1%D1%83%D0%B4%D1%8C%D0%B1%D0%B0.+%D0%A1%D1%83%D0%B4%D1%8C%D0%B1%D0%BE%D0%BD%D0%BE%D1%81%D0%BD%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F.mp4	2016-06-24 19:41:47	\N	\N
+\.
+
+
+--
+-- TOC entry 2409 (class 0 OID 0)
+-- Dependencies: 186
+-- Name: videos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('videos_id_seq', 4, true);
+
+
+--
+-- TOC entry 2273 (class 2606 OID 16864)
+-- Name: users_email_unique; Type: CONSTRAINT; Schema: public; Owner: IgorBabko
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_email_unique UNIQUE (email);
+
+
+--
+-- TOC entry 2275 (class 2606 OID 16866)
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: IgorBabko
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2277 (class 2606 OID 16868)
+-- Name: videos_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY videos
+    ADD CONSTRAINT videos_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2270 (class 1259 OID 16869)
+-- Name: password_resets_email_index; Type: INDEX; Schema: public; Owner: IgorBabko
+--
+
+CREATE INDEX password_resets_email_index ON password_resets USING btree (email);
+
+
+--
+-- TOC entry 2271 (class 1259 OID 16870)
+-- Name: password_resets_token_index; Type: INDEX; Schema: public; Owner: IgorBabko
+--
+
+CREATE INDEX password_resets_token_index ON password_resets USING btree (token);
+
+
+--
+-- TOC entry 2404 (class 0 OID 0)
+-- Dependencies: 7
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2016-07-27 19:41:12 EEST
+
+--
+-- PostgreSQL database dump complete
+--
+
