@@ -46,12 +46,7 @@
                         <div>
                             <h5>Вебинары</h5>
                             <p>Стоимость: <span>1$</span></p>
-                            {{-- <button data-section-id="webinars-section" class="button Category__button">Перейти</button> --}}
-                            @if (Auth::user())
-                                <button data-section-id="webinars-section" class="button Category__button">Перейти</button>
-                            @else
-                                <button data-section-id="payment-section" class="button Category__button">Перейти</button>
-                            @endif
+                            <button data-section-id="webinars-section" class="button Category__button">Перейти</button>
                             <a data-remodal-target="webinars" href="#" class="button Content__button">Содержание</a>
                             <div class="clear"></div>
                         </div>
@@ -61,11 +56,7 @@
                         <div>
                             <h5>Видео-лекции</h5>
                             <p>Стоимость: <span>1$</span></p>
-                            @if (Auth::user())
-                                <button data-section-id="lectures-section" class="button Category__button">Перейти</button>
-                            @else
-                                <button data-section-id="payment-section" class="button Category__button">Перейти</button>
-                            @endif
+                            <button data-section-id="lectures-section" class="button Category__button">Перейти</button>
                             <a data-remodal-target="lectures" href="#" class="button Content__button">Содержание</a>
                             <div class="clear"></div>
                         </div>

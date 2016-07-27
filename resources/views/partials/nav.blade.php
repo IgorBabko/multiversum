@@ -14,7 +14,9 @@
                     </li>
                     <li class="nav-list-item"><a href="#" data-section-id="previews-section" class="nav-list-link">Анонсы</a>
                     @if ( ! Auth::check() )
-                        <li class="nav-list-item"><a href="#" data-section-id="payment-section" class="nav-list-link">Оплата</a>
+                        <li class="nav-list-item"><a href="#" data-section-id="webinars-section" class="nav-list-link">Вебинары</a>
+                        </li>
+                        <li class="nav-list-item"><a href="#" data-section-id="lectures-section" class="nav-list-link">Лекции</a>
                         </li>
                         <li class="nav-list-item"><a href="#" data-section-id="books-section" class="nav-list-link">Книги</a>
                         </li>
@@ -22,7 +24,9 @@
                         </li>
                     @else
                         @if ( ! Auth::user()->isPremium() )
-                            <li class="nav-list-item"><a href="#" data-section-id="payment-section" class="nav-list-link">Оплата</a>
+                            <li class="nav-list-item"><a href="#" data-section-id="webinars-section" class="nav-list-link">Вебинары</a>
+                            </li>
+                            <li class="nav-list-item"><a href="#" data-section-id="lectures-section" class="nav-list-link">Лекции</a>
                             </li>
                         @else
                             <li class="nav-list-item"><a href="#" data-section-id="lectures-section" class="nav-list-link">Лекции</a></li>

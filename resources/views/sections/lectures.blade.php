@@ -1,4 +1,6 @@
 <div class="section section-orange" id="lectures-section">
+    <h2>Лекции</h2>
+    @if (Auth::user() && Auth::user()->paidForLectures)
     <div class="container">
         <h2>Ментально-духовное развитие</h2>
         <h3 style="text-align: center">В чем смысл жизни?</h3>
@@ -11,21 +13,25 @@
             <p>Мы на пороге новой эры. Новая эра – это новые удивительные люди, мысли. Другая жизнь ожидает  все  человечество,  другая ответственность.  Не надо бояться  этого слова. Оно прекрасное в своей великой сущности.</p>
             <p>Авторская речь  далека от нагромождения терминов, классификаций и прочего мешающего восприятию материала.  Всякая глубина  должна быть доступна в понимании. К этому  стремится Александр Александрович Васильев .</p>
         </div>
-        <h2>Лекции</h2>
         @forelse ($lectures as $lecture)
         <div class="row Video">
-                <div class="four columns full">
-                    <img class="thumb" src="img/{{ $lecture->img }}">
-                </div>
-                <div class="eight columns full">
-                    <h5 class="Video__heading">{{ $lecture->title }}</h5>
-                    <div class="Video__description">{!! str_limit($lecture->description, 200) !!}</div>
-                    <a href="/video/{{ $lecture->id }}" class="button Video__button Video__button--lecture">Смотреть</a>
+            <div class="four columns full">
+                <img class="thumb" src="img/{{ $lecture->img }}">
+            </div>
+            <div class="eight columns full">
+                <h5 class="Video__heading">{{ $lecture->title }}</h5>
+                <div class="Video__description">{!! str_limit($lecture->description, 200) !!}</div>
+                <a href="/video/{{ $lecture->id }}" class="button Video__button Video__button--lecture">Смотреть</a>
                 <div style="clear: both"></div>
-                </div>
+            </div>
         </div>
         @empty
-            На данный момент лекций нет
+        На данный момент лекций нет
         @endforelse
     </div>
+    @else
+    <div class="centered" style="font-size: 22px">
+        @include ('sections.payment', ['item' => 'видео-лекциям', 'callbackUrl' => 'https://multiversum.in.ua/paymentForLectures' ])
+    </div>
+    @endif
 </div>

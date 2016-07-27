@@ -91,7 +91,7 @@ class HomeController extends Controller
         return response()->json(['notify' => 'Профиль успешно обновлен']);
     }
 
-    public function payment(Request $request)
+    public function paymentForLectures(Request $request)
     {
         $data = base64_decode($request->data);
         $dataObject = json_decode($data, true);
@@ -99,8 +99,22 @@ class HomeController extends Controller
         Log::info($request);
         Log::info($data);
         Log::info($dataObject);
+        Log::info('paid for lectures');
 
-        User::where('email', $dataObject['description'])->update(['isPremium' => true]);
+        User::where('email', $dataObject['description'])->update(['paidForLectures' => true]);
+    }
+
+    public function paymentForWebinars(Request $request)
+    {
+        $data = base64_decode($request->data);
+        $dataObject = json_decode($data, true);
+
+        Log::info($request);
+        Log::info($data);
+        Log::info($dataObject);
+        Log::info('paid for webinars');
+
+        User::where('email', $dataObject['description'])->update(['paidForWebinars' => true]);
     }
 
     public function webinarEmail(Request $request)

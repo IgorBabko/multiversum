@@ -1,4 +1,4 @@
-<div class="section section-blue" id="about-section">
+<div class="section-blue" id="about-section">
     <div class="container">
         <h3 style="text-align: center">Тематика предстоящих вебинаров<br> по ментально- духовному развитию и этике</h3>
         <div class="row centered">

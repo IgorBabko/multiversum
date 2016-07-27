@@ -103,6 +103,9 @@ main {
   margin: 0 0 10px 0;
   color: white; }
 
+.section-webinars {
+  background-color: #c1fff9; }
+
 .Video__description {
   font-size: 16px;
   font-weight: 300; }
@@ -271,7 +274,8 @@ h1 {
 
 .section-blue {
   background-color: #bf4d4d;
-  color: white; }
+  color: white;
+  padding: 50px 30px; }
 
 .section-email {
   background: white; }
