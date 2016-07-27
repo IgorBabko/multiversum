@@ -45,13 +45,16 @@ main
         margin: 0
 
     .photo
-        width: 100%
+        max-width: 200px
+        border-radius: 50%
         box-shadow: 1px 1px 5px #6f6f6f
+        margin: 30px 0 50px 0
+
 
     ul
         list-style: none
         text-align: left
-        margin: 160px 0 0 0
+        margin-top: 50px
 
         li
             p
@@ -63,8 +66,14 @@ main
                 width: 64px
                 margin-right: 25px
 
+.bio
+    font-weight: 300
+    font-size: 18px
+    color: #565656
+    text-align: left
 
-.Category__button
+.Category__button,
+.Content__button
     float: right
     margin: 10px 0 30px
     background-color: #4CAF50
@@ -76,6 +85,22 @@ main
     &:focus
         background-color: #1E8C22
         color: white
+
+.Content__button
+    background-color: #33c3f0
+    margin-right: 10px
+
+    &:hover,
+    &:active,
+    &:focus
+        background-color: darken(#33c3f8, 15%)
+        color: white
+
+.content-list
+    font-size: 20px
+    list-style-type: disc
+    text-align: left
+    margin-top: 30px
 
 .thumb
     width: 300px

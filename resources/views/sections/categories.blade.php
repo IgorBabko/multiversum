@@ -3,15 +3,20 @@
         <h2 class="main-heading" style="text-align: center; color: #0b4975">Ментально-духовное развитие</h2>
         <div class="row centered">
             <div class="six columns">
-                <img src="img/photo_mini.png" class="photo">
-                <div class="main-questions" style="background: white">
-                    <h5 style="text-align: center; font-weight: bold">Ближайший вебинар</h5>
-                    <span>Тема: <strong style="color: #c11515">Вопросы и ответы</strong></span><br>
-                    <span>Дата: <strong style="color: #c11515">27.07.2016 в 16.00 (по Киевскому времени)</strong></span><br>
+                <img src="img/avatar.png" class="photo">
+                <div class="bio">
+                    Александр Александрович Васильев –  преподаватель, руководитель театрально-философского общества при молодежном драмтеатре. Свыше 40 лет работы в Сумском государственном педагогическом университете им. А.С.Макаренко. Образование – режиссер. Призвание – философ. Научные интересы – классическая квантовая физика. Родился в 1947 году(г.Ромны). Ныне работает над созданием предмета ментально-духовного развития. Издал две книги трилогии «За краешком времени». Первый роман – «Это там…». Вторая книга «Поток». Третья книга – в работе.
+                </div>
+            </div>
+            <div class="six columns">
+                <div class="main-questions" style="background: #ff5757; color: white; font-weight: bold; font-size: 18px">
+                    <h5 style="color: white; text-align: center; font-weight: bold">Ближайший вебинар</h5>
+                    <span>Тема: <span style="color: #fff44a">Вопросы и ответы</span></span><br>
+                    <span>Дата: <span style="color: #fff44a">27.07.2016 в 16.00 (по Киевскому времени)</span></span><br>
                     @if ( ! Auth::user() )
-                    <span style="font-size: 14px; line-height: 1">Для регистрации на вебинар <a href="#login">войдите</a> в аккаунт или <a href="#register">зарегистрируйтесь</a>, если у Вас еще нет аккаунта</span>
+                    <span style="font-size: 14px; line-height: 1">Для регистрации на вебинар <a style="color: #2affbe" href="#login">войдите</a> в аккаунт или <a style="color: #2affbe" href="#register">зарегистрируйтесь</a>, если у Вас еще нет аккаунта</span>
                     @else
-                    <span>Стоимость вебинара: <strong style="color: #c11515">1$</strong></span><br>
+                    <span>Стоимость вебинара: <span style="color: #fff44a">1$</span></span><br>
                     <span style="font-size: 14px">После оплаты Вам на почту будут высланы ссылка и пароль на вебинар</span>
                     <?php $unique_id = uniqid('php_');?>
                     <form method="POST" accept-charset="utf-8" action="https://www.liqpay.com/api/3/checkout">
@@ -21,33 +26,47 @@
                     </form>
                     @endif
                 </div>
-            </div>
-            <div class="six columns">
                 <ul>
-                    <li>
-                        <img src="img/lecture.png">
-                        <div>
-                            <h5>Видео-лекции</h5>
-                            <p>Стоимость: <span>1$</span></p>
-                            <button data-section-id="payment-section" class="button Category__button">Перейти</button>
-                            <div class="clear"></div>
-                        </div>
-                    </li>
-                    {{-- <li>
-                        <img src="img/webinar.png">
-                        <div>
-                            <h5>Вебинары</h5>
-                            <p>Стоимость: <span>1$</span></p>
-                            <button data-section-id="webinars-section" class="button Category__button">Перейти</button>
-                            <div class="clear"></div>
-                        </div>
-                    </li> --}}
                     <li>
                         <img src="img/livestream.png">
                         <div>
                             <h5>Вебинары в прямом эфире</h5>
                             <p>Стоимость: <span>1$</span></p>
-                            <button data-section-id="livestream-section" class="Button Category__button">Перейти</button>
+                            @if (Auth::user())
+                                <button data-section-id="livestreams-section" class="button Category__button">Перейти</button>
+                            @else
+                                <button data-section-id="payment-section" class="button Category__button">Перейти</button>
+                            @endif
+                            {{-- <a data-remodal-target="lectures" href="#" class="button Content__button">Содержание</a> --}}
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/webinar.png">
+                        <div>
+                            <h5>Вебинары</h5>
+                            <p>Стоимость: <span>1$</span></p>
+                            {{-- <button data-section-id="webinars-section" class="button Category__button">Перейти</button> --}}
+                            @if (Auth::user())
+                                <button data-section-id="webinars-section" class="button Category__button">Перейти</button>
+                            @else
+                                <button data-section-id="payment-section" class="button Category__button">Перейти</button>
+                            @endif
+                            <a data-remodal-target="webinars" href="#" class="button Content__button">Содержание</a>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/lecture.png">
+                        <div>
+                            <h5>Видео-лекции</h5>
+                            <p>Стоимость: <span>1$</span></p>
+                            @if (Auth::user())
+                                <button data-section-id="lectures-section" class="button Category__button">Перейти</button>
+                            @else
+                                <button data-section-id="payment-section" class="button Category__button">Перейти</button>
+                            @endif
+                            <a data-remodal-target="lectures" href="#" class="button Content__button">Содержание</a>
                             <div class="clear"></div>
                         </div>
                     </li>

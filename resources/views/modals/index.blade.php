@@ -2,3 +2,6 @@
 @include ('modals.login')
 @include ('modals.email')
 @include ('modals.profile')
+@include ('modals.lectures')
+@include ('modals.webinars')
+@include ('modals.livestreams')

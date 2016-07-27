@@ -8,7 +8,6 @@ use Log;
 use Mail;
 use Multiversum\User;
 use Multiversum\Video;
-use Queue;
 
 class HomeController extends Controller
 {
@@ -31,12 +30,13 @@ class HomeController extends Controller
     {
         $previews = Video::orderBy('id', 'asc')->where('type', 'preview')->get();
         $lectures = Video::orderBy('id', 'asc')->where('type', 'lecture')->get();
+        $webinars = Video::orderBy('id', 'asc')->where('type', 'webinar')->get();
 
         if ($request->paid) {
             $request->session()->flash('notify', 'Спасибо за оплату, теперь Вам доступны видео-лекции');
         }
 
-        return view('index', compact('previews', 'lectures'));
+        return view('index', compact('webinars', 'previews', 'lectures'));
     }
 
     /**
@@ -54,8 +54,8 @@ class HomeController extends Controller
     public function email(Request $request)
     {
         $validator = \Validator::make($request->all(), [
-            'name'    => 'required|string',
-            'email'   => 'required|email',
+            'name' => 'required|string',
+            'email' => 'required|email',
             'message' => 'required',
         ]);
 
@@ -74,7 +74,7 @@ class HomeController extends Controller
     public function profile(Request $request)
     {
         $validator = \Validator::make($request->all(), [
-            'email'    => 'email|unique:users,email,' . Auth::user()->id,
+            'email' => 'email|unique:users,email,' . Auth::user()->id,
             'password' => 'min:8|confirmed',
         ]);
 
@@ -93,7 +93,7 @@ class HomeController extends Controller
 
     public function payment(Request $request)
     {
-        $data       = base64_decode($request->data);
+        $data = base64_decode($request->data);
         $dataObject = json_decode($data, true);
 
         Log::info($request);
@@ -105,13 +105,13 @@ class HomeController extends Controller
 
     public function webinarEmail(Request $request)
     {
-        $data       = base64_decode($request->data);
+        $data = base64_decode($request->data);
         $dataObject = json_decode($data, true);
         $email = $dataObject['description'];
 
         try {
             Mail::send('emails.webinar', [], function ($m) use ($email) {
-		Log::info($email);
+                Log::info($email);
                 $m->to($email)->subject('Подписка на вебинар');
             });
         } catch (\Exception $ex) {
