@@ -16,7 +16,7 @@
             </div>
             <div class="six columns">
                 <img src="/img/book-icon.png" class="book-icon" alt="Книга">
-                <h4 style="font-weight: bold">Поток - 104 с.</h4>
+                <h4 style="font-weight: bold">Поток (роман) - 104 с.</h4>
                 <a href="https://s3.eu-central-1.amazonaws.com/multiversum/books/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0+%D0%9F%D0%BE%D1%82%D0%BE%D0%BA.doc.docx" class="download-button link-button">Скачать</a>
             </div>
         </div>

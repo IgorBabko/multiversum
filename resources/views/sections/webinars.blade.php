@@ -1,5 +1,5 @@
 <div class="section subsection section-webinars" id="webinars-section">
-    <h2>Вебинары</h2>
+    <h2>Прошедшие вебинары в записи</h2>
     {{-- @if (Auth::user() && Auth::user()->paidForWebinars) --}}
         <div class="container">
             {{-- <h3 style="text-align: center">В чем смысл жизни?</h3> --}}

@@ -76,7 +76,7 @@
                         <img src="img/livestream.png">
                         <div>
                             <h5>Вебинары в прямом эфире</h5>
-                            <p class="label">Стоимость: <span>1$</span></p>
+                            <p class="label">Стоимость: <span>1$ = 26 грн. = 63 руб.</span></p>
                             {{-- @if (Auth::user())
                             <button data-section-id="livestreams-section" class="button Category__button">Перейти</button>
                             @else
@@ -90,8 +90,8 @@
                     <li>
                         <img src="img/webinar.png">
                         <div>
-                            <h5>Вебинары</h5>
-                            <p class="label">Стоимость: <span>1$</span></p>
+                            <h5>Прошедшие вебинары в записи</h5>
+                            <p class="label">Стоимость: <span>1$ = 26 грн. = 63 руб.</span></p>
                             <a data-remodal-target="webinars" href="#" class="button Content__button">Содержание</a>
                             @if ( Auth::user() && Auth::user()->paidForWebinars )
                                 <button data-section-id="webinars-section" class="button Category__button">Перейти</button>
@@ -105,7 +105,7 @@
                         <img src="img/lecture.png">
                         <div>
                             <h5>Видео-лекции</h5>
-                            <p class="label">Стоимость: <span>1$</span></p>
+                            <p class="label">Стоимость: <span>1$ = 26 грн. = 63 руб.</span></p>
                             <a data-remodal-target="lectures" href="#" class="button Content__button">Содержание</a>
                             @if ( Auth::user() && Auth::user()->paidForLectures )
                                 <button data-section-id="lectures-section" class="button Category__button">Перейти</button>
