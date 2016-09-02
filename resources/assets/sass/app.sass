@@ -46,11 +46,20 @@ main
         font-size: 24px
         margin: 0
 
-    .photo
-        max-width: 200px
-        border-radius: 50%
-        box-shadow: 1px 1px 5px #6f6f6f
-        margin: 30px 0 50px 0
+    .avatar-wrapper
+        margin: 20px 0 0 0
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        .photo
+            max-width: 150px
+            border: 5px solid #0b4975
+            padding: 5px
+
+        a
+            margin: 10px 0 0 0
+            width: 170px
 
 
     ul
@@ -80,7 +89,8 @@ main
     margin: 30px 0
 
 .Category__button,
-.Content__button
+.Content__button,
+.Bio__button
     float: right
     margin: 10px 0 30px
     background-color: #4CAF50
@@ -92,6 +102,16 @@ main
     &:focus
         background-color: #1E8C22
         color: white
+
+.bio-block
+    margin: 30px
+
+.Bio__button
+    // border-radius: 0
+    background-color: #0b4975
+
+    &:hover
+        background-color: lighten(#0b4975, 10%)
 
 .Content__button
     background-color: #33c3f0

@@ -1,3 +1,4 @@
+@include ('modals.bio')
 @include ('modals.register')
 @include ('modals.login')
 @include ('modals.email')

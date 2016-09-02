@@ -3,10 +3,41 @@
         <h2 class="main-heading" style="text-align: center; color: #0b4975">Ментально-духовное развитие</h2>
         <div class="row centered">
             <div class="six columns">
-                <img src="img/avatar.png" class="photo">
-                <div class="bio">
-                    Александр Александрович Васильев –  преподаватель, руководитель театрально-философского общества при молодежном драмтеатре. Свыше 40 лет работы в Сумском государственном педагогическом университете им. А.С.Макаренко. Образование – режиссер. Призвание – философ. Научные интересы – классическая квантовая физика. Родился в 1947 году(г.Ромны). Ныне работает над созданием предмета ментально-духовного развития. Издал две книги трилогии «За краешком времени». Первый роман – «Это там…». Вторая книга «Поток». Третья книга – в работе.
+                <div class="avatar-wrapper">
+                    <img src="img/portrait.jpg" class="photo">
+                    <a data-remodal-target="bio" href="#" class="button Bio__button">Об авторе</a>
                 </div>
+                <ul>
+                    <li>
+                        <img src="img/promo.png">
+                        <div>
+                            <h5>О чем этот курс</h5>
+                            <p>Бесплатно</p>
+                            <a data-remodal-target="promo" class="button Category__button">Презентация</a>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/previews.png">
+                        <div>
+                            <h5>Видео анонсы</h5>
+                            <p>Бесплатно</p>
+                            <button data-section-id="previews-section" class="button Category__button">Перейти</button>
+                            <a data-remodal-target="previews" href="#" class="button Content__button">Содержание</a>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/books.png">
+                        <div>
+                            <h5>Литература</h5>
+                            <p>Бесплатно</p>
+                            <button data-section-id="books-section" class="button Category__button">Перейти</button>
+                            <a data-remodal-target="books" href="#" class="button Content__button">Содержание</a>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="six columns">
                 <div class="main-questions" style="background: #ff5757; color: white; font-weight: bold; font-size: 18px">
