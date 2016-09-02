@@ -1,6 +1,6 @@
-<div class="section section-webinars" id="webinars-section">
+<div class="section subsection section-webinars" id="webinars-section">
     <h2>Вебинары</h2>
-    @if (Auth::user() && Auth::user()->paidForWebinars)
+    {{-- @if (Auth::user() && Auth::user()->paidForWebinars) --}}
         <div class="container">
             {{-- <h3 style="text-align: center">В чем смысл жизни?</h3> --}}
            {{--  <div class="description">
@@ -27,9 +27,9 @@
                 На данный момент вебинаров нет
             @endforelse
         </div>
-    @else
+    {{-- @else
         <div class="centered" style="font-size: 22px">
             @include ('sections.payment', ['item' => 'вебинарам', 'callbackUrl' => 'https://multiversum.in.ua/paymentForWebinars' ])
-        </div>
-    @endif
+        </div> --}}
+    {{-- @endif --}}
 </div>

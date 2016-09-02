@@ -1,6 +1,6 @@
-<div class="section section-orange" id="lectures-section">
+<div class="section subsection section-orange" id="lectures-section">
     <h2>Лекции</h2>
-    @if (Auth::user() && Auth::user()->paidForLectures)
+    {{-- @if (Auth::user() && Auth::user()->paidForLectures) --}}
     <div class="container">
         <h2>Ментально-духовное развитие</h2>
         <h3 style="text-align: center">В чем смысл жизни?</h3>
@@ -29,9 +29,9 @@
         На данный момент лекций нет
         @endforelse
     </div>
-    @else
+    {{-- @else
     <div class="centered" style="font-size: 22px">
         @include ('sections.payment', ['item' => 'видео-лекциям', 'callbackUrl' => 'https://multiversum.in.ua/paymentForLectures' ])
     </div>
-    @endif
+    @endif --}}
 </div>

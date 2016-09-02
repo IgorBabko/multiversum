@@ -1,4 +1,8 @@
 @include ('modals.bio')
+@include ('modals.promo')
+@include ('modals.previews')
+@include ('modals.books')
+@include ('modals.future-webinars')
 @include ('modals.register')
 @include ('modals.login')
 @include ('modals.email')

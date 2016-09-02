@@ -1,4 +1,4 @@
-<div class="section section-brown centered" id="books-section">
+<div class="section subsection section-brown centered" id="books-section">
     <div class="container">
         <h2>Мои книги</h2>
         {{-- <div class="row" style="font-size: 16px; text-align: left">

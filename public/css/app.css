@@ -106,11 +106,13 @@ main {
     background-color: #0f66a4; }
 
 .Content__button {
-  background-color: #33c3f0;
-  margin-right: 10px; }
+  background-color: #33c3f0; }
   .Content__button:hover, .Content__button:active, .Content__button:focus {
     background-color: #079fd7;
     color: white; }
+
+.Category__button {
+  margin-right: 10px; }
 
 .content-list {
   font-size: 20px;
@@ -119,16 +121,16 @@ main {
   margin-top: 30px; }
 
 .thumb {
-  width: 300px; }
+  width: 300px;
+  border: 1px solid white; }
 
 .Video__heading {
   margin: 0 0 10px 0;
   color: white; }
 
 .section-webinars {
-  background-color: #c1fff9; }
-  .section-webinars h5 {
-    color: #0b4975; }
+  color: white;
+  background-color: #1cb786; }
 
 .Video__description {
   font-size: 16px;
@@ -289,7 +291,7 @@ h1 {
     width: 100% !important; } }
 
 .section-orange {
-  background-color: #FF5200;
+  background-color: #ff6b26;
   color: white; }
   .section-orange .description {
     font-weight: 300; }
@@ -539,5 +541,33 @@ fieldset {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     text-align: center; } }
+
+.promo-remodal {
+  max-width: 900px; }
+  .promo-remodal .video-js {
+    margin: 30px auto; }
+    .promo-remodal .video-js video {
+      width: auto; }
+
+.future-webinars-remodal {
+  max-width: 900px; }
+
+.important-message {
+  margin: 30px 0;
+  padding: 20px;
+  background: #ff6f00;
+  box-shadow: 1px 1px 5px #6f6f6f;
+  color: white;
+  font-size: 16px; }
+
+input[type="image"] {
+  margin: 0; }
+
+#categories-section .label {
+  margin-bottom: 15px; }
+
+#categories-section form {
+  margin-right: 10px;
+  float: right; }
 
 /*# sourceMappingURL=app.css.map */

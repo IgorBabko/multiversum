@@ -13,7 +13,7 @@
     var nav = $('nav');
     var $navLinks = $('.nav-list-link:not(.normal)');
     var $htmlAndBody = $('html, body');
-    var $sections = $('.section');
+    var $sections = $('.section:not(.subsection)');
 
     $navLinks.on("click", function(e) {
         e.preventDefault();
