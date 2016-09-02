@@ -52,18 +52,26 @@
             </div>
             <div class="six columns">
                 <ul>
-                    <li>
+                    {{-- <li>
                         <img src="img/livestream.png">
                         <div>
                             <h5>Вебинары в прямом эфире</h5>
                             <p class="label">Стоимость: <span>1$ = 26 грн. = 63 руб.</span></p>
-                            {{-- @if (Auth::user())
-                            <button data-section-id="livestreams-section" class="button Category__button">Перейти</button>
-                            @else
-                            <button data-section-id="payment-section" class="button Category__button">Перейти</button>
-                            @endif --}}
-                            {{-- <button data-section-id="payment-section" class="button Category__button">Перейти</button> --}}
                             <a data-remodal-target="future-webinars" href="#" class="button Content__button">Расписание</a>
+                            <div class="clear"></div>
+                        </div>
+                    </li> --}}
+                    <li>
+                        <img src="img/lecture.png">
+                        <div>
+                            <h5>Видео-лекции</h5>
+                            <p class="label">Стоимость: <span>1$ = 26 грн. = 63 руб.</span></p>
+                            <a data-remodal-target="lectures" href="#" class="button Content__button">Содержание</a>
+                            @if ( Auth::user() && Auth::user()->paidForLectures )
+                                <button data-section-id="lectures-section" class="button Category__button">Перейти</button>
+                            @elseif (Auth::user())
+                                @include ('sections.payment', ['callbackUrl' => 'https://multiversum.in.ua/paymentForLectures' ])
+                            @endif
                             <div class="clear"></div>
                         </div>
                     </li>
@@ -77,20 +85,6 @@
                                 <button data-section-id="webinars-section" class="button Category__button">Перейти</button>
                             @elseif (Auth::user())
                                 @include ('sections.payment', ['callbackUrl' => 'https://multiversum.in.ua/paymentForWebinars' ])
-                            @endif
-                            <div class="clear"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="img/lecture.png">
-                        <div>
-                            <h5>Видео-лекции</h5>
-                            <p class="label">Стоимость: <span>1$ = 26 грн. = 63 руб.</span></p>
-                            <a data-remodal-target="lectures" href="#" class="button Content__button">Содержание</a>
-                            @if ( Auth::user() && Auth::user()->paidForLectures )
-                                <button data-section-id="lectures-section" class="button Category__button">Перейти</button>
-                            @elseif (Auth::user())
-                                @include ('sections.payment', ['callbackUrl' => 'https://multiversum.in.ua/paymentForLectures' ])
                             @endif
                             <div class="clear"></div>
                         </div>
